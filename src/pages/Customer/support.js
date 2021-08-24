@@ -57,7 +57,7 @@ class Support extends Component {
                 >
                   Start working with{" "}
                   <span className="text-primary fw-bold">
-                    Landrick
+                    Sutura
                   </span>{" "}
                   that can provide everything you need to generate awareness,
                   drive traffic, connect.

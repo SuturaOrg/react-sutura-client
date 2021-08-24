@@ -26,7 +26,7 @@ class FeaturedItems extends Component {
     this.state = {
       pathItems: [
         //id must required
-        { id: 1, name: "Landrick", link: "/index" },
+        { id: 1, name: "Sutura", link: "/index" },
         { id: 2, name: "Shop", link: "#" },
         { id: 3, name: "Product Details" },
       ],
@@ -147,7 +147,7 @@ class FeaturedItems extends Component {
                 <p className="text-muted mx-auto mx-lg-left para-desc mb-0">
                   Start working with{" "}
                   <span className="text-primary fw-bold">
-                    Landrick
+                    Sutura
                   </span>{" "}
                   that can provide everything you need to generate awareness,
                   drive traffic, connect.
@@ -170,7 +170,7 @@ class FeaturedItems extends Component {
                             <img
                               src={product.image}
                               className="img-fluid"
-                              alt="Landrick"
+                              alt="Sutura"
                             />
                           </Link>
                           <ul className="list-unstyled shop-icons">

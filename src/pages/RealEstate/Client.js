@@ -26,7 +26,7 @@ export default class Client extends Component {
     this.state = {
       pathItems: [
         //id must required
-        { id: 1, name: "Landrick", link: "/index" },
+        { id: 1, name: "Sutura", link: "/index" },
         { id: 2, name: "Shop", link: "#" },
         { id: 3, name: "Product Details" },
       ],
@@ -164,7 +164,7 @@ export default class Client extends Component {
                                 <img
                                   src={reviews.img}
                                   className="avatar avatar-small rounded-circle d-block mx-auto shadow-lg"
-                                  alt="Landrick"
+                                  alt="Sutura"
                                 />
                                 <div className="content mt-4">
                                   <ul className="list-unstyled h6 text-warning mb-0">

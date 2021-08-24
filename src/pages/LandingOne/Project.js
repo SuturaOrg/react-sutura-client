@@ -24,7 +24,7 @@ export default class Project extends Component {
     this.state = {
       pathItems: [
         //id must required
-        { id: 1, name: "Landrick", link: "/index" },
+        { id: 1, name: "Sutura", link: "/index" },
         { id: 2, name: "Shop", link: "#" },
         { id: 3, name: "Product Details" },
       ],
@@ -164,7 +164,7 @@ export default class Project extends Component {
                 <p className="text-muted mb-0 para-desc">
                   Start working with{" "}
                   <span className="text-primary fw-bold">
-                    Landrick
+                    Sutura
                   </span>{" "}
                   that can provide everything you need to generate awareness,
                   drive traffic, connect.
@@ -187,7 +187,7 @@ export default class Project extends Component {
                                 <img
                                   src={reviews.img}
                                   className="avatar avatar-small me-3 rounded shadow"
-                                  alt="Landrick"
+                                  alt="Sutura"
                                 />
 
                                 <div className="flex-1 content p-3 shadow rounded bg-white position-relative">
@@ -240,7 +240,7 @@ export default class Project extends Component {
                 <p className="text-muted para-desc mx-auto mb-0">
                   Start working with{" "}
                   <span className="text-primary fw-bold">
-                    Landrick
+                    Sutura
                   </span>{" "}
                   that can provide everything you need to generate awareness,
                   drive traffic, connect.

@@ -16,7 +16,7 @@ export default class landrickTeam extends Component {
                 <p className="para-desc mx-auto text-muted mb-0">
                   Start working with{" "}
                   <span className="text-primary fw-bold">
-                    Landrick
+                    Sutura
                   </span>{" "}
                   that can provide everything you need to generate awareness,
                   drive traffic, connect.
@@ -215,7 +215,7 @@ export default class landrickTeam extends Component {
                 </h4>
                 <p className="text-muted para-desc mx-auto">
                   Start working with{" "}
-                  <span className="text-primary fw-bold">Landrick</span>{" "}
+                  <span className="text-primary fw-bold">Sutura</span>{" "}
                   that can provide everything you need to generate awareness,
                   drive traffic, connect.
                 </p>

@@ -396,12 +396,12 @@ class Features extends Component {
                 <div className="section-title mb-4 pb-2">
                   <h4 className="title mb-4">
                     See everything about your{" "}
-                    <span className="text-primary">Landrick</span>
+                    <span className="text-primary">Sutura</span>
                   </h4>
                   <p className="text-muted para-desc mx-auto mb-0">
                     Start working with{" "}
                     <span className="text-primary fw-bold">
-                      Landrick
+                      Sutura
                     </span>{" "}
                     that can provide everything you need to generate awareness,
                     drive traffic, connect.

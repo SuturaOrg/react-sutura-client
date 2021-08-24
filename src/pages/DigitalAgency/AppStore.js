@@ -23,7 +23,7 @@ class AppStore extends Component {
                 <img
                   src={userInterface}
                   className="img-fluid mx-auto d-block"
-                  alt="Landrick"
+                  alt="Sutura"
                 />
               </Col>
 
@@ -40,7 +40,7 @@ class AppStore extends Component {
                   <p className="text-muted para-desc mb-0">
                     Start working with{" "}
                     <span className="text-primary fw-bold">
-                      Landrick
+                      Sutura
                     </span>{" "}
                     that can provide everything you need to generate awareness,
                     drive traffic, connect.

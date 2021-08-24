@@ -60,7 +60,7 @@ class Footer extends Component {
                   />
                 </Link>
                 <p className={this.props.isLight ? "mt-4 text-muted" : "mt-4"}>
-                  Start working with Landrick that can provide everything you
+                  Start working with Sutura that can provide everything you
                   need to generate awareness, drive traffic, connect.
                 </p>
                 <ul className={this.props.isLight ? "list-unstyled social-icon social mb-0 m t-4" : "list-unstyled social-icon foot-social-icon mb-0 mt-4"}>
@@ -244,7 +244,7 @@ class Footer extends Component {
               <Col sm="6">
                 <div className="text-sm-start">
                   <p className="mb-0">
-                    © 2020-21 Landrick. Develop by{" "}
+                    © 2020-21 Sutura. Develop by{" "}
                     <i className="mdi mdi-heart text-danger"></i>{" "}
                     <a
                       href="https://themesbrand.com/"

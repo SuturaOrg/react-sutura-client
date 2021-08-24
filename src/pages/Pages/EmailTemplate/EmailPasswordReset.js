@@ -50,7 +50,7 @@ class EmailPasswordReset extends Component {
                 }}
               >
                 <th scope="col">
-                  <img src={logo} height="24" alt="Landrick" />
+                  <img src={logo} height="24" alt="Sutura" />
                 </th>
               </tr>
             </thead>
@@ -109,7 +109,7 @@ class EmailPasswordReset extends Component {
                 <td
                   style={{ padding: "15px 24px 15px", color: "#8492a6" }}
                 >
-                  Landrick <br /> Support Team
+                  Sutura <br /> Support Team
                       </td>
               </tr>
               <tr>
@@ -121,7 +121,7 @@ class EmailPasswordReset extends Component {
                     textAlign: "center",
                   }}
                 >
-                  © 2021 Landrick.
+                  © 2021 Sutura.
                       </td>
               </tr>
             </tbody>

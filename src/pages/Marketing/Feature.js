@@ -350,7 +350,7 @@ class Feature extends Component {
                 <div className="section-title ms-lg-5">
                   <SectionTitleLeft
                     title="A better compose with landrick marketing"
-                    desc="You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website."
+                    desc="You can combine all the Sutura templates into a single one, you can take a component from the Application theme and use it in the Website."
                     features={this.state.features}
                     class=""
                   />

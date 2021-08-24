@@ -23,7 +23,7 @@ class AboutBook extends Component {
                 <img
                   src={about}
                   className="img-fluid mx-auto d-block"
-                  alt="Landrick"
+                  alt="Sutura"
                 />
               </div>
             </Col>
@@ -32,7 +32,7 @@ class AboutBook extends Component {
               <div className="section-title">
                 <h4 className="title mb-4">About the Book</h4>
                 <p className="text-muted para-desc">
-                  Start working with Landrick that can provide everything you
+                  Start working with Sutura that can provide everything you
                   need to generate awareness, drive traffic, connect.
                 </p>
                 <ul className="list-unstyled text-muted my-4">
@@ -67,12 +67,12 @@ class AboutBook extends Component {
                     Embedded analytics
                   </li>
                 </ul>
-                <img src={sign} className="img-fluid" alt="Landrick" />
+                <img src={sign} className="img-fluid" alt="Sutura" />
                 <div className="d-flex align-items-center mt-4">
                   <img
                     src={client05}
                     className="avatar avatar-md-md rounded-circle shadow-lg"
-                    alt="Landrick"
+                    alt="Sutura"
                   />
                   <div className="flex-1 content ms-3">
                     <h5 className="mb-0">Cristina Murphy</h5>

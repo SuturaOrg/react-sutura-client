@@ -988,8 +988,7 @@ class Topbar extends Component {
               } else if (this.props.location.pathname === "/index-seo-agency") {
                 return (
                   <div className="buy-button">
-                    <Link
-                      to="//1.envato.market/landrickreactjs"
+                    <Link to="auth-cover-signup"
                       target="_blank"
                       className="btn btn-pills btn-primary"
                     >

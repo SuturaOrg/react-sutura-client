@@ -248,7 +248,6 @@ class Topbar extends Component {
               link: "/#",
               isOpenNestedSubMenu: false,
               nestedChild: [
-                { title: "About Us", link: "/page-aboutus" },
                 { title: "About Us Two", link: "/page-aboutus-two" },
                 { title: "History", link: "/page-history" },
                 { title: "Services", link: "page-services" },
@@ -483,6 +482,16 @@ class Topbar extends Component {
             { title: "Components", link: "/components" },
             { title: "Widget", link: "/widget" },
           ],
+        },
+        {
+          id: 5,
+          title: "About Us",
+          link: "/aboutus",
+        },
+        {
+          id: 6,
+          title: "Terms of Use",
+          link: "/tos",
         },
       ],
       wishlistModal: false,
@@ -984,7 +993,7 @@ class Topbar extends Component {
                       target="_blank"
                       className="btn btn-pills btn-primary"
                     >
-                      Buy Now
+                      Sign Up
                     </Link>
                   </div>
                 );
@@ -992,13 +1001,12 @@ class Topbar extends Component {
                 return (
                   <div className="buy-button">
                     <Link
-                      to="//1.envato.market/landrickreactjs"
+                      to="auth-cover-signup"
                       target="_blank"
-                      rel="noopener noreferrer"
                       id="buyButton"
                       className="btn btn-primary"
                     >
-                      Buy Now
+                      Sign Up
                     </Link>
                   </div>
                 );

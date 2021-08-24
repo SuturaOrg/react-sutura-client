@@ -1,4 +1,5 @@
 import React from "react";
+import Aboutus from "./pages/ITSolutionTwo/Aboutus";
 
 // Root Include
 const Root = React.lazy(() => import("./pages/Home/indexRoot"));
@@ -369,7 +370,7 @@ const routes = [
   },
 
   // Landings
-  { path: "/index-onepage", component: SaasOnepage, isTopbarDark: true },
+  /*{ path: "/index-onepage", component: SaasOnepage, isTopbarDark: true },
   { path: "/index-customer", component: Customer, isTopbarDark: true },
   { path: "/index-job", component: Job, isTopbarDark: true },
   { path: "/index-software", component: Software },
@@ -420,11 +421,10 @@ const routes = [
   { path: "/index-online-learning", component: OnlineLearning, isTopbarDark: true },
   { path: "/index-finance", component: Finance, isTopbarDark: true },
   { path: "/index-videocall", component: VideoCall, isTopbarDark: true },
-  { path: "/index-it-solution-two", component: iTSolutionTwo },
   { path: "/index-freelancer", component: Freelancer, isTopbarDark: true },
   { path: "/index-blockchain", component: Blockchain },
   { path: "/index-crypto-two", component: CryptoTwo },
-
+*/
   { path: "/page-aboutus", component: PageAboutUs, isTopbarDark: true },
   { path: "/page-aboutus-two", component: PageAboutusTwo },
   { path: "/page-history", component: PageHistory, isTopbarDark: true },
@@ -505,7 +505,12 @@ const routes = [
   { path: "/widget", component: Widget, isTopbarDark: true },
 
   //Index Main
-  { path: "/index", component: Main, isTopbarDark: true },
+  { path: "/index", component: ITSolution},
+  { path: "/index2", component: iTSolutionTwo },
+  { path: "/tos", component: HelpCenterFaqs },
+  { path: "/aboutus", component: PageAboutUs },
+
+
 
   //Index root
 

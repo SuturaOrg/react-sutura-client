@@ -252,7 +252,7 @@ class Footer extends Component {
                       rel="noopener noreferrer"
                       className="text-reset"
                     >
-                      Themesbrand
+                      Sutura
                     </a>
                     .
                   </p>

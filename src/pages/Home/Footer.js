@@ -11,7 +11,7 @@ class Footer extends Component {
                         <Row className="justify-content-center">
                             <Col sm={8}>
                                 <div className="text-sm-start">
-                                    <p className="mb-0">© {new Date().getFullYear()} Sutura. Develop with <i className="mdi mdi-heart text-danger"></i> by <a href="https://themesbrand.com/" rel="noreferrer" target="_blank" className="text-reset">ThemesBrand</a>.</p>
+                                    <p className="mb-0">© {new Date().getFullYear()} Sutura. Develop with <i className="mdi mdi-heart text-danger"></i> by <a href="https://themesbrand.com/" rel="noreferrer" target="_blank" className="text-reset">Sutura</a>.</p>
                                 </div>
                             </Col>
 
@@ -20,7 +20,7 @@ class Footer extends Component {
                                     <li className="list-inline-item me-1"><a href="https://dribbble.com/Themesbrand" rel="noreferrer" className="rounded"><i className="uil uil-dribbble"></i></a></li>
                                     <li className="list-inline-item me-1"><a href="https://www.facebook.com/themesbrand/" rel="noreferrer" target="_blank" className="rounded"><i className="mdi mdi-facebook" title="facebook"></i></a></li>
                                     <li className="list-inline-item me-1"><a href="https://www.instagram.com/themesbrand/" rel="noreferrer" target="_blank" className="rounded"><i className="mdi mdi-instagram" title="instagram"></i></a></li>
-                                    <li className="list-inline-item me-1"><a href="https://twitter.com/ThemesBrand" rel="noreferrer" target="_blank" className="rounded"><i className="mdi mdi-twitter" title="twitter"></i></a></li>
+                                    <li className="list-inline-item me-1"><a href="https://twitter.com/Sutura" rel="noreferrer" target="_blank" className="rounded"><i className="mdi mdi-twitter" title="twitter"></i></a></li>
                                     <li className="list-inline-item me-1"><a href="mailto:support@themesbrand.com" rel="noreferrer" className="rounded"><i className="mdi mdi-email-outline" title="email"></i></a></li>
                                 </ul>
                             </Col>

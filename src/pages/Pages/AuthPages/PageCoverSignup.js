@@ -1,6 +1,7 @@
 // React Basic and Bootstrap
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import {connect} from "react-redux";
 import {
   Container,
   Row,
@@ -18,14 +19,31 @@ import FeatherIcon from "feather-icons-react";
 
 // import images
 import user02 from "../../../assets/images/user/02.jpg";
+import {userActions} from "../../../actions";
 
 class PageCoverSignup extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.props.dispatch(userActions.logout());
+    this.state = {
+      termsChecked:false
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+
+  }
+  handleSubmit(event, errors, values) {
+    if (!errors.length & this.state.termsChecked){
+      console.log(values);
+    }
+  }
+  handleChange(e) {
+    const { checked } = e.target;
+    this.setState({ termsChecked: checked });
   }
 
   render() {
+    const { termsChecked } = this.state;
     return (
       <React.Fragment>
         <div className="back-to-home rounded d-none d-sm-block">
@@ -48,7 +66,7 @@ class PageCoverSignup extends Component {
                       >
                         <CardBody className="p-0">
                           <h4 className="card-title text-center">Signup</h4>
-                          <AvForm className="login-form mt-4">
+                          <AvForm className="login-form mt-4" onSubmit={this.handleSubmit}>
                             <Row>
                               <Col md="6">
                                 <div className="mb-3">
@@ -198,13 +216,16 @@ class PageCoverSignup extends Component {
                                       type="checkbox"
                                       className="form-check-input"
                                       id="customCheck1"
+                                      checked={termsChecked}
+                                      onChange={this.handleChange}
+                                      required
                                     />
                                     <Label
                                       className="form-check-label"
                                       for="customCheck1"
                                     >
                                       I Accept{" "}
-                                      <Link to="#" className="text-primary">
+                                      <Link to="tos" className="text-primary" target="_blank" rel="noopener noreferrer">
                                         Terms And Condition
                                       </Link>
                                     </Label>
@@ -267,4 +288,11 @@ class PageCoverSignup extends Component {
     );
   }
 }
-export default PageCoverSignup;
+function mapStateToProps(state) {
+  const { loggingIn } = state.authentication;
+  return {
+    loggingIn
+  };
+}
+const connectedPageCoverSignup = connect(mapStateToProps)(PageCoverSignup);
+export default connectedPageCoverSignup;

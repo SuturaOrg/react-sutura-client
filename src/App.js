@@ -15,6 +15,7 @@ import "./assets/css/colors/default.css";
 
 // Include Routes
 import routes from "./routes";
+import {connect} from "react-redux";
 
 function withLayout(WrappedComponent, hasDarkTopBar) {
   // ...and returns another component...
@@ -72,5 +73,11 @@ class App extends Component {
     );
   }
 }
-
-export default withRouter(App);
+function mapStateToProps(state) {
+  const { alert } = state;
+  return {
+    alert
+  };
+}
+const connectedApp = connect(mapStateToProps)(withRouter(App));
+export default connectedApp;

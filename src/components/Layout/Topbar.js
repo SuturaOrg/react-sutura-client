@@ -19,6 +19,7 @@ import shop1 from "../../assets/images/shop/product/s-1.jpg";
 import shop2 from "../../assets/images/shop/product/s-2.jpg";
 import shop3 from "../../assets/images/shop/product/s-3.jpg";
 import NavbarButtons from "../Shared/NavbarButtons";
+import {connect} from "react-redux";
 
 class Topbar extends Component {
   constructor(props) {
@@ -985,7 +986,7 @@ class Topbar extends Component {
                     </li>
                   </ul>
                 );
-              } else if (this.props.location.pathname === "/index-seo-agency") {
+              } else if (!this.props.loggedIn && this.props.location.pathname === "/index-seo-agency") {
                 return (
                   <div className="buy-button">
                     <Link to="auth-cover-signup"
@@ -997,6 +998,7 @@ class Topbar extends Component {
                   </div>
                 );
               } else {
+                if (!this.props.loggedIn){
                 return (
                   <div className="buy-button">
                     <Link
@@ -1008,7 +1010,7 @@ class Topbar extends Component {
                       Sign Up
                     </Link>
                   </div>
-                );
+                );}
               }
             })()}
 
@@ -1292,5 +1294,13 @@ class Topbar extends Component {
     );
   }
 }
+function mapStateToProps(state) {
+  const {loggedIn} = state.authentication;
+  return {
+    loggedIn,
+  };
+}
 
-export default withRouter(Topbar);
+const connectedApp = connect(mapStateToProps)(withRouter(Topbar));
+export default connectedApp;
+

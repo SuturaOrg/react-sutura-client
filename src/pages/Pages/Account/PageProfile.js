@@ -32,7 +32,7 @@ class PageProfile extends Component {
         image: blog1,
         likes: "33",
         blogComments: "08",
-        author: "Krishta Joseph",
+        author: "Krishta {user.lastname}",
         date: "13th August, 2019",
       },
       {
@@ -41,7 +41,7 @@ class PageProfile extends Component {
         image: blog2,
         likes: "33",
         blogComments: "08",
-        author: "Krishta Joseph",
+        author: "Krishta {user.lastname}",
         date: "13th August, 2019",
       },
     ],
@@ -149,6 +149,7 @@ class PageProfile extends Component {
   };
 
   render() {
+    const {user}=this.props;
     return (
       <React.Fragment>
         <section
@@ -178,7 +179,7 @@ class PageProfile extends Component {
                             md="7"
                             className="text-md-start text-center mt-4 mt-sm-0"
                           >
-                            <h3 className="title mb-0">Krista Joseph</h3>
+                            <h3 className="title mb-0">{user.firstname} {user.lastname}</h3>
                             <small className="text-muted h6 me-2">
                               Web Developer
                             </small>
@@ -388,7 +389,7 @@ class PageProfile extends Component {
 
               <Col lg="8" md="7" xs="12">
                 <div className="border-bottom pb-4">
-                  <h5>Krista Joseph</h5>
+                  <h5>{user.firstname} {user.lastname}</h5>
                   <p className="text-muted mb-0">
                     I have started my career as a trainee and prove my self and
                     achieve all the milestone with good guidance and reach up to
@@ -413,7 +414,7 @@ class PageProfile extends Component {
                           <div className="flex-1">
                             <h6 className="text-primary mb-0">Email :</h6>
                             <Link to="#" className="text-muted">
-                              kristajoseph0203@mail.com
+                              {user.email}
                             </Link>
                           </div>
                         </div>

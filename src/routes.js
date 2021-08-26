@@ -458,7 +458,7 @@ const routes = [
   { path: "/page-work-masonry", component: PageWorkMasonry, isTopbarDark: true },
 
   //Page Profile
-  { path: "/page-profile", component: PageProfile },
+  { path: "/page-profile", component: PageProfile, isPrivate:true },
   { path: "/page-members", component: PageMembers },
   { path: "/page-works", component: PageWorks },
   { path: "/page-messages", component: PageMessages },

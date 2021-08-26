@@ -1,12 +1,11 @@
 import React, {Component, Suspense} from "react";
 import Layout from "./components/Layout/";
 import {
-    Route,
     Switch,
     BrowserRouter as Router,
-    withRouter,
+    withRouter, Redirect, Route,
 } from "react-router-dom";
-import { history } from './_helpers';
+import {history, PrivateRoute} from './_helpers';
 
 // Import Css
 import "./assets/css/materialdesignicons.min.css";
@@ -36,12 +35,13 @@ function withLayout(WrappedComponent, hasDarkTopBar) {
 class App extends Component {
     constructor(props) {
         super(props);
-        const { dispatch } = this.props;
+        const {dispatch} = this.props;
         history.listen((location, action) => {
             // clear alert on location change
             dispatch(alertActions.clear());
         });
     }
+
     Loader = () => {
         return (
             <div id="preloader">
@@ -54,23 +54,26 @@ class App extends Component {
             </div>
         );
     };
+    x
 
     render() {
-        const {alert} = this.props;
+        const {alert, loggedIn} = this.props;
+        console.log(loggedIn);
         return (
             <React.Fragment>
-                    {alert.message &&
-                    <Alert
-                        color={alert.type}
-                    >
-                        {alert.message}
-                    </Alert>
-                    }
-                    <Router>
-                        <Suspense fallback={this.Loader()}>
+                {alert.message &&
+                <Alert
+                    color={alert.type}
+                >
+                    {alert.message}
+                </Alert>
+                }
+                <Router>
+                    <Suspense fallback={this.Loader()}>
 
-                            <Switch>
-                                {routes.map((route, idx) =>
+                        <Switch>
+                            {routes.map((route, idx) =>
+                                !route.isPrivate ?
                                     route.isWithoutLayout ? (
                                         <Route
                                             path={route.path}
@@ -86,10 +89,28 @@ class App extends Component {
                                             key={idx}
                                         />
                                     )
-                                )}
-                            </Switch>
-                        </Suspense>
-                    </Router>
+                                    :
+                                    route.isWithoutLayout ? (
+                                        <PrivateRoute
+                                            authed={loggedIn}
+                                            path={route.path}
+                                            exact={route.exact}
+                                            component={route.component}
+                                            key={idx}
+                                        />
+                                    ) : (
+                                        <PrivateRoute
+                                            authed={loggedIn}
+                                            path={route.path}
+                                            exact
+                                            component={withLayout(route.component, route.isTopbarDark)}
+                                            key={idx}
+                                        />
+                                    )
+                            )}
+                        </Switch>
+                    </Suspense>
+                </Router>
             </React.Fragment>
         );
     }
@@ -97,7 +118,9 @@ class App extends Component {
 
 function mapStateToProps(state) {
     const {alert} = state;
+    const {loggedIn} = state.authentication;
     return {
+        loggedIn,
         alert
     };
 }

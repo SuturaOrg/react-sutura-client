@@ -17,11 +17,11 @@ function login(data) {
 
     return fetch(`${config.apiUrl}/auth/signin`, requestOptions)
         .then(handleResponse)
-        .then(user => {
+        .then(signinPayload => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
-            localStorage.setItem('user', JSON.stringify(user));
+            localStorage.setItem('signinPayload', JSON.stringify(signinPayload));
 
-            return user;
+            return signinPayload;
         });
 }
 

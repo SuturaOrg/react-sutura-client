@@ -16,8 +16,9 @@ function login(data) {
 
         userService.login(data)
             .then(
-                user => { 
-                    dispatch(success(user));
+                signinPayload => {
+                    dispatch(success(signinPayload));
+                    dispatch(alertActions.clear());
                     history.push('/page-profile');
                    // window.location.reload();
                 },
@@ -29,7 +30,7 @@ function login(data) {
     };
 
     function request(user) { return { type: userConstants.LOGIN_REQUEST, user } }
-    function success(user) { return { type: userConstants.LOGIN_SUCCESS, user } }
+    function success(signinPayload) { return { type: userConstants.LOGIN_SUCCESS, signinPayload } }
     function failure(error) { return { type: userConstants.LOGIN_FAILURE, error } }
 }
 
@@ -40,8 +41,8 @@ function signup(data) {
 
         userService.signup(data)
             .then(
-                user => {
-                    dispatch(success(user));
+                signupPayload => {
+                    dispatch(success(signupPayload));
                     dispatch(login(data));
                     //window.location.reload();
 
@@ -54,7 +55,7 @@ function signup(data) {
     };
 
     function request(user) { return { type: userConstants.SIGNUP_REQUEST, user } }
-    function success(user) { return { type: userConstants.SIGNUP_SUCCESS, user } }
+    function success(signupPayload) { return { type: userConstants.SIGNUP_SUCCESS, signupPayload } }
     function failure(error) { return { type: userConstants.SIGNUP_FAILURE, error } }
 }
 

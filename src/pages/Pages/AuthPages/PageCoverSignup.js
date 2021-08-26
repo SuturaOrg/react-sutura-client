@@ -72,7 +72,7 @@ class PageCoverSignup extends Component {
                             <Row>
                               <Col md="6">
                                 <div className="mb-3">
-                                  <Label className="form-label" for="firstname">
+                                  <Label className="form-label" for="firstName">
                                     First name{" "}
                                     <span className="text-danger">*</span>
                                   </Label>
@@ -87,8 +87,8 @@ class PageCoverSignup extends Component {
                                   <AvField
                                     type="text"
                                     className="form-control ps-5"
-                                    name="firstname"
-                                    id="firstname"
+                                    name="firstName"
+                                    id="firstName"
                                     placeholder="First Name"
                                     required
                                     errorMessage=""
@@ -103,7 +103,7 @@ class PageCoverSignup extends Component {
                               </Col>
                               <Col md="6">
                                 <div className="mb-3">
-                                  <Label className="form-label" for="lastname">
+                                  <Label className="form-label" for="lastName">
                                     Last name{" "}
                                     <span className="text-danger">*</span>
                                   </Label>
@@ -118,8 +118,8 @@ class PageCoverSignup extends Component {
                                   <AvField
                                     type="text"
                                     className="form-control ps-5"
-                                    name="lastname"
-                                    id="lastname"
+                                    name="lastName"
+                                    id="lastName"
                                     placeholder="Last Name"
                                     required
                                     errorMessage=""

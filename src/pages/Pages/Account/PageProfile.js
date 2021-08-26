@@ -20,6 +20,7 @@ import blog2 from "../../../assets/images/blog/02.jpg";
 import exp1 from "../../../assets/images/job/Circleci.svg";
 import exp2 from "../../../assets/images/job/Codepen.svg";
 import exp3 from "../../../assets/images/job/Gitlab.svg";
+import {connect} from "react-redux";
 
 
 class PageProfile extends Component {
@@ -124,6 +125,7 @@ class PageProfile extends Component {
   };
 
   componentDidMount() {
+    console.log(this.props);
     document.body.classList = "";
     document.getElementById("top-menu").classList.add("nav-light");
     document.getElementById("buyButton").className = "btn btn-light";
@@ -622,5 +624,14 @@ class PageProfile extends Component {
     );
   }
 }
+function mapStateToProps(state) {
+  const { user,accessToken } = state.authentication;
+  console.log(state);
+  return {
+    user,
+    accessToken
+  };
 
-export default PageProfile;
+}
+const connectedPageProfile = connect(mapStateToProps)(PageProfile);
+export default connectedPageProfile;

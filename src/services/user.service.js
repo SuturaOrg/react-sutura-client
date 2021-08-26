@@ -1,17 +1,18 @@
 import config from '../config';
-import { authHeader } from '../helpers';
+import {authHeader} from '../_helpers';
 
 export const userService = {
     login,
+    signup,
     logout,
-    getAll
+    getAll,
 };
 
-function login(username, password) {
+function login(data) {
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
     };
 
     return fetch(`${config.apiUrl}/auth/signin`, requestOptions)
@@ -21,6 +22,21 @@ function login(username, password) {
             localStorage.setItem('user', JSON.stringify(user));
 
             return user;
+        });
+}
+
+function signup(data) {
+    const requestOptions = {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    };
+
+    return fetch(`${config.apiUrl}/auth/signup/user`, requestOptions)
+        .then(handleResponse)
+        .then(user => {
+            return login(data);
+            // store user details and jwt token in local storage to keep user logged in between page refreshes
         });
 }
 
@@ -41,6 +57,7 @@ function getAll() {
 function handleResponse(response) {
     return response.text().then(text => {
         const data = text && JSON.parse(text);
+
         if (!response.ok) {
             if (response.status === 401) {
                 // auto logout if 401 response returned from api

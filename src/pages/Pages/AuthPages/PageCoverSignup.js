@@ -1,6 +1,6 @@
 // React Basic and Bootstrap
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import {
   Container,
@@ -35,6 +35,8 @@ class PageCoverSignup extends Component {
   handleSubmit(event, errors, values) {
     if (!errors.length & this.state.termsChecked){
       console.log(values);
+      const { dispatch } = this.props;
+      dispatch(userActions.signup(values));
     }
   }
   handleChange(e) {

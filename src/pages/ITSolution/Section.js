@@ -30,7 +30,7 @@ class Section extends Component {
                     Nous proposons la meilleure solution aux problèmes que nous confrontons en tant qu'étudiants dans un pays étranger.
                   </p>
                   <div className="mt-4 pt-2">
-                    <Link to="#" className="btn btn-light">
+                    <Link onClick={this.props.onClickStart}className="btn btn-light">
                       Commencer
                     </Link>
                   </div>

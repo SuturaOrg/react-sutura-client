@@ -15,29 +15,29 @@ export default class Features extends Component {
           id: 1,
           img: Asset190,
           count: "97",
-          percentage: "%",
-          heading: "Happy Client",
+          percentage: "+",
+          heading: "Adhérents",
         },
         {
           id: 2,
           img: Asset189,
           count: "15",
           percentage: "+",
-          heading: "Awards",
+          heading: "Nationalités présentes",
         },
         {
           id: 3,
           img: Asset192,
           count: "2",
-          percentage: "K",
-          heading: "Job Placement",
+          percentage: "+",
+          heading: "Prêts accordés",
         },
         {
           id: 4,
           img: Asset187,
           count: "98",
-          percentage: "%",
-          heading: "Project Complete",
+          percentage: "+",
+          heading: "Remboursements",
         },
       ],
     };
@@ -55,7 +55,7 @@ export default class Features extends Component {
                 <Col md={6} xs={12}>
                   <div className="progress-box">
                     <h6 className="title text-light title-dark">
-                      Web Designing
+                      Disponibilité de la caisse
                     </h6>
                     <div
                       className="progress title-bg-dark"
@@ -67,42 +67,6 @@ export default class Features extends Component {
                       >
                         <div className="progress-value d-block text-light title-dark h6">
                           84%
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="progress-box mt-4">
-                    <h6 className="title text-light title-dark">
-                      Web Development
-                    </h6>
-                    <div
-                      className="progress title-bg-dark"
-                      style={{ height: "10px", padding: "3px" }}
-                    >
-                      <div
-                        className="progress-bar position-relative bg-black"
-                        style={{ width: "75%" }}
-                      >
-                        <div className="progress-value d-block text-light title-dark h6">
-                          75%
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="progress-box mt-4">
-                    <h6 className="title text-light title-dark">
-                      Game Development
-                    </h6>
-                    <div
-                      className="progress title-bg-dark"
-                      style={{ height: "10px", padding: "3px" }}
-                    >
-                      <div
-                        className="progress-bar position-relative bg-black"
-                        style={{ width: "79%" }}
-                      >
-                        <div className="progress-value d-block text-light title-dark h6">
-                          79%
                         </div>
                       </div>
                     </div>
@@ -112,7 +76,7 @@ export default class Features extends Component {
                 <Col md={6} xs={12}>
                   <div className="progress-box mt-4 mt-sm-0">
                     <h6 className="title text-light title-dark">
-                      App Development
+                      Opérations par rapport à la période précèdente
                     </h6>
                     <div
                       className="progress title-bg-dark"
@@ -120,46 +84,10 @@ export default class Features extends Component {
                     >
                       <div
                         className="progress-bar position-relative bg-black"
-                        style={{ width: "84%" }}
+                        style={{ width: "100%" }}
                       >
                         <div className="progress-value d-block text-light title-dark h6">
-                          84%
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="progress-box mt-4">
-                    <h6 className="title text-light title-dark">
-                      Digital Marketing
-                    </h6>
-                    <div
-                      className="progress title-bg-dark"
-                      style={{ height: "10px", padding: "3px" }}
-                    >
-                      <div
-                        className="progress-bar position-relative bg-black"
-                        style={{ width: "75%" }}
-                      >
-                        <div className="progress-value d-block text-light title-dark h6">
-                          75%
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="progress-box mt-4">
-                    <h6 className="title text-light title-dark">
-                      Full stack Development
-                    </h6>
-                    <div
-                      className="progress title-bg-dark"
-                      style={{ height: "10px", padding: "3px" }}
-                    >
-                      <div
-                        className="progress-bar position-relative bg-black"
-                        style={{ width: "79%" }}
-                      >
-                        <div className="progress-value d-block text-light title-dark h6">
-                          79%
+                          100%
                         </div>
                       </div>
                     </div>

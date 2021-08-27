@@ -370,7 +370,7 @@ const routes = [
   },
 
   // Landings
-  /*{ path: "/index-onepage", component: SaasOnepage, isTopbarDark: true },
+  { path: "/index-onepage", component: SaasOnepage, isTopbarDark: true },
   { path: "/index-customer", component: Customer, isTopbarDark: true },
   { path: "/index-job", component: Job, isTopbarDark: true },
   { path: "/index-software", component: Software },
@@ -424,7 +424,7 @@ const routes = [
   { path: "/index-freelancer", component: Freelancer, isTopbarDark: true },
   { path: "/index-blockchain", component: Blockchain },
   { path: "/index-crypto-two", component: CryptoTwo },
-*/
+
   { path: "/page-aboutus", component: PageAboutUs, isTopbarDark: true },
   { path: "/page-aboutus-two", component: PageAboutusTwo },
   { path: "/page-history", component: PageHistory, isTopbarDark: true },

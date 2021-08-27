@@ -21,19 +21,17 @@ class Section extends Component {
             <Row className="align-items-center">
               <Col lg={7} md={6}>
                 <div className="title-heading">
-                  <h4 className="text-white-50">We are creative</h4>
+                  <h4 className="text-white-50">L'innovation numérique, sociale et économique</h4>
                   <h4 className="heading text-white mb-3 title-dark">
                     {" "}
-                    Best IT Solution <br /> Company{" "}
+                    La plus ambitieuse des<br /> startups d'étudiants{" "}
                   </h4>
                   <p className="para-desc text-white-50">
-                    Launch your campaign and benefit from our expertise on
-                    designing and managing conversion centered bootstrap v5 html
-                    page.
+                    Nous proposons la meilleure solution aux problèmes que nous confrontons en tant qu'étudiants dans un pays étranger.
                   </p>
                   <div className="mt-4 pt-2">
                     <Link to="#" className="btn btn-light">
-                      Get Started
+                      Commencer
                     </Link>
                   </div>
                 </div>

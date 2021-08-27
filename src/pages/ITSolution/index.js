@@ -1,12 +1,14 @@
 // import react from "react";
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
+
 // import file
 import Section from "./Section";
 import WhatWeDo from './WhatWeDo'
 import Features from "./Features";
 import WorkProcess from "./WorkProcess";
 import Blog from "./Blog";
+import Testimonial from "../DigitalAgency/Testimonial";
 
 //Import Images
 import img1 from "../../assets/images/client/amazon.svg";
@@ -36,7 +38,7 @@ class index extends Component {
 
   componentDidMount() {
     document.body.classList = "";
-    document.getElementById("top-menu").classList.add("nav-light");
+    document.getElementById("top-menu")&&document.getElementById("top-menu").classList.add("nav-light");
     window.addEventListener("scroll", this.scrollNavigation, true);
   }
   // Make sure to remove the DOM listener when the component is unmounted.
@@ -60,7 +62,6 @@ class index extends Component {
         {/* Partner */}
         <section className="py-4 bg-light">
           <Container>
-            {/* partners */}
             <Row className="justify-content-center">
               {this.state.partners.map((partner, key) => (
                 <Col
@@ -81,7 +82,7 @@ class index extends Component {
           </Container>
         </section>
         {/* What we do section */}
-        <WhatWeDo />
+        <WhatWeDo id="whatWeDo" />
         {/* Feature */}
         <Features />
         {/* WorkProcess */}
@@ -92,6 +93,9 @@ class index extends Component {
         {/* Blog */}
         <section className="section bg-light">
           <Blog />
+        </section>
+        <section>
+        <Testimonial />
         </section>
       </React.Fragment>
     );

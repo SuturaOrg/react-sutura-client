@@ -20,7 +20,7 @@ class SectionTitle extends Component {
                 }
                 name="sectiondesc"
               >
-                Start working with{" "}
+                Adhérer à{" "}
                 <span className="text-primary fw-bold">Sutura</span>{" "}
                 {this.props.desc}{" "}
               </p>

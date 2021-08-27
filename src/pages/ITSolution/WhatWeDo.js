@@ -23,37 +23,37 @@ export default class WhatWeDo extends Component {
         {
           id: 1,
           icon: "uil uil-chart-line",
-          heading: "Hign Performance",
+          heading: "Santé",
           desc: "It is a long established fact that a reader.",
         },
         {
           id: 2,
           icon: "uil uil-crosshairs",
-          heading: "Best Securities",
+          heading: "Alimentation",
           desc: "It is a long established fact that a reader.",
         },
         {
           id: 3,
           icon: "uil uil-airplay",
-          heading: "Trusted Service",
+          heading: "Loyer",
           desc: "It is a long established fact that a reader.",
         },
         {
           id: 4,
           icon: "uil uil-rocket",
-          heading: "Info Technology",
+          heading: "Transport",
           desc: "It is a long established fact that a reader.",
         },
         {
           id: 5,
           icon: "uil uil-clock",
-          heading: "24/7 Support",
+          heading: "Scolarité",
           desc: "It is a long established fact that a reader.",
         },
         {
           id: 6,
           icon: "uil uil-users-alt",
-          heading: "IT Management",
+          heading: "Autres urgences",
           desc: "It is a long established fact that a reader.",
         },
         {
@@ -87,8 +87,8 @@ export default class WhatWeDo extends Component {
               <div className="col-12 text-center">
                 {/* render Section title */}
                 <SectionTitle
-                  title="What we do ?"
-                  desc=" that can provide everything you need to generate awareness, drive traffic, connect"
+                  title="Notre mission"
+                  desc=" vous permet d'avoir de la disponibilité de cash-flow en cas de besoin ponctuel urgent."
                 />
               </div>
             </Row>
@@ -111,7 +111,7 @@ export default class WhatWeDo extends Component {
               ))}
               <div className="col-lg-12 text-center col-md-4 mt-4 pt-2">
                 <Link to="#" className="btn btn-primary">
-                  See more{" "}
+                  Voir Plus{" "}
                   <i>
                     <FeatherIcon icon="arrow-right" className="fea icon-sm" />
                   </i>
@@ -188,21 +188,18 @@ export default class WhatWeDo extends Component {
                   <div className="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
                     <div className="ms-lg-4">
                       <div className="section-title mb-4 pb-2">
-                        <h4 className="title mb-4">About Our Story</h4>
+                        <h4 className="title mb-4">A propos de nous</h4>
                         <p className="text-muted para-desc">
-                          Start working with{" "}
+                          La start-up{" "}
                           <span className="text-primary fw-bold">
                             Sutura
                           </span>{" "}
-                          that can provide everything you need to generate
-                          awareness, drive traffic, connect.
+                            vient en réponse à la précarité des étudiants étrangers au Maroc.
                         </p>
                         <p className="text-muted para-desc mb-0">
-                          The most well-known dummy text is the 'Lorem Ipsum',
-                          which is said to have originated in the 16th century.
-                          Lorem Ipsum is composed in a pseudo-Latin language
-                          which more or less corresponds to 'proper' Latin. It
-                          contains a series of real Latin words.
+                          En effet, les étudiants sont de temps en temps confrontés à des problèmes financiers ponctuels. 
+                          Ces problèmes sont liés à la santé, à l'alimentation, au loyer, etc.
+                          C'est ainsi que Sutura est venu assisté les étudiants à travers un mécanisme solidaire, culturel et participatif.
                         </p>
                       </div>
 
@@ -211,19 +208,19 @@ export default class WhatWeDo extends Component {
                           <span className="text-primary h4 me-2">
                             <i className="uil uil-check-circle align-middle"></i>
                           </span>
-                          Fully Responsive
+                          Transparence
                         </li>
                         <li className="mb-0">
                           <span className="text-primary h4 me-2">
                             <i className="uil uil-check-circle align-middle"></i>
                           </span>
-                          Multiple Layouts
+                          Démocratie
                         </li>
                         <li className="mb-0">
                           <span className="text-primary h4 me-2">
                             <i className="uil uil-check-circle align-middle"></i>
                           </span>
-                          Suits Your Style
+                          Equité
                         </li>
                       </ul>
 
@@ -233,7 +230,7 @@ export default class WhatWeDo extends Component {
                           target="_blank"
                           className="btn btn-primary m-1"
                         >
-                          Read More{" "}
+                          Lire davantage{" "}
                           <i>
                             <FeatherIcon
                               icon="chevron-right"
@@ -251,7 +248,7 @@ export default class WhatWeDo extends Component {
                           </i>
                         </Link>
                         <span className="fw-bold text-uppercase small align-middle ms-1">
-                          Watch Now
+                          Voir la vidéo
                         </span>
                       </div>
                     </div>

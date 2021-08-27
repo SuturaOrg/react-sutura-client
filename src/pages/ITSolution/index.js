@@ -8,7 +8,7 @@ import WhatWeDo from './WhatWeDo'
 import Features from "./Features";
 import WorkProcess from "./WorkProcess";
 import Blog from "./Blog";
-import Testimonial from "../DigitalAgency/Testimonial";
+import Reviews from "../Software/Reviews";
 
 //Import Images
 import img1 from "../../assets/images/client/amazon.svg";
@@ -82,20 +82,23 @@ class index extends Component {
           </Container>
         </section>
         {/* What we do section */}
-        <WhatWeDo id="whatWeDo" />
+        <WhatWeDo />
         {/* Feature */}
         <Features />
         {/* WorkProcess */}
         <section className="section">
           <WorkProcess />
+        </section>
+        {/* Reviews */}
+        <section className="section bg-light">
+        <Reviews />
+        </section>
+        <section>
           <MindPower />
         </section>
         {/* Blog */}
         <section className="section bg-light">
           <Blog />
-        </section>
-        <section>
-        <Testimonial />
         </section>
       </React.Fragment>
     );

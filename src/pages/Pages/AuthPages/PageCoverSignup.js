@@ -32,8 +32,8 @@ class PageCoverSignup extends Component {
     this.handleChange = this.handleChange.bind(this);
 
   }
-  handleSubmit(event, errors, values) {
-    if (!errors.length & this.state.termsChecked){
+  handleSubmit(event, values) {
+    if (this.state.termsChecked){
       console.log(values);
       const { dispatch } = this.props;
       dispatch(userActions.signup(values));
@@ -68,7 +68,7 @@ class PageCoverSignup extends Component {
                       >
                         <CardBody className="p-0">
                           <h4 className="card-title text-center">Signup</h4>
-                          <AvForm className="login-form mt-4" onSubmit={this.handleSubmit}>
+                          <AvForm className="login-form mt-4" onValidSubmit={this.handleSubmit}>
                             <Row>
                               <Col md="6">
                                 <div className="mb-3">

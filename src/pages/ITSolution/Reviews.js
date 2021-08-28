@@ -20,9 +20,9 @@ class Reviews extends Component {
         id: 1,
         img: img1,
         name: "Ountou Sène",
-        post: "Ancien étudiant au Maroc",
+        post: "Lauréat du Maroc et jeune cadre bancaire",
         desc:
-          "It seems that only fragments of the original text remain in the Lorem Ipsum texts used today.",
+          "Sutura est une plate-forme qui met en avant les valeurs humaines: solidarité et discrétion. Ce qui je trouve pertinent, mais il l'est encore plus car c'est un modèle conçu par des étudiants et pour les étudiants. Je félicite l'idée car, cela prouve qu'eux-mêmes sont conscients de l'importance du bien-être pour mener des études stables et sérieuses dans de bonnes conditions.",
         rating: 5,
       },
       {

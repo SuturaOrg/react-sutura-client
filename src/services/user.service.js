@@ -19,7 +19,7 @@ function login(data) {
         .then(handleResponse)
         .then(signinPayload => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
-            localStorage.setItem('signinPayload', JSON.stringify(signinPayload));
+          data.rememberMe && localStorage.setItem('signinPayload', JSON.stringify(signinPayload));
 
             return signinPayload;
         });
@@ -59,11 +59,11 @@ function handleResponse(response) {
         const data = text && JSON.parse(text);
 
         if (!response.ok) {
-            if (response.status === 401) {
-                // auto logout if 401 response returned from api
-                logout();
-                window.location.reload(true);
-            }
+            // if (response.status === 401) {
+            //     // auto logout if 401 response returned from api
+            //     logout();
+            //     window.location.reload(true);
+            // }
 
             const error = (data && data.message) || response.statusText;
             return Promise.reject(error);

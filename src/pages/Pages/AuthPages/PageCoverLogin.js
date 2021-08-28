@@ -18,14 +18,31 @@ import FeatherIcon from "feather-icons-react";
 
 // import images
 import user01 from "../../../assets/images/user/01.jpg";
+import {connect} from "react-redux";
+import {userActions} from "../../../actions";
 
 class PageCoverLogin extends Component {
   constructor(props) {
     super(props);
+    this.props.dispatch(userActions.logout());
     this.state = {};
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
+  handleSubmit(event, data) {
+      console.log(data);
+      data.rememberMe=this.state.rememberMe;
+      const { dispatch } = this.props;
+      dispatch(userActions.login(data));
+
+  }
+  handleChange(e) {
+    const { checked } = e.target;
+    this.setState({ rememberMe: checked });
+  }
   render() {
+    const { rememberMe } = this.state;
     return (
       <React.Fragment>
         <div className="back-to-home rounded d-none d-sm-block">
@@ -49,7 +66,7 @@ class PageCoverLogin extends Component {
                       >
                         <CardBody className="p-0">
                           <h4 className="card-title text-center">Login</h4>
-                          <AvForm className="llogin-form mt-4">
+                          <AvForm className="llogin-form mt-4" onValidSubmit={this.handleSubmit}>
                             <Row>
                               <Col lg={12}>
                                 <div className="mb-3">
@@ -137,6 +154,7 @@ class PageCoverLogin extends Component {
                                       <Input
                                         type="checkbox"
                                         className="form-check-input"
+                                        checked={rememberMe}
                                         id="customCheck1"
                                       />
                                       <Label
@@ -189,7 +207,7 @@ class PageCoverLogin extends Component {
                                     Don't have an account ?
                                   </small>{" "}
                                   <Link
-                                    to="page-cover-signup"
+                                    to="auth-cover-signup"
                                     className="text-dark fw-bold"
                                   >
                                     Sign Up
@@ -217,4 +235,12 @@ class PageCoverLogin extends Component {
     );
   }
 }
-export default PageCoverLogin;
+function mapStateToProps(state) {
+  const { loggingIn } = state.authentication;
+  return {
+    loggingIn
+  };
+}
+const connectedPageCoverLogin = connect(mapStateToProps)(PageCoverLogin);
+export default connectedPageCoverLogin;
+

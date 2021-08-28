@@ -36,6 +36,7 @@ function login(data) {
 
 
 function signup(data) {
+    data.rememberMe=true;
     return dispatch => {
         dispatch(request({ data }));
 

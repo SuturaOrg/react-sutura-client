@@ -53,19 +53,19 @@ export default class WhatWeDo extends Component {
         {
           id: 6,
           icon: "uil uil-users-alt",
-          heading: "Autres urgences",
+          heading: "Prêts à court terme",
           desc: "It is a long established fact that a reader.",
         },
         {
           id: 7,
           icon: "uil uil-file-alt",
-          heading: "Certified Company",
+          heading: "Prêts à terme moyen",
           desc: "It is a long established fact that a reader.",
         },
         {
           id: 8,
           icon: "uil uil-search",
-          heading: "Data Analytics",
+          heading: "Autres urgences",
           desc: "It is a long established fact that a reader.",
         },
       ],
@@ -109,14 +109,14 @@ export default class WhatWeDo extends Component {
                   </div>
                 </Col>
               ))}
-              <div className="col-lg-12 text-center col-md-4 mt-4 pt-2">
+              {/* <div className="col-lg-12 text-center col-md-4 mt-4 pt-2">
                 <Link to="#" className="btn btn-primary">
                   Voir Plus{" "}
                   <i>
                     <FeatherIcon icon="arrow-right" className="fea icon-sm" />
                   </i>
                 </Link>
-              </div>
+              </div> */}
               <div className="container mt-100 mt-60">
                 <div className="row align-items-center">
                   <div className="col-lg-6 col-md-6">

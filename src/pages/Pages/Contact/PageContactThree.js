@@ -30,7 +30,7 @@ class PageContactThree extends Component {
         { id: 1, name: "Sutura", link: "/index" },
         { id: 2, name: "Page", link: "#" },
         { id: 3, name: "Contact", link: "#" },
-        { id: 4, name: "Contact Three" },
+        { id: 4, name: "Tous les contacts" },
       ],
       Contactvisible: false,
     };
@@ -84,7 +84,7 @@ class PageContactThree extends Component {
             <Row className="justify-content-center">
               <Col lg="12" className="text-center">
                 <div className="page-next-level">
-                  <h4 className="title"> Contact Us</h4>
+                  <h4 className="title"> Contacter nous</h4>
                   <div className="page-next">
                     <nav className="d-inline-block">
                       <Breadcrumb
@@ -141,7 +141,7 @@ class PageContactThree extends Component {
               <Col lg={4} md={6} className="mt-4 pt-2">
                 <Card className="shadow rounded border-0">
                   <CardBody className="py-5">
-                    <h4 className="card-title">Get In Touch !</h4>
+                    <h4 className="card-title">Prendre contact avec nous !</h4>
                     <div className="custom-form mt-3">
                       <div id="message"></div>
                       <Alert
@@ -153,7 +153,7 @@ class PageContactThree extends Component {
                           });
                         }}
                       >
-                        Contact details send successfully.
+                        Votre message a été envoyé avec succès.
                       </Alert>
                       <Form
                         method="post"
@@ -165,7 +165,7 @@ class PageContactThree extends Component {
                           <Col md={6}>
                             <div className="mb-3">
                               <Label className="form-label">
-                                Your Name <span className="text-danger">*</span>
+                                Votre nom<span className="text-danger">*</span>
                               </Label>
                               <div className="form-icon position-relative">
                                 <i>
@@ -180,7 +180,7 @@ class PageContactThree extends Component {
                                 id="name"
                                 type="text"
                                 className="form-control ps-5"
-                                placeholder="First Name :"
+                                placeholder="Votre nom :"
                                 required
                               />
                             </div>
@@ -188,7 +188,7 @@ class PageContactThree extends Component {
                           <Col md={6}>
                             <div className="mb-3">
                               <Label className="form-label">
-                                Your Email{" "}
+                                Votre email{" "}
                                 <span className="text-danger">*</span>
                               </Label>
                               <div className="form-icon position-relative">
@@ -204,14 +204,14 @@ class PageContactThree extends Component {
                                 id="email"
                                 type="email"
                                 className="form-control ps-5"
-                                placeholder="Your email :"
+                                placeholder="Votre email :"
                                 required
                               />
                             </div>
                           </Col>
                           <Col md={12}>
                             <div className="mb-3">
-                              <Label className="form-label">Subject </Label>
+                              <Label className="form-label">Objet </Label>
                               <div className="form-icon position-relative">
                                 <i>
                                   <FeatherIcon
@@ -221,18 +221,18 @@ class PageContactThree extends Component {
                                 </i>
                               </div>
                               <Input
-                                name="subject"
+                                name="Objet"
                                 id="subject"
                                 type="text"
                                 className="form-control ps-5"
-                                placeholder="Subject"
+                                placeholder="Objet"
                                 required
                               />
                             </div>
                           </Col>
                           <Col md={12}>
                             <div className="mb-3">
-                              <Label className="form-label">Comments</Label>
+                              <Label className="form-label">Commentaire</Label>
                               <div className="form-icon position-relative">
                                 <i>
                                   <FeatherIcon
@@ -246,7 +246,7 @@ class PageContactThree extends Component {
                                 id="comments"
                                 rows="4"
                                 className="form-control ps-5"
-                                placeholder="Your Message :"
+                                placeholder="Votre message :"
                               ></textarea>
                             </div>
                           </Col>
@@ -259,7 +259,7 @@ class PageContactThree extends Component {
                                 id="submit"
                                 name="send"
                                 className="submitBnt btn btn-primary btn-block"
-                                value="Send Message"
+                                value="Envoyer"
                               />
                             </div>
                             <div id="simple-msg"></div>
@@ -294,16 +294,16 @@ class PageContactThree extends Component {
                     <i className="uil uil-phone d-block rounded h3 mb-0"></i>
                   </div>
                   <div className="content mt-3">
-                    <h5 className="fw-bold">Phone</h5>
+                    <h5 className="fw-bold">Téléphone</h5>
                     <p className="text-muted">
-                      Start working with Sutura that can provide everything
+                      Sutura est aussi une équipe très accessible.
                     </p>
                     <Link
                       to="#"
                       onClick={this.callNumber}
                       className="text-primary"
                     >
-                      +152 534-468-854
+                      +212 609-863568 ou +212 684-363871
                     </Link>
                   </div>
                 </Card>
@@ -317,14 +317,14 @@ class PageContactThree extends Component {
                   <div className="content mt-3">
                     <h5 className="fw-bold">Email</h5>
                     <p className="text-muted">
-                      Start working with Sutura that can provide everything
+                      Sutura est aussi une équipe très accessible. Vos mails sont pris en compte dans les meilleurs délais.
                     </p>
                     <Link
                       to="#"
                       onClick={this.sendMail}
                       className="text-primary"
                     >
-                      contact@example.com
+                      contact@sutura.in
                     </Link>
                   </div>
                 </Card>
@@ -336,13 +336,15 @@ class PageContactThree extends Component {
                     <i className="uil uil-map-marker d-block rounded h3 mb-0"></i>
                   </div>
                   <div className="content mt-3">
-                    <h5 className="fw-bold">Location</h5>
+                    <h5 className="fw-bold">Adresse</h5>
                     <p className="text-muted">
-                      C/54 Northwest Freeway, Suite 558, <br />
-                      Houston, USA 485
+                      Cité de l'innovation, Université
+                      <br />
+                      B.P. 511 - 40000 - Marrakech <br />
+                      Cadi Ayyad av. Abdelkrim Khattabi,
                     </p>
                     <Link to="#" className="video-play-icon text-primary lightbox">
-                      View on Google map
+                      Voir sur Google map
                     </Link>
                   </div>
                 </Card>

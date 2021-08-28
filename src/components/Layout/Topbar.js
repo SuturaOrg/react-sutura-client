@@ -986,31 +986,31 @@ class Topbar extends Component {
                     </li>
                   </ul>
                 );
-              } else if (!this.props.loggedIn && this.props.location.pathname === "/index-seo-agency") {
+              } else if (this.props.location.pathname === "/index-seo-agency") {
                 return (
                   <div className="buy-button">
-                    <Link to="auth-cover-signup"
+                    <Link
+                        to={!this.props.loggedIn?"auth-cover-signup":"/"}
                       target="_blank"
                       className="btn btn-pills btn-primary"
                     >
-                      Sign Up
+                      {!this.props.loggedIn? "S'inscrire'": "Cotiser"}
                     </Link>
                   </div>
                 );
               } else {
-                if (!this.props.loggedIn){
                 return (
                   <div className="buy-button">
                     <Link
-                      to="auth-cover-signup"
+                      to={!this.props.loggedIn?"auth-cover-signup":"/"}
                       target="_blank"
                       id="buyButton"
                       className="btn btn-primary"
                     >
-                      Sign Up
+                      {!this.props.loggedIn? "S'inscrire": "Cotiser"}
                     </Link>
                   </div>
-                );}
+                );
               }
             })()}
 

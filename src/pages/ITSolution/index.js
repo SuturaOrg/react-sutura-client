@@ -24,6 +24,7 @@ class index extends Component {
 
   constructor(props) {
     super(props);
+    this.whatWeDoRef = React.createRef();
     this.state = {
       partners: [
         { image: img1 },
@@ -55,10 +56,14 @@ class index extends Component {
       document.getElementById("topnav").classList.remove("nav-sticky");
     }
   };
+  scroll=(ref)=>{
+    return ()=>{
+    ref.current.scrollIntoView()
+  }}
   render() {
     return (
       <React.Fragment>
-        <Section />
+        <Section onClickStart={this.scroll(this.whatWeDoRef)} />
         {/* Partner */}
         <section className="py-4 bg-light">
           <Container>
@@ -82,7 +87,9 @@ class index extends Component {
           </Container>
         </section>
         {/* What we do section */}
+        <div ref={this.whatWeDoRef}>
         <WhatWeDo />
+        </div>
         {/* Feature */}
         <Features />
         {/* WorkProcess */}

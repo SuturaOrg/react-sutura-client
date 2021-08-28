@@ -25,19 +25,12 @@ class Footer extends Component {
         { title: "L'équipe", link: "/page-team" },
         { title: "Services", link: "/page-services" },
         { title: "Contacts", link: "/page-contact-three" },
-        // { title: "Pricing", link: "/page-pricing" },
-        // { title: "Project", link: "/page-work" },
-        // { title: "Careers", link: "/page-jobs" },
-        // { title: "Blog", link: "/page-blog" },
       ],
       grid2: [
         { title: "A propos", link: "/page-privacy" },
         { title: "CGU", link: "/page-terms" },
-        { title: "Faire un don", link: "/page-services" },
+        { title: "Faire un don", link: "/donation" },
         { title: "Documentation", link: "/documentation" },
-        // { title: "Privacy Policy", link: "/page-privacy" },
-        // { title: "Changelog", link: "/changelog" },
-        // { title: "Components", link: "/components" },
       ],
     };
   }
@@ -66,7 +59,7 @@ class Footer extends Component {
                 </p>
                 <ul className={this.props.isLight ? "list-unstyled social-icon social mb-0 m t-4" : "list-unstyled social-icon foot-social-icon mb-0 mt-4"}>
                   <li className="list-inline-item me-1">
-                    <Link to="https://web.facebook.com/Sutura-100906312128627" className="rounded">
+                    <Link to={{pathname: "https://web.facebook.com/Sutura-100906312128627" }} target="_blank" className="rounded">
                       <FeatherIcon
                         icon="facebook"
                         className="fea icon-sm fea-social"
@@ -166,7 +159,6 @@ class Footer extends Component {
                 </ul>
               </Col>
             
-            {/*
               <Col
                 lg="3"
                 md="4"
@@ -184,7 +176,7 @@ class Footer extends Component {
                   Newsletter
                 </h5>
                 <p className="mt-4">
-                  Sign up and receive the latest tips via email.
+                  Restez informé par mail.
                 </p>
                 <Form>
                   <Row>
@@ -199,7 +191,7 @@ class Footer extends Component {
                         <Label
                           className={this.props.isLight ? "form-label text-muted" : "form-label"}
                         >
-                          Write your email{" "}
+                          Entrer votre email{" "}
                           <span className="text-danger">*</span>
                         </Label>
                         <div className="form-icon position-relative">
@@ -217,7 +209,7 @@ class Footer extends Component {
                               ? "ps-5 rounded bg-light border"
                               : "ps-5 rounded"
                           }
-                          placeholder="Your email : "
+                          placeholder="Votre email : "
                           required
                         />
                       </div>
@@ -237,7 +229,6 @@ class Footer extends Component {
                   </Row>
                 </Form>
               </Col>
-              */}
             </Row>
           </Container>
         </footer>

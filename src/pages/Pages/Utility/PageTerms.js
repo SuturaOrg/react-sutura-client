@@ -1370,14 +1370,14 @@ class PageTerms extends Component {
                       </div>
                     </div>
 
-                    <div className="mt-3">
+                    {/* <div className="mt-3">
                       <Link to="#" className="btn btn-primary mt-2 me-2">
                         Accept
                       </Link>
                       <Link to="#" className="btn btn-outline-primary mt-2">
                         Decline
                       </Link>
-                    </div>
+                    </div> */}
                   </CardBody>
                 </Card>
               </Col>

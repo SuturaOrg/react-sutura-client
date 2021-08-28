@@ -21,9 +21,10 @@ class Footer extends Component {
     super(props);
     this.state = {
       grid1: [
-        { title: "Se connecter", link: "/auth-cover-login" },
+        { title: "Se connecter", link: "/page-cover-login" },
         { title: "L'équipe", link: "/page-team" },
         { title: "Services", link: "/page-services" },
+        { title: "Contacts", link: "/page-contact-three" },
         // { title: "Pricing", link: "/page-pricing" },
         // { title: "Project", link: "/page-work" },
         // { title: "Careers", link: "/page-jobs" },
@@ -31,7 +32,8 @@ class Footer extends Component {
       ],
       grid2: [
         { title: "A propos", link: "/page-privacy" },
-        { title: "CGU", link: "/tos" },
+        { title: "CGU", link: "/page-terms" },
+        { title: "Faire un don", link: "/page-services" },
         { title: "Documentation", link: "/documentation" },
         // { title: "Privacy Policy", link: "/page-privacy" },
         // { title: "Changelog", link: "/changelog" },

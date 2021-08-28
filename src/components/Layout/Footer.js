@@ -32,7 +32,7 @@ class Footer extends Component {
       ],
       grid2: [
         { title: "A propos", link: "/page-privacy" },
-        { title: "CGU", link: "/page-terms" },
+        { title: "CGU", link: "/tos" },
         { title: "Faire un don", link: "/page-services" },
         { title: "Documentation", link: "/documentation" },
         // { title: "Privacy Policy", link: "/page-privacy" },

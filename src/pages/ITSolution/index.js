@@ -8,7 +8,7 @@ import WhatWeDo from './WhatWeDo'
 import Features from "./Features";
 import WorkProcess from "./WorkProcess";
 import Blog from "./Blog";
-import Reviews from "../Software/Reviews";
+import Reviews from "./Reviews";
 
 //Import Images
 import img1 from "../../assets/images/client/amazon.svg";

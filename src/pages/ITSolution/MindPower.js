@@ -42,7 +42,7 @@ export default class MindPower extends Component {
                   />
                   <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to="https://web.facebook.com/ambroise.tine.7" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="facebook"
@@ -52,7 +52,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to="https://www.instagram.com/ambroitisne/" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="instagram"
@@ -62,7 +62,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to="https://twitter.com/amb0u" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="twitter"
@@ -72,7 +72,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to="https://www.linkedin.com/in/ambroisetine/" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="linkedin"
@@ -89,7 +89,7 @@ export default class MindPower extends Component {
                       Ambroise Ngagne TINE
                     </Link>
                   </h5>
-                  <small className="designation text-muted">C.E.O</small>
+                  <small className="designation text-muted"><b>C.E.O</b><br/>Etudiant en 5<sup>ème</sup> année en informatique à l'ENSA de Marrakech</small>
                 </div>
               </Card>
             </Col>
@@ -148,15 +148,140 @@ export default class MindPower extends Component {
                 <div className="card-body py-3 px-0 content">
                   <h5 className="mb-0">
                     <Link to="#" className="name text-dark">
-                      Ousmane Faye
+                      Ousmane FAYE
                     </Link>
                   </h5>
-                  <small className="designation text-muted"><b>Doctorant en sciences politiques </b><br/>Vice-Président chargé des Affaires Administratives et des Relations Publiques</small>
+                  <small className="designation text-muted"><b>Vice-Président chargé des Affaires Administratives et des Relations Publiques</b><br/>Doctorant en sciences politiques</small>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6 mt-4 pt-2">
+              <div className="card team text-center border-0">
+                <div className="position-relative">
+                  <img
+                    src={client3}
+                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
+                    alt=""
+                  />
+                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="facebook"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="instagram"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="twitter"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="linkedin"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="card-body py-3 px-0 content">
+                  <h5 className="mb-0">
+                    <Link to="#" className="name text-dark">
+                      Lys Pasteur MOUSSAVOU
+                    </Link>
+                  </h5>
+                  <small className="designation text-muted"><b>Chargé de la modélisation et d'évaluation des risques</b><br/>Elève ingénieur en actuariat et finance à la FSTG-UCA Marrakech</small>
+                </div>
+              </div>
+            </div>
+            
+            <div className="col-lg-3 col-md-6 mt-4 pt-2">
+              <div className="card team text-center border-0">
+                <div className="position-relative">
+                  <img
+                    src={client3}
+                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
+                    alt=""
+                  />
+                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="facebook"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="instagram"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="twitter"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="linkedin"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="card-body py-3 px-0 content">
+                  <h5 className="mb-0">
+                    <Link to="#" className="name text-dark">
+                      Serigne GADIAGA
+                    </Link>
+                  </h5>
+                  <small className="designation text-muted"><b>Chargé des Stratégies de Com et de la Promotion</b><br/>Etudiant en Master en Géopolitique et Relations Internationales- FSJES- UCA – Marrakech</small>
+                </div>
+              </div>
+            </div>
+          </Row>
+          <Row>
+          <div className="col-lg-3 col-md-6 mt-4 pt-2">
               <div className="card team text-center border-0">
                 <div className="position-relative">
                   <img
@@ -213,16 +338,17 @@ export default class MindPower extends Component {
                       Ibrahima Gaye COULIBALY
                     </Link>
                   </h5>
-                  <small className="designation text-muted">Responsable informatique</small>
+                  <small className="designation text-muted"><b>Responsable informatique</b><br/>Etudiant en 5<sup>ème</sup> année à l'INPT de Rabat</small>
+
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6 mt-4 pt-2">
-              <div className="card team text-center border-0">
+            <Col lg={3} md={6} className="mt-4 pt-2">
+              <Card className="team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={client3}
+                    src={cilent1}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />
@@ -272,10 +398,134 @@ export default class MindPower extends Component {
                 <div className="card-body py-3 px-0 content">
                   <h5 className="mb-0">
                     <Link to="#" className="name text-dark">
-                      Sofia Razaq
+                      Amary DIOP
                     </Link>
                   </h5>
-                  <small className="designation text-muted">Developer</small>
+                  <small className="designation text-muted"><b>Membre de l'équipe informatique</b><br/>Etudiant en 5<sup>ème</sup> année en Big Data et Cloud Computing à l'ENS de Mouhammédia</small>
+                </div>
+              </Card>
+            </Col>
+
+            <div className="col-lg-3 col-md-6 mt-4 pt-2">
+              <div className="card team text-center border-0">
+                <div className="position-relative">
+                  <img
+                    src={client4}
+                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
+                    alt=""
+                  />
+                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="facebook"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="instagram"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="twitter"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="linkedin"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="card-body py-3 px-0 content">
+                  <h5 className="mb-0">
+                    <Link to="#" className="name text-dark">
+                      Mouhamadou sangaré
+                    </Link>
+                  </h5>
+                  <small className="designation text-muted"><b>Membre de l'équipe informatique</b><br/>Etudiant en 5<sup>ème</sup> année en data science à l'INSEA de Rabat</small>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 mt-4 pt-2">
+              <div className="card team text-center border-0">
+                <div className="position-relative">
+                  <img
+                    src={client2}
+                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
+                    alt=""
+                  />
+                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="facebook"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="instagram"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="twitter"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
+                      <Link to="#" className="rounded">
+                        <i>
+                          <FeatherIcon
+                            icon="linkedin"
+                            className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="card-body py-3 px-0 content">
+                  <h5 className="mb-0">
+                    <Link to="#" className="name text-dark">
+                      Aïcha Mahamane Souley
+                    </Link>
+                  </h5>
+                  <small className="designation text-muted"><b>Membre de l'équipe informatique</b><br/>Etudiante en 5<sup>ème</sup> année en Big Data et Cloud Computing à l'ENS de Mouhammédia</small>
                 </div>
               </div>
             </div>
@@ -335,10 +585,10 @@ export default class MindPower extends Component {
                 <div className="card-body py-3 px-0 content">
                   <h5 className="mb-0">
                     <Link to="#" className="name text-dark">
-                      Ronny Jofra
+                      Halidou Souleymane HALADOU
                     </Link>
                   </h5>
-                  <small className="designation text-muted">C.E.O</small>
+                  <small className="designation text-muted"><b>Trésorier </b>Etudiant en Master Management Option Ingénierie Financiers SUPDECO - Marrakech</small>
                 </div>
               </Card>
             </Col>
@@ -397,383 +647,10 @@ export default class MindPower extends Component {
                 <div className="card-body py-3 px-0 content">
                   <h5 className="mb-0">
                     <Link to="#" className="name text-dark">
-                      Micheal Carlo
+                    Mouhamadou Mansour KANE
                     </Link>
                   </h5>
-                  <small className="designation text-muted">Director</small>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 mt-4 pt-2">
-              <div className="card team text-center border-0">
-                <div className="position-relative">
-                  <img
-                    src={client2}
-                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
-                    alt=""
-                  />
-                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="facebook"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="instagram"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="twitter"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="linkedin"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body py-3 px-0 content">
-                  <h5 className="mb-0">
-                    <Link to="#" className="name text-dark">
-                      Aliana Rosy
-                    </Link>
-                  </h5>
-                  <small className="designation text-muted">Manager</small>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 mt-4 pt-2">
-              <div className="card team text-center border-0">
-                <div className="position-relative">
-                  <img
-                    src={client3}
-                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
-                    alt=""
-                  />
-                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="facebook"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="instagram"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="twitter"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="linkedin"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body py-3 px-0 content">
-                  <h5 className="mb-0">
-                    <Link to="#" className="name text-dark">
-                      Sofia Razaq
-                    </Link>
-                  </h5>
-                  <small className="designation text-muted">Developer</small>
-                </div>
-              </div>
-            </div>
-          </Row>
-          <Row>
-            <Col lg={3} md={6} className="mt-4 pt-2">
-              <Card className="team text-center border-0">
-                <div className="position-relative">
-                  <img
-                    src={cilent1}
-                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
-                    alt=""
-                  />
-                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="facebook"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="instagram"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="twitter"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="linkedin"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body py-3 px-0 content">
-                  <h5 className="mb-0">
-                    <Link to="#" className="name text-dark">
-                      Ronny Jofra
-                    </Link>
-                  </h5>
-                  <small className="designation text-muted">C.E.O</small>
-                </div>
-              </Card>
-            </Col>
-
-            <div className="col-lg-3 col-md-6 mt-4 pt-2">
-              <div className="card team text-center border-0">
-                <div className="position-relative">
-                  <img
-                    src={client4}
-                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
-                    alt=""
-                  />
-                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="facebook"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="instagram"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="twitter"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="linkedin"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body py-3 px-0 content">
-                  <h5 className="mb-0">
-                    <Link to="#" className="name text-dark">
-                      Micheal Carlo
-                    </Link>
-                  </h5>
-                  <small className="designation text-muted">Director</small>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 mt-4 pt-2">
-              <div className="card team text-center border-0">
-                <div className="position-relative">
-                  <img
-                    src={client2}
-                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
-                    alt=""
-                  />
-                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="facebook"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="instagram"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="twitter"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="linkedin"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body py-3 px-0 content">
-                  <h5 className="mb-0">
-                    <Link to="#" className="name text-dark">
-                      Aliana Rosy
-                    </Link>
-                  </h5>
-                  <small className="designation text-muted">Manager</small>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 mt-4 pt-2">
-              <div className="card team text-center border-0">
-                <div className="position-relative">
-                  <img
-                    src={client3}
-                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
-                    alt=""
-                  />
-                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="facebook"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="instagram"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="twitter"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="linkedin"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body py-3 px-0 content">
-                  <h5 className="mb-0">
-                    <Link to="#" className="name text-dark">
-                      Sofia Razaq
-                    </Link>
-                  </h5>
-                  <small className="designation text-muted">Developer</small>
+                  <small className="designation text-muted"><b>Vice-Président Chargé du Contrôle des Opérations et des Finances</b>Etudiant en master de Finance, Banque et Assurance - HECF - Fès</small>
                 </div>
               </div>
             </div>

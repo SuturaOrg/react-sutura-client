@@ -200,10 +200,24 @@ export default class WhatWeDo extends Component {
                           En effet, les étudiants sont de temps en temps confrontés à des problèmes financiers ponctuels. 
                           Ces problèmes sont liés à la santé, à l'alimentation, au loyer, etc.
                           C'est ainsi que Sutura est venu assisté les étudiants à travers un mécanisme solidaire, culturel et participatif.
+                          Sutura est un mot utilisé dans plusieurs pays africains. Au Sénégal, c'est un mot Wolof qui signifie discrétion & 
+                          dignité. Ce mot vient de l'arabe "Sitra" qui signifie discrétion.
                         </p>
                       </div>
 
                       <ul className="list-unstyled text-muted">
+                        <li className="mb-0">
+                          <span className="text-primary h4 me-2">
+                            <i className="uil uil-check-circle align-middle"></i>
+                          </span>
+                          Discrétion
+                        </li>
+                        <li className="mb-0">
+                          <span className="text-primary h4 me-2">
+                            <i className="uil uil-check-circle align-middle"></i>
+                          </span>
+                          Dignité
+                        </li>
                         <li className="mb-0">
                           <span className="text-primary h4 me-2">
                             <i className="uil uil-check-circle align-middle"></i>

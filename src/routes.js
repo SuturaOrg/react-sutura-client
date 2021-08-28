@@ -507,7 +507,7 @@ const routes = [
   //Index Main
   { path: "/index", component: ITSolution},
   { path: "/index2", component: iTSolutionTwo },
-  { path: "/tos", component: HelpCenterFaqs },
+  { path: "/tos", component: PageTerms },
   { path: "/aboutus", component: PageAboutUs },
 
 

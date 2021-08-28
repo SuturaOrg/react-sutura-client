@@ -21,21 +21,21 @@ class Footer extends Component {
     super(props);
     this.state = {
       grid1: [
-        { title: "About us", link: "/page-aboutus" },
+        { title: "Se connecter", link: "/page-cover-login" },
+        { title: "L'équipe", link: "/page-team" },
         { title: "Services", link: "/page-services" },
-        { title: "Team", link: "/page-team" },
-        { title: "Pricing", link: "/page-pricing" },
-        { title: "Project", link: "/page-work" },
-        { title: "Careers", link: "/page-jobs" },
-        { title: "Blog", link: "/page-blog" },
-        { title: "Login", link: "/page-cover-login" },
+        // { title: "Pricing", link: "/page-pricing" },
+        // { title: "Project", link: "/page-work" },
+        // { title: "Careers", link: "/page-jobs" },
+        // { title: "Blog", link: "/page-blog" },
       ],
       grid2: [
-        { title: "Terms of Services", link: "/page-terms" },
-        { title: "Privacy Policy", link: "/page-privacy" },
+        { title: "A propos", link: "/page-privacy" },
+        { title: "CGU", link: "/page-terms" },
         { title: "Documentation", link: "/documentation" },
-        { title: "Changelog", link: "/changelog" },
-        { title: "Components", link: "/components" },
+        // { title: "Privacy Policy", link: "/page-privacy" },
+        // { title: "Changelog", link: "/changelog" },
+        // { title: "Components", link: "/components" },
       ],
     };
   }
@@ -60,19 +60,18 @@ class Footer extends Component {
                   />
                 </Link>
                 <p className={this.props.isLight ? "mt-4 text-muted" : "mt-4"}>
-                  Start working with Sutura that can provide everything you
-                  need to generate awareness, drive traffic, connect.
+                  Adhérer ou soutenir Sutura revient à contribuer à l'amélioration des conditions de vies des étudiants étrangers.
                 </p>
                 <ul className={this.props.isLight ? "list-unstyled social-icon social mb-0 m t-4" : "list-unstyled social-icon foot-social-icon mb-0 mt-4"}>
                   <li className="list-inline-item me-1">
-                    <Link to="" className="rounded">
+                    <Link to="https://web.facebook.com/Sutura-100906312128627" className="rounded">
                       <FeatherIcon
                         icon="facebook"
                         className="fea icon-sm fea-social"
                       />
                     </Link>
                   </li>
-                  <li className="list-inline-item me-1">
+                  {/* <li className="list-inline-item me-1">
                     <Link to="" className="rounded">
                       <FeatherIcon
                         icon="instagram"
@@ -95,7 +94,7 @@ class Footer extends Component {
                         className="fea icon-sm fea-social"
                       />
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </Col>
 
@@ -113,7 +112,7 @@ class Footer extends Component {
                       : "text-light footer-head"
                   }
                 >
-                  Company
+                  Startup
                 </h5>
                 <ul className="list-unstyled footer-list mt-4">
                   {this.state.grid1.map((grid, key) => (
@@ -146,7 +145,7 @@ class Footer extends Component {
                       : "text-light footer-head"
                   }
                 >
-                  Usefull Links
+                  Liens utiles
                 </h5>
                 <ul className="list-unstyled footer-list mt-4">
                   {this.state.grid2.map((grid, key) => (
@@ -164,7 +163,8 @@ class Footer extends Component {
                   ))}
                 </ul>
               </Col>
-
+            
+            {/*
               <Col
                 lg="3"
                 md="4"
@@ -235,6 +235,7 @@ class Footer extends Component {
                   </Row>
                 </Form>
               </Col>
+              */}
             </Row>
           </Container>
         </footer>
@@ -259,7 +260,7 @@ class Footer extends Component {
                 </div>
               </Col>
 
-              <Col sm="6" className="mt-4 mt-sm-0 pt-2 pt-sm-0">
+              {/* <Col sm="6" className="mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <ul className="list-unstyled text-sm-end mb-0">
                   <li className="list-inline-item me-1">
                     <Link to="">
@@ -312,7 +313,7 @@ class Footer extends Component {
                     </Link>
                   </li>
                 </ul>
-              </Col>
+              </Col> */}
             </Row>
           </Container>
         </footer>

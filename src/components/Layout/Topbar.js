@@ -437,12 +437,12 @@ class Topbar extends Component {
             },
             {
               id: 15,
-              title: "Utility",
+              title: "Liens utiles",
               link: "/#",
               isOpenNestedSubMenu: false,
               nestedChild: [
-                { title: "Terms of Services", link: "/page-terms" },
-                { title: "Privacy Policy", link: "/page-privacy" },
+                { title: "CGU", link: "/page-terms" },
+                { title: "A propos", link: "/page-privacy" },
               ],
             },
             {

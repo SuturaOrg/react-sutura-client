@@ -11,7 +11,7 @@ import {history, PrivateRoute} from './_helpers';
 import "./assets/css/materialdesignicons.min.css";
 import "./Apps.scss";
 
-import "./assets/css/colors/default.css";
+import "./assets/css/colors/green.css";
 
 // Include Routes
 import routes from "./routes";

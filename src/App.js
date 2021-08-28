@@ -61,13 +61,6 @@ class App extends Component {
         console.log(loggedIn);
         return (
             <React.Fragment>
-                {alert.message &&
-                <Alert
-                    color={alert.type}
-                >
-                    {alert.message}
-                </Alert>
-                }
                 <Router>
                     <Suspense fallback={this.Loader()}>
 

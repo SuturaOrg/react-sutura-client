@@ -990,7 +990,7 @@ class Topbar extends Component {
                 return (
                   <div className="buy-button">
                     <Link
-                        to={!this.props.loggedIn?"auth-cover-signup":"/"}
+                        to={!this.props.loggedIn?"auth-cover-signup":"/contribute"}
                       target="_blank"
                       className="btn btn-pills btn-primary"
                     >
@@ -1002,7 +1002,7 @@ class Topbar extends Component {
                 return (
                   <div className="buy-button">
                     <Link
-                      to={!this.props.loggedIn?"auth-cover-signup":"/"}
+                      to={!this.props.loggedIn?"auth-cover-signup":"/contribute"}
                       target="_blank"
                       id="buyButton"
                       className="btn btn-primary"

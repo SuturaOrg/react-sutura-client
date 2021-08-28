@@ -1,6 +1,6 @@
 import React from "react";
-import Aboutus from "./pages/ITSolutionTwo/Aboutus";
 const Donation = React.lazy(() => import("./pages/Pages/Utility/Donate"));
+const ContributeRequest = React.lazy(() => import("./pages/ITSolution/operations/ContributeRequest"));
 
 // Root Include
 const Root = React.lazy(() => import("./pages/Home/indexRoot"));
@@ -511,6 +511,8 @@ const routes = [
   { path: "/tos", component: PageTerms },
   { path: "/aboutus", component: PageAboutUs },
   { path: "/donation", component: Donation, isTopbarDark: true },
+  { path: "/contribute", component: ContributeRequest, isTopbarDark: true },
+
 
   //Index root
   { path: "/", component: Root, isWithoutLayout: true, exact: true },

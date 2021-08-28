@@ -3,7 +3,10 @@ export function authHeader() {
     let signinPayload = JSON.parse(localStorage.getItem('signinPayload'));
 
     if (signinPayload && signinPayload.accessToken) {
-        return { 'Authorization': 'Bearer ' + signinPayload.accessToken };
+        return { 'Authorization': 'Bearer ' + signinPayload.accessToken,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        };
     } else {
         return {};
     }

@@ -10,7 +10,7 @@ import {
   Label,
   Button,
   Card,
-  CardBody,
+  CardBody, Alert,
 } from "reactstrap";
 import { AvForm, AvField } from "availity-reactstrap-validation";
 
@@ -45,7 +45,8 @@ class PageCoverSignup extends Component {
   }
 
   render() {
-    const { termsChecked } = this.state;
+    const { termsChecked, } = this.state;
+    const {alert}=this.props;
     return (
       <React.Fragment>
         <div className="back-to-home rounded d-none d-sm-block">
@@ -62,6 +63,11 @@ class PageCoverSignup extends Component {
                 <div className="cover-user-img d-flex align-items-center">
                   <Row>
                     <Col xs={12}>
+                      {alert && alert.message &&
+                      <Alert
+                          color={alert.type}
+                      >
+                        {alert.message}                      </Alert>}
                       <Card
                         className="login_page border-0"
                         style={{ zIndex: 1 }}
@@ -291,9 +297,11 @@ class PageCoverSignup extends Component {
   }
 }
 function mapStateToProps(state) {
+  const {alert}=state;
   const { loggingIn } = state.authentication;
   return {
-    loggingIn
+    loggingIn,
+    alert
   };
 }
 const connectedPageCoverSignup = connect(mapStateToProps)(PageCoverSignup);

@@ -65,14 +65,14 @@ class EmailPasswordReset extends Component {
                     fontWeight: "600",
                   }}
                 >
-                  Hello, Harry
+                  Salut, userName
                       </td>
               </tr>
               <tr>
                 <td
                   style={{ padding: "15px 24px 15px", color: " #8492a6" }}
                 >
-                  To reset your password, please click the button below :
+                  Pour réinitialiser votre mot de passe, veuillez cliquer sur le bouton ci-dessous :
                       </td>
               </tr>
               <tr>
@@ -91,25 +91,25 @@ class EmailPasswordReset extends Component {
                       borderRadius: "6px",
                     }}
                   >
-                    Reset Password
+                    Réinitialiser votre mot de passe
                         </Link>
                 </td>
               </tr>
 
               <tr>
                 <td style={{ padding: "15px 24px 0", color: "#8492a6" }}>
-                  This link will be active for 45 second from the time
-                  this email was sent. If you did not request to reset
-                  your password, please ignore this email and your account
-                  will not be affected.
-                      </td>
+                  Ce lien sera actif pendant 5 minutes à partir du moment où
+                  cet e-mail a été envoyé. Si vous n'avez pas demandé la réinitialisation
+                  votre mot de passe, veuillez ignorer cet email et votre compte
+                  ne sera pas affecté.
+                </td>
               </tr>
 
               <tr>
                 <td
                   style={{ padding: "15px 24px 15px", color: "#8492a6" }}
                 >
-                  Sutura <br /> Support Team
+                  Sutura <br /> L'équipe informatique
                       </td>
               </tr>
               <tr>

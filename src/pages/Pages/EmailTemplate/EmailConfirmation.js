@@ -66,17 +66,17 @@ class EmailConfirmation extends Component {
                     fontWeight: "600",
                   }}
                 >
-                  Hello, Harry
-                      </td>
+                  Salut, userName
+                  </td>
               </tr>
               <tr>
                 <td
                   style={{ padding: "15px 24px 15px", color: " #8492a6" }}
                 >
-                  Thanks for creating an Sutura account. To continue,
-                  please confirm your email address by clicking the button
-                  below :
-                      </td>
+                  Merci d'avoir créé un compte Sutura. Pour continuer,
+                  veuillez confirmer votre adresse e-mail en cliquant sur le bouton
+                  ci-dessous :
+                </td>
               </tr>
               <tr>
                 <td style={{ padding: "15px 24px", color: "#8492a6" }}>
@@ -94,15 +94,14 @@ class EmailConfirmation extends Component {
                     }}
                     className="btn-primary"
                   >
-                    Confirm Email Address
+                    Confirmer votre adresse email
                         </Link>
                 </td>
               </tr>
 
               <tr>
                 <td style={{ padding: "15px 24px 0", color: "#8492a6" }}>
-                  This link will be active for 30 min from the time this
-                  email was sent.
+                Ce lien sera actif pendant 30 minutes à partir du moment où cet e-mail a été envoyé.
                       </td>
               </tr>
 
@@ -110,7 +109,7 @@ class EmailConfirmation extends Component {
                 <td
                   style={{ padding: "15px 24px 15px", color: "#8492a6" }}
                 >
-                  Sutura <br /> Support Team
+                  Sutura <br /> L'équipe informatique
                       </td>
               </tr>
               <tr>

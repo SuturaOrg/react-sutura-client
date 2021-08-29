@@ -43,7 +43,7 @@ class PageCoverLogin extends Component {
   }
   render() {
     const { rememberMe } = this.state;
-    const alert=this.props;
+    const {alert}=this.props;
     return (
       <React.Fragment>
         <div className="back-to-home rounded d-none d-sm-block">
@@ -158,7 +158,8 @@ class PageCoverLogin extends Component {
                                   <div className="mb-3">
                                     <div className="form-check">
                                       <Input
-                                        type="checkbox"
+                                          onChange={this.handleChange}
+                                          type="checkbox"
                                         className="form-check-input"
                                         checked={rememberMe}
                                         id="customCheck1"

@@ -30,7 +30,6 @@ export function authentication(state = initialState, action) {
             };
         case userConstants.SIGNUP_SUCCESS:
             return {
-                loggedIn: true,
                 user: action.signupPayload.user,
                 accessToken: action.signupPayload.accessToken,
             };

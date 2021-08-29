@@ -119,7 +119,7 @@ class PageProfile extends Component {
         icon: "uil uil-dashboard",
         className: "navbar-item account-menu px-0 mt-2",
         title: "Logout",
-        link: "/auth-login-three",
+        link: "/auth-cover-login",
       },
     ],
   };
@@ -626,11 +626,10 @@ class PageProfile extends Component {
   }
 }
 function mapStateToProps(state) {
-  const { user,accessToken } = state.authentication;
+  const { user } = state.authentication;
   console.log(state);
   return {
     user,
-    accessToken
   };
 
 }

@@ -8,7 +8,7 @@ import {
 } from "reactstrap";
 import {Link, withRouter} from "react-router-dom";
 import { AvForm, AvField } from "availity-reactstrap-validation";
-
+import {fileService} from "../../../services";
 
 //Import Icons
 import FeatherIcon from "feather-icons-react";
@@ -16,13 +16,14 @@ import FeatherIcon from "feather-icons-react";
 //Import components
 import PageBreadcrumb from "../../../components/Shared/PageBreadcrumb";
 import {connect} from "react-redux";
-import {userActions} from "../../../actions";
+import {alertActions, userActions} from "../../../actions";
 import {contributionActions} from "../../../actions";
 
 class ContributeRequest extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedFile: null,
       pathItems: [
         //id must required
         { id: 1, name: "Sutura", link: "/index" },
@@ -32,15 +33,41 @@ class ContributeRequest extends Component {
       isOpen: false,
     };
     this.handleSubmit.bind(this);
+    this.onFileChange.bind(this);
   }
 
-  handleSubmit = (event,values) => {
+  handleSubmit = async(event,values) => {
     event.preventDefault();
     console.log(values);
     const { dispatch } = this.props;
+    if(!this.state.selectedFile.name.match(/.(jpg|jpeg|png|gif|pdf)$/i)){
+      dispatch(alertActions.error("Le fichier doit être une image ou document pdf "))
+      return;
+    }
+    if(this.state.selectedFile.size>7000000){
+      dispatch(alertActions.error("Le fichier ne doit pas dépasser 7 Mo "))
+      return;
+    }
+    const url =await this.uploadFile();
+    values.proof=url;
     dispatch(contributionActions.create(values));
   };
+  onFileChange = event => {
+    this.setState({ selectedFile: event.target.files[0] });
 
+  };
+  uploadFile = () => {
+    // Create an object of formData
+    const formData = new FormData();
+
+    // Update the formData object
+    formData.append(
+        "file",
+        this.state.selectedFile,
+        this.state.selectedFile.name
+    );
+     return  fileService.create(formData);
+  };
   componentDidMount() {
     window.addEventListener("scroll", this.scrollNavigation, true);
   }
@@ -127,13 +154,14 @@ class ContributeRequest extends Component {
                                 </i>
                               </div>
                               <AvField
-                                  type="text"
+                                  type="file"
                                   className="form-control ps-5"
                                   name="proof"
                                   id="proof"
                                   placeholder="Preuve"
                                   required
                                   errorMessage=""
+                                  onChange={this.onFileChange}
                                   validate={{
                                     required: {
                                       value: true,

@@ -39,7 +39,7 @@ class PageRePasswordThree extends Component {
                       <Row>
                         <Col lg={12}>
                           <p className="text-muted">
-                          Veuillez entrer votre adress email. Vous recevrez un lien pour créer un nouveau mot de passe via email.
+                          Veuillez entrer votre adresse email. Vous recevrez un lien pour créer un nouveau mot de passe via email.
                           </p>
                           <div className="mb-3">
                             <Label className="form-label" for="email">
@@ -70,7 +70,7 @@ class PageRePasswordThree extends Component {
                                 pattern: {
                                   value:
                                     "^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$",
-                                  errorMessage: "E-Mail is not valid!",
+                                  errorMessage: "Email non valide!",
                                 },
                               }}
                             />

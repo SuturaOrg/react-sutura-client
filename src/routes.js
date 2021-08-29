@@ -1,6 +1,10 @@
 import React from "react";
 const Donation = React.lazy(() => import("./pages/Pages/Utility/Donate"));
 const ContributeRequest = React.lazy(() => import("./pages/ITSolution/operations/ContributeRequest"));
+const SignupSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/SignupSubmitConfirmation"));
+const LoanSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/LoanSubmitConfirmation"));
+const ContributionSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/ContributionSubmitConfirmation"));
+const RefundSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/RefundSubmitConfirmation"));
 
 // Root Include
 const Root = React.lazy(() => import("./pages/Home/indexRoot"));
@@ -512,6 +516,10 @@ const routes = [
   { path: "/aboutus", component: PageAboutUs },
   { path: "/donation", component: Donation, isTopbarDark: true },
   { path: "/contribute", component: ContributeRequest, isTopbarDark: true },
+  { path: "/signup-confirmation", component: SignupSubmitConfirmation, isTopbarDark: true },
+  { path: "/loan-confirmation", component: LoanSubmitConfirmation, isTopbarDark: true },
+  { path: "/contribution-confirmation", component: ContributionSubmitConfirmation, isTopbarDark: true },
+  { path: "/refund-confirmation", component: RefundSubmitConfirmation, isTopbarDark: true },
 
 
   //Index root

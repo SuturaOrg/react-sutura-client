@@ -43,7 +43,7 @@ class EmailInvoice extends Component {
             <thead>
               <tr
                 style={{
-                  backgroundColor: "#2f55d4",
+                  backgroundColor: "#70C097",
                   padding: "3px 0",
                   lineHeight: "68px",
                   textAlign: "center",
@@ -62,6 +62,7 @@ class EmailInvoice extends Component {
             <tbody>
               <tr>
                 <td style={{ padding: " 24px 24px 0" }}>
+                <h4>Bilan de la trésorerie</h4>
                   <table style={{ maxWidth: "350px" }}>
                     <tbody>
                       <tr>
@@ -71,10 +72,10 @@ class EmailInvoice extends Component {
                             paddingBottom: "8px",
                           }}
                         >
-                          Invoice No. :
+                          Mois :
                               </td>
                         <td style={{ color: "#8492a6" }}>
-                          #land45845621
+                          #monthConsidered
                               </td>
                       </tr>
                       <tr>
@@ -84,22 +85,9 @@ class EmailInvoice extends Component {
                             paddingBottom: "8px",
                           }}
                         >
-                          Name :
+                          Nom et Prénom :
                               </td>
-                        <td style={{ color: "#8492a6" }}>Harry Patel</td>
-                      </tr>
-                      <tr>
-                        <td
-                          style={{
-                            minWidth: "130px",
-                            paddingBottom: "8px",
-                          }}
-                        >
-                          Address :
-                              </td>
-                        <td style={{ color: "#8492a6" }}>
-                          1962 Pike Street, CA 92123
-                              </td>
+                        <td style={{ color: "#8492a6" }}>userFirstName userLastName of those who have contributed</td>
                       </tr>
                       <tr>
                         <td
@@ -111,7 +99,7 @@ class EmailInvoice extends Component {
                           Date :
                               </td>
                         <td style={{ color: "#8492a6" }}>
-                          March, 25 2020
+                          March, 25 2020 (currentDate)
                               </td>
                       </tr>
                     </tbody>
@@ -127,7 +115,7 @@ class EmailInvoice extends Component {
                       display: "block",
                       width: "100%",
                       borderRadius: "6px",
-                      boxShadow: "0 0 3px rgba(60, 72, 88, 0.15)",
+                      boxShadow: "0 0 3px rgba(60, 72, 88, 1)",
                     }}
                   >
                     <table style={{ width: "100%" }}>
@@ -154,7 +142,7 @@ class EmailInvoice extends Component {
                               width: "200px"
                             }}
                           >
-                            Item
+                            Type de demande
                                 </th>
                           <th
                             scope="col"
@@ -165,7 +153,7 @@ class EmailInvoice extends Component {
                               padding: "12px",
                             }}
                           >
-                            Total
+                            Montant
                                 </th>
                         </tr>
                       </thead>
@@ -188,7 +176,7 @@ class EmailInvoice extends Component {
                               borderTop: "1px solid #dee2e6",
                             }}
                           >
-                            Sutura Template
+                            Santé
                                 </td>
                           <td
                             style={{
@@ -197,7 +185,7 @@ class EmailInvoice extends Component {
                               borderTop: "1px solid #dee2e6",
                             }}
                           >
-                            $ 5200
+                            MAD 5200
                                 </td>
                         </tr>
                         <tr>
@@ -218,7 +206,7 @@ class EmailInvoice extends Component {
                               borderTop: "1px solid #dee2e6",
                             }}
                           >
-                            Customization
+                            Alimentation
                                 </td>
                           <td
                             style={{
@@ -227,7 +215,7 @@ class EmailInvoice extends Component {
                               borderTop: "1px solid #dee2e6",
                             }}
                           >
-                            $ 3660
+                            MAD 3660
                                 </td>
                         </tr>
                         <tr>
@@ -248,7 +236,7 @@ class EmailInvoice extends Component {
                               borderTop: "1px solid #dee2e6",
                             }}
                           >
-                            Development
+                            Loyer
                                 </td>
                           <td
                             style={{
@@ -257,14 +245,76 @@ class EmailInvoice extends Component {
                               borderTop: "1px solid #dee2e6",
                             }}
                           >
-                            $ 13740
+                            MAD 13740
+                                </td>
+                        </tr>
+
+                        <tr>
+                          <th
+                            scope="row"
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            4
+                                </th>
+                          <td
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            Transport
+                                </td>
+                          <td
+                            style={{
+                              textAlign: "end",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            MAD 13740
+                                </td>
+                        </tr>
+
+                        <tr>
+                          <th
+                            scope="row"
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            5
+                                </th>
+                          <td
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            Scolarité
+                                </td>
+                          <td
+                            style={{
+                              textAlign: "end",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            MAD 13740
                                 </td>
                         </tr>
 
                         <tr
                           style={{
-                            backgroundColor: "rgba(47, 85, 212, 0.2)",
-                            color: "#2f55d4",
+                            backgroundColor: "rgba(112, 192, 151, 0.2)",
+                            color: "#236b39",
                             overflowX: "hidden",
                           }}
                         >
@@ -290,7 +340,7 @@ class EmailInvoice extends Component {
                                 "1px solid rgba(47, 85, 212, 0.2)",
                             }}
                           >
-                            $ 22600
+                            MAD 22600
                                 </td>
                         </tr>
                       </tbody>
@@ -299,15 +349,227 @@ class EmailInvoice extends Component {
                 </td>
               </tr>
               <tr>
+                <td style={{ padding: "24px" }}>
+                <h4>Bilan comptable</h4>
+                  <div
+                    id="invTable"
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      borderRadius: "6px",
+                      boxShadow: "0 0 3px rgba(60, 72, 88, 1)",
+                    }}
+                  >
+                    <table style={{ width: "100%"}}>
+                      <thead className="bg-light">
+                        <tr>
+                          <th
+                            scope="col"
+                            style={{
+                              textAlign: "left",
+                              verticalAlign: "bottom",
+                              borderTop: "1px solid #dee2e6",
+                              padding: "12px",
+                            }}
+                          >
+                            No.
+                                </th>
+                          <th
+                            scope="col"
+                            style={{
+                              textAlign: "left",
+                              verticalAlign: "bottom",
+                              borderTop: "1px solid #dee2e6",
+                              padding: "12px",
+                              width: "200px"
+                            }}
+                          >
+                            Flux
+                                </th>
+                          <th
+                            scope="col"
+                            style={{
+                              textAlign: "end",
+                              verticalAlign: "bottom",
+                              borderTop: "1px solid #dee2e6",
+                              padding: "12px",
+                            }}
+                          >
+                            Montant
+                                </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th
+                            scope="row"
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            1
+                                </th>
+                          <td
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            Cotisation
+                                </td>
+                          <td
+                            style={{
+                              textAlign: "end",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            MAD 5200
+                                </td>
+                        </tr>
+                        <tr>
+                          <th
+                            scope="row"
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            2
+                                </th>
+                          <td
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            Prêt
+                                </td>
+                          <td
+                            style={{
+                              textAlign: "end",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            MAD 3660
+                                </td>
+                        </tr>
+                        <tr>
+                          <th
+                            scope="row"
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            3
+                                </th>
+                          <td
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            Remboursement
+                                </td>
+                          <td
+                            style={{
+                              textAlign: "end",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            MAD 13740
+                                </td>
+                        </tr>
+
+                        <tr>
+                          <th
+                            scope="row"
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            4
+                                </th>
+                          <td
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            Don
+                                </td>
+                          <td
+                            style={{
+                              textAlign: "end",
+                              padding: "12px",
+                              borderTop: "1px solid #dee2e6",
+                            }}
+                          >
+                            MAD 13740
+                                </td>
+                        </tr>
+
+                        <tr
+                          style={{
+                            backgroundColor: "rgba(112, 192, 151, 0.2)",
+                            color: "#236b39",
+                            overflowX: "hidden",
+                          }}
+                        >
+                          <th
+                            scope="row"
+                            style={{
+                              textAlign: "left",
+                              padding: "12px",
+                              borderTop:
+                                "1px solid rgba(47, 85, 212, 0.2)",
+                            }}
+                          >
+                            Différence
+                                </th>
+                          <td
+                            colSpan="2"
+                            style={{
+                              textAlign: "end",
+                              fontWeight: "700",
+                              fontSize: "18px",
+                              padding: "12px",
+                              borderTop:
+                                "1px solid rgba(47, 85, 212, 0.2)",
+                            }}
+                          >
+                            + MAD 22600
+                                </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <tr></tr>
+              <tr>
                 <td
                   style={{
                     padding: "16px 8px",
-                    color: "#8492a6",
+                    color: "#70c097",
                     backgroundColor: "#f8f9fc",
                     textAlign: "center",
                   }}
                 >
-                  © 2019-20 Sutura.
+                  © 2021-22 Sutura.
                       </td>
               </tr>
             </tbody>

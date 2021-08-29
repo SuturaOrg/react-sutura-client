@@ -73,13 +73,13 @@ class PageCoverSignup extends Component {
                         style={{ zIndex: 1 }}
                       >
                         <CardBody className="p-0">
-                          <h4 className="card-title text-center">Signup</h4>
+                          <h4 className="card-title text-center">S'inscrire</h4>
                           <AvForm className="login-form mt-4" onValidSubmit={this.handleSubmit}>
                             <Row>
                               <Col md="6">
                                 <div className="mb-3">
                                   <Label className="form-label" for="firstName">
-                                    First name{" "}
+                                    Prénom{" "}
                                     <span className="text-danger">*</span>
                                   </Label>
                                   <div className="form-icon position-relative">
@@ -95,7 +95,7 @@ class PageCoverSignup extends Component {
                                     className="form-control ps-5"
                                     name="firstName"
                                     id="firstName"
-                                    placeholder="First Name"
+                                    placeholder="Prénom"
                                     required
                                     errorMessage=""
                                     validate={{
@@ -110,7 +110,7 @@ class PageCoverSignup extends Component {
                               <Col md="6">
                                 <div className="mb-3">
                                   <Label className="form-label" for="lastName">
-                                    Last name{" "}
+                                    Nom{" "}
                                     <span className="text-danger">*</span>
                                   </Label>
                                   <div className="form-icon position-relative">
@@ -126,7 +126,7 @@ class PageCoverSignup extends Component {
                                     className="form-control ps-5"
                                     name="lastName"
                                     id="lastName"
-                                    placeholder="Last Name"
+                                    placeholder="Nom"
                                     required
                                     errorMessage=""
                                     validate={{
@@ -141,7 +141,7 @@ class PageCoverSignup extends Component {
                               <Col md="12">
                                 <div className="mb-3">
                                   <Label className="form-label" for="email">
-                                    Your Email{" "}
+                                    Votre email{" "}
                                     <span className="text-danger">*</span>
                                   </Label>
                                   <div className="form-icon position-relative">
@@ -178,7 +178,7 @@ class PageCoverSignup extends Component {
                               <Col md="12">
                                 <div className="mb-3">
                                   <Label className="form-label" for="password">
-                                    Password{" "}
+                                    Mot de passe{" "}
                                     <span className="text-danger">*</span>
                                   </Label>
                                   <div className="form-icon position-relative">
@@ -232,9 +232,9 @@ class PageCoverSignup extends Component {
                                       className="form-check-label"
                                       for="customCheck1"
                                     >
-                                      I Accept{" "}
+                                      J'accepte{" "}
                                       <Link to="tos" className="text-primary" target="_blank" rel="noopener noreferrer">
-                                        Terms And Condition
+                                        les conditions générales d'utilisation
                                       </Link>
                                     </Label>
                                   </div>
@@ -243,11 +243,11 @@ class PageCoverSignup extends Component {
                               <Col md="12">
                                 <div className="d-grid">
                                   <Button color="primary">
-                                    Register
+                                    S'inscrire
                                 </Button>
                                 </div>
                               </Col>
-                              <Col lg="12" className="mt-4 text-center">
+                              {/* <Col lg="12" className="mt-4 text-center">
                                 <h6>Or Signup With</h6>
                                 <Row>
                                   <div className="col-6 mt-3">
@@ -262,17 +262,17 @@ class PageCoverSignup extends Component {
                                     </div>
                                   </div>
                                 </Row>
-                              </Col>
+                              </Col> */}
                               <div className="mx-auto">
                                 <p className="mb-0 mt-3">
                                   <small className="text-dark me-2">
-                                    Already have an account ?
+                                    Vous avez déjà un compte ?
                                   </small>{" "}
                                   <Link
                                     to="/auth-cover-login"
                                     className="text-dark fw-bold"
                                   >
-                                    Sign In
+                                    Se connecter
                                   </Link>
                                 </p>
                               </div>

@@ -33,18 +33,17 @@ class PageRePasswordThree extends Component {
               <Col lg={5} md={8}>
                 <Card className="shadow rounded border-0">
                   <CardBody>
-                    <h4 className="card-title text-center">Recover Account</h4>
+                    <h4 className="card-title text-center">Récupérer votre compte</h4>
 
                     <AvForm className="login-form mt-4">
                       <Row>
                         <Col lg={12}>
                           <p className="text-muted">
-                            Please enter your email address. You will receive a
-                            link to create a new password via email.
+                          Veuillez entrer votre adress email. Vous recevrez un lien pour créer un nouveau mot de passe via email.
                           </p>
                           <div className="mb-3">
-                            <Label className="form-label">
-                              Email address{" "}
+                            <Label className="form-label" for="email">
+                              Adresse mail{" "}
                               <span className="text-danger">*</span>
                             </Label>
                             <div className="form-icon position-relative">
@@ -56,38 +55,44 @@ class PageRePasswordThree extends Component {
                               </i>
                             </div>
                             <AvField
+                              type="text"
+                              className="form-control ps-5"
                               name="email"
-                              errorMessage="Invalid Email"
+                              id="email"
+                              placeholder="Entrez votre Email"
+                              required
+                              errorMessage=""
                               validate={{
-                                required: { value: true },
-                                email: {
+                                required: {
                                   value: true,
-                                  errorMessage: "Invalid Email",
+                                  errorMessage: "Veuillez entrer votre email",
+                                },
+                                pattern: {
+                                  value:
+                                    "^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$",
+                                  errorMessage: "E-Mail is not valid!",
                                 },
                               }}
-                              type="email"
-                              className="form-control ps-5"
-                              placeholder="Enter Your Email Address"
                             />
                           </div>
                         </Col>
-                        <Col lg={12}>
+                        <Col lg="12">
                           <div className="d-grid">
                             <Button color="primary">
-                              Send
+                              Envoyer
                           </Button>
                           </div>
                         </Col>
                         <div className="mx-auto">
                           <p className="mb-0 mt-3">
                             <small className="text-dark me-2">
-                              Remember your password ?
+                              Mot de passe retrouvé ?
                             </small>{" "}
                             <Link
-                              to="auth-login-three"
+                              to="auth-cover-login"
                               className="text-dark fw-bold"
                             >
-                              Sign in
+                              Se connecter
                             </Link>
                           </p>
                         </div>

@@ -19,7 +19,7 @@ function login(data) {
         .then(handleResponse)
         .then(signinPayload => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
-          data.rememberMe && localStorage.setItem('signinPayload', JSON.stringify(signinPayload));
+          localStorage.setItem('signinPayload', JSON.stringify(signinPayload));
 
             return signinPayload;
         });

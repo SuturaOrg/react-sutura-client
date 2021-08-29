@@ -28,29 +28,29 @@ class Reviews extends Component {
       {
         id: 2,
         img: img2,
-        name: "Fifi Morgane",
-        post: "Lauréate du Maroc",
+        name: "Anonyme",
+        post: "Parent d'élève",
         desc:
-          "One disadvantage of Lorum Ipsum is that in Latin certain letters appear more frequently than others.",
+          "Personnellementn en tant que parent ayant son enfant au Maroc cela me rassuren après les inquiétudes suscitées",
         rating: 4,
       },
       {
         id: 3,
+        img: img4,
+        name: "Fifi Morgane",
+        post: "Lauréate",
+        desc:
+          "According to most sources, Lorum Ipsum can be traced back to a text composed by Cicero.",
+        rating: 5,
+      },
+      {
+        id: 4,
         img: img3,
         name: "Ibrahima Faye",
         post: "P.A",
         desc:
           "The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century.",
         rating: 3,
-      },
-      {
-        id: 4,
-        img: img4,
-        name: "Bacar Niang",
-        post: "Parent d'élève",
-        desc:
-          "According to most sources, Lorum Ipsum can be traced back to a text composed by Cicero.",
-        rating: 5,
       },
       {
         id: 5,

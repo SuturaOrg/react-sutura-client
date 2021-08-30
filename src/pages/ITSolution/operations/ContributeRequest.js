@@ -81,7 +81,7 @@ class ContributeRequest extends Component {
         <React.Fragment>
           {/* breadcrumb */}
           <PageBreadcrumb
-              title="Cotiser"
+              title="Déclarer une cotisation"
               pathItems={this.state.pathItems}
           />
 
@@ -107,7 +107,7 @@ class ContributeRequest extends Component {
                                 <div className="form-icon position-relative">
                                   <i>
                                     <FeatherIcon
-                                        icon="user"
+                                        icon="dollar-sign"
                                         className="fea icon-sm icons"
                                     />
                                   </i>
@@ -179,54 +179,94 @@ class ContributeRequest extends Component {
             </Container>
 
             <Container className="mt-100 mt-60">
-              <Row>
-                <Col lg={6} md={6} xs={12}>
-                  <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
-                    <div className="icons text-primary text-center">
-                      <i className="uil uil-envelope-check d-block rounded h3 mb-0"></i>
-                    </div>
-                    <div className="flex-1 content ms-4">
-                      <h5 className="mb-1">
-                        <Link to="#" className="text-dark">
-                          Get in Touch !
-                        </Link>
-                      </h5>
-                      <p className="text-muted mb-0">
-                        This is required when, for text is not yet available.
-                      </p>
-                      <div className="mt-2">
-                        <Link to="#" className="btn btn-sm btn-soft-primary">
-                          Submit a Request
-                        </Link>
-                      </div>
-                    </div>
+              <h5 className="mb-1">
+                Comment ça marche ?
+              </h5>
+            <Row>
+            <Col lg={6} md={6} xs={12}>
+                <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
+                  <div className="icons text-primary text-center">
+                    <i className="uil uil-dollar-sign d-block rounded h3 mb-0"></i>
                   </div>
-                </Col>
+                  <div className="flex-1 content ms-4">
+                    <h5 className="mb-1">
+                      <Link to="#" className="text-dark">
+                        Faire un virement ou un transfert bancaire
+                      </Link>
+                    </h5>
+                    <p className="text-muted mb-0">
+                    RIB: <b>1454502111107796800014</b> <br/>Code Swift: <b>BCPOMAMC</b><br/>(Banque Populaire)
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col lg={6} md={6} xs={12}>
+                <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
+                  <div className="icons text-primary text-center">
+                    <i className="uil uil-edit d-block rounded h3 mb-0"></i>
+                  </div>
+                  <div className="flex-1 content ms-4">
+                    <h5 className="mb-1">
+                      <Link to="#" className="text-dark">
+                        Puis remplir le formulaire ci-dessous !
+                      </Link>
+                    </h5>
+                    <p className="text-muted mb-0">
+                      Saisir le montant de votre cotisation et puis joindre un justificatif de votre virement bancaire.
+                    </p>
+                    {/* <div className="mt-2">
+                      <Link to="#" className="btn btn-sm btn-soft-primary">
+                        Voir nos conditions générales de soumission
+                      </Link>
+                    </div> */}
+                  </div>
+                </div>
+              </Col>
+              
+              <Col lg={6} md={6} xs={12} className="mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
+                  <div className="icons text-primary text-center">
+                    <i className="uil uil-check-square d-block rounded h3 mb-0"></i>
+                  </div>
+                  <div className="flex-1 content ms-4">
+                    <h5 className="mb-1">
+                      <Link to="#" className="text-dark">
+                        Vérification
+                      </Link>
+                    </h5>
+                    <p className="text-muted mb-0">
+                      Les administrateurs vont rapidement vérifier que votre cotisation a été bien reçue dans notre compte bancaire. Puis, votre déclaration sera validée.
+                    </p>
+                    {/* <div className="mt-2">
+                      <Link to="#" className="btn btn-sm btn-soft-primary">
+                        Voir les conditions générales de soumission de demande.
+                      </Link>
+                    </div> */}
+                  </div>
+                </div>
+              </Col>
 
-                <Col lg={6} md={6} xs={12} className="mt-4 mt-sm-0 pt-2 pt-sm-0">
-                  <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
-                    <div className="icons text-primary text-center">
-                      <i className="uil uil-webcam d-block rounded h3 mb-0"></i>
-                    </div>
-                    <div className="flex-1 content ms-4">
-                      <h5 className="mb-1">
-                        <Link to="#" className="text-dark">
-                          Start a Meeting
-                        </Link>
-                      </h5>
-                      <p className="text-muted mb-0">
-                        This is required when, for text is not yet available.
-                      </p>
-                      <div className="mt-2">
-                        <Link to="#" className="btn btn-sm btn-soft-primary">
-                          Start Video Chat
-                        </Link>
-                      </div>
-                    </div>
+              <Col lg={6} md={6} xs={12} className="mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
+                  <div className="icons text-primary text-center">
+                    <i className="uil uil-filter d-block rounded h3 mb-0"></i>
                   </div>
-                </Col>
-              </Row>
-            </Container>
+                  <div className="flex-1 content ms-4">
+                    <h5 className="mb-1">
+                      <Link to="#" className="text-dark">
+                        L'algorithme fait le reste.
+                      </Link>
+                    </h5>
+                    <p className="text-muted mb-0">
+                      Ce dernier va considérer votre cotisation dans sa caisse puis mettre à jour vos données.
+                      Ainsi, vous êtes adhérents de Sutura et vous pouvez faire des demandes en cas de besoin.<br/>
+                      Enfin, en fonction de la nouvelle situation de la caisse et des demandes en attente, l'algorithme va décider d'éventuelles demandes de prêts à élire.
+                    </p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
           </section>
         </React.Fragment>
     );

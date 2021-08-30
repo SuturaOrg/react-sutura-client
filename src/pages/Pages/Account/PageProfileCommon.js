@@ -183,35 +183,14 @@ class PageProfileCommon extends Component {
                                                         <small className="text-muted h6 me-2">
                                                             {user.country}                            </small>
                                                         <ul className="list-inline mb-0 mt-3">
-                                                            <li className="list-inline-item me-2">
-                                                                <Link
-                                                                    to="#"
-                                                                    className="text-muted"
-                                                                    title="Linkedin"
-                                                                >
-                                                                    <i>
-                                                                        <FeatherIcon
-                                                                            icon="instagram"
-                                                                            className="fea icon-sm me-2"
-                                                                        />
-                                                                    </i>
-                                                                    krista_joseph
-                                                                </Link>
-                                                            </li>
                                                             <li className="list-inline-item ms-1">
-                                                                <Link
-                                                                    to="#"
-                                                                    className="text-muted"
-                                                                    title="Skype"
-                                                                >
                                                                     <i>
                                                                         <FeatherIcon
-                                                                            icon="linkedin"
+                                                                            icon="check-circle"
                                                                             className="fea icon-sm me-2"
                                                                         />
                                                                     </i>
-                                                                    krista_joseph
-                                                                </Link>
+                                                                    Contributeur
                                                             </li>
                                                         </ul>
                                                     </Col>
@@ -219,19 +198,10 @@ class PageProfileCommon extends Component {
                                                         <ul className="list-unstyled social-icon social mb-0 mt-4">
                                                             <li className="list-inline-item">
                                                                 <Link to="#" className="rounded">
-                                                                    <i className="uil uil-user-plus align-middle"></i>
-                                                                </Link>
-                                                            </li>
-                                                            <li className="list-inline-item">
-                                                                <Link to="#" className="rounded">
                                                                     <i className="uil uil-comment align-middle"></i>
                                                                 </Link>
                                                             </li>
-                                                            <li className="list-inline-item">
-                                                                <Link to="#" className="rounded">
-                                                                    <i className="uil uil-bell align-middle"></i>
-                                                                </Link>
-                                                            </li>
+
                                                             <li className="list-inline-item">
                                                                 <Link
                                                                     to="/page-profile-edit"
@@ -258,31 +228,32 @@ class PageProfileCommon extends Component {
                             <Col lg="4" md="6" xs="12" className="d-lg-block d-none">
                                 <div className="sidebar sticky-bar p-4 rounded shadow">
                                     <div className="widget">
-                                        <h5 className="widget-title">Followers :</h5>
+                                        <h5 className="widget-title">Quelques statistiques :</h5>
                                         <div className="row mt-4">
                                             <div className="col-6 text-center">
                                                 <FeatherIcon
-                                                    icon="user-plus"
+                                                    icon="users"
                                                     className="fea icon-ex-md text-primary mb-1"
                                                 />
                                                 <h5 className="mb-0">2588</h5>
-                                                <p className="text-muted mb-0">Followers</p>
+                                                <p className="text-muted mb-0">Adhérents</p>
                                             </div>
 
                                             <div className="col-6 text-center">
-                                                <FeatherIcon icon="users"
+                                                <FeatherIcon icon="clock"
                                                              className="fea icon-ex-md text-primary mb-1" />
                                                 <h5 className="mb-0">454</h5>
-                                                <p className="text-muted mb-0">Following</p>
+                                                <p className="text-muted mb-0">Période</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="widget mt-4 pt-2">
+                                    {this.props.id==1?<div className="widget mt-4 pt-2">
                                         <h5 className="widget-title">Etat de la caisse :</h5>
                                         <div className="progress-box mt-4">
-                                            <h6 className="title text-muted">Progress</h6>
+                                            <h6 className="title text-muted">Etat</h6>
                                             <Progress
                                                 value={50}
+                                                animated={false}
                                                 color="primary"
                                                 barClassName="position-relative"
                                             >
@@ -291,7 +262,7 @@ class PageProfileCommon extends Component {
                                                 </div>
                                             </Progress>
                                         </div>
-                                    </div>
+                                    </div>:null}
 
                                     <div className="widget mt-4">
                                         <ul className="list-unstyled sidebar-nav mb-0" id="navmenu-nav">

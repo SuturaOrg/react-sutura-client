@@ -19,7 +19,7 @@ import {connect} from "react-redux";
 import {alertActions, userActions} from "../../../actions";
 import {contributionActions} from "../../../actions";
 
-class ContributeRequest extends Component {
+class RefundRequest extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -97,9 +97,8 @@ class ContributeRequest extends Component {
           title="Cotiser"
           pathItems={this.state.pathItems}
         />
-        
+
         <section className="section">
-        
           <Container>
             <Row className="justify-content-center">
               <Col lg={7} xs={12}>
@@ -190,31 +189,10 @@ class ContributeRequest extends Component {
                 </div>
               </Col>
             </Row>
-            <div className="flex-1 content ms-4">
-        </div>
           </Container>
+
           <Container className="mt-100 mt-60">
-          <h5 className="mb-1">
-                          Comment cotiser ?
-          </h5>
             <Row>
-              <Col lg={6} md={6} xs={12} className="mt-4 mt-sm-0 pt-2 pt-sm-0">
-                <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
-                  <div className="icons text-primary text-center">
-                    <i className="uil uil-webcam d-block rounded h3 mb-0"></i>
-                  </div>
-                  <div className="flex-1 content ms-4">
-                    <h5 className="mb-1">
-                      <Link to="#" className="text-dark">
-                        Faire un virement ou un transfet bancaire
-                      </Link>
-                    </h5>
-                    <p className="text-muted mb-0">
-                    RIB: <b>1454502111107796800014</b> <br/>Code Swift: <b>BCPOMAMC</b><br/>(Banque Populaire)
-                    </p>
-                  </div>
-                </div>
-              </Col>
               <Col lg={6} md={6} xs={12}>
                 <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
                   <div className="icons text-primary text-center">
@@ -223,15 +201,38 @@ class ContributeRequest extends Component {
                   <div className="flex-1 content ms-4">
                     <h5 className="mb-1">
                       <Link to="#" className="text-dark">
-                        Puis remplir le formulaire ci-dessous !
+                        Get in Touch !
                       </Link>
                     </h5>
                     <p className="text-muted mb-0">
-                      Saisir le montant de votre cotisation et puis joindre un justificatif de votre virement bancaire.
+                      This is required when, for text is not yet available.
                     </p>
                     <div className="mt-2">
                       <Link to="#" className="btn btn-sm btn-soft-primary">
-                        Après validation, vous êtes adhérent de Sutura.
+                        Submit a Request
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+
+              <Col lg={6} md={6} xs={12} className="mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
+                  <div className="icons text-primary text-center">
+                    <i className="uil uil-webcam d-block rounded h3 mb-0"></i>
+                  </div>
+                  <div className="flex-1 content ms-4">
+                    <h5 className="mb-1">
+                      <Link to="#" className="text-dark">
+                        Start a Meeting
+                      </Link>
+                    </h5>
+                    <p className="text-muted mb-0">
+                      This is required when, for text is not yet available.
+                    </p>
+                    <div className="mt-2">
+                      <Link to="#" className="btn btn-sm btn-soft-primary">
+                        Start Video Chat
                       </Link>
                     </div>
                   </div>
@@ -255,6 +256,6 @@ function mapStateToProps(state) {
   };
 }
 
-const connectedApp = connect(mapStateToProps)(withRouter(ContributeRequest));
+const connectedApp = connect(mapStateToProps)(withRouter(RefundRequest));
 export default connectedApp;
 

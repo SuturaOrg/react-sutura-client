@@ -229,7 +229,7 @@ class LoanRequest extends Component {
                           <Col md={12}>
                             <div className="mb-3">
                               <Label className="form-label">
-                              RIB <span className="text-danger">*</span>
+                              RIB
                               </Label>
                               <div className="form-icon position-relative">
                                 <i>
@@ -260,7 +260,7 @@ class LoanRequest extends Component {
                           <Col md={12}>
                             <div className="mb-3">
                               <Label className="form-label">
-                              Nom de votre banque <span className="text-danger">*</span>
+                              Nom de votre banque
                               </Label>
                               <div className="form-icon position-relative">
                                 <i>
@@ -268,7 +268,7 @@ class LoanRequest extends Component {
                               </div>
                               <select required  name="bank" id="bank" validate={{
                                     required: {
-                                      value: true,
+                                      value: false,
                                       errorMessage: "Veuillez envoyer une preuve",
                                     },
                                   }}>
@@ -288,7 +288,7 @@ class LoanRequest extends Component {
                           <Col md={12}>
                             <div className="mb-3">
                               <Label className="form-label">
-                              Avez-vous des précisions à apporter ? <span className="text-danger">*</span>
+                              Avez-vous des précisions à apporter ?
                               </Label>
                               <div >
                                 <i>

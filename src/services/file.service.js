@@ -2,24 +2,31 @@ import config from '../config';
 import {authHeaderFormData} from '../_helpers';
 
 export const fileService = {
-    create,
+    upload,
 };
 
-function create(data) {
+function upload(file) {
+    // Create an object of formData
+    const formData = new FormData();
+
+    // Update the formData object
+    formData.append(
+        "file",
+        file,
+    );
     const requestOptions = {
         method: 'POST',
         headers: authHeaderFormData(),
-        body: data
+        body: formData
     };
 
-     return fetch(`${config.apiUrl}/upload/`, requestOptions)
+    return fetch(`${config.apiUrl}/upload/`, requestOptions)
         .then(handleResponse)
-        .then(file => {
+        .then(filePayload => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
-            return Promise.resolve(file.url);
+            return Promise.resolve(filePayload);
         });
 }
-
 
 
 function handleResponse(response) {

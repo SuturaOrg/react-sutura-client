@@ -120,6 +120,7 @@ class ContributeRequest extends Component {
                                     placeholder="Montant"
                                     required
                                     errorMessage=""
+                                    min="0"
                                     validate={{
                                       required: {
                                         value: true,
@@ -190,9 +191,7 @@ class ContributeRequest extends Component {
                   </div>
                   <div className="flex-1 content ms-4">
                     <h5 className="mb-1">
-                      <Link to="#" className="text-dark">
                         Faire un virement ou un transfert bancaire
-                      </Link>
                     </h5>
                     <p className="text-muted mb-0">
                     RIB: <b>1454502111107796800014</b> <br/>Code Swift: <b>BCPOMAMC</b><br/>(Banque Populaire)
@@ -207,9 +206,7 @@ class ContributeRequest extends Component {
                   </div>
                   <div className="flex-1 content ms-4">
                     <h5 className="mb-1">
-                      <Link to="#" className="text-dark">
                         Puis remplir le formulaire ci-dessous !
-                      </Link>
                     </h5>
                     <p className="text-muted mb-0">
                       Saisir le montant de votre cotisation et puis joindre un justificatif de votre virement bancaire.
@@ -230,9 +227,7 @@ class ContributeRequest extends Component {
                   </div>
                   <div className="flex-1 content ms-4">
                     <h5 className="mb-1">
-                      <Link to="#" className="text-dark">
                         Vérification
-                      </Link>
                     </h5>
                     <p className="text-muted mb-0">
                       Les administrateurs vont rapidement vérifier que votre cotisation a été bien reçue dans notre compte bancaire. Puis, votre déclaration sera validée.
@@ -253,9 +248,7 @@ class ContributeRequest extends Component {
                   </div>
                   <div className="flex-1 content ms-4">
                     <h5 className="mb-1">
-                      <Link to="#" className="text-dark">
                         L'algorithme fait le reste.
-                      </Link>
                     </h5>
                     <p className="text-muted mb-0">
                       Ce dernier va considérer votre cotisation dans sa caisse puis mettre à jour vos données.

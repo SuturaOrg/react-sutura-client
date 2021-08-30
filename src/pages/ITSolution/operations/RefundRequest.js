@@ -131,6 +131,7 @@ class RefundRequest extends Component {
                                   name="amount"
                                   id="amount"
                                   placeholder="Montant"
+                                  min="0"
                                   required
                                   errorMessage=""
                                   validate={{

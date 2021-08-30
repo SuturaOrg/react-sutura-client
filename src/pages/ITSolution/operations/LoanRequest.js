@@ -28,7 +28,7 @@ class LoanRequest extends Component {
         //id must required
         { id: 1, name: "Sutura", link: "/index" },
         { id: 2, name: "Opérations", link: "#" },
-        { id: 3, name: "Demnander un prêt" },
+        { id: 3, name: "Demander un prêt" },
       ],
       isOpen: false,
     };
@@ -131,6 +131,7 @@ class LoanRequest extends Component {
                                   name="amount"
                                   id="amount"
                                   placeholder="Montant"
+                                  min="0"
                                   required
                                   errorMessage=""
                                   validate={{
@@ -174,27 +175,24 @@ class LoanRequest extends Component {
                           </Col>
                           <Col md={12}>
                             <div className="mb-3">
-                              <Label className="form-label">
-                              Type <span className="text-danger">*</span>
-                              </Label>
+                              <Label className="form-label">Raison <span className="text-danger">*</span></Label>
                               <div className="form-icon position-relative">
-                                <i>
-                                </i>
+                                <AvField type="select" name="select" helpMessage="Sélectionnez une catégorie"
+
+                                         validate={{
+                                           required: {
+                                             value: true,
+                                             errorMessage: "Veuillez sélectionner une catégorie ",
+                                           },
+                                         }}>
+                                  <option>Santé</option>
+                                  <option>Alimentation</option>
+                                  <option>Loyer</option>
+                                  <option>Transport</option>
+                                  <option>Scolarité</option>
+                                  <option>Autres</option>
+                                </AvField>
                               </div>
-                              <select required  name="reason" id="reason" validate={{
-                                    required: {
-                                      value: false,
-                                      errorMessage: "Veuillez envoyer une preuve",
-                                    },
-                                  }}>
-                                <option value="">- Sélectionner une catégorie -</option>
-                                <option value="HEALTH">Santé</option>
-                                <option value="FOOD">Complément alimentaire</option>
-                                <option value="RENTAL">Loyer</option>
-                                <option value="TRANSPORT">Transport</option>
-                                <option value="SCHOOL_FEES">Frais de scolarité</option>
-                                <option value="OTHER">AUTRES</option>
-                              </select>
                             </div>
                           </Col>
                           <Col md={12}>
@@ -256,49 +254,49 @@ class LoanRequest extends Component {
                               />
                             </div>
                           </Col>
-
                           <Col md={12}>
                             <div className="mb-3">
-                              <Label className="form-label">
-                              Nom de votre banque
-                              </Label>
+                              <Label className="form-label">Banque</Label>
                               <div className="form-icon position-relative">
-                                <i>
-                                </i>
+                                <AvField type="select" name="bank"
+                                         helpMessage="Sélectionnez une banque"
+                                         id="bank"
+                                         validate={{
+                                           required: {
+                                             value: false,
+                                             errorMessage: "Veuillez sélectionner une banque ",
+                                           },
+                                         }}>
+                                  <option value="Arab Bank Maroc">Arab Bank Maroc</option>
+                                  <option value="Attijariwafa Bank">Attijariwafa Bank</option>
+                                  <option value="AL Barid Bank">AL Barid Bank</option>
+                                  <option value="Banque Centrale Populaire">Banque Centrale Populaire</option>
+                                  <option value="CFG Bank">CFG Bank</option>
+                                  <option value="CIH Bank">CIH Bank</option>
+                                  <option value="Société Générale">Société Générale</option>
+                                  <option value="Autre banque">Autre</option>
+                                </AvField>
                               </div>
-                              <select required  name="bank" id="bank" validate={{
-                                    required: {
-                                      value: false,
-                                      errorMessage: "Veuillez envoyer une preuve",
-                                    },
-                                  }}>
-                                <option value="">- Sélectionner une catégorie -</option>
-                                <option value="Arab Bank Maroc">Arab Bank Maroc</option>
-                                <option value="Attijariwafa Bank">Attijariwafa Bank</option>
-                                <option value="AL Barid Bank">AL Barid Bank</option>
-                                <option value="Banque Centrale Populaire">Banque Centrale Populaire</option>
-                                <option value="CFG Bank">CFG Bank</option>
-                                <option value="CIH Bank">CIH Bank</option>
-                                <option value="Société Générale">Société Générale</option>
-                                <option value="Autre banque">Autre</option>
-                              </select>
                             </div>
                           </Col>
-
                           <Col md={12}>
                             <div className="mb-3">
-                              <Label className="form-label">
-                              Avez-vous des précisions à apporter ?
-                              </Label>
-                              <div >
+                              <Label className="form-label">Avez-vous des précisions à apporter ?</Label>
+                              <div className="form-icon position-relative">
                                 <i>
                                   <FeatherIcon
-                                    icon="message-square"
-                                    className="fea icon-sm icons"
+                                      icon="message-circle"
+                                      className="fea icon-sm icons"
                                   />
                                 </i>
                               </div>
-                              <textarea name="comment" id="comment" placeholder="Votre commentaire pour nous aider à mieux évaluer votre déclaration" rows="2" cols="35"></textarea>
+                              <textarea
+                                  name="comment"
+                                  id="comment"
+                                  rows="4"
+                                  className="form-control ps-5"
+                                  placeholder="Votre Message :"
+                              ></textarea>
                             </div>
                           </Col>
                         </Row>

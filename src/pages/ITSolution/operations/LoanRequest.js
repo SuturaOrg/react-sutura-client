@@ -322,6 +322,9 @@ class LoanRequest extends Component {
           </Container>
 
           <Container className="mt-100 mt-60">
+          <h5 className="mb-1">
+                          Comment ça marche ?
+          </h5>
             <Row>
               <Col lg={6} md={6} xs={12}>
                 <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
@@ -331,17 +334,35 @@ class LoanRequest extends Component {
                   <div className="flex-1 content ms-4">
                     <h5 className="mb-1">
                       <Link to="#" className="text-dark">
-                        Get in Touch !
+                        Soumettre une demande
                       </Link>
                     </h5>
                     <p className="text-muted mb-0">
-                      This is required when, for text is not yet available.
+                      Remplissez le formulaire ci-dessus. Mais il faut cotiser d'abord au préalable
                     </p>
-                    <div className="mt-2">
-                      <Link to="#" className="btn btn-sm btn-soft-primary">
-                        Submit a Request
+                  </div>
+                </div>
+              </Col>
+              
+              <Col lg={6} md={6} xs={12} className="mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
+                  <div className="icons text-primary text-center">
+                    <i className="uil uil-check-square d-block rounded h3 mb-0"></i>
+                  </div>
+                  <div className="flex-1 content ms-4">
+                    <h5 className="mb-1">
+                      <Link to="#" className="text-dark">
+                        Vérification
                       </Link>
-                    </div>
+                    </h5>
+                    <p className="text-muted mb-0">
+                      Les administrateurs vont rapidement vérifier que la demande respecte les conditions générales avant de la soumettre à l'algorithme.
+                    </p>
+                    {/* <div className="mt-2">
+                      <Link to="#" className="btn btn-sm btn-soft-primary">
+                        Voir les conditions générales de soumission de demande.
+                      </Link>
+                    </div> */}
                   </div>
                 </div>
               </Col>
@@ -349,22 +370,36 @@ class LoanRequest extends Component {
               <Col lg={6} md={6} xs={12} className="mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
                   <div className="icons text-primary text-center">
-                    <i className="uil uil-webcam d-block rounded h3 mb-0"></i>
+                    <i className="uil uil-filter d-block rounded h3 mb-0"></i>
                   </div>
                   <div className="flex-1 content ms-4">
                     <h5 className="mb-1">
                       <Link to="#" className="text-dark">
-                        Start a Meeting
+                        L'algorithme continue le traitement
                       </Link>
                     </h5>
                     <p className="text-muted mb-0">
-                      This is required when, for text is not yet available.
+                      L'algorithme a été conçu afin que le traitement de demande se fasse de manière objective. Il calcule la priorité de chaque nouvelle demande et fait un classement en fonction de cette dernière.
+                      Puis en fonction de l'état de disponibilité de la caisse et des autres demandes en attente, l'algorithme va prendre une décision.
                     </p>
-                    <div className="mt-2">
-                      <Link to="#" className="btn btn-sm btn-soft-primary">
-                        Start Video Chat
+                  </div>
+                </div>
+              </Col>
+
+              <Col lg={6} md={6} xs={12} className="mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div className="d-flex align-items-center features feature-clean shadow rounded p-4">
+                  <div className="icons text-primary text-center">
+                    <i className="uil uil-umbrella d-block rounded h3 mb-0"></i>
+                  </div>
+                  <div className="flex-1 content ms-4">
+                    <h5 className="mb-1">
+                      <Link to="#" className="text-dark">
+                        Validation
                       </Link>
-                    </div>
+                    </h5>
+                    <p className="text-muted mb-0">
+                      Dès que l'algorithme élise votre demande, vous serez notifié par mail ou par téléphone afin de procéder à transport de la somme demandée.
+                    </p>
                   </div>
                 </div>
               </Col>

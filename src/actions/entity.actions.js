@@ -1,22 +1,23 @@
-import {contributionConstants} from '../_constants';
+import {entityConstants} from '../_constants';
 import {fileService, userService} from '../services';
 import {alertActions} from './';
 import {history} from '../_helpers';
-import {contributionService} from "../services/contribution.service";
+import {entityService} from "../services/entity.service";
 
-export const contributionActions = {
+export const entityActions = {
     create
 };
 
-function create(file, data) {
+function create(file, data, entity) {
+    console.log(file, data, entity);
     return dispatch => {
-        dispatch(request({data}));
+        dispatch(request(data,entity));
         fileService.upload(file).then((filePayload) => {
             data.proof=filePayload.url;
-            contributionService.create(data)
+            entityService.create(data, entity)
                 .then(
-                    contributionPayload => {
-                        dispatch(success(contributionPayload));
+                    entityPayload => {
+                        dispatch(success(entityPayload,entity));
                         dispatch(alertActions.success("Votre cotisation a été bien enregistrée"));
                         // history.push('/page-profile');
                         // window.location.reload();
@@ -32,16 +33,16 @@ function create(file, data) {
         })
     };
 
-    function request(contribution) {
-        return {type: contributionConstants.CONTRIBUTION_CREATE_REQUEST, contribution}
+    function request(data, entity) {
+        return {type: entityConstants.ENTITY_CREATE_REQUEST, data, entity}
     }
 
-    function success(contributionPayload) {
-        return {type: contributionConstants.CONTRIBUTION_CREATE_SUCCESS, contributionPayload}
+    function success(entityPayload, entity) {
+        return {type: entityConstants.ENTITY_CREATE_SUCCESS, entityPayload, entity}
     }
 
     function failure(error) {
-        return {type: contributionConstants.CONTRIBUTION_CREATE_FAILURE, error}
+        return {type: entityConstants.ENTITY_CREATE_FAILURE, error}
     }
 }
 

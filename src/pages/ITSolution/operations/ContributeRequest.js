@@ -18,7 +18,7 @@ import FeatherIcon from "feather-icons-react";
 import PageBreadcrumb from "../../../components/Shared/PageBreadcrumb";
 import {connect} from "react-redux";
 import {alertActions, userActions} from "../../../actions";
-import {contributionActions} from "../../../actions";
+import {entityActions} from "../../../actions";
 
 class ContributeRequest extends Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class ContributeRequest extends Component {
       dispatch(alertActions.error("Le fichier ne doit pas dépasser 7 Mo "))
       return;
     }
-    dispatch(contributionActions.create(this.state.selectedFile,values));
+    dispatch(entityActions.create(this.state.selectedFile,values,"contributions"));
   };
   onFileChange = event => {
     this.setState({ selectedFile: event.target.files[0] });
@@ -75,7 +75,7 @@ class ContributeRequest extends Component {
   };
 
   render() {
-    const {alert, loading}=this.props;
+    const {alert, contributionsCreateLoading}=this.props;
     console.log(alert);
     return (
         <React.Fragment>
@@ -165,7 +165,7 @@ class ContributeRequest extends Component {
                                 <Button
                                     className={'btn btn-primary'}
                                 >
-                                  {loading?<Spinner> </Spinner>:"Cotiser"} </Button>
+                                  {contributionsCreateLoading?<Spinner> </Spinner>:"Cotiser"} </Button>
                               </FormGroup>
 
                             </Col>
@@ -233,11 +233,11 @@ class ContributeRequest extends Component {
   }
 }
 function mapStateToProps(state) {
-  const {loading} = state.contribution;
+  const {contributionsCreateLoading} = state.entity;
   const {alert} = state;
 
   return {
-    loading,
+    contributionsCreateLoading,
     alert
 
   };

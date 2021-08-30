@@ -126,7 +126,7 @@ class PageCoverLogin extends Component {
                                     </i>
                                   </div>
                                   <AvField
-                                    type="text"
+                                    type="password"
                                     className="form-control ps-5"
                                     name="password"
                                     id="password"

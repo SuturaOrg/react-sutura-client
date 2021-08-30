@@ -1,18 +1,18 @@
 import config from '../config';
 import {authHeader} from '../_helpers';
 
-export const contributionService = {
+export const entityService = {
     create,
 };
 
-function create(data) {
+function create(data,entity) {
     const requestOptions = {
         method: 'POST',
         headers: authHeader(),
         body: JSON.stringify(data)
     };
 
-    return fetch(`${config.apiUrl}/contributions/`, requestOptions)
+    return fetch(`${config.apiUrl}/${entity}/`, requestOptions)
         .then(handleResponse)
         .then(loanPayload => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes

@@ -1,4 +1,4 @@
 export * from './alert.actions';
 export * from './user.actions';
-export * from './contribution.actions';
+export * from './entity.actions';
 

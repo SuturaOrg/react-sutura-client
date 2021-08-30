@@ -1,3 +1,3 @@
 export * from './alert.constants';
 export * from './user.constants';
-export * from './contribution.constants';
+export * from './entity.constants';

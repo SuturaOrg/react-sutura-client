@@ -17,7 +17,7 @@ import FeatherIcon from "feather-icons-react";
 import PageBreadcrumb from "../../../components/Shared/PageBreadcrumb";
 import {connect} from "react-redux";
 import {alertActions, userActions} from "../../../actions";
-import {contributionActions} from "../../../actions";
+import {entityActions} from "../../../actions";
 
 class LoanRequest extends Component {
   constructor(props) {
@@ -50,7 +50,7 @@ class LoanRequest extends Component {
     }
     const url =await this.uploadFile();
     values.proof=url;
-    dispatch(contributionActions.create(values));
+    dispatch(entityActions.create(values));
   };
   onFileChange = event => {
     this.setState({ selectedFile: event.target.files[0] });
@@ -411,7 +411,7 @@ class LoanRequest extends Component {
   }
 }
 function mapStateToProps(state) {
-  const {loading} = state.contribution;
+  const {loading} = state.entity;
   const {alert} = state;
 
   return {

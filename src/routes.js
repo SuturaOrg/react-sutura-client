@@ -1,6 +1,9 @@
 import React from "react";
 const Donation = React.lazy(() => import("./pages/Pages/Utility/Donate"));
 const ContributeRequest = React.lazy(() => import("./pages/ITSolution/operations/ContributeRequest"));
+const LoanRequest = React.lazy(() => import("./pages/ITSolution/operations/LoanRequest"));
+const RefundRequest = React.lazy(() => import("./pages/ITSolution/operations/RefundRequest"));
+
 const SignupSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/SignupSubmitConfirmation"));
 const LoanSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/LoanSubmitConfirmation"));
 const ContributionSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/ContributionSubmitConfirmation"));
@@ -516,6 +519,9 @@ const routes = [
   { path: "/aboutus", component: PageAboutUs },
   { path: "/donation", component: Donation, isTopbarDark: true },
   { path: "/contribute", component: ContributeRequest, isTopbarDark: true },
+  { path: "/loan", component: LoanRequest, isTopbarDark: true },
+  { path: "/refund", component: RefundRequest, isTopbarDark: true },
+
   { path: "/signup-confirmation", component: SignupSubmitConfirmation, isTopbarDark: true },
   { path: "/loan-confirmation", component: LoanSubmitConfirmation, isTopbarDark: true },
   { path: "/contribution-confirmation", component: ContributionSubmitConfirmation, isTopbarDark: true },

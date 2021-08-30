@@ -120,7 +120,7 @@ class LoanRequest extends Component {
                               <div className="form-icon position-relative">
                                 <i>
                                   <FeatherIcon
-                                    icon="user"
+                                    icon="dollar-sign"
                                     className="fea icon-sm icons"
                                   />
                                 </i>
@@ -234,7 +234,7 @@ class LoanRequest extends Component {
                               <div className="form-icon position-relative">
                                 <i>
                                   <FeatherIcon
-                                    icon="user"
+                                    icon="credit-card"
                                     className="fea icon-sm icons"
                                   />
                                 </i>

@@ -75,7 +75,7 @@ class PageProfileCommon extends Component {
             {
                 id: 1,
                 icon: "uil uil-dashboard",
-                className: "navbar-item account-menu px-0 active",
+                className: "navbar-item account-menu px-0 ",
                 title: "Profile",
                 link: "/page-profile",
             },
@@ -278,7 +278,7 @@ class PageProfileCommon extends Component {
                                         </div>
                                     </div>
                                     <div className="widget mt-4 pt-2">
-                                        <h5 className="widget-title">Projects :</h5>
+                                        <h5 className="widget-title">Etat de la caisse :</h5>
                                         <div className="progress-box mt-4">
                                             <h6 className="title text-muted">Progress</h6>
                                             <Progress
@@ -296,7 +296,7 @@ class PageProfileCommon extends Component {
                                     <div className="widget mt-4">
                                         <ul className="list-unstyled sidebar-nav mb-0" id="navmenu-nav">
                                             {this.state.widgets.map((widget, key) => (
-                                                <li className={widget.className} key={key}>
+                                                <li className={this.props.id==widget.id?widget.className+" active":widget.className} key={key}>
                                                     <Link to={widget.link} className="navbar-link d-flex rounded shadow align-items-center py-2 px-4">
                             <span className="h4 mb-0">
                               <i className={widget.icon}></i>
@@ -401,5 +401,5 @@ function mapStateToProps(state) {
     };
 
 }
-const connectedPageCommon = connect(mapStateToProps)(PageProfileCommon);
-export default connectedPageCommon;
+const connectedProfileCommon = connect(mapStateToProps)(PageProfileCommon);
+export default connectedProfileCommon;

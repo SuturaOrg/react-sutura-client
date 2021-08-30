@@ -23,7 +23,7 @@ import master from "../../../assets/images/payments/payment/master.png";
 import visaa from "../../../assets/images/payments/payment/visaa.png";
 import rupay from "../../../assets/images/payments/payment/rupay.png";
 import paypals from "../../../assets/images/payments/payment/paypals.png";
-import PageCommon from "./PageProfileCommon";
+import ProfileCommon from "./PageProfileCommon";
 
 class PagePayments extends Component {
   state = {
@@ -105,7 +105,7 @@ class PagePayments extends Component {
 
   render() {
     return (
-      <PageCommon>
+      <ProfileCommon id={5}>
         <Col lg="8" xs={12}>
           <div className="rounded shadow p-4">
             <div className="d-flex align-items-center justify-content-between">
@@ -244,7 +244,7 @@ class PagePayments extends Component {
             </Row>
           </div>
         </Col>
-      </PageCommon>
+      </ProfileCommon>
     );
   }
 }

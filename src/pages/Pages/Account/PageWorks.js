@@ -20,7 +20,7 @@ import work9 from "../../../assets/images/work/9.jpg";
 import work10 from "../../../assets/images/work/10.jpg";
 import work11 from "../../../assets/images/work/10.jpg";
 import work12 from "../../../assets/images/work/10.jpg";
-import PageCommon from "./PageProfileCommon";
+import ProfileCommon from "./PageProfileCommon";
 
 class PageWorks extends Component {
   state = {
@@ -176,7 +176,7 @@ class PageWorks extends Component {
 
   render() {
     return (
-        <PageCommon>
+        <ProfileCommon id={3}>
           <Col lg={8} xs={12}>
             <div className="rounded shadow p-4">
               <h5 className="mb-0">Works & Projects:</h5>
@@ -213,7 +213,7 @@ class PageWorks extends Component {
               </Row>
             </div>
           </Col>
-        </PageCommon>
+        </ProfileCommon>
     );
   }
 }

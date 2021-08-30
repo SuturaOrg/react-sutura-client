@@ -19,7 +19,7 @@ import FeatherIcon from "feather-icons-react";
 
 import profile from "../../../assets/images/client/05.jpg";
 import imgbg from "../../../assets/images/account/bg.png";
-import PageCommon from "./PageProfileCommon";
+import ProfileCommon from "./PageProfileCommon";
 
 class PageProfileEdit extends Component {
     constructor(props) {
@@ -151,7 +151,7 @@ class PageProfileEdit extends Component {
 
     render() {
         return (
-            <PageCommon>
+            <ProfileCommon id={6}>
                 <Col lg="8" xs="12">
                     <Card className="border-0 rounded shadow">
                         <CardBody>
@@ -601,7 +601,7 @@ class PageProfileEdit extends Component {
                     </div>
                 </Col>
 
-            </PageCommon>);
+            </ProfileCommon>);
     }
 }
 

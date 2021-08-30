@@ -16,7 +16,7 @@ import client5 from "../../../assets/images/client/05.jpg";
 import client6 from "../../../assets/images/client/06.jpg";
 import client7 from "../../../assets/images/client/07.jpg";
 import client8 from "../../../assets/images/client/08.jpg";
-import PageCommon from "./PageProfileCommon";
+import ProfileCommon from "./PageProfileCommon";
 
 class PageMembers extends Component {
   state = {
@@ -132,7 +132,7 @@ class PageMembers extends Component {
 
   render() {
     return (
-        <PageCommon>
+        <ProfileCommon id={2}>
         <Col lg={8} xs={12}>
           <div className="rounded shadow p-4">
             <h5>Members:</h5>
@@ -203,7 +203,7 @@ class PageMembers extends Component {
             </Row>
           </div>
         </Col>
-        </PageCommon>
+        </ProfileCommon>
     );
   }
 }

@@ -21,7 +21,7 @@ import exp1 from "../../../assets/images/job/Circleci.svg";
 import exp2 from "../../../assets/images/job/Codepen.svg";
 import exp3 from "../../../assets/images/job/Gitlab.svg";
 import {connect} from "react-redux";
-import PageCommon from "./PageProfileCommon";
+import ProfileCommon from "./PageProfileCommon";
 
 
 class PageProfile extends Component {
@@ -153,7 +153,7 @@ class PageProfile extends Component {
     render() {
         const {user} = this.props;
         return (
-            <PageCommon>
+            <ProfileCommon id={1}>
                 <Col lg="8" md="7" xs="12">
                     <div className="border-bottom pb-4">
                         <h5>{user.firstname} {user.lastname}</h5>
@@ -386,7 +386,7 @@ class PageProfile extends Component {
                         </Col>
                     </Row>
                 </Col>
-            </PageCommon>
+            </ProfileCommon>
 
         );
     }

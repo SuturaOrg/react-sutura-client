@@ -34,7 +34,7 @@ import client5 from "../../../assets/images/client/05.jpg";
 import client6 from "../../../assets/images/client/06.jpg";
 import client7 from "../../../assets/images/client/07.jpg";
 import client8 from "../../../assets/images/client/08.jpg";
-import PageCommon from "./PageProfileCommon";
+import ProfileCommon from "./PageProfileCommon";
 
 class PageMessages extends Component {
   constructor(props) {
@@ -223,7 +223,7 @@ class PageMessages extends Component {
 
   render() {
     return (
-        <PageCommon>
+        <ProfileCommon id={4}>
           <Col lg={8} xs={12}>
             <div className="rounded shadow p-4">
               <div className="d-flex align-items-center justify-content-between">
@@ -419,7 +419,7 @@ class PageMessages extends Component {
               </div>
             </div>
           </Col>
-        </PageCommon>
+        </ProfileCommon>
     );
   }
 }

@@ -48,26 +48,13 @@ class LoanRequest extends Component {
       dispatch(alertActions.error("Le fichier ne doit pas dépasser 7 Mo "))
       return;
     }
-    const url =await this.uploadFile();
-    values.proof=url;
-    dispatch(entityActions.create(values));
+    dispatch(entityActions.create(this.state.selectedFile,values,"loans"));
   };
   onFileChange = event => {
     this.setState({ selectedFile: event.target.files[0] });
 
   };
-  uploadFile = () => {
-    // Create an object of formData
-    const formData = new FormData();
 
-    // Update the formData object
-    formData.append(
-        "file",
-        this.state.selectedFile,
-        this.state.selectedFile.name
-    );
-     return  fileService.create(formData);
-  };
   componentDidMount() {
     window.addEventListener("scroll", this.scrollNavigation, true);
   }
@@ -177,7 +164,7 @@ class LoanRequest extends Component {
                             <div className="mb-3">
                               <Label className="form-label">Raison <span className="text-danger">*</span></Label>
                               <div className="form-icon position-relative">
-                                <AvField type="select" name="select" helpMessage="Sélectionnez une catégorie"
+                                <AvField type="select" name="select" value="Santé" helpMessage="Sélectionnez une catégorie"
 
                                          validate={{
                                            required: {
@@ -244,6 +231,7 @@ class LoanRequest extends Component {
                                   id="RIB"
                                   placeholder="Entrez votre RIB"
                                   required
+                                  min="0"
                                   errorMessage=""
                                   validate={{
                                     required: {

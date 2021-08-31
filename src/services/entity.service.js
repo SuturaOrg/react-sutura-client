@@ -41,7 +41,7 @@ function getAll(entity,id) {
 function handleResponse(response) {
     return response.text().then(text => {
         const data = text && JSON.parse(text);
-
+        console.log(data);
         if (!response.ok) {
             // if (response.status === 401) {
             //     // auto logout if 401 response returned from api
@@ -49,7 +49,7 @@ function handleResponse(response) {
             //     window.location.reload(true);
             // }
 
-            const error = (data && data.message) || response.statusText;
+            const error = (data && data.message) || response.statusText || (data && data.error);
             return Promise.reject(error);
         }
 

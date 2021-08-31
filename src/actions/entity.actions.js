@@ -20,13 +20,13 @@ function create(file, data, entity) {
                 .then(
                     entityPayload => {
                         dispatch(success(entityPayload,entity));
-                        dispatch(alertActions.success("Votre cotisation a été bien enregistrée"));
+                        dispatch(alertActions.success(getSuccessMessage(entity)));
                         // history.push('/page-profile');
                         // window.location.reload();
                     },
                     error => {
                         dispatch(failure(error));
-                        dispatch(alertActions.error("Votre cotisation n'a pas été sauvegardée à cause d'une erreur"));
+                        dispatch(alertActions.error(getErrorMessage(entity,error)));
                     }
                 );
         }).catch((error)=>{
@@ -83,3 +83,25 @@ function getAll( entity) {
     }
 }
 
+function getSuccessMessage(entity){
+    switch (entity){
+        case "contributions":
+            return "Votre cotisation a été enregistrée avec succès"
+        case "loans":
+            return "Votre demande de prêt a été enregistrée avec succès"
+        case "refunds":
+            return "Votre remboursement s'est déroulé avec succès"
+
+    }
+}
+function getErrorMessage(entity,error){
+    switch (entity){
+        case "contributions":
+            return "Votre cotisation n'a pas été sauvegardée:\n"+error;
+        case "loans":
+            return "Votre demande de prêt n'a pas été enregistrée:\n"+error;
+        case "refunds":
+            return "Votre remboursement n'a pas été enregistré:\n"+error;
+
+    }
+}

@@ -3,6 +3,7 @@ import {authHeader} from '../_helpers';
 
 export const entityService = {
     create,
+    getAll
 };
 
 function create(data,entity) {
@@ -22,6 +23,20 @@ function create(data,entity) {
 }
 
 
+function getAll(entity,id) {
+    const requestOptions = {
+        method: 'GET',
+        headers: authHeader(),
+    };
+
+    return fetch(`${config.apiUrl}/${entity}?studentPrime=${id}&sort=createdAt,desc`, requestOptions)
+        .then(handleResponse)
+        .then(entityPayload => {
+            // store user details and jwt token in local storage to keep user logged in between page refreshes
+
+            return [entityPayload._embedded[entity],entityPayload.page.totalElements];
+        });
+}
 
 function handleResponse(response) {
     return response.text().then(text => {

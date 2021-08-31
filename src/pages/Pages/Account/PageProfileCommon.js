@@ -97,7 +97,7 @@ class PageProfileCommon extends Component {
                 id: 4,
                 icon: "uil uil-envelope-star",
                 className: "navbar-item account-menu px-0 mt-2",
-                title: "Messages",
+                title: "Cotisations",
                 link: "/page-messages",
             },
             {

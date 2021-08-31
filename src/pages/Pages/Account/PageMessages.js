@@ -1,23 +1,23 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
 import {
-  Container,
-  Row,
-  Col,
-  Progress,
-  Card,
-  CardBody,
-  Modal,
-  ModalBody,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  ModalHeader,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
+    Container,
+    Row,
+    Col,
+    Progress,
+    Card,
+    CardBody,
+    Modal,
+    ModalBody,
+    Form,
+    FormGroup,
+    Label,
+    Input,
+    ModalHeader,
+    Dropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem, Spinner,
 } from "reactstrap";
 
 //Import Icons
@@ -35,393 +35,267 @@ import client6 from "../../../assets/images/client/06.jpg";
 import client7 from "../../../assets/images/client/07.jpg";
 import client8 from "../../../assets/images/client/08.jpg";
 import ProfileCommon from "./PageProfileCommon";
+import {entityActions} from "../../../actions";
+import {connect} from "react-redux";
 
 class PageMessages extends Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-      members: [
-        {
-          id: 1,
-          img: client1,
-          title: "Calvin Carlo",
-          desc:
-            "This is required when, for example, the final text is not yet available. Dummy",
-        },
-        {
-          id: 2,
-          img: client2,
-          title: "Miriam Walya",
-          desc:
-            "This is required when, for example, the final text is not yet available. Dummy",
-        },
-        {
-          id: 3,
-          img: client3,
-          title: "Jenelia Parker",
-          desc:
-            "This is required when, for example, the final text is not yet available. Dummy",
-        },
-        {
-          id: 4,
-          img: client4,
-          title: "Jack Deo",
-          desc:
-            "This is required when, for example, the final text is not yet available. Dummy",
-        },
-        {
-          id: 5,
-          img: client5,
-          title: "Marya Joseph",
-          desc:
-            "This is required when, for example, the final text is not yet available. Dummy",
-        },
-        {
-          id: 6,
-          img: client6,
-          title: "Maninder Khan",
-          desc:
-            "This is required when, for example, the final text is not yet available. Dummy",
-        },
-        {
-          id: 7,
-          img: client7,
-          title: "Pitambar Das",
-          desc:
-            "This is required when, for example, the final text is not yet available. Dummy",
-        },
-        {
-          id: 8,
-          img: client8,
-          title: "Cristino Murfy",
-          desc:
-            "This is required when, for example, the final text is not yet available. Dummy",
-        },
-      ],
-      widgets: [
-        {
-          id: 1,
-          icon: "uil uil-dashboard",
-          className: "navbar-item account-menu px-0",
-          title: "Profile",
-          link: "/page-profile",
-        },
-        {
-          id: 2,
-          icon: "uil uil-users-alt",
-          className: "navbar-item account-menu px-0 mt-2",
-          title: "Members",
-          link: "/page-members",
-        },
-        {
-          id: 3,
-          icon: "uil uil-file",
-          className: "navbar-item account-menu px-0 mt-2",
-          title: "Portfolio",
-          link: "/page-works",
-        },
-        {
-          id: 4,
-          icon: "uil uil-envelope-star",
-          className: "navbar-item account-menu px-0 mt-2 active",
-          title: "Messages",
-          link: "/page-messages",
-        },
-        {
-          id: 5,
-          icon: "uil uil-transaction",
-          className: "navbar-item account-menu px-0 mt-2",
-          title: "Payments",
-          link: "/page-payments",
-        },
-        {
-          id: 6,
-          icon: "uil uil-setting",
-          className: "navbar-item account-menu px-0 mt-2",
-          title: "Settings",
-          link: "/page-profile-edit",
-        },
-        {
-          id: 7,
-          icon: "uil uil-dashboard",
-          className: "navbar-item account-menu px-0 mt-2",
-          title: "Logout",
-          link: "/auth-login-three",
-        },
-      ],
-      modal: false,
-      dropdownOpen: false,
-      selectedContacts: [],
+        this.state = {
+            contributions: [
+                {
+                    id: 1,
+                    img: client1,
+                    title: "Calvin Carlo",
+                    desc:
+                        "This is required when, for example, the final text is not yet available. Dummy",
+                },
+                {
+                    id: 2,
+                    img: client2,
+                    title: "Miriam Walya",
+                    desc:
+                        "This is required when, for example, the final text is not yet available. Dummy",
+                },
+                {
+                    id: 3,
+                    img: client3,
+                    title: "Jenelia Parker",
+                    desc:
+                        "This is required when, for example, the final text is not yet available. Dummy",
+                },
+                {
+                    id: 4,
+                    img: client4,
+                    title: "Jack Deo",
+                    desc:
+                        "This is required when, for example, the final text is not yet available. Dummy",
+                },
+                {
+                    id: 5,
+                    img: client5,
+                    title: "Marya Joseph",
+                    desc:
+                        "This is required when, for example, the final text is not yet available. Dummy",
+                },
+                {
+                    id: 6,
+                    img: client6,
+                    title: "Maninder Khan",
+                    desc:
+                        "This is required when, for example, the final text is not yet available. Dummy",
+                },
+                {
+                    id: 7,
+                    img: client7,
+                    title: "Pitambar Das",
+                    desc:
+                        "This is required when, for example, the final text is not yet available. Dummy",
+                },
+                {
+                    id: 8,
+                    img: client8,
+                    title: "Cristino Murfy",
+                    desc:
+                        "This is required when, for example, the final text is not yet available. Dummy",
+                },
+            ],
+            widgets: [
+                {
+                    id: 1,
+                    icon: "uil uil-dashboard",
+                    className: "navbar-item account-menu px-0",
+                    title: "Profile",
+                    link: "/page-profile",
+                },
+                {
+                    id: 2,
+                    icon: "uil uil-users-alt",
+                    className: "navbar-item account-menu px-0 mt-2",
+                    title: "contributions",
+                    link: "/page-contributions",
+                },
+                {
+                    id: 3,
+                    icon: "uil uil-file",
+                    className: "navbar-item account-menu px-0 mt-2",
+                    title: "Portfolio",
+                    link: "/page-works",
+                },
+                {
+                    id: 4,
+                    icon: "uil uil-envelope-star",
+                    className: "navbar-item account-menu px-0 mt-2 active",
+                    title: "Messages",
+                    link: "/page-messages",
+                },
+                {
+                    id: 5,
+                    icon: "uil uil-transaction",
+                    className: "navbar-item account-menu px-0 mt-2",
+                    title: "Payments",
+                    link: "/page-payments",
+                },
+                {
+                    id: 6,
+                    icon: "uil uil-setting",
+                    className: "navbar-item account-menu px-0 mt-2",
+                    title: "Settings",
+                    link: "/page-profile-edit",
+                },
+                {
+                    id: 7,
+                    icon: "uil uil-dashboard",
+                    className: "navbar-item account-menu px-0 mt-2",
+                    title: "Logout",
+                    link: "/auth-login-three",
+                },
+            ],
+            modal: false,
+            dropdownOpen: false,
+            selectedContacts: [],
+        };
+        this.togglemodal.bind(this);
+        this.toggleDropdown.bind(this);
+        this.onChangeCheckbox.bind(this);
+    }
+
+    togglemodal = () => {
+        this.setState((prevState) => ({
+            modal: !prevState.modal,
+        }));
     };
-    this.togglemodal.bind(this);
-    this.toggleDropdown.bind(this);
-    this.onChangeCheckbox.bind(this);
-  }
-  togglemodal = () => {
-    this.setState((prevState) => ({
-      modal: !prevState.modal,
-    }));
-  };
-  toggleDropdown = () => {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen,
-    });
-  };
+    toggleDropdown = () => {
+        this.setState({
+            dropdownOpen: !this.state.dropdownOpen,
+        });
+    };
 
-  componentDidMount() {
-    document.body.classList = "";
-    document.getElementById("top-menu").classList.add("nav-light");
-    document.getElementById("buyButton").className = "btn btn-light";
-    window.addEventListener("scroll", this.scrollNavigation, true);
-  }
-  // Make sure to remove the DOM listener when the component is unmounted.
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.scrollNavigation, true);
-  }
+    componentDidMount() {
+        document.body.classList = "";
+        document.getElementById("top-menu").classList.add("nav-light");
+        document.getElementById("buyButton").className = "btn btn-light";
+        window.addEventListener("scroll", this.scrollNavigation, true);
 
-  scrollNavigation = () => {
-    var doc = document.documentElement;
-    var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    if (top > 80) {
-      document.getElementById("topnav").classList.add("nav-sticky");
-      document.getElementById("buyButton").className = "btn btn-primary";
-    } else {
-      document.getElementById("topnav").classList.remove("nav-sticky");
-      document.getElementById("buyButton").className = "btn btn-light";
+        const {dispatch} = this.props;
+        dispatch(entityActions.getAll("contributions"));
     }
-  };
 
-  onChangeCheckbox = (selected, contact) => {
-    let modifiedselectedContacts = [...this.state.selectedContacts];
-    if (selected) {
-      modifiedselectedContacts.push(contact);
-      this.setState({
-        selectedContacts: modifiedselectedContacts,
-      });
-    } else {
-      let otherContacts = modifiedselectedContacts.filter(
-        (r) => r.id !== contact.id
-      );
-      this.setState({
-        selectedContacts: otherContacts,
-      });
+    // Make sure to remove the DOM listener when the component is unmounted.
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.scrollNavigation, true);
     }
-  };
 
-  onSelectAll = (checked) => {
-    if (checked) {
-      this.setState({
-        selectedContacts: this.state.members,
-      });
-    } else {
-      this.setState({
-        selectedContacts: [],
-      });
-    }
-  };
+    scrollNavigation = () => {
+        var doc = document.documentElement;
+        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+        if (top > 80) {
+            document.getElementById("topnav").classList.add("nav-sticky");
+            document.getElementById("buyButton").className = "btn btn-primary";
+        } else {
+            document.getElementById("topnav").classList.remove("nav-sticky");
+            document.getElementById("buyButton").className = "btn btn-light";
+        }
+    };
 
-  render() {
-    return (
-        <ProfileCommon id={4}>
-          <Col lg={8} xs={12}>
-            <div className="rounded shadow p-4">
-              <div className="d-flex align-items-center justify-content-between">
-                <h5 className="mb-0">Messages:</h5>
-                <Link
-                    to="#"
-                    className="btn btn-primary"
-                    onClick={this.togglemodal}
-                >
-                  <i>
-                    <FeatherIcon icon="plus" className="fea icon-sm" />
-                  </i>{" "}
-                  Compose
-                </Link>
-              </div>
-              <Modal
-                  tabIndex="-1"
-                  centered
-                  isOpen={this.state.modal}
-                  toggle={this.togglemodal}
-                  contentClassName="rounded shadow border-0"
-              >
-                <ModalHeader toggle={this.togglemodal}>
-                  New Message
-                </ModalHeader>
-                <ModalBody className="p-4">
-                  <Form>
-                    <Row>
-                      <Col md={12}>
-                        <FormGroup>
-                          <Label className="form-label">
-                            Your Name <span className="text-danger">*</span>
-                          </Label>
-                          <div className="position-relative">
-                            <FeatherIcon
-                                icon="user"
-                                className="fea icon-sm icons"
-                            />
-                            <Input
-                                name="name"
-                                id="name"
-                                type="text"
-                                className="form-control ps-5"
-                                placeholder="First Name :"
-                            />
-                          </div>
-                        </FormGroup>
-                      </Col>
-                      <Col md={12}>
-                        <FormGroup>
-                          <Label className="form-label">Subject</Label>
-                          <div className="position-relative">
-                            <FeatherIcon
-                                icon="book"
-                                className="fea icon-sm icons"
-                            />
-                            <input
-                                name="subject"
-                                id="subject"
-                                className="form-control ps-5"
-                                placeholder="Your subject :"
-                            />
-                          </div>
-                        </FormGroup>
-                      </Col>
-                      <Col md={12}>
-                        <FormGroup className="mb-0">
-                          <Label className="form-label">Comments</Label>
-                          <div className="position-relative">
-                            <FeatherIcon
-                                icon="message-circle"
-                                className="fea icon-sm icons"
-                            />
-                            <textarea
-                                name="comments"
-                                id="comments"
-                                rows="4"
-                                className="form-control ps-5"
-                                placeholder="Your Message :"
-                            ></textarea>
-                          </div>
-                        </FormGroup>
-                      </Col>
-                    </Row>
-                  </Form>
-                </ModalBody>
-                <div className="border-top p-4">
-                  <button type="button" className="btn btn-primary">
-                    Send Now
-                  </button>
-                </div>
-              </Modal>
+    onChangeCheckbox = (selected, contact) => {
+        let modifiedselectedContacts = [...this.state.selectedContacts];
+        if (selected) {
+            modifiedselectedContacts.push(contact);
+            this.setState({
+                selectedContacts: modifiedselectedContacts,
+            });
+        } else {
+            let otherContacts = modifiedselectedContacts.filter(
+                (r) => r.id !== contact.id
+            );
+            this.setState({
+                selectedContacts: otherContacts,
+            });
+        }
+    };
 
-              <div className="d-flex border-bottom align-items-center justify-content-between bg-light mt-4 p-3">
-                <div className="form-check ps-0">
-                  <div className="mb-0">
-                    <div className="form-check">
-                      <input
-                          type="checkbox"
-                          className="form-check-input"
-                          id="checkAll"
-                          onChange={(e) => {
-                            this.onSelectAll(e.target.checked);
-                          }}
-                      />
-                      <label
-                          className="form-check-label"
-                          htmlFor="checkAll"
-                      >
-                        Select all
-                      </label>
-                    </div>
-                  </div>
-                </div>
+    onSelectAll = (checked) => {
+        if (checked) {
+            this.setState({
+                selectedContacts: this.state.contributions,
+            });
+        } else {
+            this.setState({
+                selectedContacts: [],
+            });
+        }
+    };
 
-                <Dropdown
-                    color="primary"
-                    className="btn-group me-2 mt-2"
-                    isOpen={this.state.dropdownOpen}
-                    toggle={this.toggleDropdown}
-                >
-                  <DropdownToggle caret color="primary">
-                    Action
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <FeatherIcon icon="eye-off" className="fea icon-sm" />
-                      Mark Unread
-                    </DropdownItem>
-                    <DropdownItem>
-                      <FeatherIcon
-                          icon="corner-up-left"
-                          className="fea icon-sm"
-                      />
-                      Reply
-                    </DropdownItem>
-                    <DropdownItem>
-                      <FeatherIcon
-                          icon="corner-up-right"
-                          className="fea icon-sm"
-                      />
-                      Forward
-                    </DropdownItem>
-                    <div className="dropdown-divider"></div>
-                    <Link to="#" className="dropdown-item text-danger">
-                      <FeatherIcon icon="trash-2" className="fea icon-sm" />
-                      Delete
-                    </Link>
-                  </DropdownMenu>
-                </Dropdown>
-              </div>
-              {this.state.members.map((member, key) => (
-                  <div className="d-flex border-bottom p-3" key={key}>
-                    <div className="form-check ps-0">
-                      <div className="mb-0">
-                        <div className="form-check">
-                          <input
-                              type="checkbox"
-                              className="form-check-input"
-                              id={"mail" + key}
-                              checked={this.state.selectedContacts.includes(
-                                  member
-                              )}
-                              onChange={(e) => {
-                                this.onChangeCheckbox(e.target.checked, member);
-                              }}
-                          />
-                          <label
-                              className="form-check-label"
-                              htmlFor={"mail" + key}
-                          ></label>
+    render() {
+        const {contributionsList,contributionsTotalElements} = this.props;
+        return (
+            <ProfileCommon id={4}>
+                <Col lg={8} xs={12}>
+                    <div className="rounded shadow p-4">
+                        <div className="d-flex align-items-center justify-content-between">
+                            <h5 className="mb-0">Cotisations:</h5>
+                            <Link
+                                to="/contribute"
+                                className="btn btn-primary"
+
+                            >
+                                <i>
+                                    <FeatherIcon icon="plus" className="fea icon-sm"/>
+                                </i>{" "}
+                                Cotiser
+                            </Link>
                         </div>
-                      </div>
-                    </div>
-                    <Link to="#">
-                      <div className="d-flex ms-2">
-                        <img
-                            src={member.img}
-                            className="avatar avatar-md-sm rounded-pill shadow"
-                            alt=""
-                        />
-                        <div className="flex-1 ms-3">
-                          <h6 className="text-dark">{member.title}</h6>
-                          <p className="text-muted mb-0">{member.desc}</p>
+                        <div
+                            className="d-flex border-bottom align-items-center justify-content-between bg-light mt-4 p-3">
+                            <div className="form-check ps-0">
+                                <div className="mb-0">
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </Link>
-                  </div>
-              ))}
-              <div className="d-flex align-items-center justify-content-between mt-4">
-                <span className="text-muted h6 mb-0">Showing 8 out of 33</span>
-                <Link to="#" className="btn btn-primary">See more</Link>
-              </div>
-            </div>
-          </Col>
-        </ProfileCommon>
-    );
-  }
+                        {contributionsList ? contributionsList.map((contribution, key) => (
+                                <div className="d-flex border-bottom p-3" key={key}>
+                                    <div className="form-check ps-0">
+                                        <div className="mb-0">
+                                        </div>
+                                    </div>
+                                        <div className="d-flex ms-2">
+                                            <i>
+                                                <FeatherIcon icon={contribution.approved ? "check" : "x-circle"}
+                                                             className={contribution.approved ?"avatar avatar-md-sm text-primary":"avatar avatar-md-sm text-dark"}/>
+                                            </i>
+                                            <div className="flex-1 ms-3">
+                                                <h6 className="text-dark">{contribution.amount} <b>DH</b></h6>
+                                                <p className="text-muted mb-0">{contribution.createdAt}</p>
+                                            </div>
+                                        </div>
+                                </div>
+                            )) :
+                            <div className="d-flex border-bottom justify-content-center text-primary">
+                                <div className="form-check ps-0">
+                                    <Spinner> </Spinner></div>
+                            </div>}
+
+                        <div className="d-flex align-items-center justify-content-between mt-4">
+                            <span className="text-muted h6 mb-0"> {contributionsList?contributionsList.length:0} éléments sur {contributionsTotalElements}</span>
+                            <Link to="#" className="btn btn-primary">See more</Link>
+                        </div>
+                    </div>
+                </Col>
+            </ProfileCommon>
+        );
+    }
 }
 
-export default PageMessages;
+function mapStateToProps(state) {
+    const {contributionsList,contributionsTotalElements} = state.entity;
+    return {
+        contributionsList,
+        contributionsTotalElements
+    };
+
+}
+
+const connectedPageMessages = connect(mapStateToProps)(PageMessages);
+export default connectedPageMessages;

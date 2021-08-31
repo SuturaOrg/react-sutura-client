@@ -6,6 +6,7 @@ export const userService = {
     signup,
     logout,
     getAll,
+    getUserMe
 };
 
 function login(data) {
@@ -37,6 +38,19 @@ function signup(data) {
         .then(user => {
             return login(data);
             // store user details and jwt token in local storage to keep user logged in between page refreshes
+        });
+}
+
+function getUserMe(){
+    const requestOptions = {
+        method: 'GET',
+        headers: authHeader(),
+    };
+
+    return fetch(`${config.apiUrl}/user/me`, requestOptions)
+        .then(handleResponse)
+        .then(user => {
+            return user;
         });
 }
 

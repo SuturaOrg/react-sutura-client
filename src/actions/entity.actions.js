@@ -31,7 +31,7 @@ function create(file, data, entity) {
                 );
         }).catch((error)=>{
             dispatch(failure(error));
-            dispatch(alertActions.error("Votre cotisation n'a pas été sauvegardée à cause d'une erreur"));
+            dispatch(alertActions.error(getErrorMessage(entity,error)));
         })
     };
 
@@ -91,6 +91,9 @@ function getSuccessMessage(entity){
             return "Votre demande de prêt a été enregistrée avec succès"
         case "refunds":
             return "Votre remboursement s'est déroulé avec succès"
+        default : 
+            return "L'opération s'est bien déroulée"
+
 
     }
 }
@@ -102,6 +105,7 @@ function getErrorMessage(entity,error){
             return "Votre demande de prêt n'a pas été enregistrée:\n"+error;
         case "refunds":
             return "Votre remboursement n'a pas été enregistré:\n"+error;
-
+        default : 
+            return "L'opération ne peut pas bien déroulée"
     }
 }

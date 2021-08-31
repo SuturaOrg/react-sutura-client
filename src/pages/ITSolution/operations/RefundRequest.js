@@ -218,10 +218,10 @@ class RefundRequest extends Component {
                                             votre virement bancaire.
                                         </p>
                                         {/* <div className="mt-2">
-                      <Link to="#" className="btn btn-sm btn-soft-primary">
-                        Voir nos conditions générales de soumission
-                      </Link>
-                    </div> */}
+                                        <Link to="#" className="btn btn-sm btn-soft-primary">
+                                            Voir nos conditions générales de soumission
+                                        </Link>
+                                        </div> */}
                                     </div>
                                 </div>
                             </Col>
@@ -242,10 +242,10 @@ class RefundRequest extends Component {
                                             bien reçue dans notre compte bancaire. Puis, votre déclaration sera validée.
                                         </p>
                                         {/* <div className="mt-2">
-                      <Link to="#" className="btn btn-sm btn-soft-primary">
-                        Voir les conditions générales de soumission de demande.
-                      </Link>
-                    </div> */}
+                                            <Link to="#" className="btn btn-sm btn-soft-primary">
+                                                Voir les conditions générales de soumission de demande.
+                                            </Link>
+                                        </div> */}
                                     </div>
                                 </div>
                             </Col>

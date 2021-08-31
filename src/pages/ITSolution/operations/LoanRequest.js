@@ -196,7 +196,6 @@ class LoanRequest extends Component {
                               <AvField
                                   type="file"
                                   className="form-control ps-5"
-                                  required
                                   name="proof"
                                   id="proof"
                                   placeholder="Preuve"

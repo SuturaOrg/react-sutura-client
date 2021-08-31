@@ -254,7 +254,7 @@ class PageMessages extends Component {
                                 </div>
                             </div>
                         </div>
-                        {contributionsList ? contributionsList.map((contribution, key) => (
+                        {contributionsList ? contributionsList.length?contributionsList.map((contribution, key) => (
                                 <div className="d-flex border-bottom p-3" key={key}>
                                     <div className="form-check ps-0">
                                         <div className="mb-0">
@@ -271,7 +271,10 @@ class PageMessages extends Component {
                                             </div>
                                         </div>
                                 </div>
-                            )) :
+                            )): <div className="d-flex border-bottom mt-4 justify-content-center text-dark">
+                                <div className="form-check ps-0">
+                                    <p> Vous n'avez pas encore cotisé</p></div>
+                            </div> :
                             <div className="d-flex border-bottom justify-content-center text-primary">
                                 <div className="form-check ps-0">
                                     <Spinner> </Spinner></div>

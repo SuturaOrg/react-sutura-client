@@ -592,6 +592,7 @@ class Topbar extends Component {
   };
 
   render() {
+    const {loggedIn}=this.props;
     return (
       <React.Fragment>
         {this.props.tagline ? this.props.tagline : null}
@@ -990,11 +991,11 @@ class Topbar extends Component {
                 return (
                   <div className="buy-button">
                     <Link
-                        to={!this.props.loggedIn?"auth-cover-signup":"/contribute"}
+                        to={!loggedIn?"auth-cover-signup":"/contribute"}
                       target="_blank"
                       className="btn btn-pills btn-primary"
                     >
-                      {!this.props.loggedIn? "S'inscrire'": "Cotiser"}
+                      {!loggedIn? "S'inscrire'": "Cotiser"}
                     </Link>
                   </div>
                 );
@@ -1002,12 +1003,12 @@ class Topbar extends Component {
                 return (
                   <div className="buy-button">
                     <Link
-                      to={!this.props.loggedIn?"auth-cover-signup":"/contribute"}
+                      to={!loggedIn?"auth-cover-signup":"/contribute"}
                       target="_blank"
                       id="buyButton"
                       className="btn btn-primary"
                     >
-                      {!this.props.loggedIn? "S'inscrire": "Cotiser"}
+                      {!loggedIn? "S'inscrire": "Cotiser"}
                     </Link>
                   </div>
                 );

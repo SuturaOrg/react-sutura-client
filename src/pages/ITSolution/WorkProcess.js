@@ -147,7 +147,7 @@ export default class WorkProcess extends Component {
                 </div>
 
                 <CardBody>
-                  <h5 className="text-dark">Réception du montant demanddé</h5>
+                  <h5 className="text-dark">Réception du montant demandé</h5>
                   <p className="text-muted mb-0">
                     L'envoi se fera de manière traçable, généralement par transfert bancaire.
                   </p>

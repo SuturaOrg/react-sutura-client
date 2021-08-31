@@ -12,9 +12,6 @@ import {
 //Import Icons
 import FeatherIcon from "feather-icons-react";
 
-//Import Images
-import imgbg from "../../../assets/images/account/bg.png";
-import profile from "../../../assets/images/client/05.jpg";
 import blog1 from "../../../assets/images/blog/01.jpg";
 import blog2 from "../../../assets/images/blog/02.jpg";
 import exp1 from "../../../assets/images/job/Circleci.svg";

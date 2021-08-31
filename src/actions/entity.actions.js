@@ -12,10 +12,9 @@ export const entityActions = {
 
 function create(file, data, entity) {
     console.log(file, data, entity);
+
     return dispatch => {
-        dispatch(request(data,entity));
-        fileService.upload(file).then((filePayload) => {
-            data.proof=filePayload.url;
+        function _create(){
             entityService.create(data, entity)
                 .then(
                     entityPayload => {
@@ -29,10 +28,16 @@ function create(file, data, entity) {
                         dispatch(alertActions.error(getErrorMessage(entity,error)));
                     }
                 );
+        }
+
+        dispatch(request(data,entity));
+       file?fileService.upload(file).then((filePayload) => {
+            data.proof=filePayload.url;
+          _create()
         }).catch((error)=>{
             dispatch(failure(error));
             dispatch(alertActions.error(getErrorMessage(entity,error)));
-        })
+        }):_create();
     };
 
     function request(data, entity) {

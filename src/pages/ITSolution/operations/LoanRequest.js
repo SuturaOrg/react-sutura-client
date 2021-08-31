@@ -40,11 +40,11 @@ class LoanRequest extends Component {
     event.preventDefault();
     console.log(values);
     const { dispatch } = this.props;
-    if(!this.state.selectedFile.name.match(/.(jpg|jpeg|png|gif|pdf)$/i)){
+    if(this.state.selectedFile && !this.state.selectedFile.name.match(/.(jpg|jpeg|png|gif|pdf)$/i)){
       dispatch(alertActions.error("Le fichier doit être une image ou document pdf "))
       return;
     }
-    if(this.state.selectedFile.size>7000000){
+    if(this.state.selectedFile && this.state.selectedFile.size>7000000){
       dispatch(alertActions.error("Le fichier ne doit pas dépasser 7 Mo "))
       return;
     }

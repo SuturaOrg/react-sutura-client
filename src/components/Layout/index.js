@@ -81,7 +81,7 @@ class Layout extends Component {
           )}
 
           {this.props.children}
-          3{(() => {
+          {(() => {
             if (
               this.props.location.pathname === "/index-marketing" ||
               this.props.location.pathname === "/index-digital-agency" ||

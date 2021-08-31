@@ -272,7 +272,7 @@ class PageMessages extends Component {
                                                 <b>Remboursé:</b> {loan.statusRefund?"Remboursé":"Non remboursé"}<br/>
                                                 <b>Montant remboursement:</b> {loan.amountRefund}<br/>
                                                 <b>Echéance de paiement:</b> {loan.deadline}<br/>
-                                                {loan.status==="FINISHED"&&<Link to={{pathname: "https://web.facebook.com/Sutura-100906312128627" }} className="btn btn-primary mt-2">Voir le reçu</Link>}<br/>
+                                                {loan.status==="FINISHED"&&<Link to={{pathname: `${loan.receipt}` }} target="_blank" className="btn btn-primary mt-2">Voir le reçu</Link>}<br/>
                                                 </p>
                                             </div>
                                         </div>

@@ -43,7 +43,7 @@ class PageMessages extends Component {
         super(props);
 
         this.state = {
-            contributions: [
+            loans: [
                 {
                     id: 1,
                     img: client1,
@@ -113,8 +113,8 @@ class PageMessages extends Component {
                     id: 2,
                     icon: "uil uil-users-alt",
                     className: "navbar-item account-menu px-0 mt-2",
-                    title: "contributions",
-                    link: "/page-contributions",
+                    title: "loans",
+                    link: "/page-loans",
                 },
                 {
                     id: 3,
@@ -179,7 +179,7 @@ class PageMessages extends Component {
         window.addEventListener("scroll", this.scrollNavigation, true);
 
         const {dispatch} = this.props;
-        dispatch(entityActions.getAll("contributions"));
+        dispatch(entityActions.getAll("loans"));
     }
 
     // Make sure to remove the DOM listener when the component is unmounted.
@@ -219,7 +219,7 @@ class PageMessages extends Component {
     onSelectAll = (checked) => {
         if (checked) {
             this.setState({
-                selectedContacts: this.state.contributions,
+                selectedContacts: this.state.loans,
             });
         } else {
             this.setState({
@@ -229,22 +229,22 @@ class PageMessages extends Component {
     };
 
     render() {
-        const {contributionsList,contributionsTotalElements} = this.props;
+        const {loansList,loansTotalElements} = this.props;
         return (
             <ProfileCommon id={5}>
                 <Col lg={8} xs={12}>
                     <div className="rounded shadow p-4">
                         <div className="d-flex align-items-center justify-content-between">
-                            <h5 className="mb-0">Cotisations:</h5>
+                            <h5 className="mb-0">Demandes de prêts:</h5>
                             <Link
-                                to="/contribute"
+                                to="/loan"
                                 className="btn btn-primary"
 
                             >
                                 <i>
                                     <FeatherIcon icon="plus" className="fea icon-sm"/>
                                 </i>{" "}
-                                Cotiser
+                                Demander un prêt
                             </Link>
                         </div>
                         <div
@@ -254,7 +254,7 @@ class PageMessages extends Component {
                                 </div>
                             </div>
                         </div>
-                        {contributionsList ? contributionsList.length?contributionsList.map((contribution, key) => (
+                        {loansList ? loansList.length?loansList.map((loan, key) => (
                                 <div className="d-flex border-bottom p-3" key={key}>
                                     <div className="form-check ps-0">
                                         <div className="mb-0">
@@ -262,12 +262,18 @@ class PageMessages extends Component {
                                     </div>
                                         <div className="d-flex ms-2">
                                             <i>
-                                                <FeatherIcon icon={contribution.approved ? "check" : "x-circle"}
-                                                             className={contribution.approved ?"avatar avatar-md-sm text-primary":"avatar avatar-md-sm text-dark"}/>
+                                                <FeatherIcon icon={loan.approved ? "check" : "x-circle"}
+                                                             className={loan.approved ?"avatar avatar-md-sm text-primary":"avatar avatar-md-sm text-dark"}/>
                                             </i>
                                             <div className="flex-1 ms-3">
-                                                <h6 className="text-dark">{contribution.amount} <b>DH</b></h6>
-                                                <p className="text-muted mb-0">{contribution.createdAt}</p>
+                                                <h6 className="text-dark">{loan.amount} <b>MAD</b></h6>
+                                                <p className="text-muted mb-0"><b>Date:</b> {new Date (loan.createdAt).toLocaleDateString("fr-FR",{day:"numeric",month:"long", year:"numeric"})}<br/>
+                                                <b>Catégorie:</b> {loan.reason}<br/>
+                                                <b>Remboursé:</b> {loan.statusRefund?"Remboursé":"Non remboursé"}<br/>
+                                                <b>Montant remboursement:</b> {loan.amountRefund}<br/>
+                                                <b>Echéance de paiement:</b> {loan.deadline}<br/>
+                                                {loan.status==="FINISHED"&&<Link to={{pathname: "https://web.facebook.com/Sutura-100906312128627" }} className="btn btn-primary mt-2">Voir le reçu</Link>}<br/>
+                                                </p>
                                             </div>
                                         </div>
                                 </div>
@@ -281,8 +287,8 @@ class PageMessages extends Component {
                             </div>}
 
                         <div className="d-flex align-items-center justify-content-between mt-4">
-                            <span className="text-muted h6 mb-0"> {contributionsList?contributionsList.length:0} éléments sur {contributionsTotalElements}</span>
-                            <Link to="#" className="btn btn-primary">See more</Link>
+                            <span className="text-muted h6 mb-0"> {loansList?loansList.length:0} éléments sur {loansTotalElements}</span>
+                            <Link to="#" className="btn btn-primary">Voir plus</Link>
                         </div>
                     </div>
                 </Col>
@@ -292,10 +298,10 @@ class PageMessages extends Component {
 }
 
 function mapStateToProps(state) {
-    const {contributionsList,contributionsTotalElements} = state.entity;
+    const {loansList,loansTotalElements} = state.entity;
     return {
-        contributionsList,
-        contributionsTotalElements
+        loansList,
+        loansTotalElements
     };
 
 }

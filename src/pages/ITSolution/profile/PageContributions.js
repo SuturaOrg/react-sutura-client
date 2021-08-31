@@ -266,8 +266,9 @@ class PageContributions extends Component {
                                                              className={contribution.approved ?"avatar avatar-md-sm text-primary":"avatar avatar-md-sm text-dark"}/>
                                             </i>
                                             <div className="flex-1 ms-3">
-                                                <h6 className="text-dark">{contribution.amount} <b>DH</b></h6>
-                                                <p className="text-muted mb-0">{contribution.createdAt}</p>
+                                                <h6 className="text-dark">{contribution.amount} <b>MAD</b></h6>
+                                                <p className="text-muted mb-0"><b>Date: </b>{new Date (contribution.createdAt).toLocaleDateString("fr-FR",{day:"numeric",month:"long", year:"numeric"})}</p>
+                                                <p className="text-muted mb-0"><b>Etat: </b>{contribution.approved?"Approuvé":"En attente"}</p>
                                             </div>
                                         </div>
                                 </div>
@@ -282,7 +283,7 @@ class PageContributions extends Component {
 
                         <div className="d-flex align-items-center justify-content-between mt-4">
                             <span className="text-muted h6 mb-0"> {contributionsList?contributionsList.length:0} éléments sur {contributionsTotalElements}</span>
-                            <Link to="#" className="btn btn-primary">See more</Link>
+                            <Link to="#" className="btn btn-primary">Voir plus</Link>
                         </div>
                     </div>
                 </Col>

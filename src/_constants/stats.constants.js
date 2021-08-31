@@ -1,0 +1,5 @@
+export const statsConstants = {
+    STATS_REQUEST: 'STATS_REQUEST',
+    STATS_SUCCESS: 'STATS_SUCCESS',
+    STATS_FAILURE: 'STATS_FAILURE',
+};

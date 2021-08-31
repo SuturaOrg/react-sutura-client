@@ -6,7 +6,7 @@ import {
     Col,
     Progress,
     Card,
-    CardBody,
+    CardBody, Spinner,
 } from "reactstrap";
 
 //Import Icons
@@ -21,6 +21,7 @@ import exp1 from "../../../assets/images/job/Circleci.svg";
 import exp2 from "../../../assets/images/job/Codepen.svg";
 import exp3 from "../../../assets/images/job/Gitlab.svg";
 import {connect} from "react-redux";
+import {statsActions} from "../../../actions/stats.actions";
 
 
 class PageProfileCommon extends Component {
@@ -144,6 +145,8 @@ class PageProfileCommon extends Component {
         document.getElementById("top-menu") && document.getElementById("top-menu").classList.add("nav-light");
         document.getElementById("buyButton") && (document.getElementById("buyButton").className = "btn btn-light");
         window.addEventListener("scroll", this.scrollNavigation, true);
+        const {dispatch}=this.props;
+        dispatch(statsActions.get());
     }
     // Make sure to remove the DOM listener when the component is unmounted.
     componentWillUnmount() {
@@ -163,7 +166,7 @@ class PageProfileCommon extends Component {
     };
 
     render() {
-        const {user}=this.props;
+        const {user, statsLoading, period, studentsCount}=this.props;
         return (
             <React.Fragment>
                 <section
@@ -252,14 +255,14 @@ class PageProfileCommon extends Component {
                                                     icon="users"
                                                     className="fea icon-ex-md text-primary mb-1"
                                                 />
-                                                <h5 className="mb-0">2588</h5>
+                                                <h5 className="mb-0">{statsLoading?<Spinner> </Spinner>:studentsCount}</h5>
                                                 <p className="text-muted mb-0">Adhérents</p>
                                             </div>
 
                                             <div className="col-6 text-center">
                                                 <FeatherIcon icon="clock"
                                                              className="fea icon-ex-md text-primary mb-1" />
-                                                <h5 className="mb-0">454</h5>
+                                                <h5 className="mb-0">{statsLoading?<Spinner> </Spinner>:period}</h5>
                                                 <p className="text-muted mb-0">Période</p>
                                             </div>
                                         </div>
@@ -383,9 +386,14 @@ class PageProfileCommon extends Component {
 }
 function mapStateToProps(state) {
     const { user } = state.authentication;
+    const { statsLoading, period, studentsCount } = state.stats;
+
     console.log(state);
     return {
         user,
+        statsLoading,
+        period,
+        studentsCount
     };
 
 }

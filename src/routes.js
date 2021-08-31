@@ -33,7 +33,7 @@ const PageMaintenance = React.lazy(() =>
 //Auth Pages
 const PageLogin = React.lazy(() => import("./pages/Pages/AuthPages/PageLogin"));
 const PageCoverLogin = React.lazy(() =>
-  import("./pages/Pages/AuthPages/PageCoverLogin")
+  import("./pages/ITSolution/auth/PageCoverLogin")
 );
 const PageLoginThree = React.lazy(() =>
   import("./pages/Pages/AuthPages/PageLoginThree")
@@ -43,17 +43,17 @@ const PageSignup = React.lazy(() =>
   import("./pages/Pages/AuthPages/PageSignup")
 );
 const PageCoverSignup = React.lazy(() =>
-  import("./pages/Pages/AuthPages/PageCoverSignup")
+  import("./pages/ITSolution/auth/PageCoverSignup")
 );
 const PageSignupThree = React.lazy(() =>
   import("./pages/Pages/AuthPages/PageSignupThree")
 );
 
 const PageCoverRePassword = React.lazy(() =>
-  import("./pages/Pages/AuthPages/PageCoverRePassword")
+  import("./pages/ITSolution/auth/PageCoverRePassword")
 );
 const PageRecoveryPassword = React.lazy(() =>
-  import("./pages/Pages/AuthPages/PageRecoveryPassword")
+  import("./pages/ITSolution/auth/PageRecoveryPassword")
 );
 const PageRePasswordThree = React.lazy(() =>
   import("./pages/Pages/AuthPages/PageRePasswordThree")
@@ -132,11 +132,11 @@ const PageAboutUs = React.lazy(() => import("./pages/Pages/PageAboutUs"));
 const PageAboutusTwo = React.lazy(() => import("./pages/Pages/PageAboutusTwo"));
 const PageHistory = React.lazy(() => import("./pages/Pages/PageHistory"));
 const PageMembers = React.lazy(() =>
-  import("./pages/Pages/Account/PageMembers")
+  import("./pages/ITSolution/profile/PageMembers")
 );
-const PageWorks = React.lazy(() => import("./pages/Pages/Account/PageWorks"));
+const PageWorks = React.lazy(() => import("./pages/ITSolution/profile/PageWorks"));
 const PageMessages = React.lazy(() =>
-  import("./pages/Pages/Account/PageMessages")
+  import("./pages/ITSolution/profile/PageMessages")
 );
 const PagePricing = React.lazy(() => import("./pages/Pages/PagePricing"));
 const PageServices = React.lazy(() => import("./pages/Pages/PageServices"));
@@ -144,16 +144,16 @@ const PageTeam = React.lazy(() => import("./pages/Pages/PageTeam"));
 
 //Account
 const PageProfile = React.lazy(() =>
-  import("./pages/Pages/Account/PageProfile")
+  import("./pages/ITSolution/profile/PageProfile")
 );
 const PageProfileEdit = React.lazy(() =>
-  import("./pages/Pages/Account/PageProfileEdit")
+  import("./pages/ITSolution/profile/PageProfileEdit")
 );
 const PagePayments = React.lazy(() =>
-  import("./pages/Pages/Account/PagePayments")
+  import("./pages/ITSolution/profile/PagePayments")
 );
 const PageInvoice = React.lazy(() =>
-  import("./pages/Pages/Account/PageInvoice")
+  import("./pages/ITSolution/profile/PageInvoice")
 );
 
 //Career
@@ -248,16 +248,16 @@ const ForumsComments = React.lazy(() => import('./pages/Pages/Forums/ForumsComme
 
 //Email
 const EmailAlert = React.lazy(() =>
-  import("./pages/Pages/EmailTemplate/EmailAlert")
+  import("./pages/ITSolution/email/EmailAlert")
 );
 const EmailPasswordReset = React.lazy(() =>
-  import("./pages/Pages/EmailTemplate/EmailPasswordReset")
+  import("./pages/ITSolution/email/EmailPasswordReset")
 );
 const EmailConfirmation = React.lazy(() =>
-  import("./pages/Pages/EmailTemplate/EmailConfirmation")
+  import("./pages/ITSolution/email/EmailConfirmation")
 );
 const EmailInvoice = React.lazy(() =>
-  import("./pages/Pages/EmailTemplate/EmailInvoice")
+  import("./pages/ITSolution/email/EmailInvoice")
 );
 
 //Help Center

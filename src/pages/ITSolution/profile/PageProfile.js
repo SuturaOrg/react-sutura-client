@@ -95,8 +95,8 @@ class PageProfile extends Component {
                 id: 4,
                 icon: "uil uil-envelope-star",
                 className: "navbar-item account-menu px-0 mt-2",
-                title: "Messages",
-                link: "/page-messages",
+                title: "Contributions",
+                link: "/page-contributions",
             },
             {
                 id: 5,

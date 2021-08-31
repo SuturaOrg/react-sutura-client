@@ -135,9 +135,9 @@ const PageMembers = React.lazy(() =>
   import("./pages/ITSolution/profile/PageMembers")
 );
 const PageWorks = React.lazy(() => import("./pages/ITSolution/profile/PageWorks"));
-const PageMessages = React.lazy(() =>
-  import("./pages/ITSolution/profile/PageMessages")
-);
+const PageContributions = React.lazy(() => import("./pages/ITSolution/profile/PageContributions"));
+const PageLoans = React.lazy(() => import("./pages/ITSolution/profile/PageLoans"));
+const PageRefunds = React.lazy(() => import("./pages/ITSolution/profile/PageRefunds"));
 const PagePricing = React.lazy(() => import("./pages/Pages/PagePricing"));
 const PageServices = React.lazy(() => import("./pages/Pages/PageServices"));
 const PageTeam = React.lazy(() => import("./pages/Pages/PageTeam"));
@@ -153,7 +153,7 @@ const PagePayments = React.lazy(() =>
   import("./pages/ITSolution/profile/PagePayments")
 );
 const PageInvoice = React.lazy(() =>
-  import("./pages/ITSolution/profile/PageInvoice")
+  import("./pages/ITSolution/email/PageInvoice")
 );
 
 //Career
@@ -469,7 +469,9 @@ const routes = [
   { path: "/page-profile", component: PageProfile, isPrivate:true },
   { path: "/page-members", component: PageMembers },
   { path: "/page-works", component: PageWorks },
-  { path: "/page-messages", component: PageMessages },
+  { path: "/page-contributions", component: PageContributions },
+  { path: "/page-loans", component: PageLoans },
+  { path: "/page-refunds", component: PageRefunds },
   { path: "/page-profile-edit", component: PageProfileEdit },
   { path: "/page-payments", component: PagePayments },
   { path: "/page-invoice", component: PageInvoice, isTopbarDark: true },

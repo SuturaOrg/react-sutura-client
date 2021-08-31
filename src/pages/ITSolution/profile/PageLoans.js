@@ -231,7 +231,7 @@ class PageMessages extends Component {
     render() {
         const {contributionsList,contributionsTotalElements} = this.props;
         return (
-            <ProfileCommon id={4}>
+            <ProfileCommon id={5}>
                 <Col lg={8} xs={12}>
                     <div className="rounded shadow p-4">
                         <div className="d-flex align-items-center justify-content-between">

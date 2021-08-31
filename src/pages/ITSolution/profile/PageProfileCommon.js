@@ -98,24 +98,38 @@ class PageProfileCommon extends Component {
                 icon: "uil uil-envelope-star",
                 className: "navbar-item account-menu px-0 mt-2",
                 title: "Cotisations",
-                link: "/page-messages",
+                link: "/page-contributions",
             },
             {
                 id: 5,
+                icon: "uil uil-envelope-star",
+                className: "navbar-item account-menu px-0 mt-2",
+                title: "Loans",
+                link: "/page-loans",
+            },
+            {
+                id: 6,
+                icon: "uil uil-envelope-star",
+                className: "navbar-item account-menu px-0 mt-2",
+                title: "Refunds",
+                link: "/page-refunds",
+            },
+            {
+                id: 7,
                 icon: "uil uil-transaction",
                 className: "navbar-item account-menu px-0 mt-2",
                 title: "Payments",
                 link: "/page-payments",
             },
             {
-                id: 6,
+                id: 8,
                 icon: "uil uil-setting",
                 className: "navbar-item account-menu px-0 mt-2",
                 title: "Settings",
                 link: "/page-profile-edit",
             },
             {
-                id: 7,
+                id: 9,
                 icon: "uil uil-dashboard",
                 className: "navbar-item account-menu px-0 mt-2",
                 title: "Logout",
@@ -181,18 +195,21 @@ class PageProfileCommon extends Component {
                                                     >
                                                         <h3 className="title mb-0">{user.firstname} {user.lastname}</h3>
                                                         <small className="text-muted h6 me-2">
-                                                            {user.country}                            </small>
-                                                        <ul className="list-inline mb-0 mt-3">
-                                                            <li className="list-inline-item ms-1">
-                                                                    <i>
-                                                                        <FeatherIcon
-                                                                            icon="check-circle"
-                                                                            className="fea icon-sm me-2"
-                                                                        />
-                                                                    </i>
-                                                                    Contributeur
-                                                            </li>
-                                                        </ul>
+                                                            {user.country}
+                                                        </small>
+                                                        {user.transactionHistory.contributed && 
+                                                            <ul className="list-inline mb-0 mt-3">
+                                                                <li className="list-inline-item ms-1">
+                                                                        <i>
+                                                                            <FeatherIcon
+                                                                                icon="check-circle"
+                                                                                className="fea icon-sm me-2"
+                                                                            />
+                                                                        </i>
+                                                                        A contribué
+                                                                </li>
+                                                            </ul>
+                                                        }
                                                     </Col>
                                                     <Col md="5" className="text-md-end text-center">
                                                         <ul className="list-unstyled social-icon social mb-0 mt-4">
@@ -267,7 +284,7 @@ class PageProfileCommon extends Component {
                                     <div className="widget mt-4">
                                         <ul className="list-unstyled sidebar-nav mb-0" id="navmenu-nav">
                                             {this.state.widgets.map((widget, key) => (
-                                                <li className={this.props.id==widget.id?widget.className+" active":widget.className} key={key}>
+                                                <li className={this.props.id=== widget.id?widget.className+" active":widget.className} key={key}>
                                                     <Link to={widget.link} className="navbar-link d-flex rounded shadow align-items-center py-2 px-4">
                             <span className="h4 mb-0">
                               <i className={widget.icon}></i>
@@ -280,7 +297,7 @@ class PageProfileCommon extends Component {
                                     </div>
 
                                     <div className="widget mt-4 pt-2">
-                                        <h5 className="widget-title">Follow me :</h5>
+                                        <h5 className="widget-title">Nous suivre :</h5>
                                         <ul className="list-unstyled social-icon mb-0 mt-4">
                                             <li className="list-inline-item">
                                                 <Link to="#" className="rounded">

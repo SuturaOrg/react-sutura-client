@@ -151,7 +151,7 @@ class PageProfileEdit extends Component {
 
     render() {
         return (
-            <ProfileCommon id={6}>
+            <ProfileCommon id={8}>
                 <Col lg="8" xs="12">
                     <Card className="border-0 rounded shadow">
                         <CardBody>

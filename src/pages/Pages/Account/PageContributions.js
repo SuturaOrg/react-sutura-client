@@ -128,7 +128,7 @@ class PageMessages extends Component {
                     icon: "uil uil-envelope-star",
                     className: "navbar-item account-menu px-0 mt-2 active",
                     title: "Messages",
-                    link: "/page-messages",
+                    link: "/page-contributions",
                 },
                 {
                     id: 5,

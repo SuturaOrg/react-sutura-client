@@ -105,7 +105,7 @@ class PagePayments extends Component {
 
   render() {
     return (
-      <ProfileCommon id={5}>
+      <ProfileCommon id={7}>
         <Col lg="8" xs={12}>
           <div className="rounded shadow p-4">
             <div className="d-flex align-items-center justify-content-between">

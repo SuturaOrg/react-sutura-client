@@ -19,7 +19,7 @@ import FeatherIcon from "feather-icons-react";
 
 // import images
 import user02 from "../../../assets/images/user/02.jpg";
-import {userActions} from "../../../actions";
+import {alertActions, userActions} from "../../../actions";
 
 class PageCoverSignup extends Component {
   constructor(props) {
@@ -271,6 +271,7 @@ class PageCoverSignup extends Component {
                                   <Link
                                     to="/auth-cover-login"
                                     className="text-dark fw-bold"
+                                    onClick={()=>this.props.dispatch(alertActions.clear())}
                                   >
                                     Se connecter
                                   </Link>

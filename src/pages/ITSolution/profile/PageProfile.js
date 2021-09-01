@@ -148,7 +148,7 @@ class PageProfile extends Component {
     };
 
     render() {
-        const {user,statsActions} = this.props;
+        const {user} = this.props;
         return (
             <ProfileCommon id={1}>
                 <Col lg="8" md="7" xs="12">
@@ -251,9 +251,9 @@ class PageProfile extends Component {
                                             />
                                         </i>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0">Cotisation de la période courante :</h6>
+                                            <h6 className="text-primary mb-0">Cotisations de la période courante :</h6>
                                             <Link to="#" className="text-muted">
-                                                {statsActions && statsActions.currentContribution} MAD
+                                                {user && user.currentPeriodContributions} MAD
                                             </Link>
                                         </div>
                                     </div>
@@ -266,7 +266,7 @@ class PageProfile extends Component {
                                         </i>
                                         <div className="flex-1">
                                             <h6 className="text-primary mb-0">Date d'expiration :</h6>
-                                            <p className="text-muted mb-0">{statsActions && statsActions.expirationDate}</p>
+                                            <p className="text-muted mb-0">{user && user.expirationDate}</p>
                                         </div>
                                     </div>
                                     <div className="d-flex align-items-center mt-3">
@@ -278,7 +278,7 @@ class PageProfile extends Component {
                                         </i>
                                         <div className="flex-1">
                                             <h6 className="text-primary mb-0">Nombre de cotisations :</h6>
-                                            <p className="text-muted mb-0">{statsActions && statsActions.contributionsCount}</p>
+                                            <p className="text-muted mb-0">{user && user.contributionsCount}</p>
                                         </div>
                                     </div>
                                     <div className="d-flex align-items-center mt-3">
@@ -290,7 +290,7 @@ class PageProfile extends Component {
                                         </i>
                                         <div className="flex-1">
                                             <h6 className="text-primary mb-0">Nombre de prêts :</h6>
-                                            <p className="text-muted mb-0">{statsActions && statsActions.loansCount}</p>
+                                            <p className="text-muted mb-0">{user && user.loansCount}</p>
                                         </div>
                                     </div>
                                     <div className="d-flex align-items-center mt-3">
@@ -302,7 +302,7 @@ class PageProfile extends Component {
                                         </i>
                                         <div className="flex-1">
                                             <h6 className="text-primary mb-0">Nombre de remboursements :</h6>
-                                            <p className="text-muted mb-0">{statsActions && statsActions.refundsCount}</p>
+                                            <p className="text-muted mb-0">{user && user.refundsCount}</p>
                                         </div>
                                     </div>
                                     <div className="d-flex align-items-center mt-3">
@@ -314,7 +314,7 @@ class PageProfile extends Component {
                                         </i>
                                         <div className="flex-1">
                                             <h6 className="text-primary mb-0">Prêt en attente :</h6>
-                                            <p className="text-muted mb-0">{statsActions && statsActions.pendingLoan}</p>
+                                            <p className="text-muted mb-0">{user && user.pendingLoans}</p>
                                         </div>
                                     </div>
                                     <div className="d-flex align-items-center mt-3">
@@ -326,11 +326,11 @@ class PageProfile extends Component {
                                         </i>
                                         <div className="flex-1">
                                             <h6 className="text-primary mb-0">Cotisation en cours de validation :</h6>
-                                            <p className="text-muted mb-0">{statsActions && statsActions.pendingContribution}</p>
+                                            <p className="text-muted mb-0">{user && user.pendingContributions}</p>
                                         </div>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0">remboursement en cours de validation :</h6>
-                                            <p className="text-muted mb-0">{statsActions && statsActions.pendingRefund}</p>
+                                            <h6 className="text-primary mb-0">Remboursement en cours de validation :</h6>
+                                            <p className="text-muted mb-0">{user && user.pendingRefunds}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -346,11 +346,9 @@ class PageProfile extends Component {
 
 function mapStateToProps(state) {
     const {user} = state.user;
-    const statsActions = state.stats;
     console.log(state);
     return {
         user,
-        statsActions
     };
 
 }

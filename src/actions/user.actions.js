@@ -7,7 +7,7 @@ export const userActions = {
     login,
     signup,
     logout,
-    getAll
+    getInfo
 };
 
 function login(data) {
@@ -17,10 +17,9 @@ function login(data) {
         userService.login(data)
             .then(
                 signinPayload => {
-                    dispatch(success(signinPayload));
+                    dispatch(success());
                     dispatch(alertActions.clear());
                     history.push('/page-profile');
-                   // window.location.reload();
                 },
                 error => {
                     dispatch(failure(error));
@@ -30,7 +29,7 @@ function login(data) {
     };
 
     function request(user) { return { type: userConstants.LOGIN_REQUEST, user } }
-    function success(signinPayload) { return { type: userConstants.LOGIN_SUCCESS, signinPayload } }
+    function success() { return { type: userConstants.LOGIN_SUCCESS } }
     function failure(error) { return { type: userConstants.LOGIN_FAILURE, error } }
 }
 
@@ -65,18 +64,23 @@ function logout() {
     return { type: userConstants.LOGOUT };
 }
 
-function getAll() {
+function getInfo(){
     return dispatch => {
         dispatch(request());
 
-        userService.getAll()
+        userService.getUserMe()
             .then(
-                users => dispatch(success(users)),
-                error => dispatch(failure(error))
+                userSummary => {
+                    dispatch(success(userSummary));
+                },
+                error => {
+                    dispatch(failure(error));
+                    dispatch(alertActions.error(error));
+                }
             );
     };
 
-    function request() { return { type: userConstants.GETALL_REQUEST } }
-    function success(users) { return { type: userConstants.GETALL_SUCCESS, users } }
-    function failure(error) { return { type: userConstants.GETALL_FAILURE, error } }
+    function request() { return { type: userConstants.GETINFO_REQUEST } }
+    function success(userSummary) { return { type: userConstants.GETINFO_SUCCESS, userSummary } }
+    function failure(error) { return { type: userConstants.GETINFO_FAILURE, error } }
 }

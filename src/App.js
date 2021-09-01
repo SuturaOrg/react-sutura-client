@@ -16,7 +16,6 @@ import "./assets/css/colors/green.css";
 // Include Routes
 import routes from "./routes";
 import {connect} from "react-redux";
-import {Alert} from "reactstrap";
 import {alertActions} from "./actions";
 
 function withLayout(WrappedComponent, hasDarkTopBar) {
@@ -57,7 +56,7 @@ class App extends Component {
     x
 
     render() {
-        const {alert, loggedIn} = this.props;
+        const {loggedIn} = this.props;
         console.log(loggedIn);
         return (
             <React.Fragment>
@@ -110,11 +109,9 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-    const {alert} = state;
     const {loggedIn} = state.authentication;
     return {
         loggedIn,
-        alert
     };
 }
 

@@ -22,6 +22,7 @@ import exp2 from "../../../assets/images/job/Codepen.svg";
 import exp3 from "../../../assets/images/job/Gitlab.svg";
 import {connect} from "react-redux";
 import {statsActions} from "../../../actions/stats.actions";
+import {userActions} from "../../../actions";
 
 
 class PageProfileCommon extends Component {
@@ -80,20 +81,13 @@ class PageProfileCommon extends Component {
                 title: "Profile",
                 link: "/page-profile",
             },
-            {
-                id: 2,
-                icon: "uil uil-users-alt",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Members",
-                link: "/page-members",
-            },
-            {
-                id: 3,
-                icon: "uil uil-file",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Portfolio",
-                link: "/page-works",
-            },
+            // {
+            //     id: 3,
+            //     icon: "uil uil-file",
+            //     className: "navbar-item account-menu px-0 mt-2",
+            //     title: "Portfolio",
+            //     link: "/page-works",
+            // },
             {
                 id: 4,
                 icon: "uil uil-envelope-star",
@@ -105,7 +99,7 @@ class PageProfileCommon extends Component {
                 id: 5,
                 icon: "uil uil-envelope-star",
                 className: "navbar-item account-menu px-0 mt-2",
-                title: "Loans",
+                title: "Prêts",
                 link: "/page-loans",
             },
             {
@@ -115,13 +109,13 @@ class PageProfileCommon extends Component {
                 title: "Refunds",
                 link: "/page-refunds",
             },
-            {
-                id: 7,
-                icon: "uil uil-transaction",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Payments",
-                link: "/page-payments",
-            },
+            // {
+            //     id: 7,
+            //     icon: "uil uil-transaction",
+            //     className: "navbar-item account-menu px-0 mt-2",
+            //     title: "Payments",
+            //     link: "/page-payments",
+            // },
             {
                 id: 8,
                 icon: "uil uil-setting",
@@ -146,7 +140,10 @@ class PageProfileCommon extends Component {
         document.getElementById("buyButton") && (document.getElementById("buyButton").className = "btn btn-light");
         window.addEventListener("scroll", this.scrollNavigation, true);
         const {dispatch}=this.props;
+        console.log("ggggggggg")
+        dispatch(userActions.getInfo());
         dispatch(statsActions.get());
+
     }
     // Make sure to remove the DOM listener when the component is unmounted.
     componentWillUnmount() {
@@ -196,11 +193,11 @@ class PageProfileCommon extends Component {
                                                         md="7"
                                                         className="text-md-start text-center mt-4 mt-sm-0"
                                                     >
-                                                        <h3 className="title mb-0">{user.firstname} {user.lastname}</h3>
+                                                        <h3 className="title mb-0">{user && user.firstname} {user && user.lastname}</h3>
                                                         <small className="text-muted h6 me-2">
-                                                            {user.country}
+                                                            {user && user.country}
                                                         </small>
-                                                        {user.transactionHistory.contributed && 
+                                                        {user && user.transactionHistory.contributed &&
                                                             <ul className="list-inline mb-0 mt-3">
                                                                 <li className="list-inline-item ms-1">
                                                                         <i>
@@ -385,7 +382,7 @@ class PageProfileCommon extends Component {
     }
 }
 function mapStateToProps(state) {
-    const { user } = state.authentication;
+    const { user } = state.user;
     const { statsLoading, period, studentsCount } = state.stats;
 
     console.log(state);

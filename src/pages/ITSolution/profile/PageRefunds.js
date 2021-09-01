@@ -167,7 +167,7 @@ class PageRefunds extends Component {
                 <Col lg={8} xs={12}>
                     <div className="rounded shadow p-4">
                         <div className="d-flex align-items-center justify-content-between">
-                            <h5 className="mb-0">Remboursemnts:</h5>
+                            <h5 className="mb-0">Remboursements:</h5>
                             <Link
                                 to="/refund"
                                 className="btn btn-primary"

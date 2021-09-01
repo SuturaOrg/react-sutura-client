@@ -5,7 +5,6 @@ export const userService = {
     login,
     signup,
     logout,
-    getAll,
     getUserMe
 };
 
@@ -21,7 +20,6 @@ function login(data) {
         .then(signinPayload => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
           localStorage.setItem('signinPayload', JSON.stringify(signinPayload));
-
             return signinPayload;
         });
 }
@@ -47,9 +45,10 @@ function getUserMe(){
         headers: authHeader(),
     };
 
-    return fetch(`${config.apiUrl}/user/me`, requestOptions)
+    return fetch(`${config.apiUrl}/user/studentInfos`, requestOptions)
         .then(handleResponse)
         .then(user => {
+            localStorage.setItem('userInfos', JSON.stringify(user));
             return user;
         });
 }
@@ -57,15 +56,8 @@ function getUserMe(){
 function logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('signinPayload');
-}
+    localStorage.removeItem('userInfos');
 
-function getAll() {
-    const requestOptions = {
-        method: 'GET',
-        headers: authHeader()
-    };
-
-    return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {
@@ -79,7 +71,7 @@ function handleResponse(response) {
             //     window.location.reload(true);
             // }
 
-            const error = (data && data.message) || response.statusText;
+            const error = (data && data.message) || response.statusText || (data && data.error);
             return Promise.reject(error);
         }
 

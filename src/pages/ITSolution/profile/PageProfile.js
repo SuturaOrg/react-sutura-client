@@ -153,9 +153,9 @@ class PageProfile extends Component {
             <ProfileCommon id={1}>
                 <Col lg="8" md="7" xs="12">
                     <div className="border-bottom pb-4">
-                        <h5>{user && user.firstname} {user && user.lastname}</h5>
+                        <h5>Bienvenue!</h5>
                         <p className="text-muted mb-0">
-                            Participer à Sutura c'est non seulement pour soi mais pour d'autres étudiants qui sont dans la 
+                            Participer à <b>Sutura</b> c'est non seulement pour soi mais pour d'autres étudiants qui sont dans la 
                             même situation que nous-même.<br/>Nous sommes ravi de vous compter parmi nos membres.
                         </p>
                     </div>
@@ -210,7 +210,7 @@ class PageProfile extends Component {
                                         </i>
                                         <div className="flex-1">
                                             <h6 className="text-primary mb-0">Année d'entrée au Maroc:</h6>
-                                            <p className="text-muted mb-0">{user && user.yearEntryMorroco}</p>
+                                            <p className="text-muted mb-0">{user && user.yearEntryMorocco}</p>
                                         </div>
                                     </div>
                                     <div className="d-flex align-items-center mt-3">
@@ -234,7 +234,7 @@ class PageProfile extends Component {
                                         </i>
                                         <div className="flex-1">
                                             <h6 className="text-primary mb-0">Téléphone :</h6>
-                                            <p className="text-muted mb-0">{user && user.telephone}</p>
+                                            <p className="text-muted mb-0">0{user && user.phone}</p>
                                         </div>
                                     </div>
                                 </div>

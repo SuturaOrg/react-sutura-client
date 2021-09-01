@@ -15,11 +15,6 @@ import FeatherIcon from "feather-icons-react";
 //Import Images
 import imgbg from "../../../assets/images/account/bg.png";
 import profile from "../../../assets/images/client/05.jpg";
-import blog1 from "../../../assets/images/blog/01.jpg";
-import blog2 from "../../../assets/images/blog/02.jpg";
-import exp1 from "../../../assets/images/job/Circleci.svg";
-import exp2 from "../../../assets/images/job/Codepen.svg";
-import exp3 from "../../../assets/images/job/Gitlab.svg";
 import {connect} from "react-redux";
 import {statsActions} from "../../../actions/stats.actions";
 import {userActions} from "../../../actions";
@@ -27,52 +22,6 @@ import {userActions} from "../../../actions";
 
 class PageProfileCommon extends Component {
     state = {
-        blogs: [
-            {
-                id: 1,
-                title: "Design your apps in your own way",
-                image: blog1,
-                likes: "33",
-                blogComments: "08",
-                author: "Krishta {user.lastname}",
-                date: "13th August, 2019",
-            },
-            {
-                id: 2,
-                title: "How apps is changing the IT world",
-                image: blog2,
-                likes: "33",
-                blogComments: "08",
-                author: "Krishta {user.lastname}",
-                date: "13th August, 2019",
-            },
-        ],
-        experiences: [
-            {
-                id: 1,
-                image: exp1,
-                designation: "Senior Web Developer",
-                duration: "3 Years",
-                companyName: "CircleCi",
-                location: "London, UK",
-            },
-            {
-                id: 2,
-                image: exp2,
-                designation: "Web Designer",
-                duration: "2 Years",
-                companyName: "Codepen",
-                location: "Washington D.C, USA",
-            },
-            {
-                id: 3,
-                image: exp3,
-                designation: "UI Designer",
-                duration: "2 Years",
-                companyName: "Gitlab",
-                location: "Perth, Australia",
-            },
-        ],
         widgets: [
             {
                 id: 1,
@@ -81,6 +30,41 @@ class PageProfileCommon extends Component {
                 title: "Profile",
                 link: "/page-profile",
             },
+            {
+                id: 2,
+                icon: "uil uil-envelope-star",
+                className: "navbar-item account-menu px-0 mt-2",
+                title: "Cotisations",
+                link: "/page-contributions",
+            },
+            {
+                id: 3,
+                icon: "uil uil-envelope-star",
+                className: "navbar-item account-menu px-0 mt-2",
+                title: "Prêts",
+                link: "/page-loans",
+            },
+            {
+                id: 4,
+                icon: "uil uil-envelope-star",
+                className: "navbar-item account-menu px-0 mt-2",
+                title: "Refunds",
+                link: "/page-refunds",
+            },
+            {
+                id: 5,
+                icon: "uil uil-setting",
+                className: "navbar-item account-menu px-0 mt-2",
+                title: "Settings",
+                link: "/page-profile-edit",
+            },
+            {
+                id: 6,
+                icon: "uil uil-dashboard",
+                className: "navbar-item account-menu px-0 mt-2",
+                title: "Logout",
+                link: "/auth-cover-login",
+            },
             // {
             //     id: 3,
             //     icon: "uil uil-file",
@@ -88,27 +72,6 @@ class PageProfileCommon extends Component {
             //     title: "Portfolio",
             //     link: "/page-works",
             // },
-            {
-                id: 4,
-                icon: "uil uil-envelope-star",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Cotisations",
-                link: "/page-contributions",
-            },
-            {
-                id: 5,
-                icon: "uil uil-envelope-star",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Prêts",
-                link: "/page-loans",
-            },
-            {
-                id: 6,
-                icon: "uil uil-envelope-star",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Refunds",
-                link: "/page-refunds",
-            },
             // {
             //     id: 7,
             //     icon: "uil uil-transaction",
@@ -116,20 +79,6 @@ class PageProfileCommon extends Component {
             //     title: "Payments",
             //     link: "/page-payments",
             // },
-            {
-                id: 8,
-                icon: "uil uil-setting",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Settings",
-                link: "/page-profile-edit",
-            },
-            {
-                id: 9,
-                icon: "uil uil-dashboard",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Logout",
-                link: "/auth-cover-login",
-            },
         ],
     };
 
@@ -163,7 +112,7 @@ class PageProfileCommon extends Component {
     };
 
     render() {
-        const {user, statsLoading, period, studentsCount}=this.props;
+        const {user, statsLoading, period, studentsCount, fundState}=this.props;
         return (
             <React.Fragment>
                 <section
@@ -264,7 +213,7 @@ class PageProfileCommon extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    {this.props.id==1?<div className="widget mt-4 pt-2">
+                                    {this.props.id===1?<div className="widget mt-4 pt-2">
                                         <h5 className="widget-title">Etat de la caisse :</h5>
                                         <div className="progress-box mt-4">
                                             <h6 className="title text-muted">Etat</h6>
@@ -275,7 +224,7 @@ class PageProfileCommon extends Component {
                                                 barClassName="position-relative"
                                             >
                                                 <div className="progress-value d-block text-muted h6">
-                                                    24 / 48
+                                                {fundState}%
                                                 </div>
                                             </Progress>
                                         </div>
@@ -383,14 +332,15 @@ class PageProfileCommon extends Component {
 }
 function mapStateToProps(state) {
     const { user } = state.user;
-    const { statsLoading, period, studentsCount } = state.stats;
+    const { statsLoading, period, studentsCount, fundState } = state.stats;
 
     console.log(state);
     return {
         user,
         statsLoading,
         period,
-        studentsCount
+        studentsCount,
+        fundState
     };
 
 }

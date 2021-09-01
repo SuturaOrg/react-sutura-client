@@ -10,7 +10,8 @@ export function stats(state = {}, action) {
             return {
                 statsLoading:false,
                 period: action.statsPayload.period,
-                studentsCount:action.statsPayload.studentsCount
+                studentsCount:action.statsPayload.studentsCount,
+                fundState:action.statsPayload.fundState
             };
         case statsConstants.STATS_FAILURE:
             return {

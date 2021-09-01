@@ -1,4 +1,5 @@
 import config from '../config';
+import {authHeader} from '../_helpers';
 
 export const statsService = {
     get,
@@ -8,6 +9,7 @@ function get() {
 
     const requestOptions = {
         method: 'GET',
+        headers:authHeader()
     };
 
     return fetch(`${config.apiUrl}/stats/`, requestOptions)

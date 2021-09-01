@@ -214,11 +214,10 @@ class PageProfileCommon extends Component {
                                         </div>
                                     </div>
                                     {this.props.id===1?<div className="widget mt-4 pt-2">
-                                        <h5 className="widget-title">Etat de la caisse :</h5>
-                                        <div className="progress-box mt-4">
-                                            <h6 className="title text-muted">Etat</h6>
+                                        <h5 className="widget-title">Disponibilité de la caisse :</h5>
+                                        <div className="progress-box mt-5">
                                             <Progress
-                                                value={50}
+                                                value={fundState}
                                                 animated={false}
                                                 color="primary"
                                                 barClassName="position-relative"

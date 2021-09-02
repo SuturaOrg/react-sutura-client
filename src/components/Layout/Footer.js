@@ -239,7 +239,7 @@ class Footer extends Component {
                     © 2020-21 Sutura. Développé par{" "}
                     <i className="mdi mdi-heart text-danger"></i>{" "}
                     <a
-                      href="/page-team"
+                      href="/about-team"
                       rel="noopener noreferrer"
                       className="text-reset"
                     >

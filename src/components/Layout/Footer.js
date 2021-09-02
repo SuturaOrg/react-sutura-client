@@ -190,7 +190,7 @@ class Footer extends Component {
                         <Label
                           className={this.props.isLight ? "form-label text-muted" : "form-label"}
                         >
-                          Entrer votre email{" "}
+                          Entrez votre email{" "}
                           <span className="text-danger">*</span>
                         </Label>
                         <div className="form-icon position-relative">
@@ -214,14 +214,13 @@ class Footer extends Component {
                       </div>
                     </Col>
                     <Col lg="12">
-                      <div className="d-grid">
+                      <div className="buy-button">
                         <Input
                           type="submit"
                           id="submitsubscribefooter"
                           name="send"
                           className="btn btn-primary"
-                          readOnly
-                          value="Subscribe"
+                          value="S'inscrire"
                         />
                       </div>
                     </Col>
@@ -237,11 +236,10 @@ class Footer extends Component {
               <Col sm="6">
                 <div className="text-sm-start">
                   <p className="mb-0">
-                    © 2020-21 Sutura. Develop by{" "}
+                    © 2020-21 Sutura. Développé par{" "}
                     <i className="mdi mdi-heart text-danger"></i>{" "}
                     <a
-                      href="https://themesbrand.com/"
-                      target="_blank"
+                      href="/page-team"
                       rel="noopener noreferrer"
                       className="text-reset"
                     >

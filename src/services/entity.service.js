@@ -37,5 +37,5 @@ function getAll(entity,id) {
             return [entityPayload._embedded[entity],entityPayload.page.totalElements];
         });
 }
-
+ 
 

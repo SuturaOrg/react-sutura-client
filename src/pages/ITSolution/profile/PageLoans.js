@@ -43,115 +43,6 @@ class PageMessages extends Component {
         super(props);
 
         this.state = {
-            loans: [
-                {
-                    id: 1,
-                    img: client1,
-                    title: "Calvin Carlo",
-                    desc:
-                        "This is required when, for example, the final text is not yet available. Dummy",
-                },
-                {
-                    id: 2,
-                    img: client2,
-                    title: "Miriam Walya",
-                    desc:
-                        "This is required when, for example, the final text is not yet available. Dummy",
-                },
-                {
-                    id: 3,
-                    img: client3,
-                    title: "Jenelia Parker",
-                    desc:
-                        "This is required when, for example, the final text is not yet available. Dummy",
-                },
-                {
-                    id: 4,
-                    img: client4,
-                    title: "Jack Deo",
-                    desc:
-                        "This is required when, for example, the final text is not yet available. Dummy",
-                },
-                {
-                    id: 5,
-                    img: client5,
-                    title: "Marya Joseph",
-                    desc:
-                        "This is required when, for example, the final text is not yet available. Dummy",
-                },
-                {
-                    id: 6,
-                    img: client6,
-                    title: "Maninder Khan",
-                    desc:
-                        "This is required when, for example, the final text is not yet available. Dummy",
-                },
-                {
-                    id: 7,
-                    img: client7,
-                    title: "Pitambar Das",
-                    desc:
-                        "This is required when, for example, the final text is not yet available. Dummy",
-                },
-                {
-                    id: 8,
-                    img: client8,
-                    title: "Cristino Murfy",
-                    desc:
-                        "This is required when, for example, the final text is not yet available. Dummy",
-                },
-            ],
-            widgets: [
-                {
-                    id: 1,
-                    icon: "uil uil-dashboard",
-                    className: "navbar-item account-menu px-0",
-                    title: "Profile",
-                    link: "/page-profile",
-                },
-                {
-                    id: 2,
-                    icon: "uil uil-users-alt",
-                    className: "navbar-item account-menu px-0 mt-2",
-                    title: "contributions",
-                    link: "/page-contributions",
-                },
-                {
-                    id: 3,
-                    icon: "uil uil-file",
-                    className: "navbar-item account-menu px-0 mt-2 active",
-                    title: "Prêts",
-                    link: "/page-loans",
-                },
-                {
-                    id: 4,
-                    icon: "uil uil-envelope-star",
-                    className: "navbar-item account-menu px-0 mt-2",
-                    title: "Remboursements",
-                    link: "/page-refunds",
-                },
-                {
-                    id: 5,
-                    icon: "uil uil-setting",
-                    className: "navbar-item account-menu px-0 mt-2",
-                    title: "Settings",
-                    link: "/page-profile-edit",
-                },
-                {
-                    id: 6,
-                    icon: "uil uil-dashboard",
-                    className: "navbar-item account-menu px-0 mt-2",
-                    title: "Logout",
-                    link: "/auth-cover-login",
-                },
-                // {
-                //     id: 7,
-                //     icon: "uil uil-transaction",
-                //     className: "navbar-item account-menu px-0 mt-2",
-                //     title: "Payments",
-                //     link: "/page-payments",
-                // },
-            ],
             modal: false,
             dropdownOpen: false,
             selectedContacts: [],
@@ -231,7 +122,7 @@ class PageMessages extends Component {
     render() {
         const {loansList,loansTotalElements} = this.props;
         return (
-            <ProfileCommon id={5}>
+            <ProfileCommon id={3}>
                 <Col lg={8} xs={12}>
                     <div className="rounded shadow p-4">
                         <div className="d-flex align-items-center justify-content-between">
@@ -279,7 +170,7 @@ class PageMessages extends Component {
                                 </div>
                             )): <div className="d-flex border-bottom mt-4 justify-content-center text-dark">
                                 <div className="form-check ps-0">
-                                    <p> Vous n'avez pas encore cotisé</p></div>
+                                    <p> Vous n'avez pas encore de prêts</p></div>
                             </div> :
                             <div className="d-flex border-bottom justify-content-center text-primary">
                                 <div className="form-check ps-0">

@@ -33,57 +33,6 @@ class PageRefunds extends Component {
         super(props);
 
         this.state = {
-            widgets: [
-                {
-                    id: 1,
-                    icon: "uil uil-dashboard",
-                    className: "navbar-item account-menu px-0",
-                    title: "Profile",
-                    link: "/page-profile",
-                },
-                {
-                    id: 2,
-                    icon: "uil uil-users-alt",
-                    className: "navbar-item account-menu px-0 mt-2",
-                    title: "contributions",
-                    link: "/page-contributions",
-                },
-                {
-                    id: 3,
-                    icon: "uil uil-file",
-                    className: "navbar-item account-menu px-0 mt-2",
-                    title: "Portfolio",
-                    link: "/page-loans",
-                },
-                {
-                    id: 4,
-                    icon: "uil uil-envelope-star",
-                    className: "navbar-item account-menu px-0 mt-2 active",
-                    title: "Contributions",
-                    link: "/page-refunds",
-                },
-                {
-                    id: 5,
-                    icon: "uil uil-setting",
-                    className: "navbar-item account-menu px-0 mt-2",
-                    title: "Settings",
-                    link: "/page-profile-edit",
-                },
-                {
-                    id: 6,
-                    icon: "uil uil-dashboard",
-                    className: "navbar-item account-menu px-0 mt-2",
-                    title: "Logout",
-                    link: "/auth-cover-login",
-                },
-                // {
-                //     id: 7,
-                //     icon: "uil uil-transaction",
-                //     className: "navbar-item account-menu px-0 mt-2",
-                //     title: "Payments",
-                //     link: "/page-payments",
-                // },
-            ],
             modal: false,
             dropdownOpen: false,
             selectedContacts: [],
@@ -163,7 +112,7 @@ class PageRefunds extends Component {
     render() {
         const {refundsList,refundsTotalElements} = this.props;
         return (
-            <ProfileCommon id={6}>
+            <ProfileCommon id={4}>
                 <Col lg={8} xs={12}>
                     <div className="rounded shadow p-4">
                         <div className="d-flex align-items-center justify-content-between">
@@ -206,7 +155,7 @@ class PageRefunds extends Component {
                                 </div>
                             )): <div className="d-flex border-bottom mt-4 justify-content-center text-dark">
                                 <div className="form-check ps-0">
-                                    <p> Vous n'avez pas encore cotisé</p></div>
+                                    <p> Vous n'avez pas encore de remboursements</p></div>
                             </div> :
                             <div className="d-flex border-bottom justify-content-center text-primary">
                                 <div className="form-check ps-0">

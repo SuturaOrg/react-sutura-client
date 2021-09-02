@@ -29,7 +29,9 @@ class Topbar extends Component {
       dropdownOpenShop: false,
       navLinks: [
         //Note : each child and nested child must have unique id
-        { id: 1, title: "Home", link: "/index" },
+        { id: 1, title: "Accueil", link: "/index" },
+        { id: 200, title: "Faire un don", link: "/operations/donate" },
+
         {
           id: 2,
           title: "Landing",
@@ -249,7 +251,6 @@ class Topbar extends Component {
               link: "/#",
               isOpenNestedSubMenu: false,
               nestedChild: [
-                { title: "About Us Two", link: "/page-aboutus-two" },
                 { title: "History", link: "/page-history" },
                 { title: "Services", link: "page-services" },
                 { title: "Pricing", link: "/page-pricing" },
@@ -436,16 +437,6 @@ class Topbar extends Component {
               ],
             },
             {
-              id: 15,
-              title: "Liens utiles",
-              link: "/#",
-              isOpenNestedSubMenu: false,
-              nestedChild: [
-                { title: "CGU", link: "/page-terms" },
-                { title: "A propos", link: "/page-privacy" },
-              ],
-            },
-            {
               id: 16,
               title: "Special",
               link: "/#",
@@ -486,14 +477,28 @@ class Topbar extends Component {
         },
         {
           id: 5,
-          title: "About Us",
-          link: "/aboutus",
+          title: "Opérations",
+          link: "/#",
+          isOpenSubMenu: false,
+          child: [
+            { title: "Cotiser", link: "/operations/contribute" },
+            { title: "Demander un prêt", link: "/operations/askloan" },
+            { title: "Rembourser un prêt", link: "/operations/refund" },
+          ],
         },
         {
-          id: 6,
-          title: "Terms of Use",
-          link: "/tos",
+          id: 8,
+          title: "Liens Utiles",
+          link: "/#",
+          isOpenSubMenu: false,
+          child: [
+            { title: "A propos", link: "/aboutus" },
+            { title: "CGU", link: "/tos" },
+            { title: "L'équipe", link: "/about-team" },
+
+          ],
         },
+
       ],
       wishlistModal: false,
       dropdownIsOpen: false,

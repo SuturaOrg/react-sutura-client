@@ -27,8 +27,8 @@ class Footer extends Component {
         { title: "Contacts", link: "/page-contact-three" },
       ],
       grid2: [
-        { title: "A propos", link: "/page-privacy" },
-        { title: "Faire un don", link: "/donation" },
+        { title: "A propos", link: "/aboutus" },
+        { title: "Faire un don", link: "/operations/donate" },
         { title: "CGU", link: "/tos" },
         { title: "Documentation", link: "/documentation" },
       ],

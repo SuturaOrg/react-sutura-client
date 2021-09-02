@@ -1080,7 +1080,7 @@ class Demo extends Component {
                   <Col md={6} xs={12} className="mt-5 mt-sm-0">
                     <div className="text-center">
                       <div className="demos-box new-demo rounded shadow text-center border-0">
-                        <Link to="page-aboutus-two" target="_blank">
+                        <Link to="about-team" target="_blank">
                           <img
                             src={about2}
                             className="img-fluid rounded"

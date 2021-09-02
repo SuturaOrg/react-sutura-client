@@ -434,7 +434,7 @@ const routes = [
   { path: "/index-crypto-two", component: CryptoTwo },
 
   { path: "/page-aboutus", component: PageAboutUs, isTopbarDark: true },
-  { path: "/page-aboutus-two", component: PageAboutusTwo },
+  { path: "/about-team", component: PageAboutusTwo },
   { path: "/page-history", component: PageHistory, isTopbarDark: true },
   { path: "/page-pricing", component: PagePricing, isTopbarDark: true },
   { path: "/page-services", component: PageServices, isTopbarDark: true },
@@ -456,7 +456,7 @@ const routes = [
 
   //Utility
   { path: "/page-terms", component: PageTerms, isTopbarDark: true },
-  { path: "/page-privacy", component: PagePrivacy, isTopbarDark: true },
+  { path: "/aboutus", component: PagePrivacy, isTopbarDark: true },
 
   //Page Work
   { path: "/page-work-modern", component: PageWorkModern, isTopbarDark: true },
@@ -518,11 +518,11 @@ const routes = [
   { path: "/index", component: ITSolution},
   { path: "/index2", component: iTSolutionTwo },
   { path: "/tos", component: PageTerms },
-  { path: "/aboutus", component: PageAboutUs },
-  { path: "/donation", component: Donation, isTopbarDark: true },
-  { path: "/contribute", component: ContributeRequest, isTopbarDark: true },
-  { path: "/loan", component: LoanRequest, isTopbarDark: true },
-  { path: "/refund", component: RefundRequest, isTopbarDark: true },
+  { path: "/about-team", component: PageAboutUs },
+  { path: "/operations/donate", component: Donation, isTopbarDark: true },
+  { path: "/operations/contribute", component: ContributeRequest, isTopbarDark: true },
+  { path: "/operations/askloan", component: LoanRequest, isTopbarDark: true },
+  { path: "/operations/refund", component: RefundRequest, isTopbarDark: true },
 
   { path: "/signup-confirmation", component: SignupSubmitConfirmation, isTopbarDark: true },
   { path: "/loan-confirmation", component: LoanSubmitConfirmation, isTopbarDark: true },

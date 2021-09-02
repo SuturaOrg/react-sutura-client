@@ -237,7 +237,7 @@ class PageMessages extends Component {
                         <div className="d-flex align-items-center justify-content-between">
                             <h5 className="mb-0">Cotisations:</h5>
                             <Link
-                                to="/contribute"
+                                to="/operations/contribute"
                                 className="btn btn-primary"
 
                             >

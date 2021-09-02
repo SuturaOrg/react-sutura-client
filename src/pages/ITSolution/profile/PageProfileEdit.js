@@ -13,6 +13,7 @@ import {
     CardBody,
     Card,
 } from "reactstrap";
+import { AvForm, AvField } from "availity-reactstrap-validation";
 
 //Import Icons
 import FeatherIcon from "feather-icons-react";
@@ -187,11 +188,11 @@ class PageProfileEdit extends Component {
                             >
                                 Data sended successfully.
                             </Alert>
-                            <Form onSubmit={this.handleSubmit}>
+                            <AvForm onSubmit={this.handleSubmit}>
                                 <Row className="mt-4">
                                     <Col md="6">
                                         <div className="mb-3">
-                                            <Label className="form-label">First Name</Label>
+                                            <Label className="form-label">Ville</Label>
                                             <div className="form-icon position-relative">
                                                 <i>
                                                     <FeatherIcon
@@ -200,18 +201,18 @@ class PageProfileEdit extends Component {
                                                     />
                                                 </i>
                                             </div>
-                                            <Input
-                                                name="name"
-                                                id="first"
+                                            <AvField
+                                                name="town"
+                                                id="town"
                                                 type="text"
                                                 className="form-control ps-5"
-                                                placeholder="First Name :"
+                                                placeholder="Ville :"
                                             />
                                         </div>
                                     </Col>
                                     <Col md="6">
                                         <div className="mb-3">
-                                            <Label className="form-label">Last Name</Label>
+                                            <Label className="form-label">Etablissement d'études</Label>
                                             <div className="form-icon position-relative">
                                                 <i>
                                                     <FeatherIcon
@@ -220,18 +221,18 @@ class PageProfileEdit extends Component {
                                                     />
                                                 </i>
                                             </div>
-                                            <Input
-                                                name="name"
+                                            <AvField
+                                                name="school"
                                                 id="last"
                                                 type="text"
                                                 className="form-control ps-5"
-                                                placeholder="Last Name :"
+                                                placeholder="Etablissement :"
                                             />
                                         </div>
                                     </Col>
                                     <Col md="6">
                                         <div className="mb-3">
-                                            <Label className="form-label">Your Email</Label>
+                                            <Label className="form-label">Filière</Label>
                                             <div className="form-icon position-relative">
                                                 <i>
                                                     <FeatherIcon
@@ -240,59 +241,40 @@ class PageProfileEdit extends Component {
                                                     />
                                                 </i>
                                             </div>
-                                            <Input
-                                                name="email"
-                                                id="email"
-                                                type="email"
+                                            <AvField
+                                                name="faculty"
+                                                id="faculty"
+                                                type="text"
                                                 className="form-control ps-5"
-                                                placeholder="Your email :"
+                                                placeholder="Filière :"
                                             />
                                         </div>
                                     </Col>
                                     <Col md="6">
                                         <div className="mb-3">
-                                            <Label className="form-label">Occupation</Label>
+                                            <Label className="form-label">Téléphone No. :</Label>
                                             <div className="form-icon position-relative">
                                                 <i>
                                                     <FeatherIcon
-                                                        icon="bookmark"
+                                                        icon="phone"
                                                         className="fea icon-sm icons"
                                                     />
                                                 </i>
                                             </div>
-                                            <Input
-                                                name="name"
-                                                id="occupation"
-                                                type="text"
+                                            <AvField
+                                                min="0"
+                                                name="number"
+                                                id="number"
+                                                type="number"
                                                 className="form-control ps-5"
-                                                placeholder="Occupation :"
+                                                placeholder="Phone :"
                                             />
-                                        </div>
-                                    </Col>
-                                    <Col md="12">
-                                        <div className="mb-3">
-                                            <Label className="form-label">Description</Label>
-                                            <div className="form-icon position-relative">
-                                                <i>
-                                                    <FeatherIcon
-                                                        icon="message-circle"
-                                                        className="fea icon-sm icons"
-                                                    />
-                                                </i>
-                                            </div>
-                                            <textarea
-                                                name="comments"
-                                                id="comments"
-                                                rows="4"
-                                                className="form-control ps-5"
-                                                placeholder="Description :"
-                                            ></textarea>
                                         </div>
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col sm="12">
-                                        <input
+                                    <Col md="3" sm="12">
+                                        <AvField
                                             type="submit"
                                             id="submit"
                                             name="send"
@@ -301,74 +283,9 @@ class PageProfileEdit extends Component {
                                         />
                                     </Col>
                                 </Row>
-                            </Form>
+                            </AvForm>
 
                             <Row>
-                                <Col md="6" className="mt-4 pt-2">
-                                    <h5>Contact Info :</h5>
-                                    <Alert
-                                        color="info"
-                                        isOpen={this.state.successMsg2}
-                                        toggle={() => {
-                                            this.setState({
-                                                successMsg2: !this.state.successMsg2,
-                                            });
-                                        }}
-                                    >
-                                        Data sended successfully.
-                                    </Alert>
-
-                                    <Form onSubmit={this.handleSubmit2}>
-                                        <Row className="mt-4">
-                                            <Col lg="12">
-                                                <div className="mb-3">
-                                                    <Label className="form-label">Phone No. :</Label>
-                                                    <div className="form-icon position-relative">
-                                                        <i>
-                                                            <FeatherIcon
-                                                                icon="phone"
-                                                                className="fea icon-sm icons"
-                                                            />
-                                                        </i>
-                                                    </div>
-                                                    <Input
-                                                        name="number"
-                                                        id="number"
-                                                        type="number"
-                                                        className="form-control ps-5"
-                                                        placeholder="Phone :"
-                                                    />
-                                                </div>
-                                            </Col>
-
-                                            <Col lg="12">
-                                                <div className="mb-3">
-                                                    <Label className="form-label">Website :</Label>
-                                                    <div className="form-icon position-relative">
-                                                        <i>
-                                                            <FeatherIcon
-                                                                icon="globe"
-                                                                className="fea icon-sm icons"
-                                                            />
-                                                        </i>
-                                                    </div>
-                                                    <Input
-                                                        name="url"
-                                                        id="url"
-                                                        type="url"
-                                                        className="form-control ps-5"
-                                                        placeholder="Url :"
-                                                    />
-                                                </div>
-                                            </Col>
-
-                                            <Col lg="12" className="mt-2 mb-0">
-                                                <Button color="primary">Add</Button>
-                                            </Col>
-                                        </Row>
-                                    </Form>
-                                </Col>
-
                                 <Col md="6" className="mt-4 pt-2">
                                     <h5>Change password :</h5>
                                     <Alert

@@ -996,7 +996,7 @@ class Topbar extends Component {
                 return (
                   <div className="buy-button">
                     <Link
-                        to={!loggedIn?"auth-cover-signup":"/contribute"}
+                        to={!loggedIn?"auth-cover-signup":"/operations/contribute"}
                       target="_blank"
                       className="btn btn-pills btn-primary"
                     >
@@ -1008,7 +1008,7 @@ class Topbar extends Component {
                 return (
                   <div className="buy-button">
                     <Link
-                      to={!loggedIn?"auth-cover-signup":"/contribute"}
+                      to={!loggedIn?"auth-cover-signup":"/operations/contribute"}
                       target="_blank"
                       id="buyButton"
                       className="btn btn-primary"

@@ -28,7 +28,7 @@ class Features extends Component {
                     img: Asset189,
                     count: "15",
                     percentage: "+",
-                    stateMapping:"fundState",
+                    stateMapping:"nationalities",
                     heading: "Nationalités présentes",
                 },
                 {
@@ -36,6 +36,7 @@ class Features extends Component {
                     img: Asset192,
                     count: "2",
                     percentage: "+",
+                    stateMapping:"accordedLoans",
                     heading: "Prêts accordés",
                 },
                 {
@@ -43,6 +44,7 @@ class Features extends Component {
                     img: Asset187,
                     count: "98",
                     percentage: "+",
+                    stateMapping:"approvedRefunds",
                     heading: "Remboursements",
                 },
             ],
@@ -66,20 +68,21 @@ class Features extends Component {
                         >
                             <Row>
                                 <Col md={6} xs={12}>
-                                    <div className="progress-box">
+                                <div className="progress-box">
                                         <h6 className="title text-light title-dark">
                                             Disponibilité de la caisse
                                         </h6>
                                         <div
                                             className="progress title-bg-dark"
-                                            style={{height: "10px", padding: "3px"}}
+                                            style={{height: "10px", padding: "3px"}} 
+                                            value={statsActions.fundState}
                                         >
                                             <div
                                                 className="progress-bar position-relative bg-black"
                                                 style={{width: "84%"}}
                                             >
                                                 <div className="progress-value d-block text-light title-dark h6">
-                                                    84%
+                                                    {statsActions.fundState}84%
                                                 </div>
                                             </div>
                                         </div>
@@ -144,9 +147,9 @@ class Features extends Component {
 }
 
 function mapStateToProps(state) {
-    const {statsLoading, studentsCount, fundState} = state.stats;
+    const {statsLoading, fundState, studentsCount, nationalities, accordedLoans, approvedRefunds} = state.stats;
     return {
-        statsLoading, studentsCount, fundState
+        statsLoading, studentsCount, nationalities, accordedLoans, approvedRefunds, fundState
     };
 }
 

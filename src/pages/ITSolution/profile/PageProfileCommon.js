@@ -26,20 +26,20 @@ class PageProfileCommon extends Component {
             {
                 id: 1,
                 icon: "uil uil-dashboard",
-                className: "navbar-item account-menu px-0 ",
+                className: "navbar-item account-menu px-0",
                 title: "Profile",
                 link: "/page-profile",
             },
             {
                 id: 2,
-                icon: "uil uil-envelope-star",
+                icon: "uil uil-users-alt",
                 className: "navbar-item account-menu px-0 mt-2",
-                title: "Cotisations",
+                title: "contributions",
                 link: "/page-contributions",
             },
             {
                 id: 3,
-                icon: "uil uil-envelope-star",
+                icon: "uil uil-file",
                 className: "navbar-item account-menu px-0 mt-2",
                 title: "Prêts",
                 link: "/page-loans",
@@ -48,7 +48,7 @@ class PageProfileCommon extends Component {
                 id: 4,
                 icon: "uil uil-envelope-star",
                 className: "navbar-item account-menu px-0 mt-2",
-                title: "Refunds",
+                title: "Remboursements",
                 link: "/page-refunds",
             },
             {
@@ -65,13 +65,6 @@ class PageProfileCommon extends Component {
                 title: "Logout",
                 link: "/auth-cover-login",
             },
-            // {
-            //     id: 3,
-            //     icon: "uil uil-file",
-            //     className: "navbar-item account-menu px-0 mt-2",
-            //     title: "Portfolio",
-            //     link: "/page-works",
-            // },
             // {
             //     id: 7,
             //     icon: "uil uil-transaction",

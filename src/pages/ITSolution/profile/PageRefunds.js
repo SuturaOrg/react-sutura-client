@@ -45,44 +45,44 @@ class PageRefunds extends Component {
                     id: 2,
                     icon: "uil uil-users-alt",
                     className: "navbar-item account-menu px-0 mt-2",
-                    title: "refunds",
-                    link: "/page-refunds",
+                    title: "contributions",
+                    link: "/page-contributions",
                 },
                 {
                     id: 3,
                     icon: "uil uil-file",
                     className: "navbar-item account-menu px-0 mt-2",
                     title: "Portfolio",
-                    link: "/page-works",
+                    link: "/page-loans",
                 },
                 {
                     id: 4,
                     icon: "uil uil-envelope-star",
-                    className: "navbar-item account-menu px-0 mt-2",
-                    title: "Messages",
-                    link: "/page-messages",
-                },
-                {
-                    id: 5,
-                    icon: "uil uil-transaction",
-                    className: "navbar-item account-menu px-0 mt-2",
-                    title: "Loans",
-                    link: "/page-loans",
-                },
-                {
-                    id: 6,
-                    icon: "uil uil-setting",
                     className: "navbar-item account-menu px-0 mt-2 active",
-                    title: "Refunds",
+                    title: "Contributions",
                     link: "/page-refunds",
                 },
                 {
-                    id: 7,
+                    id: 5,
+                    icon: "uil uil-setting",
+                    className: "navbar-item account-menu px-0 mt-2",
+                    title: "Settings",
+                    link: "/page-profile-edit",
+                },
+                {
+                    id: 6,
                     icon: "uil uil-dashboard",
                     className: "navbar-item account-menu px-0 mt-2",
                     title: "Logout",
-                    link: "/auth-login-three",
+                    link: "/auth-cover-login",
                 },
+                // {
+                //     id: 7,
+                //     icon: "uil uil-transaction",
+                //     className: "navbar-item account-menu px-0 mt-2",
+                //     title: "Payments",
+                //     link: "/page-payments",
+                // },
             ],
             modal: false,
             dropdownOpen: false,
@@ -169,7 +169,7 @@ class PageRefunds extends Component {
                         <div className="d-flex align-items-center justify-content-between">
                             <h5 className="mb-0">Remboursements:</h5>
                             <Link
-                                to="/refund"
+                                to="/operations/refund"
                                 className="btn btn-primary"
 
                             >

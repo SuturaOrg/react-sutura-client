@@ -266,7 +266,7 @@ class PageProfile extends Component {
                                         </i>
                                         <div className="flex-1">
                                             <h6 className="text-primary mb-0">Date d'expiration :</h6>
-                                            <p className="text-muted mb-0">{user && user.expirationDate}</p>
+                                            <p className="text-muted mb-0">{this.props.expirationDate && this.props.expirationDate}</p>
                                         </div>
                                     </div>
                                     <div className="d-flex align-items-center mt-3">
@@ -346,9 +346,11 @@ class PageProfile extends Component {
 
 function mapStateToProps(state) {
     const {user} = state.user;
+    const {expirationDate}= state.stats;
     console.log(state);
     return {
         user,
+        expirationDate
     };
 
 }

@@ -30,7 +30,6 @@ class Footer extends Component {
         { title: "A propos", link: "/aboutus" },
         { title: "Faire un don", link: "/operations/donate" },
         { title: "CGU", link: "/tos" },
-        { title: "Documentation", link: "/documentation" },
       ],
     };
   }

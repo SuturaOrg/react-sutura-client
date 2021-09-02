@@ -12,6 +12,7 @@ export function stats(state = {}, action) {
                 period: action.statsPayload.period,
                 studentsCount:action.statsPayload.studentsCount,
                 fundState:action.statsPayload.fundState,
+                expirationDate: action.statsPayload.expirationDate
 
             };
         case statsConstants.STATS_FAILURE:

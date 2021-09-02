@@ -17,6 +17,18 @@ export function user(state = initialState, action) {
             };
         case userConstants.GETINFO_FAILURE:
             return {};
+        case userConstants.PATCH_REQUEST:
+            return {
+                loading : true
+            };
+        case userConstants.PATCH_SUCCESS:
+            return {
+                
+            };
+            case userConstants.PATCH_FAILURE:
+                return {
+                    
+                };
 
         default:
             return state

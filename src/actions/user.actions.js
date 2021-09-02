@@ -2,12 +2,14 @@ import { userConstants } from '../_constants';
 import { userService } from '../services';
 import { alertActions } from './';
 import { history } from '../_helpers';
+import { user } from '../reducers/user.reducer';
 
 export const userActions = {
     login,
     signup,
     logout,
-    getInfo
+    getInfo,
+    patchInfo
 };
 
 function login(data) {
@@ -83,4 +85,27 @@ function getInfo(){
     function request() { return { type: userConstants.GETINFO_REQUEST } }
     function success(userSummary) { return { type: userConstants.GETINFO_SUCCESS, userSummary } }
     function failure(error) { return { type: userConstants.GETINFO_FAILURE, error } }
+}
+
+function patchInfo(data){
+    return dispatch => {
+        dispatch(request());
+        userService.getUserMe()
+            .then(
+                user => {
+                    userService.patchInfos(data,user.id)
+                        .then((user) => {
+                            dispatch(success());
+                          },
+                          error => {
+                              dispatch(failure(error));
+                              dispatch(alertActions.error(error));
+                          })
+                }
+            );
+    };
+
+    function request() { return { type: userConstants.PATCH_REQUEST } }
+    function success() { return { type: userConstants.PATCH_SUCCESS } }
+    function failure(error) { return { type: userConstants.PATCH_FAILURE, error } }
 }

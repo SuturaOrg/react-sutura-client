@@ -21,6 +21,8 @@ import FeatherIcon from "feather-icons-react";
 import profile from "../../../assets/images/client/05.jpg";
 import imgbg from "../../../assets/images/account/bg.png";
 import ProfileCommon from "./PageProfileCommon";
+import {connect} from "react-redux";
+import { userActions } from "../../../actions";
 
 class PageProfileEdit extends Component {
     constructor(props) {
@@ -91,11 +93,14 @@ class PageProfileEdit extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSubmit2 = this.handleSubmit2.bind(this);
         this.handleSubmit3 = this.handleSubmit3.bind(this);
+
     }
 
-    handleSubmit(event) {
+    handleSubmit(event, values) {
         event.preventDefault();
-        this.setState({successMsg: true});
+        const {dispatch} = this.props
+        //dispatch (userActions.patchInfo(values));
+        console.log(values);
     }
 
     handleSubmit2(event) {
@@ -151,6 +156,7 @@ class PageProfileEdit extends Component {
     };
 
     render() {
+        const {user} = this.props;
         return (
             <ProfileCommon id={8}>
                 <Col lg="8" xs="12">
@@ -207,6 +213,8 @@ class PageProfileEdit extends Component {
                                                 type="text"
                                                 className="form-control ps-5"
                                                 placeholder="Ville :"
+                                                value={user && user.town}
+                                                required
                                             />
                                         </div>
                                     </Col>
@@ -227,6 +235,8 @@ class PageProfileEdit extends Component {
                                                 type="text"
                                                 className="form-control ps-5"
                                                 placeholder="Etablissement :"
+                                                value={user && user.school}
+                                                required
                                             />
                                         </div>
                                     </Col>
@@ -247,6 +257,8 @@ class PageProfileEdit extends Component {
                                                 type="text"
                                                 className="form-control ps-5"
                                                 placeholder="Filière :"
+                                                value={user && user.faculty}
+                                                required
                                             />
                                         </div>
                                     </Col>
@@ -268,6 +280,8 @@ class PageProfileEdit extends Component {
                                                 type="number"
                                                 className="form-control ps-5"
                                                 placeholder="Phone :"
+                                                value={user && user.phone}
+                                                required
                                             />
                                         </div>
                                     </Col>
@@ -522,4 +536,13 @@ class PageProfileEdit extends Component {
     }
 }
 
-export default PageProfileEdit;
+function mapStateToProps(state) {
+    const {user} = state.user;
+    console.log(state);
+    return {
+        user
+    };
+}
+
+const connectedPageProfilEdit= connect(mapStateToProps)(PageProfileEdit);
+export default connectedPageProfilEdit;

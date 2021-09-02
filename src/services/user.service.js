@@ -5,7 +5,8 @@ export const userService = {
     login,
     signup,
     logout,
-    getUserMe
+    getUserMe,
+    patchInfos
 };
 
 function login(data) {
@@ -59,5 +60,22 @@ function logout() {
     localStorage.removeItem('userInfos');
 
 }
+
+function patchInfos(data,id) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    };
+
+    return fetch(`${config.apiUrl}/students/${id}`, requestOptions)
+        .then(handleResponse)
+        .then(patchInfosPayload => {
+          localStorage.setItem('patchInfosPayload', JSON.stringify(patchInfosPayload));
+            return patchInfosPayload;
+        });
+}
+
+
 
 

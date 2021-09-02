@@ -13,7 +13,7 @@ import {
     CardBody,
     Card, Spinner,
 } from "reactstrap";
-import { AvForm, AvField } from "availity-reactstrap-validation";
+import {AvForm, AvField} from "availity-reactstrap-validation";
 
 //Import Icons
 import FeatherIcon from "feather-icons-react";
@@ -22,7 +22,7 @@ import profile from "../../../assets/images/client/05.jpg";
 import imgbg from "../../../assets/images/account/bg.png";
 import ProfileCommon from "./PageProfileCommon";
 import {connect} from "react-redux";
-import { userActions } from "../../../actions";
+import {alertActions, userActions} from "../../../actions";
 
 class PageProfileEdit extends Component {
     constructor(props) {
@@ -99,7 +99,7 @@ class PageProfileEdit extends Component {
     handleSubmit(event, values) {
         event.preventDefault();
         const {dispatch} = this.props
-        dispatch (userActions.patchInfo(values));
+        dispatch(userActions.patchInfo(values));
         console.log(values);
     }
 
@@ -156,7 +156,7 @@ class PageProfileEdit extends Component {
     };
 
     render() {
-        const {user, patchLoading} = this.props;
+        const {user, patchLoading, alert} = this.props;
         return (
             <ProfileCommon id={5}>
                 <Col lg="8" xs="12">
@@ -185,15 +185,15 @@ class PageProfileEdit extends Component {
                                     </Link>
                                 </div>
                             </div>
-                            <Alert
-                                color="primary"
-                                isOpen={this.state.successMsg}
+                            {alert && alert.message && <Alert
+                                color={alert.type}
                                 toggle={() => {
-                                    this.setState({successMsg: !this.state.successMsg});
-                                }}
+                                    this.props.dispatch(alertActions.clear())
+                                }
+                                }
                             >
-                                Data sended successfully.
-                            </Alert>
+                                {alert.message}
+                            </Alert>}
                             <AvForm onValidSubmit={this.handleSubmit}>
                                 <Row className="mt-4">
                                     <Col md="6">
@@ -296,19 +296,20 @@ class PageProfileEdit extends Component {
                                                         value: false,
                                                         errorMessage: "Veuillez remplir ce champ",
                                                     },
-                                                }}                                            />
+                                                }}/>
                                         </div>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col md="3" sm="12">
-                                        {!patchLoading?<AvField
+                                        {!patchLoading ? <AvField
                                             type="submit"
                                             id="submit"
                                             name="send"
                                             className="btn btn-primary"
                                             value="Save Changes"
-                                        />:<div className="btn justify-content-center"><Spinner className="text-primary"
+                                        /> : <div className="btn justify-content-center"><Spinner
+                                            className="text-primary"
                                         > </Spinner></div>}
                                     </Col>
                                 </Row>
@@ -552,9 +553,11 @@ class PageProfileEdit extends Component {
 
                         <div className="p-4">
                             <h6 className="mb-0">
-                                Pour supprimer votre compte, veuillez vous envoyer un mail avec comme objet : "Demande de résiliation de compte" et expliquer 
+                                Pour supprimer votre compte, veuillez vous envoyer un mail avec comme objet : "Demande
+                                de résiliation de compte" et expliquer
                                 dans le corps du messaege, vos raisons.<b/>
-                                Après les vérifications, nous procéderons très rapidement à la suppresion de votre compte.
+                                Après les vérifications, nous procéderons très rapidement à la suppresion de votre
+                                compte.
                             </h6>
                             <div className="mt-4">
                                 <Link to="/page-contact-three" className="btn btn-danger">Envoyer un mail</Link>
@@ -569,12 +572,14 @@ class PageProfileEdit extends Component {
 
 function mapStateToProps(state) {
     const {user, patchLoading} = state.user;
+    const {alert} = state;
     console.log(state);
     return {
         user,
-        patchLoading
+        patchLoading,
+        alert
     };
 }
 
-const connectedPageProfilEdit= connect(mapStateToProps)(PageProfileEdit);
+const connectedPageProfilEdit = connect(mapStateToProps)(PageProfileEdit);
 export default connectedPageProfilEdit;

@@ -96,6 +96,7 @@ function patchInfo(data){
                     userService.patchInfos(data,user.id)
                         .then((user) => {
                             dispatch(success());
+                            dispatch(alertActions.success("Vos modifications ont bien été enregistrées"))
                           },
                           error => {
                               dispatch(failure(error));

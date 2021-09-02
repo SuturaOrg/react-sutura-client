@@ -21,7 +21,7 @@ import lenovo from "../../assets/images/client/lenovo.svg";
 import paypal from "../../assets/images/client/paypal.svg";
 import shopify from "../../assets/images/client/shopify.svg";
 import spotify from "../../assets/images/client/spotify.svg";
-import WorkProcess from "../../components/Shared/WorkProcess";
+import MindPower from "../ITSolution/MindPower.js";
 import work1 from "../../assets/images/work/7.jpg";
 import work2 from "../../assets/images/work/8.jpg";
 import work3 from "../../assets/images/work/9.jpg";
@@ -102,11 +102,9 @@ export default class PageAboutusTwo extends Component {
             <Row className="justify-content-center">
               <Col lg={12} className="text-center">
                 <div className="page-next-level title-heading">
-                  <h1 className="text-white title-dark"> Aboutus </h1>
+                  <h1 className="text-white title-dark"> A propos de nous </h1>
                   <p className="text-white-50 para-desc mb-0 mx-auto">
-                    Start working with Sutura that can provide everything you
-                    need to generate awareness, drive traffic, connect.
-                  </p>
+                    Notre équipe composée d'étudiants très dynamiques et engagés pour des conditions d'études plus sereines, est à votre disposition.</p>
                   <div className="page-next">
                     <nav aria-label="breadcrumb" className="d-inline-block">
                       <ul className="breadcrumb bg-white rounded shadow mb-0">
@@ -120,7 +118,7 @@ export default class PageAboutusTwo extends Component {
                           className="breadcrumb-item active"
                           aria-current="page"
                         >
-                          Aboutus
+                          L'équipe
                         </li>
                       </ul>
                     </nav>
@@ -156,31 +154,25 @@ export default class PageAboutusTwo extends Component {
                   <div className="d-flex mb-4">
                     <span className="text-primary h1 mb-0">
                       <span className="counter-value display-1 fw-bold">
-                        <CountUp start={0} end={15} duration={12} />
+                        <CountUp start={0} end={10} duration={12} />
                       </span>
                       +
                     </span>
                     <span className="h6 align-self-end ms-2">
-                      Years <br /> Experience
+                      membres<br />  de plusieurs nationalités <br/> et de domaines divers
                     </span>
                   </div>
                   <div className="section-title">
-                    <h4 className="title mb-4">Who we are ?</h4>
+                    <h4 className="title mb-4">Qui sommes nous ?</h4>
                     <p className="text-muted">
-                      Start working with{" "}
+                      Venant de divers horizons (Afrique & Haïti), nous nous sommes retrouvé seuls dans ce pays d'accueil où nous sommmes
+                      confrontés aux mêmes problèmes pour mettre en place{" "}
                       <span className="text-primary fw-bold">
                         Sutura
-                      </span>{" "}
-                      that can provide everything you need to generate
-                      awareness, drive traffic, connect. Dummy text is text that
-                      is used in the publishing industry or by web designers to
-                      occupy the space which will later be filled with 'real'
-                      content. This is required when, for example, the final
-                      text is not yet available. Dummy texts have been in use by
-                      typesetters since the 16th century.
+                      </span>{" "}. Ce dernier a pu exister à la suite d'une longue période de réflexion et d'inverstigation. 
                     </p>
-                    <Link to="#" className="btn btn-primary mt-3">
-                      Contact us
+                    <Link to="/page-contact-three" className="btn btn-primary mt-3">
+                      Contacter nous
                     </Link>
                   </div>
                 </div>
@@ -204,14 +196,13 @@ export default class PageAboutusTwo extends Component {
           </Container>
         </section>
         <section className="section bg-light">
-          {/* Work process render */}
-          <WorkProcess />
-
+          {/*MindPower render */}
+        <MindPower />
           <Container className="mt-100 mt-60">
             <Row className="align-items-end mb-4 pb-4">
               <Col md={8}>
                 <div className="section-title text-center text-md-start">
-                  <h6 className="text-primary">Services</h6>
+                  <h6 className="text-primary">Les compétences dans Sutura</h6>
                   <h4 className="title mb-4">What we do ?</h4>
                   <p className="text-muted mb-0 para-desc">
                     Start working with{" "}

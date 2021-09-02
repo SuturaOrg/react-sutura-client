@@ -31,17 +31,13 @@ class PageError extends Component {
             <Row className="justify-content-center">
               <Col lg={8} md={12} className="text-center">
                 <img src={img404} className="img-fluid" alt="" />
-                <div className="text-uppercase mt-4 display-3">Oh ! no</div>
+                <div className="text-uppercase mt-4 display-3">Oh ! non</div>
                 <div className="text-capitalize text-dark mb-4 error-page">
-                  Page Not Found
+                  Page introuvable
                 </div>
                 <p className="text-muted para-desc mx-auto">
-                  Start working with{" "}
-                  <span className="text-primary fw-bold">
-                    Sutura
-                  </span>{" "}
-                  that can provide everything you need to generate awareness,
-                  drive traffic, connect.
+                  La page demandée n'est pas Disponible.<br/>
+                  Vous pouvez poursuivre votre navigation.
                 </p>
               </Col>
             </Row>
@@ -53,10 +49,10 @@ class PageError extends Component {
                   onClick={this.props.history.goBack}
                   className="btn btn-outline-primary mt-4"
                 >
-                  Go Back
+                  Retourner
                 </Link>{" "}
-                <Link to="/" className="btn btn-primary mt-4 ms-2">
-                  Go To Home
+                <Link to="/index" className="btn btn-primary mt-4 ms-2">
+                  Aller à l'acceuil
                 </Link>
               </Col>
             </Row>

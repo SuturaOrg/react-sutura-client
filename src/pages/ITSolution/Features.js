@@ -58,6 +58,7 @@ class Features extends Component {
     }
 
     render() {
+        const {fundState} = this.props;
         return (
             <React.Fragment>
                 <section className="section pt-0">
@@ -73,16 +74,16 @@ class Features extends Component {
                                             Disponibilité de la caisse
                                         </h6>
                                         <div
-                                            className="progress title-bg-dark"
+                                            className="mt-4 progress title-bg-dark"
                                             style={{height: "10px", padding: "3px"}} 
-                                            value={statsActions.fundState}
+                                            value={fundState}
                                         >
                                             <div
                                                 className="progress-bar position-relative bg-black"
-                                                style={{width: "84%"}}
+                                                style={{width: `${fundState}%`}}
                                             >
                                                 <div className="progress-value d-block text-light title-dark h6">
-                                                    {statsActions.fundState}84%
+                                                    {fundState}%
                                                 </div>
                                             </div>
                                         </div>
@@ -95,7 +96,7 @@ class Features extends Component {
                                             Opérations par rapport à la période précèdente
                                         </h6>
                                         <div
-                                            className="progress title-bg-dark"
+                                            className=" mt-4 progress title-bg-dark"
                                             style={{height: "10px", padding: "3px"}}
                                         >
                                             <div

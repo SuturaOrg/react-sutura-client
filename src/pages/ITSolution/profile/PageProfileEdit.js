@@ -384,7 +384,7 @@ class PageProfileEdit extends Component {
                             </Row>
                         </CardBody>
                     </Card>
-                    <div className="rounded shadow mt-4">
+                    {/* <div className="rounded shadow mt-4">
                         <div className="p-4 border-bottom">
                             <h5 className="mb-0">Account Notifications :</h5>
                         </div>
@@ -514,8 +514,8 @@ class PageProfileEdit extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="rounded shadow mt-4">
+                    </div> */}
+                    {/* <div className="rounded shadow mt-4">
                         <div className="p-4 border-bottom">
                             <h5 className="mb-0 text-danger">Delete Account :</h5>
                         </div>
@@ -527,6 +527,22 @@ class PageProfileEdit extends Component {
                             </h6>
                             <div className="mt-4">
                                 <button className="btn btn-danger">Delete Account</button>
+                            </div>
+                        </div>
+                    </div> */}
+                    <div className="rounded shadow mt-4">
+                        <div className="p-4 border-bottom">
+                            <h5 className="mb-0 text-danger">Resilier votre compte :</h5>
+                        </div>
+
+                        <div className="p-4">
+                            <h6 className="mb-0">
+                                Pour supprimer votre compte, veuillez vous envoyer un mail avec comme objet : "Demande de résiliation de compte" et expliquer 
+                                dans le corps du messaege, vos raisons.<b/>
+                                Après les vérifications, nous procéderons très rapidement à la suppresion de votre compte.
+                            </h6>
+                            <div className="mt-4">
+                                <Link to="/page-contact-three" className="btn btn-danger">Envoyer un mail</Link>
                             </div>
                         </div>
                     </div>

@@ -64,7 +64,7 @@ function logout() {
 function patchInfos(data,id) {
     const requestOptions = {
         method: 'PATCH',
-        headers: {'Content-Type': 'application/json'},
+        headers: authHeader(),
         body: JSON.stringify(data)
     };
 

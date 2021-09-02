@@ -19,7 +19,7 @@ export function user(state = initialState, action) {
             return {};
         case userConstants.PATCH_REQUEST:
             return {
-                loading : true
+                patchLoading : true
             };
         case userConstants.PATCH_SUCCESS:
             return {

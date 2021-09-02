@@ -11,7 +11,7 @@ import {
     Button,
     Label,
     CardBody,
-    Card,
+    Card, Spinner,
 } from "reactstrap";
 import { AvForm, AvField } from "availity-reactstrap-validation";
 
@@ -99,7 +99,7 @@ class PageProfileEdit extends Component {
     handleSubmit(event, values) {
         event.preventDefault();
         const {dispatch} = this.props
-        //dispatch (userActions.patchInfo(values));
+        dispatch (userActions.patchInfo(values));
         console.log(values);
     }
 
@@ -156,7 +156,7 @@ class PageProfileEdit extends Component {
     };
 
     render() {
-        const {user} = this.props;
+        const {user, patchLoading} = this.props;
         return (
             <ProfileCommon id={5}>
                 <Col lg="8" xs="12">
@@ -194,7 +194,7 @@ class PageProfileEdit extends Component {
                             >
                                 Data sended successfully.
                             </Alert>
-                            <AvForm onSubmit={this.handleSubmit}>
+                            <AvForm onValidSubmit={this.handleSubmit}>
                                 <Row className="mt-4">
                                     <Col md="6">
                                         <div className="mb-3">
@@ -214,7 +214,7 @@ class PageProfileEdit extends Component {
                                                 className="form-control ps-5"
                                                 placeholder="Ville :"
                                                 value={user && user.town}
-                                                required
+
                                             />
                                         </div>
                                     </Col>
@@ -236,7 +236,12 @@ class PageProfileEdit extends Component {
                                                 className="form-control ps-5"
                                                 placeholder="Etablissement :"
                                                 value={user && user.school}
-                                                required
+                                                validate={{
+                                                    required: {
+                                                        value: false,
+                                                        errorMessage: "Veuillez remplir ce champ",
+                                                    },
+                                                }}
                                             />
                                         </div>
                                     </Col>
@@ -258,7 +263,12 @@ class PageProfileEdit extends Component {
                                                 className="form-control ps-5"
                                                 placeholder="Filière :"
                                                 value={user && user.faculty}
-                                                required
+                                                validate={{
+                                                    required: {
+                                                        value: false,
+                                                        errorMessage: "Veuillez remplir ce champ",
+                                                    },
+                                                }}
                                             />
                                         </div>
                                     </Col>
@@ -281,20 +291,25 @@ class PageProfileEdit extends Component {
                                                 className="form-control ps-5"
                                                 placeholder="Phone :"
                                                 value={user && user.phone}
-                                                required
-                                            />
+                                                validate={{
+                                                    required: {
+                                                        value: false,
+                                                        errorMessage: "Veuillez remplir ce champ",
+                                                    },
+                                                }}                                            />
                                         </div>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col md="3" sm="12">
-                                        <AvField
+                                        {!patchLoading?<AvField
                                             type="submit"
                                             id="submit"
                                             name="send"
                                             className="btn btn-primary"
                                             value="Save Changes"
-                                        />
+                                        />:<div className="btn justify-content-center"><Spinner className="text-primary"
+                                        > </Spinner></div>}
                                     </Col>
                                 </Row>
                             </AvForm>
@@ -553,10 +568,11 @@ class PageProfileEdit extends Component {
 }
 
 function mapStateToProps(state) {
-    const {user} = state.user;
+    const {user, patchLoading} = state.user;
     console.log(state);
     return {
-        user
+        user,
+        patchLoading
     };
 }
 

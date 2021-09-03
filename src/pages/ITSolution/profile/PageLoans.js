@@ -168,7 +168,7 @@ class PageMessages extends Component {
                                                 </p>
                                             </div>
                                             <div className="mt-4">
-                                            {loan.status!=="FINISHED" && loan.statusRefund===false && <Button to="/deleteLoan" className="btn btn-danger">Supprimer</Button>}<br/>
+                                            {loan.status!=="FINISHED" && loan.statusRefund===false && <Button to="/deleteLoan" className="btn btn-danger">Annuler</Button>}<br/>
                                             </div>
                                         </div>
                                 </div>

@@ -46,7 +46,7 @@ class ContributionSubmitConfirmation extends Component {
                           <div className="d-grid">
                             <Button color="primary">
                             <Link
-                              to="auth-cover-login"
+                              to="page-contributions"
                               className="text-light fw-bold"
                             >Accueil
                             </Link>

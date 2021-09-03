@@ -20,7 +20,16 @@ function create(file, data, entity) {
                     entityPayload => {
                         dispatch(success(entityPayload,entity));
                         dispatch(alertActions.success(getSuccessMessage(entity)));
-                        // history.push('/page-profile');
+                        if(entity==="contributions"){
+                            history.push('/contribution-confirmation');
+                        }
+                        if(entity==="loans"){
+                            history.push('/loan-confirmation');
+                        }
+                        if(entity==="refunds"){
+                            history.push('/refund-confirmation');
+                        }
+                        //history.push('/page-profile');
                         // window.location.reload();
                     },
                     error => {

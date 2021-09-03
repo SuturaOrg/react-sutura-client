@@ -35,7 +35,7 @@ function signup(data) {
     return fetch(`${config.apiUrl}/auth/signup/user`, requestOptions)
         .then(handleResponse)
         .then(user => {
-            return login(data);
+            return user;
             // store user details and jwt token in local storage to keep user logged in between page refreshes
         });
 }

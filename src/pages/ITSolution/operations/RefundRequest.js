@@ -76,7 +76,7 @@ class RefundRequest extends Component {
     };
 
     render() {
-        const {alert,loading} = this.props;
+        const {alert,refundsCreateLoading} = this.props;
         console.log(alert);
         return (
             <React.Fragment>
@@ -163,13 +163,13 @@ class RefundRequest extends Component {
                                                 </Row>
                                                 <Row>
                                                     <Col sm={12}>
-                                                    {!loading?<input
+                                                    {!refundsCreateLoading?<input
                                                             type="submit"
                                                             id="submit"
                                                             name="send"
                                                             className="btn btn-primary"
                                                             value="Rembourser"
-                                                        />:<Spinner></Spinner>}
+                                                        />:<Spinner className="text-primary"> </Spinner>}
                                                     </Col>
                                                 </Row>
                                             </AvForm>
@@ -285,11 +285,11 @@ class RefundRequest extends Component {
 }
 
 function mapStateToProps(state) {
-    const {loading} = state.entity;
+    const {refundsCreateLoading} = state.entity;
     const {alert} = state;
 
     return {
-        loading,
+        refundsCreateLoading,
         alert
 
     };

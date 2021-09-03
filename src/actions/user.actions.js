@@ -45,7 +45,7 @@ function signup(data) {
             .then(
                 signupPayload => {
                     dispatch(success(signupPayload));
-                    dispatch(login(data));
+                    history.push('/registration-confirmation');
                     //window.location.reload();
 
                 },

@@ -75,7 +75,7 @@ class LoanRequest extends Component {
   };
 
   render() {
-      const {alert,loading}=this.props;
+      const {alert,loansCreateLoading}=this.props;
       console.log(alert);
     return (
       <React.Fragment>
@@ -289,13 +289,13 @@ class LoanRequest extends Component {
                         </Row>
                         <Row>
                         <Col sm={12}>
-                          {!loading?<input
+                          {!loansCreateLoading?<input
                                   type="submit"
                                   id="submit"
                                   name="send"
                                   className="btn btn-primary"
                                   value="Demander"
-                              />:<Spinner></Spinner>}
+                              />:<Spinner className="text-primary"> </Spinner>}
                           </Col>
                         </Row>
                       </AvForm>
@@ -396,11 +396,11 @@ class LoanRequest extends Component {
   }
 }
 function mapStateToProps(state) {
-  const {loading} = state.entity;
+  const {loansCreateLoading} = state.entity;
   const {alert} = state;
 
   return {
-    loading,
+    loansCreateLoading,
     alert
 
   };

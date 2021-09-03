@@ -166,7 +166,7 @@ class ContributeRequest extends Component {
                                 <Button
                                     className={'btn btn-primary'}
                                 >
-                                  {contributionsCreateLoading?<Spinner> </Spinner>:"Cotiser"} </Button>
+                                  {contributionsCreateLoading?<Spinner className="text-primary"> </Spinner>:"Cotiser"} </Button> 
                               </FormGroup>
 
                             </Col>

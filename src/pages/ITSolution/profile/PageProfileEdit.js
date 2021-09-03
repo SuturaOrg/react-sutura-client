@@ -163,7 +163,7 @@ class PageProfileEdit extends Component {
                     <Card className="border-0 rounded shadow">
                         <CardBody>
                             <h5 className="text-md-start text-center">
-                                Personal Detail :
+                                Informations personnlles :
                             </h5>
 
                             <div className="mt-3 text-md-start text-center d-sm-flex">
@@ -175,14 +175,14 @@ class PageProfileEdit extends Component {
                                 <div className="mt-md-4 mt-3 mt-sm-0">
                                     <Link to="#" className="btn btn-primary mt-2">
                                         {" "}
-                                        Change Picture{" "}
+                                        Changer le profil{" "}
                                     </Link>{" "}
-                                    <Link
+                                    {/* <Link
                                         to="#"
                                         className="btn btn-outline-primary mt-2 ms-2"
                                     >
                                         Delete
-                                    </Link>
+                                    </Link> */}
                                 </div>
                             </div>
                             {alert && alert.message && <Alert
@@ -307,7 +307,7 @@ class PageProfileEdit extends Component {
                                             id="submit"
                                             name="send"
                                             className="btn btn-primary"
-                                            value="Save Changes"
+                                            value="Sauvegarder"
                                         /> : <div className="btn justify-content-center"><Spinner
                                             className="text-primary"
                                         > </Spinner></div>}
@@ -317,7 +317,7 @@ class PageProfileEdit extends Component {
 
                             <Row>
                                 <Col md="6" className="mt-4 pt-2">
-                                    <h5>Change password :</h5>
+                                    <h5>Changer de mot de passe :</h5>
                                     <Alert
                                         color="primary"
                                         isOpen={this.state.successMsg3}
@@ -327,13 +327,13 @@ class PageProfileEdit extends Component {
                                             });
                                         }}
                                     >
-                                        Data sended successfully.
+                                        Votre mot de passe a été mis à jour avec succes!
                                     </Alert>
                                     <Form onSubmit={this.handleSubmit3}>
                                         <Row className="mt-4">
                                             <Col lg="12">
                                                 <div className="mb-3">
-                                                    <Label className="form-label">Old password :</Label>
+                                                    <Label className="form-label">Mot de passe actuel  :</Label>
                                                     <div className="form-icon position-relative">
                                                         <i>
                                                             <FeatherIcon
@@ -345,7 +345,7 @@ class PageProfileEdit extends Component {
                                                     <Input
                                                         type="password"
                                                         className="form-control ps-5"
-                                                        placeholder="Old password"
+                                                        placeholder="Ancien mot de passe"
                                                         required
                                                     />
                                                 </div>
@@ -353,7 +353,7 @@ class PageProfileEdit extends Component {
 
                                             <Col lg="12">
                                                 <div className="mb-3">
-                                                    <Label className="form-label">New password :</Label>
+                                                    <Label className="form-label">Nouveau mot de passe :</Label>
                                                     <div className="form-icon position-relative">
                                                         <i>
                                                             <FeatherIcon
@@ -365,7 +365,7 @@ class PageProfileEdit extends Component {
                                                     <Input
                                                         type="password"
                                                         className="form-control ps-5"
-                                                        placeholder="New password"
+                                                        placeholder="Nouveau mot de passe"
                                                         required
                                                     />
                                                 </div>
@@ -373,7 +373,7 @@ class PageProfileEdit extends Component {
 
                                             <Col lg="12">
                                                 <div className="mb-3">
-                                                    <Label className="form-label">Re-type New password :</Label>
+                                                    <Label className="form-label">Retaper le mot de passe :</Label>
                                                     <div className="form-icon position-relative">
                                                         <i>
                                                             <FeatherIcon
@@ -385,14 +385,14 @@ class PageProfileEdit extends Component {
                                                     <Input
                                                         type="password"
                                                         className="form-control ps-5"
-                                                        placeholder="Re-type New password"
+                                                        placeholder="Retaper votre mot de passe"
                                                         required
                                                     />
                                                 </div>
                                             </Col>
 
                                             <Col lg="12" className="mt-2 mb-0">
-                                                <Button color="primary">Save password</Button>
+                                                <Button color="primary">Enregistrer</Button>
                                             </Col>
                                         </Row>
                                     </Form>

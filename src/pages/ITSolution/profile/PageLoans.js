@@ -4,6 +4,7 @@ import {
     Container,
     Row,
     Col,
+    Button,
     Progress,
     Card,
     CardBody,
@@ -128,7 +129,7 @@ class PageMessages extends Component {
                         <div className="d-flex align-items-center justify-content-between">
                             <h5 className="mb-0">Demandes de prêts:</h5>
                             <Link
-                                to="/loan"
+                                to="/operations/askloan"
                                 className="btn btn-primary"
 
                             >
@@ -165,6 +166,9 @@ class PageMessages extends Component {
                                                 <b>Echéance de paiement:</b> {loan.deadline}<br/>
                                                 {loan.status==="FINISHED"&&<Link to={{pathname: `${loan.receipt}` }} target="_blank" className="btn btn-primary mt-2">Voir le reçu</Link>}<br/>
                                                 </p>
+                                            </div>
+                                            <div className="mt-4">
+                                            {loan.status!=="FINISHED" && loan.statusRefund===false && <Button to="/deleteLoan" className="btn btn-danger">Supprimer</Button>}<br/>
                                             </div>
                                         </div>
                                 </div>

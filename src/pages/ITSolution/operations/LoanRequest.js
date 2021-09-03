@@ -4,7 +4,7 @@ import {
   Row,
   Col,
   Label,
-  Alert,
+  Alert,Spinner
 } from "reactstrap";
 import {Link, withRouter} from "react-router-dom";
 import { AvForm, AvField } from "availity-reactstrap-validation";
@@ -75,7 +75,7 @@ class LoanRequest extends Component {
   };
 
   render() {
-      const {alert}=this.props;
+      const {alert,loading}=this.props;
       console.log(alert);
     return (
       <React.Fragment>
@@ -288,14 +288,14 @@ class LoanRequest extends Component {
                           </Col>
                         </Row>
                         <Row>
-                          <Col sm={12}>
-                            <input
-                              type="submit"
-                              id="submit"
-                              name="send"
-                              className="btn btn-primary"
-                              value="Demander"
-                            />
+                        <Col sm={12}>
+                          {!loading?<input
+                                  type="submit"
+                                  id="submit"
+                                  name="send"
+                                  className="btn btn-primary"
+                                  value="Demander"
+                              />:<Spinner></Spinner>}
                           </Col>
                         </Row>
                       </AvForm>

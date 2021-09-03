@@ -5,6 +5,7 @@ import {
     Col,
     Label,
     Alert,
+    Spinner,
 } from "reactstrap";
 import {Link, withRouter} from "react-router-dom";
 import {AvForm, AvField} from "availity-reactstrap-validation";
@@ -75,7 +76,7 @@ class RefundRequest extends Component {
     };
 
     render() {
-        const {alert} = this.props;
+        const {alert,loading} = this.props;
         console.log(alert);
         return (
             <React.Fragment>
@@ -162,13 +163,13 @@ class RefundRequest extends Component {
                                                 </Row>
                                                 <Row>
                                                     <Col sm={12}>
-                                                        <input
+                                                    {!loading?<input
                                                             type="submit"
                                                             id="submit"
                                                             name="send"
                                                             className="btn btn-primary"
                                                             value="Rembourser"
-                                                        />
+                                                        />:<Spinner></Spinner>}
                                                     </Col>
                                                 </Row>
                                             </AvForm>

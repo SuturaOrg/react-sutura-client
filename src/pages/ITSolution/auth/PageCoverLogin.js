@@ -9,7 +9,7 @@ import {
   Input,
   Button,
   Card,
-  CardBody, Alert,
+  CardBody, Alert, Spinner
 } from "reactstrap";
 import { AvForm, AvField } from "availity-reactstrap-validation";
 
@@ -43,11 +43,11 @@ class PageCoverLogin extends Component {
   }
   render() {
     const { rememberMe } = this.state;
-    const {alert}=this.props;
+    const {alert, loggingIn}=this.props;
     return (
       <React.Fragment>
         <div className="back-to-home rounded d-none d-sm-block">
-          <Link to="/" className="btn btn-icon btn-soft-primary">
+          <Link to="/index" className="btn btn-icon btn-soft-primary">
             <i>
               <FeatherIcon icon="home" className="icons" />
             </i>
@@ -184,10 +184,12 @@ class PageCoverLogin extends Component {
                               </Col>
 
                               <Col lg={12} className="mb-0">
-                                <div className="d-grid">
-                                  <Button color="primary">
+                              <div className="d-grid">
+                                  {!loggingIn?<Button color="primary">
                                     Se connecter
-                                </Button>
+                                </Button>: <div className="btn justify-content-center"><Spinner
+                                            className="text-primary"
+                                        > </Spinner></div>}
                                 </div>
                               </Col>
 

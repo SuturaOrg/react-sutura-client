@@ -10,7 +10,7 @@ import {
   Label,
   Button,
   Card,
-  CardBody, Alert,
+  CardBody, Alert, Spinner
 } from "reactstrap";
 import { AvForm, AvField } from "availity-reactstrap-validation";
 
@@ -46,11 +46,11 @@ class PageCoverSignup extends Component {
 
   render() {
     const { termsChecked, } = this.state;
-    const {alert}=this.props;
+    const {alert,loggingIn}=this.props;
     return (
       <React.Fragment>
         <div className="back-to-home rounded d-none d-sm-block">
-          <Link to="/" className="btn btn-icon btn-primary">
+          <Link to="/index" className="btn btn-icon btn-primary">
             <i>
               <FeatherIcon icon="home" className="icons" />
             </i>
@@ -242,9 +242,11 @@ class PageCoverSignup extends Component {
                               </Col>
                               <Col md="12">
                                 <div className="d-grid">
-                                  <Button color="primary">
+                                  {!loggingIn?<Button color="primary">
                                     S'inscrire
-                                </Button>
+                                </Button>: <div className="btn justify-content-center"><Spinner
+                                            className="text-primary"
+                                        > </Spinner></div>}
                                 </div>
                               </Col>
                               {/* <Col lg="12" className="mt-4 text-center">

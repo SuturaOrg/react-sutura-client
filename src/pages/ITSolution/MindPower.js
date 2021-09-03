@@ -460,7 +460,7 @@ export default class MindPower extends Component {
                 <div className="card-body py-3 px-0 content">
                   <h5 className="mb-0">
                     <Link to="#" className="name text-dark">
-                      Mouhamadou sangaré
+                      Mouhamadou SANGARÉ
                     </Link>
                   </h5>
                   <small className="designation text-muted"><b>Membre de l'équipe informatique</b><br/>Etudiant en 5<sup>ème</sup> année en data science à l'INSEA de Rabat</small>
@@ -522,7 +522,7 @@ export default class MindPower extends Component {
                 <div className="card-body py-3 px-0 content">
                   <h5 className="mb-0">
                     <Link to="#" className="name text-dark">
-                      Aïcha Mahamane Souley
+                      Aïcha Mahamane SOULEY
                     </Link>
                   </h5>
                   <small className="designation text-muted"><b>Membre de l'équipe informatique</b><br/>Etudiante en 5<sup>ème</sup> année en Big Data et Cloud Computing à l'ENS de Mouhammédia</small>
@@ -647,10 +647,10 @@ export default class MindPower extends Component {
                 <div className="card-body py-3 px-0 content">
                   <h5 className="mb-0">
                     <Link to="#" className="name text-dark">
-                    Mouhamadou Mansour KANE
+                      Sylvain TERWILLY
                     </Link>
                   </h5>
-                  <small className="designation text-muted"><b>Vice-Président Chargé du Contrôle des Opérations et des Finances</b>Etudiant en master de Finance, Banque et Assurance - HECF - Fès</small>
+                  <small className="designation text-muted"><b>Membre de l'équipe de communication</b><br/>Etudiant en informatique à la FSTG de Marrakech</small>
                 </div>
               </div>
             </div>

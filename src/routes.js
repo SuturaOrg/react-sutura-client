@@ -8,6 +8,8 @@ const SignupSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/conf
 const LoanSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/LoanSubmitConfirmation"));
 const ContributionSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/ContributionSubmitConfirmation"));
 const RefundSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/RefundSubmitConfirmation"));
+const RegistrationSubmitConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/RegistrationSubmitConfirmation"));
+const RegistrationSuccessConfirmation= React.lazy(() => import("./pages/ITSolution/confirmations/RegistrationSuccessConfirmation"));
 
 // Root Include
 const Root = React.lazy(() => import("./pages/Home/indexRoot"));
@@ -528,6 +530,8 @@ const routes = [
   { path: "/loan-confirmation", component: LoanSubmitConfirmation, isTopbarDark: true },
   { path: "/contribution-confirmation", component: ContributionSubmitConfirmation, isTopbarDark: true },
   { path: "/refund-confirmation", component: RefundSubmitConfirmation, isTopbarDark: true },
+  { path: "/registration-confirmation", component: RegistrationSubmitConfirmation, isTopbarDark: true },
+  { path: "/registration-success-confirmation", component: RegistrationSuccessConfirmation, isTopbarDark: true },
 
 
   //Index root

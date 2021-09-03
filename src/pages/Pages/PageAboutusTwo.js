@@ -202,26 +202,25 @@ export default class PageAboutusTwo extends Component {
             <Row className="align-items-end mb-4 pb-4">
               <Col md={8}>
                 <div className="section-title text-center text-md-start">
-                  <h6 className="text-primary">Les compétences dans Sutura</h6>
-                  <h4 className="title mb-4">What we do ?</h4>
+                  <h6 className="text-primary">Notre projet est original et bien adapté</h6>
+                  <h4 className="title mb-4">Quelle est la particularité de Sutura ?</h4>
                   <p className="text-muted mb-0 para-desc">
-                    Start working with{" "}
+                    La startup{" "}
                     <span className="text-primary fw-bold">
                       Sutura
                     </span>{" "}
-                    that can provide everything you need to generate awareness,
-                    drive traffic, connect.
+                    a la particularité d'être la résultante de beaucoup de domaines.
                   </p>
                 </div>
               </Col>
 
               <Col md={4} className="mt-4 mt-sm-0">
-                <div className="text-center text-md-end">
+                {/* <div className="text-center text-md-end">
                   <Link to="#" className="text-primary h6">
                     See More{" "}
                     <i className="uil uil-angle-right-b align-middle"></i>
                   </Link>
-                </div>
+                </div> */}
               </Col>
             </Row>
 
@@ -240,7 +239,7 @@ export default class PageAboutusTwo extends Component {
                       }}
                     >
                       <div className="text-center py-1">
-                        <h6 className="mb-0">Web Developing</h6>
+                        <h6 className="mb-0">Social</h6>
                       </div>
                     </NavLink>
                   </NavItem>
@@ -257,7 +256,7 @@ export default class PageAboutusTwo extends Component {
                       }}
                     >
                       <div className="text-center py-1">
-                        <h6 className="mb-0">Database Analysis</h6>
+                        <h6 className="mb-0">Economique</h6>
                       </div>
                     </NavLink>
                   </NavItem>
@@ -274,7 +273,7 @@ export default class PageAboutusTwo extends Component {
                       }}
                     >
                       <div className="text-center py-1">
-                        <h6 className="mb-0">Server Security</h6>
+                        <h6 className="mb-0">Informatique</h6>
                       </div>
                     </NavLink>
                   </NavItem>
@@ -291,7 +290,24 @@ export default class PageAboutusTwo extends Component {
                       }}
                     >
                       <div className="text-center py-1">
-                        <h6 className="mb-0">Web Designing</h6>
+                        <h6 className="mb-0">Startup</h6>
+                      </div>
+                    </NavLink>
+                  </NavItem>
+
+                  <NavItem className="mt-2">
+                    <NavLink
+                      to="#"
+                      className={classnames(
+                        { active: this.state.activeTab === "5" },
+                        "rounded"
+                      )}
+                      onClick={() => {
+                        this.toggle("5");
+                      }}
+                    >
+                      <div className="text-center py-1">
+                        <h6 className="mb-0">Associatif</h6>
                       </div>
                     </NavLink>
                   </NavItem>
@@ -311,15 +327,13 @@ export default class PageAboutusTwo extends Component {
                     />
                     <div className="mt-4">
                       <p className="text-muted">
-                        This is required when, for example, the final text is
-                        not yet available. Dummy text is also known as 'fill
-                        text'. It is said that song composers of the past used
-                        dummy texts as lyrics.
+                        Le projet Sutura est d'abord social car il a pour ambition d'assister les étudiants étrangers en cas de
+                        besoin ponctuel financier d'ordre divers. Et, sur la base de la solidarité et de l'entraide.
                       </p>
-                      <Link to="#" className="text-primary">
+                      {/* <Link to="#" className="text-primary">
                         See More{" "}
                         <i className="uil uil-angle-right-b align-middle"></i>
-                      </Link>
+                      </Link> */}
                     </div>
                   </TabPane>
 
@@ -334,15 +348,12 @@ export default class PageAboutusTwo extends Component {
                     />
                     <div className="mt-4">
                       <p className="text-muted">
-                        This is required when, for example, the final text is
-                        not yet available. Dummy text is also known as 'fill
-                        text'. It is said that song composers of the past used
-                        dummy texts as lyrics.
+                        Sutura est un service financier participatif.
                       </p>
-                      <Link to="#" className="text-primary">
+                      {/* <Link to="#" className="text-primary">
                         See More{" "}
                         <i className="uil uil-angle-right-b align-middle"></i>
-                      </Link>
+                      </Link> */}
                     </div>
                   </TabPane>
 
@@ -357,15 +368,12 @@ export default class PageAboutusTwo extends Component {
                     />
                     <div className="mt-4">
                       <p className="text-muted">
-                        This is required when, for example, the final text is
-                        not yet available. Dummy text is also known as 'fill
-                        text'. It is said that song composers of the past used
-                        dummy texts as lyrics.
+                        Nous avons conçu cet application web qui fait plus 90% du travail de gestion. Cette dernière intègre un algorithme pour optimiser la gestion.
                       </p>
-                      <Link to="#" className="text-primary">
+                      {/* <Link to="#" className="text-primary">
                         See More{" "}
                         <i className="uil uil-angle-right-b align-middle"></i>
-                      </Link>
+                      </Link> */}
                     </div>
                   </TabPane>
 
@@ -380,15 +388,33 @@ export default class PageAboutusTwo extends Component {
                     />
                     <div className="mt-4">
                       <p className="text-muted">
-                        This is required when, for example, the final text is
-                        not yet available. Dummy text is also known as 'fill
-                        text'. It is said that song composers of the past used
-                        dummy texts as lyrics.
+                        Le projet Sutura est aussi vraie startup. D'autres services assez intéressants seront proposés pour mieux améliorer
+                        les conditions estudiantines.
                       </p>
-                      <Link to="#" className="text-primary">
+                      {/* <Link to="#" className="text-primary">
                         See More{" "}
                         <i className="uil uil-angle-right-b align-middle"></i>
-                      </Link>
+                      </Link> */}
+                    </div>
+                  </TabPane>
+
+                  <TabPane
+                    className="fade bg-white show p-4 rounded shadow"
+                    tabId="5"
+                  >
+                    <img
+                      src={work4}
+                      className="img-fluid rounded shadow"
+                      alt=""
+                    />
+                    <div className="mt-4">
+                      <p className="text-muted">
+                        Le projet Sutura se base sur le modèle économique et juridique de l'association.
+                      </p>
+                      {/* <Link to="#" className="text-primary">
+                        See More{" "}
+                        <i className="uil uil-angle-right-b align-middle"></i>
+                      </Link> */}
                     </div>
                   </TabPane>
                 </TabContent>

@@ -55,24 +55,22 @@ export default class ExperienceTeam extends Component {
                         <Row className="align-items-center">
                           <Col md={6} className="mt-4 pt-2">
                             <div className="section-title text-md-start">
-                              <h6 className="text-white-50">Team</h6>
                               <h4 className="title text-white title-dark mb-0">
-                                Meet Experience <br /> Team Member
+                                L'équipe de Sutura 
                               </h4>
+                              <h6 className="text-white-50">Un groupe de personnes magnifiques</h6>
                             </div>
                           </Col>
 
                           <Col md={6} xs={12} className="mt-4 pt-md-2">
-                            <div className="section-title text-md-start">
+                            <div className="section-title text-md-start"><br/><br/>
                               <p className="text-white-50 para-desc">
-                                Start working with Sutura that can provide
-                                everything you need to generate awareness, drive
-                                traffic, connect.
+                                L'équipe de Sutura est aussi une famille.
                               </p>
-                              <Link to="#" className="text-white title-dark">
+                              {/* <Link to="#" className="text-white title-dark">
                                 Read More{" "}
                                 <i className="uil uil-angle-right-b align-middle"></i>
-                              </Link>
+                              </Link> */}
                             </div>
                           </Col>
                         </Row>

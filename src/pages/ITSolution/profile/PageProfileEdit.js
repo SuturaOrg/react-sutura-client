@@ -25,6 +25,7 @@ import {connect} from "react-redux";
 import {alertActions, entityActions, userActions} from "../../../actions";
 
 class PageProfileEdit extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -93,14 +94,28 @@ class PageProfileEdit extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSubmit2 = this.handleSubmit2.bind(this);
         this.handleSubmitPassword = this.handleSubmitPassword.bind(this);
+        this.handlePicClick = this.handlePicClick.bind(this);
+
 
     }
 
     handleSubmit(event, values) {
         event.preventDefault();
-        const {dispatch} = this.props
-        dispatch(userActions.patchInfo(values));
-        console.log(values);
+        const {dispatch} = this.props;
+        if (this.state.selectedFile && !this.state.selectedFile.name.match(/.(jpg|jpeg|png|gif)$/i)) {
+            dispatch(alertActions.error("Le fichier doit être une image"))
+            return;
+        }
+        dispatch(userActions.patchInfo(values, this.state.selectedFile));
+    }
+
+    onFileChange = event => {
+        this.setState({selectedFile: event.target.files[0]});
+
+    };
+
+    handlePicClick(event) {
+        this.refs.picUploader.click();
     }
 
     handleSubmit2(event) {
@@ -110,8 +125,8 @@ class PageProfileEdit extends Component {
 
     handleSubmitPassword(event, values) {
         event.preventDefault();
-        const {dispatch}=this.props;
-        if(values.newPassword1!==values.newPassword2){
+        const {dispatch} = this.props;
+        if (values.newPassword1 !== values.newPassword2) {
             dispatch(alertActions.error("Les nouveaux mots de passe ne correspondent pas "))
             return;
         }
@@ -163,16 +178,21 @@ class PageProfileEdit extends Component {
                             </h5>
 
                             <div className="mt-3 text-md-start text-center d-sm-flex">
-                                <img
-                                    src={profile}
+                                <input type="file" id="file" ref="picUploader" style={{display: "none"}}
+                                       onChange={this.onFileChange.bind(this)}
+                                />
+                                <Link> <img
+                                    src={user && (user.picture ? user.picture : profile)}
                                     className="avatar float-md-left avatar-medium rounded-circle shadow me-md-4"
                                     alt=""
+                                    onClick={this.handlePicClick}
                                 />
+                                </Link>
                                 <div className="mt-md-4 mt-3 mt-sm-0">
-                                    <Link to="#" className="btn btn-primary mt-2">
+                                    <Button onClick={this.handlePicClick} className="btn btn-primary mt-2">
                                         {" "}
-                                        Changer le profil{" "}
-                                    </Link>{" "}
+                                        Choisir une photo{" "}
+                                    </Button>{" "}
                                     {/* <Link
                                         to="#"
                                         className="btn btn-outline-primary mt-2 ms-2"
@@ -329,7 +349,7 @@ class PageProfileEdit extends Component {
                                         <Row className="mt-4">
                                             <Col lg="12">
                                                 <div className="mb-3">
-                                                    <Label className="form-label">Mot de passe actuel  :</Label>
+                                                    <Label className="form-label">Mot de passe actuel :</Label>
                                                     <div className="form-icon position-relative">
                                                         <i>
                                                             <FeatherIcon

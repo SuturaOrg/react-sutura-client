@@ -122,7 +122,7 @@ class PageProfileCommon extends Component {
                                         <Row className="align-items-center">
                                             <Col lg="2" md="3" className="text-md-start text-center">
                                                 <img
-                                                    src={profile}
+                                                    src={user && (user.picture ? user.picture : profile)}
                                                     className="avatar avatar-large rounded-circle shadow d-block mx-auto"
                                                     alt=""
                                                 />

@@ -1,5 +1,5 @@
 import {userConstants} from '../_constants';
-import {userService} from '../services';
+import {fileService, userService} from '../services';
 import {alertActions} from './';
 import {history} from '../_helpers';
 import {user} from '../reducers/user.reducer';
@@ -112,23 +112,30 @@ function getInfo() {
     }
 }
 
-function patchInfo(data) {
-    return dispatch => {
+function patchInfo(data,picture) {
+    return async dispatch => {
         dispatch(request());
-        userService.getUserMe()
-            .then(
-                user => {
-                    userService.patchInfos(data, user.id)
-                        .then((user) => {
-                                dispatch(success());
-                                dispatch(alertActions.success("Vos modifications ont bien été enregistrées"))
-                            },
-                            error => {
-                                dispatch(failure(error));
-                                dispatch(alertActions.error(error));
-                            })
-                }
-            );
+        picture &&  await fileService.upload(picture, "profilePics").then((payload) => {
+                data.picture=payload.url;
+            }, error => {
+            dispatch(alertActions.error(error));
+            });
+            userService.getUserMe()
+                .then(
+                    user => {
+                        console.log(data);
+                        userService.patchInfos(data, user.id)
+                            .then((user) => {
+                                    dispatch(success());
+                                    dispatch(getInfo());
+                                    dispatch(alertActions.success("Vos modifications ont bien été enregistrées"))
+                                },
+                                error => {
+                                    dispatch(failure(error));
+                                    dispatch(alertActions.error(error));
+                                })
+                    }
+                );
     };
 
     function request() {
@@ -170,3 +177,5 @@ function patchPwd(data) {
         return {type: userConstants.UPDATEPWD_FAILURE, error}
     }
 }
+
+

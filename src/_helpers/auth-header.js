@@ -1,9 +1,9 @@
 export function authHeader() {
     // return authorization header with jwt token
-    let signinPayload = JSON.parse(localStorage.getItem('signinPayload'));
+    let accessToken = localStorage.getItem('accessToken');
 
-    if (signinPayload && signinPayload.accessToken) {
-        return { 'Authorization': 'Bearer ' + signinPayload.accessToken,
+    if (accessToken ) {
+        return { 'Authorization': 'Bearer ' + accessToken,
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         };
@@ -14,10 +14,10 @@ export function authHeader() {
 
 export function authHeaderFormData() {
     // return authorization header with jwt token
-    let signinPayload = JSON.parse(localStorage.getItem('signinPayload'));
+    let accessToken = localStorage.getItem('accessToken');
 
-    if (signinPayload && signinPayload.accessToken) {
-        return { 'Authorization': 'Bearer ' + signinPayload.accessToken,
+    if (accessToken) {
+        return { 'Authorization': 'Bearer ' + accessToken,
         };
     } else {
         return {};

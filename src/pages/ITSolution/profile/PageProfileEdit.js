@@ -22,7 +22,7 @@ import profile from "../../../assets/images/client/05.jpg";
 import imgbg from "../../../assets/images/account/bg.png";
 import ProfileCommon from "./PageProfileCommon";
 import {connect} from "react-redux";
-import {alertActions, userActions} from "../../../actions";
+import {alertActions, entityActions, userActions} from "../../../actions";
 
 class PageProfileEdit extends Component {
     constructor(props) {
@@ -92,7 +92,7 @@ class PageProfileEdit extends Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSubmit2 = this.handleSubmit2.bind(this);
-        this.handleSubmit3 = this.handleSubmit3.bind(this);
+        this.handleSubmitPassword = this.handleSubmitPassword.bind(this);
 
     }
 
@@ -108,9 +108,14 @@ class PageProfileEdit extends Component {
         this.setState({successMsg2: true});
     }
 
-    handleSubmit3(event) {
+    handleSubmitPassword(event, values) {
         event.preventDefault();
-        this.setState({successMsg3: true});
+        const {dispatch}=this.props;
+        if(values.newPassword1!==values.newPassword2){
+            dispatch(alertActions.error("Les nouveaux mots de passe ne correspondent pas "))
+            return;
+        }
+        dispatch(userActions.patchPwd(values));
     }
 
     componentDidMount() {
@@ -137,15 +142,6 @@ class PageProfileEdit extends Component {
         }
     };
 
-    onChangeCheckbox = (selected, contact) => {
-        let modifiedselectedContacts = [...this.state.selectedContacts];
-        if (selected) {
-            modifiedselectedContacts.push(contact);
-        }
-        this.setState({
-            selectedContacts: modifiedselectedContacts,
-        });
-    };
 
     handleNewImage = (e) => {
         this.setState({image: e.target.files[0]});
@@ -329,7 +325,7 @@ class PageProfileEdit extends Component {
                                     >
                                         Votre mot de passe a été mis à jour avec succes!
                                     </Alert>
-                                    <Form onSubmit={this.handleSubmit3}>
+                                    <AvForm onValidSubmit={this.handleSubmitPassword}>
                                         <Row className="mt-4">
                                             <Col lg="12">
                                                 <div className="mb-3">
@@ -342,11 +338,28 @@ class PageProfileEdit extends Component {
                                                             />
                                                         </i>
                                                     </div>
-                                                    <Input
+                                                    <AvField
                                                         type="password"
+                                                        name="oldPassword"
                                                         className="form-control ps-5"
                                                         placeholder="Ancien mot de passe"
                                                         required
+                                                        validate={{
+                                                            required: {
+                                                                value: true,
+                                                                errorMessage: "Veuillez remplir ce champ",
+                                                            },
+                                                            minLength: {
+                                                                value: 6,
+                                                                errorMessage:
+                                                                    "La taille de votre mot de passe doit être comprise entre 6 and 16 caractères",
+                                                            },
+                                                            maxLength: {
+                                                                value: 16,
+                                                                errorMessage:
+                                                                    "La taille de votre mot de passe doit être comprise entre 6 and 16 caractères",
+                                                            },
+                                                        }}
                                                     />
                                                 </div>
                                             </Col>
@@ -362,11 +375,28 @@ class PageProfileEdit extends Component {
                                                             />
                                                         </i>
                                                     </div>
-                                                    <Input
+                                                    <AvField
                                                         type="password"
+                                                        name="newPassword1"
                                                         className="form-control ps-5"
                                                         placeholder="Nouveau mot de passe"
                                                         required
+                                                        validate={{
+                                                            required: {
+                                                                value: true,
+                                                                errorMessage: "Veuillez remplir ce champ",
+                                                            },
+                                                            minLength: {
+                                                                value: 6,
+                                                                errorMessage:
+                                                                    "La taille de votre mot de passe doit être comprise entre 6 and 16 caractères",
+                                                            },
+                                                            maxLength: {
+                                                                value: 16,
+                                                                errorMessage:
+                                                                    "La taille de votre mot de passe doit être comprise entre 6 and 16 caractères",
+                                                            },
+                                                        }}
                                                     />
                                                 </div>
                                             </Col>
@@ -382,11 +412,18 @@ class PageProfileEdit extends Component {
                                                             />
                                                         </i>
                                                     </div>
-                                                    <Input
+                                                    <AvField
+                                                        name="newPassword2"
                                                         type="password"
                                                         className="form-control ps-5"
-                                                        placeholder="Retaper votre mot de passe"
+                                                        placeholder="Retapez votre mot de passe"
                                                         required
+                                                        validate={{
+                                                            required: {
+                                                                value: true,
+                                                                errorMessage: "Veuillez remplir ce champ",
+                                                            }
+                                                        }}
                                                     />
                                                 </div>
                                             </Col>
@@ -395,7 +432,7 @@ class PageProfileEdit extends Component {
                                                 <Button color="primary">Enregistrer</Button>
                                             </Col>
                                         </Row>
-                                    </Form>
+                                    </AvForm>
                                 </Col>
                             </Row>
                         </CardBody>

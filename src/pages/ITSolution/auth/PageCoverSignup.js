@@ -205,12 +205,12 @@ class PageCoverSignup extends Component {
                                       minLength: {
                                         value: 6,
                                         errorMessage:
-                                          "Your password must be between 6 and 8 characters",
+                                          "La taille de votre mot de passe doit être comprise entre 6 and 16 caractères",
                                       },
                                       maxLength: {
                                         value: 16,
                                         errorMessage:
-                                          "Your password must be between 6 and 8 characters",
+                                            "La taille de votre mot de passe doit être comprise entre 6 and 16 caractères",
                                       },
                                     }}
                                   />

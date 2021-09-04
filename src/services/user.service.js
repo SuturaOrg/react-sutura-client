@@ -6,7 +6,9 @@ export const userService = {
     signup,
     logout,
     getUserMe,
-    patchInfos
+    patchInfos,
+    updatePwd
+
 };
 
 function login(data) {
@@ -20,7 +22,7 @@ function login(data) {
         .then(handleResponse)
         .then(signinPayload => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
-          localStorage.setItem('signinPayload', JSON.stringify(signinPayload));
+          localStorage.setItem('accessToken', signinPayload.accessToken);
             return signinPayload;
         });
 }
@@ -56,7 +58,7 @@ function getUserMe(){
 
 function logout() {
     // remove user from local storage to log user out
-    localStorage.removeItem('signinPayload');
+    localStorage.removeItem('accessToken');
     localStorage.removeItem('userInfos');
 
 }
@@ -71,11 +73,24 @@ function patchInfos(data,id) {
     return fetch(`${config.apiUrl}/students/${id}`, requestOptions)
         .then(handleResponse)
         .then(patchInfosPayload => {
-          localStorage.setItem('patchInfosPayload', JSON.stringify(patchInfosPayload));
             return patchInfosPayload;
         });
 }
 
+
+function updatePwd(data) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: authHeader(),
+        body: JSON.stringify(data)
+    };
+
+    return fetch(`${config.apiUrl}/auth/updatepwd`, requestOptions)
+        .then(handleResponse)
+        .then(updatePwdPayload => {
+            return updatePwdPayload;
+        });
+}
 
 
 

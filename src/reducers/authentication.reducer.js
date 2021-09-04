@@ -1,6 +1,6 @@
 import {userConstants} from '../_constants';
-let signinPayload = JSON.parse(localStorage.getItem('signinPayload'));
-const initialState = signinPayload ? {
+let accessToken = localStorage.getItem('accessToken');
+const initialState = accessToken ? {
     loggedIn: true,
 } : {};
 export function authentication(state = initialState, action) {

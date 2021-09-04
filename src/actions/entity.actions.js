@@ -40,7 +40,7 @@ function create(file, data, entity) {
         }
 
         dispatch(request(data,entity));
-       file?fileService.upload(file).then((filePayload) => {
+       file?fileService.upload(file,entity).then((filePayload) => {
             data.proof=filePayload.url;
           _create()
         }).catch((error)=>{

@@ -6,7 +6,7 @@ export const fileService = {
     upload,
 };
 
-function upload(file) {
+function upload(file, folder) {
     // Create an object of formData
     const formData = new FormData();
 
@@ -15,13 +15,15 @@ function upload(file) {
         "file",
         file,
     );
+    formData.append("folder",
+        folder)
     const requestOptions = {
         method: 'POST',
         headers: authHeaderFormData(),
         body: formData
     };
 
-    return fetch(`${config.apiUrl}/upload/`, requestOptions)
+    return fetch(`${config.apiUrl}/upload`, requestOptions)
         .then(handleResponse)
         .then(filePayload => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes

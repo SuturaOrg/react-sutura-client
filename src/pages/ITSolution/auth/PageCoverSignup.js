@@ -138,6 +138,25 @@ class PageCoverSignup extends Component {
                                   />
                                 </div>
                               </Col>
+                              <Col md={12}>
+                                <div className="mb-3">
+                                  <Label className="form-label">Sexe <span className="text-danger">*</span></Label>
+                                  <div className="form-icon position-relative">
+                                    <AvField type="select" name="sexe" value="sexe" helpMessage="Sélectionnez une catégorie"
+
+                                            validate={{
+                                              required: {
+                                                value: true,
+                                                errorMessage: "Veuillez sélectionner une option",
+                                              },
+                                            }}>
+                                      <option value="">- Sélectionnez une option-</option>
+                                      <option value="true">Homme</option>
+                                      <option value="false">Femme</option>
+                                    </AvField>
+                                  </div>
+                                </div>
+                              </Col>
                               <Col md="12">
                                 <div className="mb-3">
                                   <Label className="form-label" for="email">
@@ -213,6 +232,244 @@ class PageCoverSignup extends Component {
                                             "La taille de votre mot de passe doit être comprise entre 6 and 16 caractères",
                                       },
                                     }}
+                                  />
+                                </div>
+                              </Col>
+                              <Col md={12}>
+                                <div className="mb-3">
+                                  <Label className="form-label">Ville de résidence <span className="text-danger">*</span></Label>
+                                  <div className="form-icon position-relative">
+                                    <AvField type="select" name="town" value="town" helpMessage="Sélectionnez une catégorie"
+
+                                            validate={{
+                                              required: {
+                                                value: true,
+                                                errorMessage: "Veuillez sélectionner une catégorie ",
+                                              },
+                                            }}>
+                                      <option value="">- Sélectionnez votre pays -</option>
+                                        <option value="Agadir">Agadir</option>
+                                        <option value="Al Hoceïma">Al Hoceïma</option>
+                                        <option value="Béni Mellal">Béni Mellal</option>
+                                        <option value="Casablanca">Casablanca</option>
+                                        <option value="El Jadida">El Jadida</option>
+                                        <option value="Errachidia">Errachidia</option>
+                                        <option value="Essaouira">Essaouira</option>
+                                        <option value="Fès">Fès</option>
+                                        <option value="Marrakech">Marrakech</option>
+                                        <option value="Meknès">Meknès</option>
+                                        <option value="Mouhammédia">Mouhammédia</option>
+                                        <option value="Kénitra">Kénitra</option>
+                                        <option value="Khouribga">Khouribga</option>
+                                        <option value="Ouarzazate">Ouarzazate</option>
+                                        <option value="Oujda">Oujda</option>
+                                        <option value="Rabat">Rabat</option>
+                                        <option value="Safi">Safi</option>
+                                        <option value="Salé">Salé</option>
+                                        <option value="Settat">Settat</option>
+                                        <option value="Tanger">Tanger</option>
+                                        <option value="Tétouan">Tétouan</option>
+                                    </AvField>
+                                  </div>
+                                </div>
+                              </Col>
+
+                              <Col md={12}>
+                                <div className="mb-3">
+                                  <Label className="form-label">Pays d'origine <span className="text-danger">*</span></Label>
+                                  <div className="form-icon position-relative">
+                                    <AvField type="select" name="country" value="country" helpMessage="Sélectionnez un pays"
+
+                                            validate={{
+                                              required: {
+                                                value: true,
+                                                errorMessage: "Veuillez sélectionner une catégorie ",
+                                              },
+                                            }}>
+                                      <option value="">- Sélectionnez votre pays -</option>
+                                      <option value="Afghanistan">Afghanistan</option>
+                                      <option value="Angola">Angola</option>
+                                      <option value="Benin">Bénin</option>
+                                      <option value="Burkina Faso">Burkina-Faso</option>
+                                      <option value="Burundi">Burundi</option>
+                                      <option value="Cameroun">Caméroun</option>
+                                      <option value="Cap-Vert">Cap-Vert</option>
+                                      <option value="Commonwealth">Commonwealth</option>
+                                      <option value="Congo">Congo</option>
+                                      <option value="Ivory Coast">Côte d'Ivoire</option>
+                                      <option value="Djibouti">Djibouti</option>
+                                      <option value="Egypt">Egypte</option>
+                                      <option value="Eritrea">Erythrée</option>
+                                      <option value="Gabon">Gabon</option>
+                                      <option value="Gambia">Gambie</option>
+                                      <option value="Ghana">Ghana</option>
+                                      <option value="Guinea">Guinée</option>
+                                      <option value="Guinea-Bissau">Guinée-Bissau</option>
+                                      <option value="Equatorial Guinea">Guinée Equatoriale</option>
+                                      <option value="Haiti">Haïti</option>
+                                      <option value="Indonesia">Indonésie</option>
+                                      <option value="Irak">Irak</option>
+                                      <option value="Jordonie">Jordonie</option>
+                                      <option value="Kenya">Kénya</option>
+                                      <option value="Kiribati">Kiribati</option>
+                                      <option value="Laos">Laos</option>
+                                      <option value="Liban">Liban</option>
+                                      <option value="Liberia">Libéria</option>
+                                      <option value="Madagascar">Madagascar</option>
+                                      <option value="Malaisia">Malaisie</option>
+                                      <option value="Malawi">Malawi</option>
+                                      <option value="Mali">Mali</option>
+                                      <option value="Mauritania">Mauritanie</option>
+                                      <option value="Niger">Niger</option>
+                                      <option value="Nigeria">Nigéria</option>
+                                      <option value="Pakistan">Pakistan</option>
+                                      <option value="Palestine">Palestine</option>
+                                      <option value="Panama">Panama</option>
+                                      <option value="République-Centrafrique">République Centrafrique</option>
+                                      <option value="Central African Republic">République Démocratique du Congo</option>
+                                      <option value="Rwanda">Rwanda</option>
+                                      <option value="Saint Lucia">Saint Lucie</option>
+                                      <option value="Sao Tome and Principe">Sao-Tomé et Principe</option>
+                                      <option value="Senegal">Sénégal</option>
+                                      <option value="Sierra Leone">Sierra Léone</option>
+                                      <option value="Singapour">Singapour</option>
+                                      <option value="Somalia">Somalie</option>
+                                      <option value="Soudan">Soudan</option>
+                                      <option value="South sudan">Soudan du Sud</option>
+                                      <option value="Syria">Syrie</option>
+                                      <option value="Tanzania">Tanzanie</option>
+                                      <option value="Tchad">Tchad</option>
+                                      <option value="Thaeland">Thaïlande</option>
+                                      <option value="Togo">Togo</option>
+                                      <option value="Tunisia">Tunisie</option>
+                                      <option value="Turkey">Turquie</option>
+                                      <option value="Union of the Comoros">Union des Comores</option>
+                                      <option value="Vietnam">Vietnam</option>
+                                      <option value="Yemen">Yémen</option>
+                                      <option value="Zambia">Zambie</option>
+                                    </AvField>
+                                  </div>
+                                </div>
+                              </Col>
+
+                              <Col md={12}>
+                                <div className="mb-3">
+                                  <Label className="form-label">Année d'entrée au Maroc <span className="text-danger">*</span></Label>
+                                  <div className="form-icon position-relative">
+                                    <AvField type="select" name="yearEntryMorocco" value="yearEntryMorocco" helpMessage="Sélectionnez une catégorie"
+
+                                            validate={{
+                                              required: {
+                                                value: true,
+                                                errorMessage: "Veuillez sélectionner une année ",
+                                              },
+                                            }}>
+                                      <option value="">- Sélectionnez une année -</option>
+                                      <option value="2022">2022</option>
+                                      <option value="2021">2021</option>
+                                      <option value="2020">2020</option>
+                                      <option value="2019">2019</option>
+                                      <option value="2018">2018</option>
+                                      <option value="2017">2017</option>
+                                      <option value="2016">2016</option>
+                                      <option value="2015">2015</option>
+                                      <option value="2014">2014</option>
+                                      <option value="2013">2013</option>
+                                      <option value="2012">2012</option>
+                                      <option value="2011">2011</option>
+                                    </AvField>
+                                  </div>
+                                </div>
+                              </Col>
+                              <Col md={12}>
+                                <div className="mb-3">
+                                  <Label className="form-label">
+                                  Etablissement d'étude
+                                  </Label>
+                                  <div className="form-icon position-relative">
+                                    <i>
+                                      <FeatherIcon
+                                        icon="credit-card"
+                                        className="fea icon-sm icons"
+                                      />
+                                    </i>
+                                  </div>
+                                  <AvField
+                                      type="text"
+                                      className="form-control ps-5"
+                                      name="school"
+                                      id="school"
+                                      placeholder="Entrez votre établissement"
+                                      required
+                                      errorMessage=""
+                                      validate={{
+                                        required: {
+                                          value: false,
+                                          errorMessage: "Veuillez établissement",
+                                        },
+                                      }}
+                                  />
+                                </div>
+                              </Col>
+                              <Col md={12}>
+                                <div className="mb-3">
+                                  <Label className="form-label">
+                                  Filière d'étude
+                                  </Label>
+                                  <div className="form-icon position-relative">
+                                    <i>
+                                      <FeatherIcon
+                                        icon="credit-card"
+                                        className="fea icon-sm icons"
+                                      />
+                                    </i>
+                                  </div>
+                                  <AvField
+                                      type="text"
+                                      className="form-control ps-5"
+                                      name="faculty"
+                                      id="faculty"
+                                      placeholder="Entrez votre filière"
+                                      required
+                                      errorMessage=""
+                                      validate={{
+                                        required: {
+                                          value: false,
+                                          errorMessage: "Veuillez filière",
+                                        },
+                                      }}
+                                  />
+                                </div>
+                              </Col>
+
+                              <Col md={12}>
+                                <div className="mb-3">
+                                  <Label className="form-label">
+                                  Téléphone
+                                  </Label>
+                                  <div className="form-icon position-relative">
+                                    <i>
+                                      <FeatherIcon
+                                        icon="credit-card"
+                                        className="fea icon-sm icons"
+                                      />
+                                    </i>
+                                  </div>
+                                  <AvField
+                                      type="number"
+                                      className="form-control ps-5"
+                                      name="phone"
+                                      id="phone"
+                                      placeholder="Entrez votre téléphone"
+                                      required
+                                      min="0"
+                                      errorMessage=""
+                                      validate={{
+                                        required: {
+                                          value: false,
+                                          errorMessage: "Veuillez téléphone",
+                                        },
+                                      }}
                                   />
                                 </div>
                               </Col>

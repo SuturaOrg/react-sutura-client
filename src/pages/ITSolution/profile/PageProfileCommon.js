@@ -240,7 +240,7 @@ class PageProfileCommon extends Component {
                                         <h5 className="widget-title">Nous suivre :</h5>
                                         <ul className="list-unstyled social-icon mb-0 mt-4">
                                             <li className="list-inline-item">
-                                                <Link to="#" className="rounded">
+                                                <Link to={{pathname: "https://web.facebook.com/Sutura-100906312128627" }} target="_blank" className="rounded">
                                                     <i>
                                                         <FeatherIcon
                                                             icon="facebook"
@@ -249,7 +249,7 @@ class PageProfileCommon extends Component {
                                                     </i>
                                                 </Link>
                                             </li>{" "}
-                                            <li className="list-inline-item">
+                                            {/* <li className="list-inline-item">
                                                 <Link to="#" className="rounded">
                                                     <i>
                                                         <FeatherIcon
@@ -288,9 +288,9 @@ class PageProfileCommon extends Component {
                                                         />
                                                     </i>
                                                 </Link>
-                                            </li>{" "}
+                                            </li>{" "} */}
                                             <li className="list-inline-item">
-                                                <Link to="#" className="rounded">
+                                                <Link to={{pathname: "https://www.youtube.com/channel/UC6x42F06mu0jUP-q_esG7jA/featured" }} target="_blank" className="rounded">
                                                     <i>
                                                         <FeatherIcon
                                                             icon="youtube"
@@ -299,7 +299,7 @@ class PageProfileCommon extends Component {
                                                     </i>
                                                 </Link>
                                             </li>{" "}
-                                            <li className="list-inline-item">
+                                            {/* <li className="list-inline-item">
                                                 <Link to="#" className="rounded">
                                                     <i>
                                                         <FeatherIcon
@@ -308,7 +308,7 @@ class PageProfileCommon extends Component {
                                                         />
                                                     </i>
                                                 </Link>
-                                            </li>
+                                            </li> */}
                                         </ul>
                                     </div>
                                 </div>

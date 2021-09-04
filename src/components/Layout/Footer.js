@@ -65,6 +65,16 @@ class Footer extends Component {
                       />
                     </Link>
                   </li>
+                  <li className="list-inline-item me-1">
+                      <Link to={{pathname: "https://www.youtube.com/channel/UC6x42F06mu0jUP-q_esG7jA/featured" }} target="_blank" className="rounded">
+                          <i>
+                              <FeatherIcon
+                                  icon="youtube"
+                                  className="fea icon-sm fea-social"
+                              />
+                          </i>
+                      </Link>
+                  </li>
                   {/* <li className="list-inline-item me-1">
                     <Link to="" className="rounded">
                       <FeatherIcon

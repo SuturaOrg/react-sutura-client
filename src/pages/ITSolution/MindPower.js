@@ -42,7 +42,7 @@ export default class MindPower extends Component {
                   />
                   <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
                     <li className="list-inline-item ms-1">
-                      <Link to="https://web.facebook.com/ambroise.tine.7" className="rounded">
+                      <Link to={{pathname: "https://web.facebook.com/ambroise.tine.7" }}  className="rounded">
                         <i>
                           <FeatherIcon
                             icon="facebook"
@@ -52,7 +52,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="https://www.instagram.com/ambroitisne/" className="rounded">
+                      <Link to={{pathname: "https://www.instagram.com/ambroitisne/" }} className="rounded">
                         <i>
                           <FeatherIcon
                             icon="instagram"
@@ -62,7 +62,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="https://twitter.com/amb0u" className="rounded">
+                      <Link to={{pathname: "https://twitter.com/amb0u" }} className="rounded">
                         <i>
                           <FeatherIcon
                             icon="twitter"
@@ -72,7 +72,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="https://www.linkedin.com/in/ambroisetine/" className="rounded">
+                      <Link to={{pathname: "https://www.linkedin.com/in/ambroisetine/" }} className="rounded">
                         <i>
                           <FeatherIcon
                             icon="linkedin"

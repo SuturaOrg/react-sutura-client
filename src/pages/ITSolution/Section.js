@@ -24,7 +24,7 @@ class Section extends Component {
                   <h4 className="text-white-50">L'innovation numérique, sociale et économique</h4>
                   <h4 className="heading text-white mb-3 title-dark">
                     {" "}
-                    La plus ambitieuse des<br /> startups d'étudiants{" "}
+                    Une startup d'étudiants<br />très ambitieuse{" "}
                   </h4>
                   <p className="para-desc text-white-50">
                     Nous proposons la meilleure solution aux problèmes que nous confrontons en tant qu'étudiants dans un pays étranger.

@@ -159,7 +159,7 @@ class PageProfileEdit extends Component {
                     <Card className="border-0 rounded shadow">
                         <CardBody>
                             <h5 className="text-md-start text-center">
-                                Informations personnlles :
+                                Informations personnelles :
                             </h5>
 
                             <div className="mt-3 text-md-start text-center d-sm-flex">

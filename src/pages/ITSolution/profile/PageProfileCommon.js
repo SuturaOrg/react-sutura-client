@@ -27,14 +27,14 @@ class PageProfileCommon extends Component {
                 id: 1,
                 icon: "uil uil-dashboard",
                 className: "navbar-item account-menu px-0",
-                title: "Profile",
+                title: "Résumé",
                 link: "/page-profile",
             },
             {
                 id: 2,
                 icon: "uil uil-users-alt",
                 className: "navbar-item account-menu px-0 mt-2",
-                title: "contributions",
+                title: "Cotisations",
                 link: "/page-contributions",
             },
             {
@@ -55,14 +55,14 @@ class PageProfileCommon extends Component {
                 id: 5,
                 icon: "uil uil-setting",
                 className: "navbar-item account-menu px-0 mt-2",
-                title: "Settings",
+                title: "Paramètres",
                 link: "/page-profile-edit",
             },
             {
                 id: 6,
                 icon: "uil uil-dashboard",
                 className: "navbar-item account-menu px-0 mt-2",
-                title: "Logout",
+                title: "Se déconnecter",
                 link: "/auth-cover-login",
             },
             // {
@@ -82,7 +82,6 @@ class PageProfileCommon extends Component {
         document.getElementById("buyButton") && (document.getElementById("buyButton").className = "btn btn-light");
         window.addEventListener("scroll", this.scrollNavigation, true);
         const {dispatch}=this.props;
-        console.log("ggggggggg")
         dispatch(userActions.getInfo());
         dispatch(statsActions.get());
 

@@ -998,7 +998,6 @@ class Topbar extends Component {
                   <div className="buy-button">
                     <Link
                         to={!loggedIn?"auth-cover-signup":"/operations/contribute"}
-                      target="_blank"
                       className="btn btn-pills btn-primary"
                     >
                       {!loggedIn? "S'inscrire'": "Cotiser"}
@@ -1010,7 +1009,6 @@ class Topbar extends Component {
                   <div className="buy-button">
                     <Link
                       to={!loggedIn?"auth-cover-signup":"/operations/contribute"}
-                      target="_blank"
                       id="buyButton"
                       className="btn btn-primary"
                     >

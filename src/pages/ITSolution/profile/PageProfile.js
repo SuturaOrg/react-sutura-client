@@ -1,22 +1,13 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import {
-    Container,
     Row,
     Col,
-    Progress,
-    Card,
-    CardBody,
 } from "reactstrap";
 
 //Import Icons
 import FeatherIcon from "feather-icons-react";
 
-import blog1 from "../../../assets/images/blog/01.jpg";
-import blog2 from "../../../assets/images/blog/02.jpg";
-import exp1 from "../../../assets/images/job/Circleci.svg";
-import exp2 from "../../../assets/images/job/Codepen.svg";
-import exp3 from "../../../assets/images/job/Gitlab.svg";
 import {connect} from "react-redux";
 import ProfileCommon from "./PageProfileCommon";
 

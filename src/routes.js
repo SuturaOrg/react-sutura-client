@@ -15,7 +15,7 @@ const RegistrationSuccessConfirmation= React.lazy(() => import("./pages/ITSoluti
 const Root = React.lazy(() => import("./pages/Home/indexRoot"));
 
 //Main Index
-const Main = React.lazy(() => import("./pages/Home/indexMain"));
+// const Main = React.lazy(() => import("./pages/Home/indexMain"));
 
 //Special
 const PageComingSoon = React.lazy(() =>
@@ -62,67 +62,67 @@ const PageRePasswordThree = React.lazy(() =>
 );
 
 // Import all components
-const SaasOnepage = React.lazy(() => import("./pages/Saas Onepage/index"));
-const Customer = React.lazy(() => import("./pages/Customer/index"));
-const Job = React.lazy(() => import("./pages/Job/index"));
-const Software = React.lazy(() => import("./pages/Software/index"));
-const Cryptocurrency = React.lazy(() => import("./pages/Cryptocurrency/index"));
-const Payments = React.lazy(() => import("./pages/Payments/index"));
-const IndexCarRiding = React.lazy(() => import("./pages/Car Ride/index"));
-const IndexclassicSaas = React.lazy(() => import("./pages/Classic Saas/index"));
-const ClassicApp = React.lazy(() =>
-  import("./pages/Classic Application/index")
-);
-const Agency = React.lazy(() => import("./pages/Agency/index"));
-const Saas = React.lazy(() => import("./pages/Saas/index"));
-const Apps = React.lazy(() => import("./pages/Apps/index"));
-const Studio = React.lazy(() => import("./pages/Studio/index"));
-const Business = React.lazy(() => import("./pages/Business/index"));
+// const SaasOnepage = React.lazy(() => import("./pages/Saas Onepage/index"));
+// const Customer = React.lazy(() => import("./pages/Customer/index"));
+// const Job = React.lazy(() => import("./pages/Job/index"));
+// const Software = React.lazy(() => import("./pages/Software/index"));
+// const Cryptocurrency = React.lazy(() => import("./pages/Cryptocurrency/index"));
+// const Payments = React.lazy(() => import("./pages/Payments/index"));
+// const IndexCarRiding = React.lazy(() => import("./pages/Car Ride/index"));
+// const IndexclassicSaas = React.lazy(() => import("./pages/Classic Saas/index"));
+// const ClassicApp = React.lazy(() =>
+//   import("./pages/Classic Application/index")
+// );
+// const Agency = React.lazy(() => import("./pages/Agency/index"));
+// const Saas = React.lazy(() => import("./pages/Saas/index"));
+// const Apps = React.lazy(() => import("./pages/Apps/index"));
+// const Studio = React.lazy(() => import("./pages/Studio/index"));
+// const Business = React.lazy(() => import("./pages/Business/index"));
 const ITSolution = React.lazy(() => import("./pages/ITSolution/index"));
-const Marketing = React.lazy(() => import("./pages/Marketing/index"));
-const RealEstate = React.lazy(() => import("./pages/RealEstate/index"));
-const Hotel = React.lazy(() => import("./pages/Hotel/index"));
-const Developer = React.lazy(() => import("./pages/Developer/index"));
-const LandingFour = React.lazy(() => import("./pages/LandingFour/index"));
-const Integration = React.lazy(() => import("./pages/Integration/index"));
-const TaskManagement = React.lazy(() => import("./pages/TaskManagement/index"));
-const Hospital = React.lazy(() => import("./pages/Hospital/index"));
-const Construction = React.lazy(() => import("./pages/Construction/index"));
-const EmailInbox = React.lazy(() => import("./pages/Email-Inbox/index"));
-const LandingOne = React.lazy(() => import("./pages/LandingOne/index"));
-const LandingThree = React.lazy(() => import("./pages/LandingThree/index"));
-const LandingTwo = React.lazy(() => import("./pages/LandingTwo/index"));
-const Travel = React.lazy(() => import("./pages/Travel/index"));
-const Blog = React.lazy(() => import("./pages/Blog/index"));
-const Forums = React.lazy(() => import("./pages/Forums/index"));
-const SeoAgency = React.lazy(() => import("./pages/SeoAgency/index"));
-const ModernBusiness = React.lazy(() => import("./pages/ModernBusiness/index"));
-const CorporateBusiness = React.lazy(() =>
-  import("./pages/CorporateBusiness/index")
-);
-const Coworking = React.lazy(() => import("./pages/Coworking/index"));
-const CloudHosting = React.lazy(() => import("./pages/CloudHosting/index"));
-const Event = React.lazy(() => import("./pages/Event/index"));
-const Course = React.lazy(() => import("./pages/Course/index"));
-const Personal = React.lazy(() => import("./pages/Personal/index"));
-const SingleProduct = React.lazy(() => import("./pages/SingleProduct/index"));
-const Enterprise = React.lazy(() => import("./pages/Enterprise/index"));
-const Portfolio = React.lazy(() => import("./pages/Portfolio/index"));
-const Services = React.lazy(() => import("./pages/Services/index"));
-const Shop = React.lazy(() => import("./pages/Shop/index"));
-const Insurance = React.lazy(() => import("./pages/Insurance/index"));
-const Ebook = React.lazy(() => import("./pages/Ebook/index"));
-const SocialMarketing = React.lazy(() =>
-  import("./pages/SocialMarketing/index")
-);
-const DigitalAgency = React.lazy(() => import("./pages/DigitalAgency/index"));
-const OnlineLearning = React.lazy(() => import("./pages/OnlineLearning/index"));
-const Finance = React.lazy(() => import('./pages/Finance/index'));
-const VideoCall = React.lazy(() => import('./pages/VideoCall/index'));
-const iTSolutionTwo = React.lazy(() => import('./pages/ITSolutionTwo/index'));
-const Freelancer = React.lazy(() => import('./pages/Freelancer/index'));
-const Blockchain = React.lazy(() => import('./pages/Blockchain/index'));
-const CryptoTwo = React.lazy(() => import('./pages/CryptoTwo/index'));
+// const Marketing = React.lazy(() => import("./pages/Marketing/index"));
+// const RealEstate = React.lazy(() => import("./pages/RealEstate/index"));
+// const Hotel = React.lazy(() => import("./pages/Hotel/index"));
+// const Developer = React.lazy(() => import("./pages/Developer/index"));
+// const LandingFour = React.lazy(() => import("./pages/LandingFour/index"));
+// const Integration = React.lazy(() => import("./pages/Integration/index"));
+// const TaskManagement = React.lazy(() => import("./pages/TaskManagement/index"));
+// const Hospital = React.lazy(() => import("./pages/Hospital/index"));
+// const Construction = React.lazy(() => import("./pages/Construction/index"));
+// const EmailInbox = React.lazy(() => import("./pages/Email-Inbox/index"));
+// const LandingOne = React.lazy(() => import("./pages/LandingOne/index"));
+// const LandingThree = React.lazy(() => import("./pages/LandingThree/index"));
+// const LandingTwo = React.lazy(() => import("./pages/LandingTwo/index"));
+// const Travel = React.lazy(() => import("./pages/Travel/index"));
+// const Blog = React.lazy(() => import("./pages/Blog/index"));
+// const Forums = React.lazy(() => import("./pages/Forums/index"));
+// const SeoAgency = React.lazy(() => import("./pages/SeoAgency/index"));
+// const ModernBusiness = React.lazy(() => import("./pages/ModernBusiness/index"));
+// const CorporateBusiness = React.lazy(() =>
+//   import("./pages/CorporateBusiness/index")
+// );
+// const Coworking = React.lazy(() => import("./pages/Coworking/index"));
+// const CloudHosting = React.lazy(() => import("./pages/CloudHosting/index"));
+// const Event = React.lazy(() => import("./pages/Event/index"));
+// const Course = React.lazy(() => import("./pages/Course/index"));
+// const Personal = React.lazy(() => import("./pages/Personal/index"));
+// const SingleProduct = React.lazy(() => import("./pages/SingleProduct/index"));
+// const Enterprise = React.lazy(() => import("./pages/Enterprise/index"));
+// const Portfolio = React.lazy(() => import("./pages/Portfolio/index"));
+// const Services = React.lazy(() => import("./pages/Services/index"));
+// const Shop = React.lazy(() => import("./pages/Shop/index"));
+// const Insurance = React.lazy(() => import("./pages/Insurance/index"));
+// const Ebook = React.lazy(() => import("./pages/Ebook/index"));
+// const SocialMarketing = React.lazy(() =>
+//   import("./pages/SocialMarketing/index")
+// );
+// const DigitalAgency = React.lazy(() => import("./pages/DigitalAgency/index"));
+// const OnlineLearning = React.lazy(() => import("./pages/OnlineLearning/index"));
+// const Finance = React.lazy(() => import('./pages/Finance/index'));
+// const VideoCall = React.lazy(() => import('./pages/VideoCall/index'));
+// const iTSolutionTwo = React.lazy(() => import('./pages/ITSolutionTwo/index'));
+// const Freelancer = React.lazy(() => import('./pages/Freelancer/index'));
+// const Blockchain = React.lazy(() => import('./pages/Blockchain/index'));
+// const CryptoTwo = React.lazy(() => import('./pages/CryptoTwo/index'));
 
 //Docs
 const ChangeLog = React.lazy(() => import("./pages/Docs/ChangeLog"));
@@ -132,15 +132,15 @@ const Widget = React.lazy(() => import("./pages/Docs/widget"));
 
 const PageAboutUs = React.lazy(() => import("./pages/Pages/PageAboutUs"));
 const PageAboutusTwo = React.lazy(() => import("./pages/Pages/PageAboutusTwo"));
-const PageHistory = React.lazy(() => import("./pages/Pages/PageHistory"));
-const PageMembers = React.lazy(() =>
-  import("./pages/ITSolution/profile/PageMembers")
-);
-const PageWorks = React.lazy(() => import("./pages/ITSolution/profile/PageWorks"));
+//const PageHistory = React.lazy(() => import("./pages/Pages/PageHistory"));
+// const PageMembers = React.lazy(() =>
+//   import("./pages/ITSolution/profile/PageMembers")
+// );
+// const PageWorks = React.lazy(() => import("./pages/ITSolution/profile/PageWorks"));
 const PageContributions = React.lazy(() => import("./pages/ITSolution/profile/PageContributions"));
 const PageLoans = React.lazy(() => import("./pages/ITSolution/profile/PageLoans"));
 const PageRefunds = React.lazy(() => import("./pages/ITSolution/profile/PageRefunds"));
-const PagePricing = React.lazy(() => import("./pages/Pages/PagePricing"));
+//const PagePricing = React.lazy(() => import("./pages/Pages/PagePricing"));
 const PageServices = React.lazy(() => import("./pages/Pages/PageServices"));
 const PageTeam = React.lazy(() => import("./pages/Pages/PageTeam"));
 
@@ -151,77 +151,77 @@ const PageProfile = React.lazy(() =>
 const PageProfileEdit = React.lazy(() =>
   import("./pages/ITSolution/profile/PageProfileEdit")
 );
-const PagePayments = React.lazy(() =>
-  import("./pages/ITSolution/profile/PagePayments")
-);
+// const PagePayments = React.lazy(() =>
+//   import("./pages/ITSolution/profile/PagePayments")
+// );
 const PageInvoice = React.lazy(() =>
   import("./pages/ITSolution/email/PageInvoice")
 );
 
 //Career
-const PageJobsSidebar = React.lazy(() =>
-  import("./pages/Pages/Careers/PageJobsSidebar")
-);
-const PageCompanyList = React.lazy(() =>
-  import("./pages/Pages/Careers/PageCompanyList")
-);
-const PageCandidateList = React.lazy(() =>
-  import("./pages/Pages/Careers/PageCandidateList")
-);
-const PageJobDetail = React.lazy(() =>
-  import("./pages/Pages/Careers/PageJobDetail")
-);
-const PageJob = React.lazy(() => import("./pages/Pages/Careers/PageJob"));
-const PageJobApply = React.lazy(() =>
-  import("./pages/Pages/Careers/PageJobApply")
-);
-const PageJobCompany = React.lazy(() =>
-  import("./pages/Pages/Careers/PageJobCompany")
-);
-const PageJobCandidate = React.lazy(() =>
-  import("./pages/Pages/Careers/PageJobCandidate")
-);
+// const PageJobsSidebar = React.lazy(() =>
+//   import("./pages/Pages/Careers/PageJobsSidebar")
+// );
+// const PageCompanyList = React.lazy(() =>
+//   import("./pages/Pages/Careers/PageCompanyList")
+// );
+// const PageCandidateList = React.lazy(() =>
+//   import("./pages/Pages/Careers/PageCandidateList")
+// );
+// const PageJobDetail = React.lazy(() =>
+//   import("./pages/Pages/Careers/PageJobDetail")
+// );
+// const PageJob = React.lazy(() => import("./pages/Pages/Careers/PageJob"));
+// const PageJobApply = React.lazy(() =>
+//   import("./pages/Pages/Careers/PageJobApply")
+// );
+// const PageJobCompany = React.lazy(() =>
+//   import("./pages/Pages/Careers/PageJobCompany")
+// );
+// const PageJobCandidate = React.lazy(() =>
+//   import("./pages/Pages/Careers/PageJobCandidate")
+// );
 
 //Blog
-const PageBlog = React.lazy(() => import("./pages/Pages/Blog/PageBlog"));
-const PageBlogDetail = React.lazy(() =>
-  import("./pages/Pages/Blog/PageBlogDetail")
-);
-const PageBlogDetailTwo = React.lazy(() =>
-  import("./pages/Pages/Blog/PageBlogDetailTwo")
-);
-const PageBlogSidebar = React.lazy(() =>
-  import("./pages/Pages/Blog/PageBlogSidebar")
-);
-const PageBlogList = React.lazy(() =>
-  import("./pages/Pages/Blog/PageBlogList")
-);
-const PageBlogListSidebar = React.lazy(() =>
-  import("./pages/Pages/Blog/PageBlogListSidebar")
-);
+// const PageBlog = React.lazy(() => import("./pages/Pages/Blog/PageBlog"));
+// const PageBlogDetail = React.lazy(() =>
+//   import("./pages/Pages/Blog/PageBlogDetail")
+// );
+// const PageBlogDetailTwo = React.lazy(() =>
+//   import("./pages/Pages/Blog/PageBlogDetailTwo")
+// );
+// const PageBlogSidebar = React.lazy(() =>
+//   import("./pages/Pages/Blog/PageBlogSidebar")
+// );
+// const PageBlogList = React.lazy(() =>
+//   import("./pages/Pages/Blog/PageBlogList")
+// );
+// const PageBlogListSidebar = React.lazy(() =>
+//   import("./pages/Pages/Blog/PageBlogListSidebar")
+// );
 
-//Case Study
-const AllCases = React.lazy(() => import("./pages/Pages/CaseStudy/AllCases"));
-const CaseDetail = React.lazy(() =>
-  import("./pages/Pages/CaseStudy/CaseDetail")
-);
+// //Case Study
+// const AllCases = React.lazy(() => import("./pages/Pages/CaseStudy/AllCases"));
+// const CaseDetail = React.lazy(() =>
+//   import("./pages/Pages/CaseStudy/CaseDetail")
+// );
 
 //Work
-const PageWorkModern = React.lazy(() =>
-  import("./pages/Pages/Work/PageWorkModern")
-);
-const PageWorkDetail = React.lazy(() =>
-  import("./pages/Pages/Work/PageWorkDetail")
-);
-const PageWorkClassic = React.lazy(() =>
-  import("./pages/Pages/Work/PageWorkClassic")
-);
-const PageWorkGrid = React.lazy(() =>
-  import("./pages/Pages/Work/PageWorkGrid")
-);
-const PageWorkMasonry = React.lazy(() =>
-  import("./pages/Pages/Work/PageWorkMasonry")
-);
+// const PageWorkModern = React.lazy(() =>
+//   import("./pages/Pages/Work/PageWorkModern")
+// );
+// const PageWorkDetail = React.lazy(() =>
+//   import("./pages/Pages/Work/PageWorkDetail")
+// );
+// const PageWorkClassic = React.lazy(() =>
+//   import("./pages/Pages/Work/PageWorkClassic")
+// );
+// const PageWorkGrid = React.lazy(() =>
+//   import("./pages/Pages/Work/PageWorkGrid")
+// );
+// const PageWorkMasonry = React.lazy(() =>
+//   import("./pages/Pages/Work/PageWorkMasonry")
+// );
 
 //Utility
 const PagePrivacy = React.lazy(() =>
@@ -244,9 +244,9 @@ const PageContactTwo = React.lazy(() =>
 );
 
 // forums
-const Overview = React.lazy(() => import("./pages/Pages/Forums/overview"));
-const ForumTopic = React.lazy(() => import("./pages/Pages/Forums/ForumTopic"));
-const ForumsComments = React.lazy(() => import('./pages/Pages/Forums/ForumsComments'));
+// const Overview = React.lazy(() => import("./pages/Pages/Forums/overview"));
+// const ForumTopic = React.lazy(() => import("./pages/Pages/Forums/ForumTopic"));
+// const ForumsComments = React.lazy(() => import('./pages/Pages/Forums/ForumsComments'));
 
 //Email
 const EmailAlert = React.lazy(() =>
@@ -263,36 +263,36 @@ const EmailInvoice = React.lazy(() =>
 );
 
 //Help Center
-const HelpCenterOverview = React.lazy(() =>
-  import("./pages/Pages/HelpCenter/HelpCenterOverview")
-);
-const HelpCenterFaqs = React.lazy(() =>
-  import("./pages/Pages/HelpCenter/HelpCenterFaqs")
-);
-const HelpCenterGuides = React.lazy(() =>
-  import("./pages/Pages/HelpCenter/HelpCenterGuides")
-);
-const HelpCenterSupportRequest = React.lazy(() =>
-  import("./pages/Pages/HelpCenter/HelpCenterSupportRequest")
-);
+// const HelpCenterOverview = React.lazy(() =>
+//   import("./pages/Pages/HelpCenter/HelpCenterOverview")
+// );
+// const HelpCenterFaqs = React.lazy(() =>
+//   import("./pages/Pages/HelpCenter/HelpCenterFaqs")
+// );
+// const HelpCenterGuides = React.lazy(() =>
+//   import("./pages/Pages/HelpCenter/HelpCenterGuides")
+// );
+// const HelpCenterSupportRequest = React.lazy(() =>
+//   import("./pages/Pages/HelpCenter/HelpCenterSupportRequest")
+// );
 
 //Shop
-const ShopProducts = React.lazy(() =>
-  import("./pages/Pages/Shop/ShopProducts")
-);
-const ShopProductsLists = React.lazy(() =>
-  import("./pages/Pages/Shop/ShopProductList")
-);
-const ShopProductDetail = React.lazy(() =>
-  import("./pages/Pages/Shop/ShopProductDetail")
-);
-const ShopCart = React.lazy(() => import("./pages/Pages/Shop/ShopCart"));
-const ShopCheckouts = React.lazy(() =>
-  import("./pages/Pages/Shop/ShopCheckouts")
-);
-const ShopMyAccount = React.lazy(() =>
-  import("./pages/Pages/Shop/ShopMyAccount")
-);
+// const ShopProducts = React.lazy(() =>
+//   import("./pages/Pages/Shop/ShopProducts")
+// );
+// const ShopProductsLists = React.lazy(() =>
+//   import("./pages/Pages/Shop/ShopProductList")
+// );
+// const ShopProductDetail = React.lazy(() =>
+//   import("./pages/Pages/Shop/ShopProductDetail")
+// );
+// const ShopCart = React.lazy(() => import("./pages/Pages/Shop/ShopCart"));
+// const ShopCheckouts = React.lazy(() =>
+//   import("./pages/Pages/Shop/ShopCheckouts")
+// );
+// const ShopMyAccount = React.lazy(() =>
+//   import("./pages/Pages/Shop/ShopMyAccount")
+// );
 
 const routes = [
   //routes without Layout
@@ -380,125 +380,125 @@ const routes = [
   },
 
   // Landings
-  { path: "/index-onepage", component: SaasOnepage, isTopbarDark: true },
-  { path: "/index-customer", component: Customer, isTopbarDark: true },
-  { path: "/index-job", component: Job, isTopbarDark: true },
-  { path: "/index-software", component: Software },
-  { path: "/index-crypto", component: Cryptocurrency },
-  { path: "/index-payments", component: Payments, isTopbarDark: true },
-  { path: "/index-car-riding", component: IndexCarRiding, isTopbarDark: true },
-  { path: "/index-classic-saas", component: IndexclassicSaas, isTopbarDark: true },
-  { path: "/index-classic-app", component: ClassicApp, isTopbarDark: true },
-  { path: "/index-saas", component: Saas, isTopbarDark: true },
-  { path: "/index-apps", component: Apps, isTopbarDark: true },
-  { path: "/index-agency", component: Agency, isTopbarDark: true },
-  { path: "/index-studio", component: Studio, isTopbarDark: true },
-  { path: "/index-business", component: Business, isTopbarDark: true },
-  { path: "/index-corporate", component: CorporateBusiness },
+  // { path: "/index-onepage", component: SaasOnepage, isTopbarDark: true },
+  // { path: "/index-customer", component: Customer, isTopbarDark: true },
+  // { path: "/index-job", component: Job, isTopbarDark: true },
+  // { path: "/index-software", component: Software },
+  // { path: "/index-crypto", component: Cryptocurrency },
+  // { path: "/index-payments", component: Payments, isTopbarDark: true },
+  // { path: "/index-car-riding", component: IndexCarRiding, isTopbarDark: true },
+  // { path: "/index-classic-saas", component: IndexclassicSaas, isTopbarDark: true },
+  // { path: "/index-classic-app", component: ClassicApp, isTopbarDark: true },
+  // { path: "/index-saas", component: Saas, isTopbarDark: true },
+  // { path: "/index-apps", component: Apps, isTopbarDark: true },
+  // { path: "/index-agency", component: Agency, isTopbarDark: true },
+  // { path: "/index-studio", component: Studio, isTopbarDark: true },
+  // { path: "/index-business", component: Business, isTopbarDark: true },
+  // { path: "/index-corporate", component: CorporateBusiness },
   { path: "/index-it-solution", component: ITSolution },
-  { path: "/index-marketing", component: Marketing, isTopbarDark: true },
-  { path: "/index-hotel", component: Hotel, isTopbarDark: true },
-  { path: "/index-developer", component: Developer, isTopbarDark: true },
-  { path: "/index-landing-four", component: LandingFour, isTopbarDark: true },
-  { path: "/index-integration", component: Integration },
-  { path: "/index-task-management", component: TaskManagement },
-  { path: "/index-hospital", component: Hospital, isTopbarDark: true },
-  { path: "/index-construction", component: Construction },
-  { path: "/index-email-inbox", component: EmailInbox, isTopbarDark: true },
-  { path: "/index-landing-one", component: LandingOne },
-  { path: "/index-landing-two", component: LandingTwo, isTopbarDark: true },
-  { path: "/index-landing-three", component: LandingThree },
-  { path: "/index-travel", component: Travel },
-  { path: "/index-blog", component: Blog, isTopbarDark: true },
-  { path: "/index-forums", component: Forums, isTopbarDark: true },
-  { path: "/index-real-estate", component: RealEstate },
-  { path: "/index-seo-agency", component: SeoAgency, isTopbarDark: true },
-  { path: "/index-modern-business", component: ModernBusiness },
-  { path: "/index-coworking", component: Coworking },
-  { path: "/index-hosting", component: CloudHosting },
-  { path: "/index-event", component: Event },
-  { path: "/index-course", component: Course },
-  { path: "/index-personal", component: Personal, isTopbarDark: true },
-  { path: "/index-single", component: SingleProduct, isTopbarDark: true },
-  { path: "/index-enterprise", component: Enterprise },
-  { path: "/index-portfolio", component: Portfolio, isTopbarDark: true },
-  { path: "/index-services", component: Services, isTopbarDark: true },
-  { path: "/index-shop", component: Shop, isTopbarDark: true },
-  { path: "/index-insurance", component: Insurance },
-  { path: "/index-ebook", component: Ebook, isTopbarDark: true },
-  { path: "/index-social-marketing", component: SocialMarketing, isTopbarDark: true },
-  { path: "/index-digital-agency", component: DigitalAgency, isTopbarDark: true },
-  { path: "/index-online-learning", component: OnlineLearning, isTopbarDark: true },
-  { path: "/index-finance", component: Finance, isTopbarDark: true },
-  { path: "/index-videocall", component: VideoCall, isTopbarDark: true },
-  { path: "/index-freelancer", component: Freelancer, isTopbarDark: true },
-  { path: "/index-blockchain", component: Blockchain },
-  { path: "/index-crypto-two", component: CryptoTwo },
+  // { path: "/index-marketing", component: Marketing, isTopbarDark: true },
+  // { path: "/index-hotel", component: Hotel, isTopbarDark: true },
+  // { path: "/index-developer", component: Developer, isTopbarDark: true },
+  // { path: "/index-landing-four", component: LandingFour, isTopbarDark: true },
+  // { path: "/index-integration", component: Integration },
+  // { path: "/index-task-management", component: TaskManagement },
+  // { path: "/index-hospital", component: Hospital, isTopbarDark: true },
+  // { path: "/index-construction", component: Construction },
+  // { path: "/index-email-inbox", component: EmailInbox, isTopbarDark: true },
+  // { path: "/index-landing-one", component: LandingOne },
+  // { path: "/index-landing-two", component: LandingTwo, isTopbarDark: true },
+  // { path: "/index-landing-three", component: LandingThree },
+  // { path: "/index-travel", component: Travel },
+  // { path: "/index-blog", component: Blog, isTopbarDark: true },
+  // { path: "/index-forums", component: Forums, isTopbarDark: true },
+  // { path: "/index-real-estate", component: RealEstate },
+  // { path: "/index-seo-agency", component: SeoAgency, isTopbarDark: true },
+  // { path: "/index-modern-business", component: ModernBusiness },
+  // { path: "/index-coworking", component: Coworking },
+  // { path: "/index-hosting", component: CloudHosting },
+  // { path: "/index-event", component: Event },
+  // { path: "/index-course", component: Course },
+  // { path: "/index-personal", component: Personal, isTopbarDark: true },
+  // { path: "/index-single", component: SingleProduct, isTopbarDark: true },
+  // { path: "/index-enterprise", component: Enterprise },
+  // { path: "/index-portfolio", component: Portfolio, isTopbarDark: true },
+  // { path: "/index-services", component: Services, isTopbarDark: true },
+  // { path: "/index-shop", component: Shop, isTopbarDark: true },
+  // { path: "/index-insurance", component: Insurance },
+  // { path: "/index-ebook", component: Ebook, isTopbarDark: true },
+  // { path: "/index-social-marketing", component: SocialMarketing, isTopbarDark: true },
+  // { path: "/index-digital-agency", component: DigitalAgency, isTopbarDark: true },
+  // { path: "/index-online-learning", component: OnlineLearning, isTopbarDark: true },
+  // { path: "/index-finance", component: Finance, isTopbarDark: true },
+  // { path: "/index-videocall", component: VideoCall, isTopbarDark: true },
+  // { path: "/index-freelancer", component: Freelancer, isTopbarDark: true },
+  // { path: "/index-blockchain", component: Blockchain },
+  // { path: "/index-crypto-two", component: CryptoTwo },
 
   { path: "/page-aboutus", component: PageAboutUs, isTopbarDark: true },
   { path: "/about-team", component: PageAboutusTwo },
-  { path: "/page-history", component: PageHistory, isTopbarDark: true },
-  { path: "/page-pricing", component: PagePricing, isTopbarDark: true },
+  //{ path: "/page-history", component: PageHistory, isTopbarDark: true },
+  //{ path: "/page-pricing", component: PagePricing, isTopbarDark: true },
   { path: "/page-services", component: PageServices, isTopbarDark: true },
   { path: "/page-team", component: PageTeam, isTopbarDark: true },
 
   //Help Center
-  { path: "/helpcenter-overview", component: HelpCenterOverview, isTopbarDark: true },
-  { path: "/helpcenter-faqs", component: HelpCenterFaqs, isTopbarDark: true },
-  { path: "/helpcenter-guides", component: HelpCenterGuides, isTopbarDark: true },
-  { path: "/helpcenter-support-request", component: HelpCenterSupportRequest, isTopbarDark: true },
+  // { path: "/helpcenter-overview", component: HelpCenterOverview, isTopbarDark: true },
+  // { path: "/helpcenter-faqs", component: HelpCenterFaqs, isTopbarDark: true },
+  // { path: "/helpcenter-guides", component: HelpCenterGuides, isTopbarDark: true },
+  // { path: "/helpcenter-support-request", component: HelpCenterSupportRequest, isTopbarDark: true },
 
   //Shop
-  { path: "/shop-grids", component: ShopProducts, isTopbarDark: true },
-  { path: "/shop-lists", component: ShopProductsLists, isTopbarDark: true },
-  { path: "/shop-product-detail", component: ShopProductDetail, isTopbarDark: true },
-  { path: "/shop-cart", component: ShopCart, isTopbarDark: true },
-  { path: "/shop-checkouts", component: ShopCheckouts, isTopbarDark: true },
-  { path: "/shop-myaccount", component: ShopMyAccount, isTopbarDark: true },
+  // { path: "/shop-grids", component: ShopProducts, isTopbarDark: true },
+  // { path: "/shop-lists", component: ShopProductsLists, isTopbarDark: true },
+  // { path: "/shop-product-detail", component: ShopProductDetail, isTopbarDark: true },
+  // { path: "/shop-cart", component: ShopCart, isTopbarDark: true },
+  // { path: "/shop-checkouts", component: ShopCheckouts, isTopbarDark: true },
+  // { path: "/shop-myaccount", component: ShopMyAccount, isTopbarDark: true },
 
   //Utility
   { path: "/page-terms", component: PageTerms, isTopbarDark: true },
   { path: "/aboutus", component: PagePrivacy, isTopbarDark: true },
 
   //Page Work
-  { path: "/page-work-modern", component: PageWorkModern, isTopbarDark: true },
-  { path: "/page-work-detail", component: PageWorkDetail, isTopbarDark: true },
-  { path: "/page-work-classic", component: PageWorkClassic, isTopbarDark: true },
-  { path: "/page-work-grid", component: PageWorkGrid, isTopbarDark: true },
-  { path: "/page-work-masonry", component: PageWorkMasonry, isTopbarDark: true },
+  // { path: "/page-work-modern", component: PageWorkModern, isTopbarDark: true },
+  // { path: "/page-work-detail", component: PageWorkDetail, isTopbarDark: true },
+  // { path: "/page-work-classic", component: PageWorkClassic, isTopbarDark: true },
+  // { path: "/page-work-grid", component: PageWorkGrid, isTopbarDark: true },
+  // { path: "/page-work-masonry", component: PageWorkMasonry, isTopbarDark: true },
 
   //Page Profile
   { path: "/page-profile", component: PageProfile, isPrivate:true },
-  { path: "/page-members", component: PageMembers },
-  { path: "/page-works", component: PageWorks },
+  // { path: "/page-members", component: PageMembers },
+  // { path: "/page-works", component: PageWorks },
   { path: "/page-contributions", component: PageContributions },
   { path: "/page-loans", component: PageLoans },
   { path: "/page-refunds", component: PageRefunds },
   { path: "/page-profile-edit", component: PageProfileEdit },
-  { path: "/page-payments", component: PagePayments },
+  // { path: "/page-payments", component: PagePayments },
   { path: "/page-invoice", component: PageInvoice, isTopbarDark: true },
 
-  //Page Job
-  { path: "/page-job", component: PageJob, isTopbarDark: true },
-  { path: "/page-job-apply", component: PageJobApply, isTopbarDark: true },
-  { path: "/page-job-detail", component: PageJobDetail, isTopbarDark: true },
-  { path: "/page-jobs-sidebar", component: PageJobsSidebar, isTopbarDark: true },
-  { path: "/page-job-company-list", component: PageCompanyList, isTopbarDark: true },
-  { path: "/page-job-candidate-list", component: PageCandidateList, isTopbarDark: true },
-  { path: "/page-job-company", component: PageJobCompany },
-  { path: "/page-job-candidate", component: PageJobCandidate },
+  // Page Job
+  // { path: "/page-job", component: PageJob, isTopbarDark: true },
+  // { path: "/page-job-apply", component: PageJobApply, isTopbarDark: true },
+  // { path: "/page-job-detail", component: PageJobDetail, isTopbarDark: true },
+  // { path: "/page-jobs-sidebar", component: PageJobsSidebar, isTopbarDark: true },
+  // { path: "/page-job-company-list", component: PageCompanyList, isTopbarDark: true },
+  // { path: "/page-job-candidate-list", component: PageCandidateList, isTopbarDark: true },
+  // { path: "/page-job-company", component: PageJobCompany },
+  // { path: "/page-job-candidate", component: PageJobCandidate },
 
   //Page Blog
-  { path: "/page-blog-grid", component: PageBlog, isTopbarDark: true },
-  { path: "/page-blog-detail", component: PageBlogDetail, isTopbarDark: true },
-  { path: "/page-blog-detail-two", component: PageBlogDetailTwo },
-  { path: "/page-blog-sidebar", component: PageBlogSidebar, isTopbarDark: true },
-  { path: "/page-blog-list", component: PageBlogList, isTopbarDark: true },
-  { path: "/page-blog-list-sidebar", component: PageBlogListSidebar, isTopbarDark: true },
+  // { path: "/page-blog-grid", component: PageBlog, isTopbarDark: true },
+  // { path: "/page-blog-detail", component: PageBlogDetail, isTopbarDark: true },
+  // { path: "/page-blog-detail-two", component: PageBlogDetailTwo },
+  // { path: "/page-blog-sidebar", component: PageBlogSidebar, isTopbarDark: true },
+  // { path: "/page-blog-list", component: PageBlogList, isTopbarDark: true },
+  // { path: "/page-blog-list-sidebar", component: PageBlogListSidebar, isTopbarDark: true },
 
   //Page Case Study
-  { path: "/page-all-cases", component: AllCases },
-  { path: "/page-case-detail", component: CaseDetail, isTopbarDark: true },
+  // { path: "/page-all-cases", component: AllCases },
+  // { path: "/page-case-detail", component: CaseDetail, isTopbarDark: true },
 
   //Page Contact
   { path: "/page-contact-one", component: PageContactOne, isTopbarDark: true },
@@ -506,9 +506,9 @@ const routes = [
   { path: "/page-contact-two", component: PageContactTwo, isTopbarDark: true },
 
   // forums
-  { path: "/forums", component: Overview, isTopbarDark: true },
-  { path: "/forums-topic", component: ForumTopic, isTopbarDark: true },
-  { path: "/forums-comments", component: ForumsComments, isTopbarDark: true },
+  // { path: "/forums", component: Overview, isTopbarDark: true },
+  // { path: "/forums-topic", component: ForumTopic, isTopbarDark: true },
+  // { path: "/forums-comments", component: ForumsComments, isTopbarDark: true },
 
   //Docs
   { path: "/changelog", component: ChangeLog, isTopbarDark: true },
@@ -518,7 +518,7 @@ const routes = [
 
   //Index Main
   { path: "/index", component: ITSolution},
-  { path: "/index2", component: iTSolutionTwo },
+  // { path: "/index2", component: iTSolutionTwo },
   { path: "/tos", component: PageTerms },
   { path: "/about-team", component: PageAboutUs },
   { path: "/operations/donate", component: Donation, isTopbarDark: true },

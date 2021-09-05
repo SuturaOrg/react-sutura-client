@@ -9,9 +9,9 @@ import ModalVideo from "react-modal-video";
 import "../../../node_modules/react-modal-video/scss/modal-video.scss";
 
 // import image
-import ab01 from "../../assets/images/course/online/ab01.jpg";
-import ab02 from "../../assets/images/course/online/ab02.jpg";
-import ab03 from "../../assets/images/course/online/ab03.jpg";
+import ab01 from "../../assets/images/course/online/ousmane.png";
+import ab02 from "../../assets/images/course/online/ambroise.jpg";
+import ab03 from "../../assets/images/course/online/pasteur.jpg";
 import { Link } from "react-router-dom";
 
 export default class WhatWeDo extends Component {
@@ -240,7 +240,7 @@ export default class WhatWeDo extends Component {
 
                       <div className="watch-video mt-4 pt-2">
                         <Link
-                          to="https://1.envato.market/landrickreactjs"
+                          to="/aboutus"
                           target="_blank"
                           className="btn btn-primary m-1"
                         >
@@ -271,10 +271,11 @@ export default class WhatWeDo extends Component {
               </div>
             </Row>
             <ModalVideo
-              channel="vimeo"
+              channel="youtube"
               isOpen={this.state.isOpen}
-              videoId="99025203"
+              videoId="V6V5K37PFRc"
               onClose={() => this.setState({ isOpen: false })}
+              autoplay={1}
             />
           </Container>
         </section>

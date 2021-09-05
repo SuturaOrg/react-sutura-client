@@ -6,10 +6,17 @@ import { Card, Col, Container, Row } from "reactstrap";
 import FeatherIcon from "feather-icons-react";
 
 // Import Images
-import cilent1 from "../../assets/images/client/01.jpg";
-import client2 from "../../assets/images/client/02.jpg";
-import client3 from "../../assets/images/client/03.jpg";
-import client4 from "../../assets/images/client/04.jpg";
+import client1 from "../../assets/images/team/ambroise.png";
+import client2 from "../../assets/images/team/ousmane.png";
+import client3 from "../../assets/images/team/pasteur.jpg";
+import client4 from "../../assets/images/team/serigne.jpeg";
+import client5 from "../../assets/images/team/ambroise.png";
+import client6 from "../../assets/images/team/amary.jpg";
+import client7 from "../../assets/images/team/sangare.jpg";
+import client8 from "../../assets/images/team/aicha.jpeg";
+import client9 from "../../assets/images/team/souleymane.jpg";
+import client10 from "../../assets/images/team/ambroise.png";
+
 
 export default class MindPower extends Component {
   render() {
@@ -36,7 +43,7 @@ export default class MindPower extends Component {
               <Card className="team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={cilent1}
+                    src={client1}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />
@@ -98,7 +105,7 @@ export default class MindPower extends Component {
               <div className="card team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={client4}
+                    src={client2}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />
@@ -222,7 +229,7 @@ export default class MindPower extends Component {
               <div className="card team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={client3}
+                    src={client4}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />
@@ -285,7 +292,7 @@ export default class MindPower extends Component {
               <div className="card team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={client2}
+                    src={client5}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />
@@ -348,7 +355,7 @@ export default class MindPower extends Component {
               <Card className="team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={cilent1}
+                    src={client6}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />
@@ -410,7 +417,7 @@ export default class MindPower extends Component {
               <div className="card team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={client4}
+                    src={client7}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />
@@ -472,7 +479,7 @@ export default class MindPower extends Component {
               <div className="card team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={client2}
+                    src={client8}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />
@@ -535,7 +542,7 @@ export default class MindPower extends Component {
               <Card className="team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={cilent1}
+                    src={client9}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />
@@ -588,7 +595,7 @@ export default class MindPower extends Component {
                       Halidou Souleymane HALADOU
                     </Link>
                   </h5>
-                  <small className="designation text-muted"><b>Trésorier </b>Etudiant en Master Management Option Ingénierie Financiers SUPDECO - Marrakech</small>
+                  <small className="designation text-muted"><b>Trésorier<br/> </b>Etudiant en Master Management Option Ingénierie Financiers SUPDECO - Marrakech</small>
                 </div>
               </Card>
             </Col>
@@ -597,7 +604,7 @@ export default class MindPower extends Component {
               <div className="card team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={client4}
+                    src={client10}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />

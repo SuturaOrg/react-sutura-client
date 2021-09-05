@@ -6,12 +6,12 @@ import SectionTitle from "../../components/Shared/SectionTitle";
 import ReviewsSlider from "../../components/Shared/ReviewsSlider";
 
 //Import Images
-import img1 from "../../assets/images/client/01.jpg";
-import img2 from "../../assets/images/client/02.jpg";
-import img3 from "../../assets/images/client/03.jpg";
-import img4 from "../../assets/images/client/04.jpg";
-import img5 from "../../assets/images/client/05.jpg";
-import img6 from "../../assets/images/client/06.jpg";
+import img1 from "../../assets/images/reviews/ountou.jpg";
+import img2 from "../../assets/images/reviews/ountou.jpg";
+import img3 from "../../assets/images/reviews/ountou.jpg";
+import img4 from "../../assets/images/reviews/ountou.jpg";
+import img5 from "../../assets/images/reviews/ountou.jpg";
+import img6 from "../../assets/images/reviews/ountou.jpg";
 
 class Reviews extends Component {
   state = {

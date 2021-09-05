@@ -27,7 +27,7 @@ class PageContactThree extends Component {
     this.state = {
       pathItems: [
         //id must required
-        { id: 1, name: "Sutura", link: "/index" },
+        { id: 1, name: "Sutura", link: "/" },
         { id: 2, name: "Page", link: "#" },
         { id: 3, name: "Contact", link: "#" },
         { id: 4, name: "Tous les contacts" },

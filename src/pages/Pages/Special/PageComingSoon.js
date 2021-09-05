@@ -61,7 +61,7 @@ class PageComingSoon extends Component {
     return (
       <React.Fragment>
         <div className="back-to-home rounded d-none d-sm-block">
-          <Link to="/index" className="btn btn-icon btn-primary">
+          <Link to="/" className="btn btn-icon btn-primary">
             <i>
               <FeatherIcon icon="home" className="icons" />
             </i>
@@ -104,7 +104,7 @@ class PageComingSoon extends Component {
             </Row>
             <Row>
               <Col md="12" className="text-center">
-                <Link to="/index" className="btn btn-primary mt-4">
+                <Link to="/" className="btn btn-primary mt-4">
                   <i className="mdi mdi-backup-restore"></i> Go Back Home
                 </Link>
               </Col>

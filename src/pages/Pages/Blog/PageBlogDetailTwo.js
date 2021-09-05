@@ -62,7 +62,7 @@ export default class PageBlogDetailTwo extends Component {
                     <nav aria-label="breadcrumb" className="d-inline-block">
                       <ul className="breadcrumb bg-white rounded shadow mb-0">
                         <li className="breadcrumb-item">
-                          <Link to="/index">Sutura</Link>
+                          <Link to="/">Sutura</Link>
                         </li>
                         <li className="breadcrumb-item">
                           <Link to="#">Blog</Link>

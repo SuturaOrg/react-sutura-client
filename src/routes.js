@@ -517,7 +517,7 @@ const routes = [
   { path: "/widget", component: Widget, isTopbarDark: true },
 
   //Index Main
-  { path: "/index", component: ITSolution},
+  { path: "/", component: ITSolution},
   // { path: "/index2", component: iTSolutionTwo },
   { path: "/tos", component: PageTerms },
   { path: "/about-team", component: PageAboutUs },
@@ -535,7 +535,7 @@ const routes = [
 
 
   //Index root
-  { path: "/", component: Root, isWithoutLayout: true, exact: true },
+  //{ path: "/", component: Root, isWithoutLayout: true, exact: true },
   { component: PageError, isWithoutLayout: true, exact: false },
 ];
 

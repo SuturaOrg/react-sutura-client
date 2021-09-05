@@ -155,8 +155,8 @@ class PageProfileCommon extends Component {
                                                     <Col md="5" className="text-md-end text-center">
                                                         <ul className="list-unstyled social-icon social mb-0 mt-4">
                                                             <li className="list-inline-item">
-                                                                <Link to="#" className="rounded">
-                                                                    <i className="uil uil-comment align-middle"></i>
+                                                                <Link to="/" className="rounded">
+                                                                    <i className="uil uil-home align-middle"></i>
                                                                 </Link>
                                                             </li>
 

@@ -26,7 +26,7 @@ class LoanRequest extends Component {
       selectedFile: null,
       pathItems: [
         //id must required
-        { id: 1, name: "Sutura", link: "/index" },
+        { id: 1, name: "Sutura", link: "/" },
         { id: 2, name: "Opérations", link: "#" },
         { id: 3, name: "Demander un prêt" },
       ],

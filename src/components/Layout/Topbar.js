@@ -29,7 +29,7 @@ class Topbar extends Component {
       dropdownOpenShop: false,
       navLinks: [
         //Note : each child and nested child must have unique id
-        { id: 1, title: "Accueil", link: "/index" },
+        { id: 1, title: "Accueil", link: "/" },
         {
           id: 5,
           title: "Opérations",
@@ -608,12 +608,12 @@ class Topbar extends Component {
             <div>
 
               {this.props.hasDarkTopBar ? (
-                <a className="logo" href="/index">
+                <a className="logo" href="/">
                   <img src={logodark} height="24" className="logo-light-mode" alt="" />
                   <img src={logolight} height="24" className="logo-dark-mode" alt="" />
                 </a>
               ) :
-                <a className="logo" href="/index">
+                <a className="logo" href="/">
                   <span className="logo-light-mode">
                     <img src={logodark} className="l-dark" height="24" alt="" />
                     <img src={logolight} className="l-light" height="24" alt="" />

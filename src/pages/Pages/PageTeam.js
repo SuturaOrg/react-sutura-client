@@ -26,7 +26,7 @@ class PageTeam extends Component {
         this.state = {
             pathItems : [
                 //id must required
-                { id : 1, name : "Home", link : "/index" },
+                { id : 1, name : "Home", link : "/" },
                 { id : 2, name : "Pages", link : "#" },
                 { id : 3, name : "Team" },
 

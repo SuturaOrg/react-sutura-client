@@ -31,7 +31,7 @@ class PageProfileEdit extends Component {
         this.state = {
             pathItems: [
                 //id must required
-                {id: 1, name: "Sutura", link: "/index"},
+                {id: 1, name: "Sutura", link: "/"},
                 {id: 2, name: "Page", link: "#"},
                 {id: 3, name: "Account", link: "/page-profile"},
                 {id: 4, name: "Setting"},
@@ -201,15 +201,7 @@ class PageProfileEdit extends Component {
                                     </Link> */}
                                 </div>
                             </div>
-                            {alert && alert.message && <Alert
-                                color={alert.type}
-                                toggle={() => {
-                                    this.props.dispatch(alertActions.clear())
-                                }
-                                }
-                            >
-                                {alert.message}
-                            </Alert>}
+
                             <AvForm onValidSubmit={this.handleSubmit}>
                                 <Row className="mt-4">
                                     <Col md="6">
@@ -330,21 +322,14 @@ class PageProfileEdit extends Component {
                                     </Col>
                                 </Row>
                             </AvForm>
-
+                            <Row className={"mt-4"}><Col md={6}> {alert && alert.message && <Alert
+                                color={alert.type}
+                            >
+                                {alert.message}
+                            </Alert>}</Col></Row>
                             <Row>
                                 <Col md="6" className="mt-4 pt-2">
                                     <h5>Changer de mot de passe :</h5>
-                                    <Alert
-                                        color="primary"
-                                        isOpen={this.state.successMsg3}
-                                        toggle={() => {
-                                            this.setState({
-                                                successMsg3: !this.state.successMsg3,
-                                            });
-                                        }}
-                                    >
-                                        Votre mot de passe a été mis à jour avec succes!
-                                    </Alert>
                                     <AvForm onValidSubmit={this.handleSubmitPassword}>
                                         <Row className="mt-4">
                                             <Col lg="12">

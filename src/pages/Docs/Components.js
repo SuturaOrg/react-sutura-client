@@ -69,7 +69,7 @@ class Components extends Component {
     this.state = {
       pathItems: [
         //id must required
-        { id: 1, name: "Sutura", link: "/index" },
+        { id: 1, name: "Sutura", link: "/" },
         { id: 2, name: "Docs", link: "#" },
         { id: 3, name: "Components" },
       ],

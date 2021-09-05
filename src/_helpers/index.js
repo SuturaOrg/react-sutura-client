@@ -1,7 +1,6 @@
 import {Redirect, Route} from "react-router-dom";
 import {userService} from "../services";
 
-export * from './fake-backend';
 export * from './history';
 export * from './store';
 export * from './auth-header';

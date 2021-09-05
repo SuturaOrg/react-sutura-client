@@ -18,7 +18,7 @@ import {AvForm, AvField} from "availity-reactstrap-validation";
 //Import Icons
 import FeatherIcon from "feather-icons-react";
 
-import profile from "../../../assets/images/client/05.jpg";
+import profile from "../../../assets/images/unknown.jpg";
 import imgbg from "../../../assets/images/account/bg.png";
 import ProfileCommon from "./PageProfileCommon";
 import {connect} from "react-redux";

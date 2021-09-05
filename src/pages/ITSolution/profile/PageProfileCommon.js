@@ -14,7 +14,7 @@ import FeatherIcon from "feather-icons-react";
 
 //Import Images
 import imgbg from "../../../assets/images/account/bg.png";
-import profile from "../../../assets/images/client/05.jpg";
+import profile from "../../../assets/images/unknown.jpg";
 import {connect} from "react-redux";
 import {statsActions} from "../../../actions/stats.actions";
 import {userActions} from "../../../actions";

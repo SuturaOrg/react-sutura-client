@@ -24,13 +24,13 @@ export default class WhatWeDo extends Component {
           id: 1,
           icon: "uil uil-chart-line",
           heading: "Santé",
-          desc: "It is a long established fact that a reader.",
+          desc: "Il s'agit de notre première priorité",
         },
         {
           id: 2,
           icon: "uil uil-crosshairs",
           heading: "Alimentation",
-          desc: "It is a long established fact that a reader.",
+          desc: "Ventre affamé n'a point d'oreilles",
         },
         {
           id: 3,
@@ -52,20 +52,20 @@ export default class WhatWeDo extends Component {
         },
         {
           id: 6,
+          icon: "uil uil-search",
+          heading: "Autres urgences",
+          desc: "It is a long established fact that a reader.",
+        },
+        {
+          id: 7,
           icon: "uil uil-users-alt",
           heading: "Prêts à court terme",
           desc: "It is a long established fact that a reader.",
         },
         {
-          id: 7,
+          id: 8,
           icon: "uil uil-file-alt",
           heading: "Prêts à terme moyen",
-          desc: "It is a long established fact that a reader.",
-        },
-        {
-          id: 8,
-          icon: "uil uil-search",
-          heading: "Autres urgences",
           desc: "It is a long established fact that a reader.",
         },
       ],
@@ -131,10 +131,10 @@ export default class WhatWeDo extends Component {
                                 to="#"
                                 className="title text-white d-block fw-bold"
                               >
-                                Web Development
+                                Ousmane
                               </Link>
                               <small className="text-light">
-                                IT & Software
+                                Animation d'une conférence
                               </small>
                             </div>
                           </div>
@@ -153,10 +153,10 @@ export default class WhatWeDo extends Component {
                                     to="#"
                                     className="title text-white d-block fw-bold"
                                   >
-                                    Michanical Engineer
+                                    Ambroise
                                   </Link>
                                   <small className="text-light">
-                                    Engineering
+                                    Présentation de Sutura
                                   </small>
                                 </div>
                               </div>
@@ -173,9 +173,9 @@ export default class WhatWeDo extends Component {
                                     to="#"
                                     className="title text-white d-block fw-bold"
                                   >
-                                    Chartered Accountant
+                                    Lys Pasteur
                                   </Link>
-                                  <small className="text-light">C.A.</small>
+                                  <small className="text-light"></small>
                                 </div>
                               </div>
                             </div>

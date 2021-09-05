@@ -22,106 +22,7 @@ import ProfileCommon from "./PageProfileCommon";
 
 
 class PageProfile extends Component {
-    state = {
-        blogs: [
-            {
-                id: 1,
-                title: "Design your apps in your own way",
-                image: blog1,
-                likes: "33",
-                blogComments: "08",
-                author: "Krishta {user && user.lastname}",
-                date: "13th August, 2019",
-            },
-            {
-                id: 2,
-                title: "How apps is changing the IT world",
-                image: blog2,
-                likes: "33",
-                blogComments: "08",
-                author: "Krishta {user && user.lastname}",
-                date: "13th August, 2019",
-            },
-        ],
-        experiences: [
-            {
-                id: 1,
-                image: exp1,
-                designation: "Senior Web Developer",
-                duration: "3 Years",
-                companyName: "CircleCi",
-                location: "London, UK",
-            },
-            {
-                id: 2,
-                image: exp2,
-                designation: "Web Designer",
-                duration: "2 Years",
-                companyName: "Codepen",
-                location: "Washington D.C, USA",
-            },
-            {
-                id: 3,
-                image: exp3,
-                designation: "UI Designer",
-                duration: "2 Years",
-                companyName: "Gitlab",
-                location: "Perth, Australia",
-            },
-        ],
-        widgets: [
-            {
-                id: 1,
-                icon: "uil uil-dashboard",
-                className: "navbar-item account-menu px-0 active",
-                title: "Profile",
-                link: "/page-profile",
-            },
-            {
-                id: 2,
-                icon: "uil uil-users-alt",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "contributions",
-                link: "/page-contributions",
-            },
-            {
-                id: 3,
-                icon: "uil uil-file",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Prêts",
-                link: "/page-loans",
-            },
-            {
-                id: 4,
-                icon: "uil uil-envelope-star",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Remboursements",
-                link: "/page-refunds",
-            },
-            {
-                id: 5,
-                icon: "uil uil-setting",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Settings",
-                link: "/page-profile-edit",
-            },
-            {
-                id: 6,
-                icon: "uil uil-dashboard",
-                className: "navbar-item account-menu px-0 mt-2",
-                title: "Logout",
-                link: "/auth-cover-login",
-            },
-            // {
-            //     id: 7,
-            //     icon: "uil uil-transaction",
-            //     className: "navbar-item account-menu px-0 mt-2",
-            //     title: "Payments",
-            //     link: "/page-payments",
-            // },
-        ],
-    };
-
+    
     componentDidMount() {
         console.log(this.props);
         document.body.classList = "";
@@ -257,7 +158,7 @@ class PageProfile extends Component {
                                             </Link>
                                         </div>
                                     </div>
-                                    <div className="d-flex align-items-center mt-3">
+                                    {user && user.currentPeriodContributions!==0 && <div className="d-flex align-items-center mt-3">
                                         <i>
                                             <FeatherIcon
                                                 icon="gift"
@@ -268,7 +169,7 @@ class PageProfile extends Component {
                                             <h6 className="text-primary mb-0">Date d'expiration :</h6>
                                             <p className="text-muted mb-0">{this.props.expirationDate && this.props.expirationDate}</p>
                                         </div>
-                                    </div>
+                                    </div>}
                                     <div className="d-flex align-items-center mt-3">
                                         <i>
                                             <FeatherIcon

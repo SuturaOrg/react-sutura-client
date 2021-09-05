@@ -60,8 +60,8 @@ class PageCoverSignup extends Component {
           <Container fluid className="px-0">
             <Row className="g-0 position-relative">
               <Col lg={4} xs={{ order: 2 }} className="cover-my-30 ">
-                <div className="cover-user-img d-flex align-items-center">
-                  <Row>
+                <div className="cover-user-img d-flex align-items-center" >
+                  <Row className="scrollable" >
                     <Col xs={12}>
                       {alert && alert.message &&
                       <Alert
@@ -76,7 +76,9 @@ class PageCoverSignup extends Component {
                           <h4 className="card-title text-center">S'inscrire</h4>
                           <AvForm className="login-form mt-4" onValidSubmit={this.handleSubmit}>
                             <Row>
-                              <Col md="6">
+                              <Col md="6" style={{
+                                "overflow-y": "auto"
+                              }}>
                                 <div className="mb-3">
                                   <Label className="form-label" for="firstName">
                                     Prénom{" "}
@@ -239,15 +241,15 @@ class PageCoverSignup extends Component {
                                 <div className="mb-3">
                                   <Label className="form-label">Ville de résidence <span className="text-danger">*</span></Label>
                                   <div className="form-icon position-relative">
-                                    <AvField type="select" name="town" value="town" helpMessage="Sélectionnez une catégorie"
+                                    <AvField type="select" name="town" value="town" helpMessage="Sélectionnez une ville"
 
                                             validate={{
                                               required: {
                                                 value: true,
-                                                errorMessage: "Veuillez sélectionner une catégorie ",
+                                                errorMessage: "Veuillez sélectionner une ville ",
                                               },
                                             }}>
-                                      <option value="">- Sélectionnez votre pays -</option>
+                                      <option value="">- Sélectionnez votre ville -</option>
                                         <option value="Agadir">Agadir</option>
                                         <option value="Al Hoceïma">Al Hoceïma</option>
                                         <option value="Béni Mellal">Béni Mellal</option>

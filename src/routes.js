@@ -237,7 +237,7 @@ const PageContactOne = React.lazy(() =>
   import("./pages/Pages/Contact/PageContactOne")
 );
 const PageContactThree = React.lazy(() =>
-  import("./pages/Pages/Contact/PageContactThree")
+  import("./pages/ITSolution/PageContactThree")
 );
 const PageContactTwo = React.lazy(() =>
   import("./pages/Pages/Contact/PageContactTwo")

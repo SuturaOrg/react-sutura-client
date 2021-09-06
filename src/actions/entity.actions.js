@@ -9,7 +9,7 @@ export const entityActions = {
     create,
     getAll,
     deleteById,
-    sendMail
+
 };
 
 function create(file, data, entity) {
@@ -153,33 +153,5 @@ function deleteById(entity,id) {
 
     function failure(error) {
         return {type: entityConstants.ENTITY_DELETE_FAILURE, error, entity}
-    }
-}
-
-
-function sendMail(entity) {
-    return dispatch => {
-        dispatch(request());
-            entityService.sendEmail(entity)
-                .then(
-                    (emailPayload) => {
-                       dispatch(success(emailPayload));
-                    },
-                    error => {
-                        dispatch(failure(error));
-                    }
-                );
-    };
-
-    function request() {
-        return {type: entityConstants.ENTITY_CREATE_REQUEST, entity}
-    }
-
-    function success() {
-        return {type: entityConstants.ENTITY_CREATE_SUCCESS, entity}
-    }
-
-    function failure(error) {
-        return {type: entityConstants.ENTITY_CREATE_FAILURE, error, entity}
     }
 }

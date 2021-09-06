@@ -6,6 +6,8 @@ import { alert } from './alert.reducer';
 import { entity } from './entity.reducer';
 import { stats } from './stats.reducer';
 import {user} from "./user.reducer";
+import {mail} from "./mail.reducer";
+
 
 
 
@@ -15,7 +17,8 @@ const rootReducer = combineReducers({
   alert,
   entity,
   stats,
-  user
+  user,
+  mail
 });
 
 export default rootReducer;

@@ -4,7 +4,8 @@ import {authHeader, handleResponse} from '../_helpers';
 export const entityService = {
     create,
     getAll,
-    deleteById
+    deleteById,
+    sendEmail
 };
 
 function create(data,entity) {
@@ -47,6 +48,19 @@ function deleteById(entity,id) {
     };
 
     return fetch(`${config.apiUrl}/${entity}/${id}`, requestOptions)
+        .then(handleResponse)
+        .then(entityPayload => {
+            return entityPayload;
+        });
+}
+
+function sendEmail(entity) {
+    const requestOptions = {
+        method: 'POST',
+        headers: authHeader(),
+    };
+
+    return fetch(`${config.apiUrl}/${entity}`, requestOptions)
         .then(handleResponse)
         .then(entityPayload => {
             return entityPayload;

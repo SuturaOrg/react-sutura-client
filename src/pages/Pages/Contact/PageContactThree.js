@@ -12,7 +12,7 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   Card,
-  CardBody,
+  CardBody, Spinner
 } from "reactstrap";
 
 //Import Icons
@@ -21,6 +21,8 @@ import FeatherIcon from "feather-icons-react";
 // import images
 import contactImg from "../../../assets/images/contact-detail.jpg";
 
+import {connect} from "react-redux";
+import {entityActions} from "../../../actions";
 class PageContactThree extends Component {
   constructor(props) {
     super(props);
@@ -64,8 +66,9 @@ class PageContactThree extends Component {
     }
   };
 
-  sendMail() {
-    window.location.href = "mailto:contact@example.com";
+  sendMail = async(values) => {
+    const { dispatch } = this.props;
+    dispatch(entityActions.sendMail(values,"emails"));
   }
 
   callNumber() {
@@ -73,6 +76,7 @@ class PageContactThree extends Component {
   }
 
   render() {
+    const {alert,emailsCreateLoading}=this.props;
     const length = this.state.pathItems.length;
     return (
       <React.Fragment>
@@ -144,7 +148,7 @@ class PageContactThree extends Component {
                     <h4 className="card-title">Prendre contact avec nous !</h4>
                     <div className="custom-form mt-3">
                       <div id="message"></div>
-                      <Alert
+                      {/* <Alert
                         color="info"
                         isOpen={this.state.Contactvisible}
                         toggle={() => {
@@ -154,10 +158,16 @@ class PageContactThree extends Component {
                         }}
                       >
                         Votre message a été envoyé avec succès.
-                      </Alert>
+                      </Alert> */}
+                      {alert.message &&
+                      <Alert
+                        color={alert.type}
+                      >
+                        {alert.message}
+                        </Alert>}
                       <Form
                         method="post"
-                        onSubmit={this.handleSubmit}
+                        onSubmit={this.sendMail}
                         name="contact-form"
                         id="contact-form"
                       >
@@ -242,8 +252,8 @@ class PageContactThree extends Component {
                                 </i>
                               </div>
                               <textarea
-                                name="comments"
-                                id="comments"
+                                name="message"
+                                id="message"
                                 rows="4"
                                 className="form-control ps-5"
                                 placeholder="Votre message :"
@@ -253,14 +263,14 @@ class PageContactThree extends Component {
                         </Row>
                         <Row>
                           <Col sm={12} className="text-center">
-                            <div className="d-grid">
-                              <input
+                          <div className="d-grid">
+                          {!emailsCreateLoading?<input
                                 type="submit"
                                 id="submit"
                                 name="send"
                                 className="submitBnt btn btn-primary btn-block"
                                 value="Envoyer"
-                              />
+                              />:<Spinner className="text-primary"> </Spinner>}
                             </div>
                             <div id="simple-msg"></div>
                           </Col>
@@ -356,4 +366,16 @@ class PageContactThree extends Component {
     );
   }
 }
-export default PageContactThree;
+function mapStateToProps(state) {
+  const {emailsCreateLoading} = state.entity;
+  const {alert} = state;
+
+  return {
+    emailsCreateLoading,
+    alert
+
+  };
+}
+
+const connectedPageContactThree = connect(mapStateToProps)(PageContactThree);
+export default connectedPageContactThree;

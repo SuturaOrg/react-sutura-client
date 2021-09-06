@@ -15,7 +15,7 @@ import client6 from "../../assets/images/team/amary.jpg";
 import client7 from "../../assets/images/team/sangare.jpg";
 import client8 from "../../assets/images/team/aicha.jpeg";
 import client9 from "../../assets/images/team/souleymane.jpg";
-import client10 from "../../assets/images/team/ambroise.png";
+import client10 from "../../assets/images/team/sylvain.jpg";
 
 
 export default class MindPower extends Component {
@@ -610,7 +610,7 @@ export default class MindPower extends Component {
                   />
                   <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to={{pathname: "https://www.facebook.com/terwilly.sylvain" }} className="rounded">
                         <i>
                           <FeatherIcon
                             icon="facebook"
@@ -620,7 +620,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to={{pathname: "https://www.instagram.com/gterlly/" }}  className="rounded">
                         <i>
                           <FeatherIcon
                             icon="instagram"
@@ -630,17 +630,17 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to={{pathname: "https://github.com/Terwilly" }}  className="rounded">
                         <i>
                           <FeatherIcon
-                            icon="twitter"
+                            icon="github"
                             className="fea icon-sm fea-social"
                           />
                         </i>
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to={{pathname: "https://www.linkedin.com/in/terwilly-sylvain-455558162/" }}  className="rounded">
                         <i>
                           <FeatherIcon
                             icon="linkedin"

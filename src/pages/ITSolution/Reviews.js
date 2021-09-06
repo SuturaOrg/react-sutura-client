@@ -8,10 +8,10 @@ import ReviewsSlider from "../../components/Shared/ReviewsSlider";
 //Import Images
 import img1 from "../../assets/images/reviews/ountou.jpg";
 import img2 from "../../assets/images/reviews/mansour.jpg";
-import img3 from "../../assets/images/reviews/ountou.jpg";
-import img4 from "../../assets/images/reviews/ountou.jpg";
-import img5 from "../../assets/images/reviews/ountou.jpg";
-import img6 from "../../assets/images/reviews/ountou.jpg";
+import img3 from "../../assets/images/reviews/moussa.jpg";
+import img4 from "../../assets/images/reviews/naby.jpg";
+import img5 from "../../assets/images/reviews/daba.jpg";
+import img6 from "../../assets/images/reviews/frey.jpg";
 
 class Reviews extends Component {
   state = {
@@ -37,46 +37,46 @@ class Reviews extends Component {
       {
         id: 3,
         img: img3,
-        name: "Anonyme",
-        post: "Parent d'élève",
+        name: "Moussa Diongue",
+        post: "Ingénieur, lauréat",
         desc:
-          "Personnellementn en tant que parent ayant son enfant au Maroc cela me rassuren après les inquiétudes suscitées",
+          "Depuis son lancement, Sutura est venu en aide à beaucoup d'étudiants subsahariens du public comme du privée en allégeant leurs frais de scolarité, de soins médicaux, de logement et de déplacements. Conçu sur mesure pour répondre aux besoins pressants des étudiants dans la discrétion et le respect total de la dignité humaine. Sutura, pour vous et grâce à vous.",
         rating: 4,
       },
       {
         id: 4,
         img: img4,
-        name: "Fifi Morgane",
-        post: "Lauréate",
+        name: "Naby Ndiaye",
+        post: "Doctorant",
         desc:
-          "According to most sources, Lorum Ipsum can be traced back to a text composed by Cicero.",
-        rating: 5,
-      },
-      {
-        id: 5,
-        img: img5,
-        name: "Ibrahima Faye",
-        post: "P.A",
-        desc:
-          "The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century.",
+          "Sutura est une solution qui est arrivée à un moment crucial. L'idée est vriament extraordinaire en plus d'avoir une dimension sociale, elle met en avant les valeurs humaines comme l'entraide.",
         rating: 3,
       },
       {
         id: 5,
         img: img5,
-        name: "Mansour Kane",
-        post: "Lauréat du Maroc",
+        name: "Daba Sarr",
+        post: "Etudiante",
         desc:
-          "There is now an abundance of readable dummy texts. These are usually used when a text is required.",
-        rating: 5,
+          "Je salue la belle initiative Sutura, pensée par des étudiants engagés et soucieux des conditions de vie et d’étude des étudiants étrangers au maroc. Grâce à la plate-forme Sutura, les étudiants beneficieront d’une meilleure prise en charge en cas de besoin.",
+        rating: 4,
       },
       {
         id: 6,
         img: img6,
-        name: "Mapathé Karé",
-        post: "étudiant Sénégalais au Maroc",
+        name: "Frey Moukassa",
+        post: "Etudiant",
         desc:
-          "Thus, Lorem Ipsum has only limited suitability as a visual filler for German texts.",
+          "Sutura est une plateforme qui place l'étudiant au coeur de ses actions pour améliorer la prise en charge de ces derniers,étant conçu par des étudiants et au vu des valeurs qu'elle prône,elle est sans doute ce qu'il faut pour chaque étudiant en matière de prise en charge. Je loue l'initiative et  recommande vivement.",
+        rating: 5,
+      },
+      {
+        id: 7,
+        img: img6,
+        name: "Anonyme",
+        post: "Parent d'élève",
+        desc:
+          "Personnellementn en tant que parent ayant son enfant au Maroc cela me rassuren après les inquiétudes suscitées",
         rating: 4,
       },
     ],

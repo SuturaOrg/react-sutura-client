@@ -1,40 +1,13 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import {
-    Container,
-    Row,
     Col,
-    Button,
-    Progress,
-    Card,
-    CardBody,
-    Modal,
-    ModalBody,
-    Form,
-    FormGroup,
-    Label,
-    Input,
-    ModalHeader,
-    Dropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem, Spinner,
+    Button, Spinner, Alert
 } from "reactstrap";
 
 //Import Icons
 import FeatherIcon from "feather-icons-react";
 
-//Import Images
-import imgbg from "../../../assets/images/account/bg.png";
-import profile from "../../../assets/images/client/05.jpg";
-import client1 from "../../../assets/images/client/01.jpg";
-import client2 from "../../../assets/images/client/02.jpg";
-import client3 from "../../../assets/images/client/03.jpg";
-import client4 from "../../../assets/images/client/04.jpg";
-import client5 from "../../../assets/images/client/05.jpg";
-import client6 from "../../../assets/images/client/06.jpg";
-import client7 from "../../../assets/images/client/07.jpg";
-import client8 from "../../../assets/images/client/08.jpg";
 import ProfileCommon from "./PageProfileCommon";
 import {entityActions} from "../../../actions";
 import {connect} from "react-redux";
@@ -120,8 +93,14 @@ class PageMessages extends Component {
         }
     };
 
+    handleDeleteClick(id) {
+        const { dispatch } = this.props;
+        dispatch(entityActions.deleteById("loans",id));
+  
+    }
+
     render() {
-        const {loansList,loansTotalElements} = this.props;
+        const {loansList,loansTotalElements, loansDeleteLoading} = this.props;
         return (
             <ProfileCommon id={3}>
                 <Col lg={8} xs={12}>
@@ -143,6 +122,11 @@ class PageMessages extends Component {
                             className="d-flex border-bottom align-items-center justify-content-between bg-light mt-4 p-3">
                             <div className="form-check ps-0">
                                 <div className="mb-0">
+                                {alert.message &&
+                                    <Alert
+                                        color={alert.type}>
+                                        {alert.message}
+                                    </Alert>}
                                 </div>
                             </div>
                         </div>
@@ -168,8 +152,13 @@ class PageMessages extends Component {
                                                 </p>
                                             </div>
                                             <div className="mt-4">
-                                            {loan.status!=="FINISHED" && loan.statusRefund===false && <Button to="/deleteLoan" className="btn btn-danger">Annuler</Button>}<br/>
-                                            </div>
+                                            {!loansDeleteLoading?loan.status!=="FINISHED" && loan.statusRefund===false && <Button className="btn btn-danger" onClick={()=>{
+                                                if(window.confirm("Voulez-vous vraimment supprimer ?")){
+                                                    this.handleDeleteClick(loan.id);
+                                                }
+                                            }
+                                            }>Annuler</Button>:<Spinner className="text-primary danger"> </Spinner>}
+                                            </div><br/>
                                         </div>
                                 </div>
                             )): <div className="d-flex border-bottom mt-4 justify-content-center text-dark">
@@ -193,10 +182,13 @@ class PageMessages extends Component {
 }
 
 function mapStateToProps(state) {
-    const {loansList,loansTotalElements} = state.entity;
+    const {loansList,loansTotalElements,loansDeleteLoading} = state.entity;
+    const {alert}  = state;
     return {
         loansList,
-        loansTotalElements
+        loansTotalElements,
+        alert,
+        loansDeleteLoading
     };
 
 }

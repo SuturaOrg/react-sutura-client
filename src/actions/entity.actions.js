@@ -7,7 +7,8 @@ import {users} from "../reducers/users.reducer";
 
 export const entityActions = {
     create,
-    getAll
+    getAll,
+    deleteById
 };
 
 function create(file, data, entity) {
@@ -84,6 +85,8 @@ function getAll( entity) {
 
     };
 
+    
+
     function request(entity) {
         return {type: entityConstants.ENTITY_GETALL_REQUEST, entity}
     }
@@ -121,5 +124,33 @@ function getErrorMessage(entity,error){
             return "Votre remboursement n'a pas été enregistré:\n"+error;
         default : 
             return "L'opération ne peut pas bien déroulée"
+    }
+}
+
+function deleteById(entity,id) {
+    return dispatch => {
+        dispatch(request());
+            entityService.deleteById(entity,id)
+                .then(
+                    (deletePayload) => {
+                       dispatch(success(deletePayload));
+                       dispatch(getAll(entity));
+                    },
+                    error => {
+                        dispatch(failure(error));
+                    }
+                );
+    };
+
+    function request() {
+        return {type: entityConstants.ENTITY_DELETE_REQUEST, entity}
+    }
+
+    function success() {
+        return {type: entityConstants.ENTITY_DELETE_SUCCESS, entity}
+    }
+
+    function failure(error) {
+        return {type: entityConstants.ENTITY_DELETE_FAILURE, error, entity}
     }
 }

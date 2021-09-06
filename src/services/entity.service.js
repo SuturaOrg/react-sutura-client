@@ -3,7 +3,8 @@ import {authHeader, handleResponse} from '../_helpers';
 
 export const entityService = {
     create,
-    getAll
+    getAll,
+    deleteById
 };
 
 function create(data,entity) {
@@ -37,5 +38,18 @@ function getAll(entity,id) {
             return [entityPayload._embedded[entity],entityPayload.page.totalElements];
         });
 }
- 
+
+
+function deleteById(entity,id) {
+    const requestOptions = {
+        method: 'DELETE',
+        headers: authHeader(),
+    };
+
+    return fetch(`${config.apiUrl}/${entity}/${id}`, requestOptions)
+        .then(handleResponse)
+        .then(entityPayload => {
+            return entityPayload;
+        });
+}
 

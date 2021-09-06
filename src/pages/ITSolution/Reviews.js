@@ -7,7 +7,7 @@ import ReviewsSlider from "../../components/Shared/ReviewsSlider";
 
 //Import Images
 import img1 from "../../assets/images/reviews/ountou.jpg";
-import img2 from "../../assets/images/reviews/ountou.jpg";
+import img2 from "../../assets/images/reviews/mansour.jpg";
 import img3 from "../../assets/images/reviews/ountou.jpg";
 import img4 from "../../assets/images/reviews/ountou.jpg";
 import img5 from "../../assets/images/reviews/ountou.jpg";
@@ -28,6 +28,15 @@ class Reviews extends Component {
       {
         id: 2,
         img: img2,
+        name: "M. Mansour Kane",
+        post: "Lauréat du Maroc",
+        desc:
+          "Une bonne santé est primordiale pour tout étudiant. En effet, pour être au meilleur de soi, ce dernier a besoin d’assurer ses services sociaux de base. C’est en ce sens que sutura joue un rôle prépondérant. Elle permet non seulement à l’étudiant ne disposant pas des moyens nécessaires de se soigner mais surtout, dans la dignité. Plus besoin d’emprunter ça et là; de courir derrière une assurance « non assurée ». Le concept est simple et pratique : s’aider en aidant les autres !",
+        rating: 5,
+      },
+      {
+        id: 3,
+        img: img3,
         name: "Anonyme",
         post: "Parent d'élève",
         desc:
@@ -35,7 +44,7 @@ class Reviews extends Component {
         rating: 4,
       },
       {
-        id: 3,
+        id: 4,
         img: img4,
         name: "Fifi Morgane",
         post: "Lauréate",
@@ -44,8 +53,8 @@ class Reviews extends Component {
         rating: 5,
       },
       {
-        id: 4,
-        img: img3,
+        id: 5,
+        img: img5,
         name: "Ibrahima Faye",
         post: "P.A",
         desc:

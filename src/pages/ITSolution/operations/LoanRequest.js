@@ -164,7 +164,7 @@ class LoanRequest extends Component {
                             <div className="mb-3">
                               <Label className="form-label">Raison <span className="text-danger">*</span></Label>
                               <div className="form-icon position-relative">
-                                <AvField type="select" name="select" value="Santé" helpMessage="Sélectionnez une catégorie"
+                                <AvField type="select" name="reason" value="" helpMessage="Sélectionnez une catégorie"
 
                                          validate={{
                                            required: {
@@ -172,12 +172,12 @@ class LoanRequest extends Component {
                                              errorMessage: "Veuillez sélectionner une catégorie ",
                                            },
                                          }}>
-                                  <option>Santé</option>
-                                  <option>Alimentation</option>
-                                  <option>Loyer</option>
-                                  <option>Transport</option>
-                                  <option>Scolarité</option>
-                                  <option>Autres</option>
+                                  <option value="HEALTH">Santé</option>
+                                  <option value="FOOD">Alimentation</option>
+                                  <option value="RENTAL">Loyer</option>
+                                  <option value="TRANSPORT">Transport</option>
+                                  <option value="SCHOOL_FEES">Scolarité</option>
+                                  <option value="OTHER">Autres</option>
                                 </AvField>
                               </div>
                             </div>

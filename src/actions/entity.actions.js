@@ -20,7 +20,7 @@ function create(file, data, entity) {
             entityService.create(data, entity)
                 .then(
                     entityPayload => {
-                        dispatch(success(entityPayload,entity));
+                        dispatch(success(entityPayload));
                         dispatch(alertActions.success(getSuccessMessage(entity)));
                         if(entity==="contributions"){
                             history.push('/contribution-confirmation');
@@ -41,7 +41,7 @@ function create(file, data, entity) {
                 );
         }
 
-        dispatch(request(data,entity));
+        dispatch(request(data));
        file?fileService.upload(file,entity).then((filePayload) => {
             data.proof=filePayload.url;
           _create()
@@ -51,16 +51,16 @@ function create(file, data, entity) {
         }):_create();
     };
 
-    function request(data, entity) {
+    function request(data) {
         return {type: entityConstants.ENTITY_CREATE_REQUEST, data, entity}
     }
 
-    function success(entityPayload, entity) {
+    function success(entityPayload) {
         return {type: entityConstants.ENTITY_CREATE_SUCCESS, entityPayload, entity}
     }
 
     function failure(error) {
-        return {type: entityConstants.ENTITY_CREATE_FAILURE, error}
+        return {type: entityConstants.ENTITY_CREATE_FAILURE, error, entity}
     }
 }
 
@@ -97,7 +97,7 @@ function getAll( entity) {
     }
 
     function failure(error) {
-        return {type: entityConstants.ENTITY_GETALL_FAILURE, error}
+        return {type: entityConstants.ENTITY_GETALL_FAILURE, error, entity}
     }
 }
 

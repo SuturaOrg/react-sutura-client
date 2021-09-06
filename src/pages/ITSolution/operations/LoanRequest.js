@@ -48,6 +48,8 @@ class LoanRequest extends Component {
       dispatch(alertActions.error("Le fichier ne doit pas dépasser 7 Mo "))
       return;
     }
+    const textAreaValue = document.getElementById("comment").value;
+    values.comment=textAreaValue;
     dispatch(entityActions.create(this.state.selectedFile,values,"loans"));
   };
   onFileChange = event => {

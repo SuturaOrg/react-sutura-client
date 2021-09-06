@@ -44,8 +44,7 @@ class PageContactThree extends Component {
 
     handleSubmit(event, values) {
         const {dispatch} = this.props;
-        event.preventDefault();
-        console.log(values);
+        dispatch(alertActions.clear());
         //this.setState({ Contactvisible: true });
         const textAreaValue = document.getElementById("messageForm").value;
         if (!textAreaValue.trim()) {

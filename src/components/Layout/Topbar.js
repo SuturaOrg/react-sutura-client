@@ -63,18 +63,6 @@ class Topbar extends Component {
                     link: "/#",
                     isOpenSubMenu: false,
                     child: [
-                        // {
-                        //   id: 4,
-                        //   title: "Company",
-                        //   link: "/#",
-                        //   isOpenNestedSubMenu: false,
-                        //   nestedChild: [
-                        //     { title: "History", link: "/page-history" },
-                        //     { title: "Services", link: "page-services" },
-                        //     { title: "Pricing", link: "/page-pricing" },
-                        //     { title: "Team", link: "/page-team" },
-                        //   ],
-                        // },
                         {
                             id: 5,
                             title: "Account",
@@ -82,12 +70,6 @@ class Topbar extends Component {
                             isOpenNestedSubMenu: false,
                             nestedChild: [
                                 {title: "Profile", link: "/page-profile", isupdatePage: true},
-                                // { title: "Members", link: "/page-members", isNewPage: true },
-                                // { title: "Works", link: "/page-works", isNewPage: true },
-                                // { title: "Messages", link: "/page-messages", isNewPage: true },
-                                // { title: "Payments", link: "/page-payments", isNewPage: true },
-                                // { title: "Account Setting", link: "/page-profile-edit" },
-                                // { title: "Invoice", link: "/page-invoice" },
                             ],
                         },
                         {
@@ -108,47 +90,19 @@ class Topbar extends Component {
                             link: "/#",
                             isOpenNestedSubMenu: false,
                             nestedChild: [
-                                //{ title: "Login", link: "/auth-login" },
                                 {title: "Login Cover", link: "/auth-cover-login"},
-                                //{ title: "Login Simple", link: "/auth-login-three" },
-                                //{ title: "Signup", link: "/auth-signup" },
                                 {title: "Signup Cover", link: "/auth-cover-signup"},
-                                //{ title: "Signup Simple", link: "/auth-signup-three" },
-                                // { title: "Reset Password", link: "/auth-re-password" },
                                 {
                                     title: "Reset Password Cover",
                                     link: "/auth-cover-re-password",
                                 },
-                                // {
-                                //   title: "Reset Password Simple",
-                                //   link: "/auth-re-password-three",
-                                // },
                             ],
                         },
-                        // {
-                        //   id: 16,
-                        //   title: "Special",
-                        //   link: "/#",
-                        //   isOpenNestedSubMenu: false,
-                        //   nestedChild: [
-                        //     { title: "Coming Soon", link: "/page-comingsoon" },
-                        //     { title: "Coming Soon Two", link: "/page-comingsoon2" },
-                        //     { title: "Maintenance", link: "/page-maintenance" },
-                        //     { title: "Error", link: "/page-error" },
-                        //     { title: "Thank you", link: "/page-thankyou", isNewPage: true },
-                        //   ],
-                        // },
+                        
                         {
                             id: 17,
                             title: "Contact",
                             link: "//page-contact-three",
-                            // isOpenNestedSubMenu: false,
-                            // nestedChild: [
-                            //   { title: "Contact Detail", link: "/page-contact-detail" },
-                            //   { title: "Contact One", link: "/page-contact-one" },
-                            //   { title: "Contact Two", link: "/page-contact-two" },
-                            //   { title: "Contact Three", link: "/page-contact-three" },
-                            // ],
                         },
                     ],
                 },

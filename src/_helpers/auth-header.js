@@ -1,9 +1,10 @@
-export function authHeader() {
+export function authHeader(publicRoute) {
     // return authorization header with jwt token
     let accessToken = localStorage.getItem('accessToken');
 
-    if (accessToken ) {
-        return { 'Authorization': 'Bearer ' + accessToken,
+    if (publicRoute || (!publicRoute && accessToken)) {
+        return {
+            'Authorization': 'Bearer ' + accessToken,
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         };
@@ -17,7 +18,8 @@ export function authHeaderFormData() {
     let accessToken = localStorage.getItem('accessToken');
 
     if (accessToken) {
-        return { 'Authorization': 'Bearer ' + accessToken,
+        return {
+            'Authorization': 'Bearer ' + accessToken,
         };
     } else {
         return {};

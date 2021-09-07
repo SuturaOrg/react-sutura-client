@@ -8,7 +8,7 @@ export const mailService = {
 function create(data) {
     const requestOptions = {
         method: 'POST',
-        headers: authHeader(),
+        headers: authHeader(true),
         body: JSON.stringify(data)
     };
 

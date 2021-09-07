@@ -47,7 +47,7 @@ class Footer extends Component {
     }
 
     render() {
-        const {newsLetterEmailCreateLoading, alert } = this.props;
+        const {newsLetterEmailCreateLoading, alert, loggedIn } = this.props;
         return (
             <React.Fragment>
                 <footer className={this.props.isLight ? "footer bg-light" : "footer"}>
@@ -185,7 +185,7 @@ class Footer extends Component {
                                 </ul>
                             </Col>
 
-                            <Col
+                            { !loggedIn && <Col
                                 lg="3"
                                 md="4"
                                 xs="12"
@@ -270,6 +270,7 @@ class Footer extends Component {
                                     {alert.message}                      </Alert>}
                                 </div>
                             </Col>
+                            }
                         </Row>
                     </Container>
                 </footer>
@@ -358,10 +359,13 @@ class Footer extends Component {
 function mapStateToProps(state) {
     const {newsLetterEmailsCreateLoading} = state.entity;
     const {alert} = state;
+    const {loggedIn} = state.authentication;
+
 
     return {
         newsLetterEmailsCreateLoading,
-        alert
+        alert,
+        loggedIn
     };
 }
 

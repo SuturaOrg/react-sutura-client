@@ -50,7 +50,7 @@ class LoanRequest extends Component {
     }
     const textAreaValue = document.getElementById("comment").value;
     values.comment=textAreaValue;
-    dispatch(entityActions.create(this.state.selectedFile,values,"loans"));
+    dispatch(entityActions.create(values,"loans",this.state.selectedFile));
   };
   onFileChange = event => {
     this.setState({ selectedFile: event.target.files[0] });

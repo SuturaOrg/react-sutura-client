@@ -9,7 +9,10 @@ export function authHeader(publicRoute) {
             'Content-Type': 'application/json'
         };
     } else {
-        return {};
+        return {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        };
     }
 }
 

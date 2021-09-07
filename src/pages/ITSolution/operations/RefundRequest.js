@@ -49,7 +49,7 @@ class RefundRequest extends Component {
             dispatch(alertActions.error("Le fichier ne doit pas dépasser 7 Mo "))
             return;
         }
-        dispatch(entityActions.create(this.state.selectedFile, values, "refunds"));
+        dispatch(entityActions.create( values, "refunds",this.state.selectedFile));
     };
     onFileChange = event => {
         this.setState({selectedFile: event.target.files[0]});

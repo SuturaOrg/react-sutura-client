@@ -49,7 +49,7 @@ class ContributeRequest extends Component {
       dispatch(alertActions.error("Le fichier ne doit pas dépasser 7 Mo "))
       return;
     }
-    dispatch(entityActions.create(this.state.selectedFile,values,"contributions"));
+    dispatch(entityActions.create(values,"contributions", this.state.selectedFile));
   };
   onFileChange = event => {
     this.setState({ selectedFile: event.target.files[0] });

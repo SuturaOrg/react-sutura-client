@@ -719,7 +719,7 @@ class Topbar extends Component {
                         >
                             <ul className="navigation-menu" id="top-menu">
                                 {this.state.navLinks.map((navLink, key) =>
-                                    !(!loggedIn &&navLink.private) && (
+                                    (loggedIn || !navLink.private) && (
                                         navLink.child ? (
                                             <li className="has-submenu" key={key}>
                                                 {/* child item(menu Item) - Level 1 */}

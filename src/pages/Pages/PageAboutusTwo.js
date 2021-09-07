@@ -112,7 +112,7 @@ export default class PageAboutusTwo extends Component {
                           <Link to="/">Sutura</Link>
                         </li>
                         <li className="breadcrumb-item">
-                          <Link to="#">Company</Link>
+                          <Link to="#">Liens utiles</Link>
                         </li>
                         <li
                           className="breadcrumb-item active"

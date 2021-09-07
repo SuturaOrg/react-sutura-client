@@ -7,7 +7,7 @@ import ModalVideo from "react-modal-video";
 import "../../../node_modules/react-modal-video/scss/modal-video.scss";
 
 //import bg image
-import bgimg from "../../assets/images/cta-bg.jpg";
+import bgimg from "../../assets/images/logo-sutura.jpg";
 
 export default class ExperienceTeam extends Component {
   constructor(props) {
@@ -85,7 +85,7 @@ export default class ExperienceTeam extends Component {
           <ModalVideo
             channel="youtube"
             isOpen={this.state.isOpen}
-            videoId="yba7hPeTSjk"
+            videoId="V6V5K37PFRc"
             onClose={() => this.setState({ isOpen: false })}
           />
         </section>

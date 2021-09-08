@@ -56,69 +56,70 @@ class Topbar extends Component {
                 },
                 {id: 200, title: "Faire un don", link: "/operations/donate"},
 
-                {id: 15, title: "Contacts", link: "/page-contact-three"},
-                {
-                    id: 3,
-                    title: "Pages",
-                    link: "/#",
-                    isOpenSubMenu: false,
-                    child: [
-                        {
-                            id: 5,
-                            title: "Account",
-                            link: "/#",
-                            isOpenNestedSubMenu: false,
-                            nestedChild: [
-                                {title: "Profile", link: "/page-profile", isupdatePage: true},
-                            ],
-                        },
-                        {
-                            id: 9,
-                            title: "Email Template",
-                            link: "/#",
-                            isOpenNestedSubMenu: false,
-                            nestedChild: [
-                                {title: "Confirmation", link: "/email-confirmation"},
-                                {title: "Reset Password", link: "/email-password-reset"},
-                                {title: "Alert", link: "/email-alert"},
-                                {title: "Invoice", link: "/email-invoice"},
-                            ],
-                        },
-                        {
-                            id: 14,
-                            title: "Auth Pages",
-                            link: "/#",
-                            isOpenNestedSubMenu: false,
-                            nestedChild: [
-                                {title: "Login Cover", link: "/auth-cover-login"},
-                                {title: "Signup Cover", link: "/auth-cover-signup"},
-                                {
-                                    title: "Reset Password Cover",
-                                    link: "/auth-cover-re-password",
-                                },
-                            ],
-                        },
+                // {
+                //     id: 3,
+                //     title: "Pages",
+                //     link: "/#",
+                //     isOpenSubMenu: false,
+                //     child: [
+                //         {
+                //             id: 5,
+                //             title: "Account",
+                //             link: "/#",
+                //             isOpenNestedSubMenu: false,
+                //             nestedChild: [
+                //                 {title: "Profile", link: "/page-profile", isupdatePage: true},
+                //             ],
+                //         },
+                //         {
+                //             id: 9,
+                //             title: "Email Template",
+                //             link: "/#",
+                //             isOpenNestedSubMenu: false,
+                //             nestedChild: [
+                //                 {title: "Confirmation", link: "/email-confirmation"},
+                //                 {title: "Reset Password", link: "/email-password-reset"},
+                //                 {title: "Alert", link: "/email-alert"},
+                //                 {title: "Invoice", link: "/email-invoice"},
+                //             ],
+                //         },
+                //         {
+                //             id: 14,
+                //             title: "Auth Pages",
+                //             link: "/#",
+                //             isOpenNestedSubMenu: false,
+                //             nestedChild: [
+                //                 {title: "Login Cover", link: "/auth-cover-login"},
+                //                 {title: "Signup Cover", link: "/auth-cover-signup"},
+                //                 {
+                //                     title: "Reset Password Cover",
+                //                     link: "/auth-cover-re-password",
+                //                 },
+                //             ],
+                //         },
                         
-                        {
-                            id: 17,
-                            title: "Contact",
-                            link: "//page-contact-three",
-                        },
-                    ],
-                },
-                {
-                    id: 4,
-                    title: "Docs",
-                    link: "/#",
-                    isOpenSubMenu: false,
-                    child: [
-                        {title: "Documentations", link: "/documentation"},
-                        {title: "Changelog", link: "/changelog"},
-                        {title: "Components", link: "/components"},
-                        {title: "Widget", link: "/widget"},
-                    ],
-                },
+                //         {
+                //             id: 17,
+                //             title: "Contact",
+                //             link: "//page-contact-three",
+                //         },
+                //     ],
+                // },
+                // {
+                //     id: 4,
+                //     title: "Docs",
+                //     link: "/#",
+                //     isOpenSubMenu: false,
+                //     child: [
+                //         {title: "Documentations", link: "/documentation"},
+                //         {title: "Changelog", link: "/changelog"},
+                //         {title: "Components", link: "/components"},
+                //         {title: "Widget", link: "/widget"},
+                //     ],
+                // },
                 {id: 101, title: "Tutoriels", link: "/page-services"},
+                {id: 15, title: "Contacts", link: "/page-contact-three"},
+                {id: 102, notLoggedInOnly:true, title: "Se connecter", link: "/auth-cover-login"},
 
 
             ],
@@ -674,7 +675,8 @@ class Topbar extends Component {
                             <ul className="navigation-menu" id="top-menu">
                                 {this.state.navLinks.map((navLink, key) =>
                                     (loggedIn || !navLink.private) && (
-                                        navLink.child ? (
+                                        (!loggedIn || !navLink.notLoggedInOnly)  &&
+                                        (navLink.child ? (
                                             <li className="has-submenu" key={key}>
                                                 {/* child item(menu Item) - Level 1 */}
                                                 <Link
@@ -889,7 +891,7 @@ class Topbar extends Component {
                                                 <Link to={navLink.link}>{navLink.title}</Link>
                                             </li>
                                         )
-                                    ))}
+                                    )))}
                             </ul>
                             {/* <div className="buy-menu-btn d-none">
                 <Link

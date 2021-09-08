@@ -11,19 +11,23 @@ import {
 import { Link } from "react-router-dom";
 import { AvForm, AvField } from "availity-reactstrap-validation";
 import {connect} from "react-redux";
-import {entityActions} from "../../../actions";
+import {mailActions} from "../../../actions";
 
 //Import Icons
 import FeatherIcon from "feather-icons-react";
 
 class PageRePasswordThree extends Component {
+  constructor(props){
+    super(props);
+    this.handleSubmit=this.handleSubmit.bind(this);
+  }
   handleSubmit(event,value) {
     const {dispatch} = this.props;
     console.log(value);
-    dispatch(entityActions.resetpwd(value));
+    dispatch(mailActions.resetpwd(value.email));
 }
   render() {
-    const {resetpwdLoading, alert} = this.props;
+    const {resetPwdLoading, alert} = this.props;
     return (
       <React.Fragment>
         <div className="back-to-home rounded d-none d-sm-block">
@@ -90,9 +94,9 @@ class PageRePasswordThree extends Component {
                         </Col>
                         <Col lg="12">
                         <div className="d-grid">
-                        {!resetpwdLoading ? <Button color="primary">
+                        {!resetPwdLoading ? <Button color="primary">
                               Envoyer
-                          </Button>: <Spinner className="text-primary"> </Spinner>}
+                          </Button>:  <div className="d-grid justify-content-center"><Spinner className="text-primary"> </Spinner></div>}
                           </div>
                         </Col>
                         <div className="mx-auto">
@@ -121,10 +125,10 @@ class PageRePasswordThree extends Component {
   }
 }
 function mapStateToProps(state) {
-  const {resetpwdLoading} = state.entity;
+  const {resetPwdLoading} = state.mail;
     const {alert} = state;
   return {
-    resetpwdLoading,
+    resetPwdLoading,
     alert
   };
 

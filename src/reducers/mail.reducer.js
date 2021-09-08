@@ -17,41 +17,21 @@ export function mail(state = {}, action) {
                 ...state,
                createLoading: false
             };
-
-
-        case mailConstants.MAIL_GETALL_REQUEST:
+            
+        case mailConstants.MAIL_RESETPWD_REQUEST:
             return {
                 ...state,
-                [action.mail + "GetAllLoading"]: true
+                resetPwdLoading: true
             };
-        case mailConstants.MAIL_GETALL_SUCCESS:
+        case mailConstants.MAIL_RESETPWD_SUCCESS:
             return {
                 ...state,
-                [action.mail+"List"]: action.entitiesPayload,
-                [action.mail + "GetAllLoading"]: false,
-                [action.mail + "TotalElements"]: action.totalElements
+                resetPwdLoading: false
             };
-        case mailConstants.MAIL_GETALL_FAILURE:
+        case mailConstants.MAIL_RESETPWD_FAILURE:
             return {
                 ...state,
-                [action.mail + "CreateLoading"]: false
-            };
-
-
-        case mailConstants.MAIL_DELETE_REQUEST:
-            return {
-                ...state,
-                [action.mail + "DeleteLoading"]: true
-            };
-        case mailConstants.MAIL_DELETE_SUCCESS:
-            return {
-                ...state,
-                [action.mail + "DeleteLoading"]: false
-            };
-        case mailConstants.MAIL_DELETE_FAILURE:
-            return {
-                ...state,
-                [action.mail + "DeleteLoading"]: false
+                resetPwdLoading: false
             };
         default:
             return state

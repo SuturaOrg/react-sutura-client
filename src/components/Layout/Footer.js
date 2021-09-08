@@ -40,7 +40,7 @@ class Footer extends Component {
     }
 
 
-    handleSubmit(values) {
+    handleSubmit(event,values) {
         const {dispatch} = this.props;
         console.log(values);
         dispatch(entityActions.create(values, "newsLetterEmails"))
@@ -251,7 +251,7 @@ class Footer extends Component {
                                         <Col lg="12">
                                             <div className="buy-button">
 
-                                                {!newsLetterEmailCreateLoading ? <Input
+                                                {!newsLetterEmailCreateLoading?<Input
                                                     type="submit"
                                                     id="submitsubscribefooter"
                                                     name="send"
@@ -263,9 +263,9 @@ class Footer extends Component {
                                     </Row>
                                 </AvForm>
                                 <div className={"mt-4"}>
-                                <Alert color={alert.type}>
+                                {alert && alert.message &&<Alert color={alert.type}>
                                     {alert.message}
-                                </Alert>
+                                </Alert>}
                                 </div>
                             </Col>
                             }

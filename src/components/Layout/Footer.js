@@ -40,7 +40,7 @@ class Footer extends Component {
     }
 
 
-    handleSubmit(event, values) {
+    handleSubmit(values) {
         const {dispatch} = this.props;
         console.log(values);
         dispatch(entityActions.create(values, "newsLetterEmails"))
@@ -263,11 +263,9 @@ class Footer extends Component {
                                     </Row>
                                 </AvForm>
                                 <div className={"mt-4"}>
-                                {alert.message &&
-                                <Alert
-                                    color={alert.type}
-                                >
-                                    {alert.message}                      </Alert>}
+                                <Alert color={alert.type}>
+                                    {alert.message}
+                                </Alert>
                                 </div>
                             </Col>
                             }

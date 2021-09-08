@@ -6,20 +6,28 @@ import {
   Card,
   CardBody,
   Label,
-  Button,
+  Button, Spinner, Alert
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import { AvForm, AvField } from "availity-reactstrap-validation";
+import {connect} from "react-redux";
+import {entityActions} from "../../../actions";
 
 //Import Icons
 import FeatherIcon from "feather-icons-react";
 
 class PageRePasswordThree extends Component {
+  handleSubmit(event,value) {
+    const {dispatch} = this.props;
+    console.log(value);
+    dispatch(entityActions.resetpwd(value));
+}
   render() {
+    const {resetpwdLoading, alert} = this.props;
     return (
       <React.Fragment>
         <div className="back-to-home rounded d-none d-sm-block">
-          <Link to="index" className="btn btn-icon btn-primary">
+          <Link to="/" className="btn btn-icon btn-primary">
             <i>
               <FeatherIcon icon="home" className="icons" />
             </i>
@@ -32,10 +40,14 @@ class PageRePasswordThree extends Component {
             <Row className="justify-content-center">
               <Col lg={5} md={8}>
                 <Card className="shadow rounded border-0">
+                  {alert.message &&
+                    <Alert color={alert.type}>
+                      {alert.message}
+                    </Alert>}
                   <CardBody>
                     <h4 className="card-title text-center">Récupérer votre compte</h4>
 
-                    <AvForm className="login-form mt-4">
+                    <AvForm className="login-form mt-4" onValidSubmit={this.handleSubmit}>
                       <Row>
                         <Col lg={12}>
                           <p className="text-muted">
@@ -77,10 +89,10 @@ class PageRePasswordThree extends Component {
                           </div>
                         </Col>
                         <Col lg="12">
-                          <div className="d-grid">
-                            <Button color="primary">
+                        <div className="d-grid">
+                        {!resetpwdLoading ? <Button color="primary">
                               Envoyer
-                          </Button>
+                          </Button>: <Spinner className="text-primary"> </Spinner>}
                           </div>
                         </Col>
                         <div className="mx-auto">
@@ -108,5 +120,15 @@ class PageRePasswordThree extends Component {
     );
   }
 }
+function mapStateToProps(state) {
+  const {resetpwdLoading} = state.entity;
+    const {alert} = state;
+  return {
+    resetpwdLoading,
+    alert
+  };
 
-export default PageRePasswordThree;
+}
+
+const connectedPageRePasswordThree = connect(mapStateToProps)(PageRePasswordThree);
+export default connectedPageRePasswordThree;

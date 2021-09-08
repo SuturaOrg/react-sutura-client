@@ -1,4 +1,4 @@
-const apiUrl='http://localhost:8082/api';
+const apiUrl='https://aqueous-anchorage-99323.herokuapp.com/api';
 export default {
     apiUrl
 }

@@ -40,7 +40,7 @@ class Topbar extends Component {
                         {title: "Mes cotisations", link: "/page-contributions"},
                         {title: "Mes demandes", link: "/page-loans"},
                         {title: "Mes remboursements", link: "/page-refunds"},
-                        {title: "Se déconnecter", link: "/logout"},
+                        {title: "Se déconnecter", link: "/auth-cover-login"},
 
                     ],
                 },

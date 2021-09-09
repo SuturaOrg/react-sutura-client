@@ -46,7 +46,7 @@ class RegistrationSuccessConfirmation extends Component {
                         <Col lg="12">
                           <div className="d-grid">
                             <Link
-                              to="auth-cover-login"
+                              to="/auth-cover-login"
                               className="btn btn-primary"
                             >Se connecter
                             </Link>

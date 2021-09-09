@@ -143,10 +143,8 @@ class PageProfile extends Component {
                                             />
                                         </i>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0"><Link to="/page-contributions" className="text-muted">Cotisations de la période courante :</Link></h6>
-                                            <Link to="##" className="text-muted">
-                                                {user && user.currentPeriodContributions} MAD
-                                            </Link>
+                                            <h6 className="text-primary mb-0"><Link to="/page-contributions" className="text-primary mb-0">Cotisations de la période courante :</Link></h6>
+                                            <p className="text-muted mb-0">{user && user.currentPeriodContributions} MAD</p>
                                         </div>
                                     </div>
                                     {user && user.currentPeriodContributions!==0 && <div className="d-flex align-items-center mt-3">
@@ -169,7 +167,7 @@ class PageProfile extends Component {
                                             />
                                         </i>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0"><Link to="/page-contributions" className="text-muted"></Link>Nombre de cotisations :</h6>
+                                            <h6 className="text-primary mb-0"><Link to="/page-contributions" className="text-primary mb-0">Nombre de Cotisations :</Link></h6>
                                             <p className="text-muted mb-0">{user && user.contributionsCount}</p>
                                         </div>
                                     </div>
@@ -181,7 +179,7 @@ class PageProfile extends Component {
                                             />
                                         </i>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0">Nombre de prêts :</h6>
+                                            <h6 className="text-primary mb-0"><Link to="/page-loans" className="text-primary mb-0">Nombre de prêts :</Link></h6>
                                             <p className="text-muted mb-0">{user && user.loansCount}</p>
                                         </div>
                                     </div>
@@ -193,7 +191,7 @@ class PageProfile extends Component {
                                             />
                                         </i>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0">Nombre de remboursements :</h6>
+                                            <h6 className="text-primary mb-0"><Link to="/page-refunds" className="text-primary mb-0">Nombre de remboursements :</Link></h6>
                                             <p className="text-muted mb-0">{user && user.refundsCount}</p>
                                         </div>
                                     </div>
@@ -205,7 +203,7 @@ class PageProfile extends Component {
                                             />
                                         </i>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0">Prêt en attente :</h6>
+                                            <h6 className="text-primary mb-0"><Link to="/page-loans" className="text-primary mb-0">Prêt en attente :</Link></h6>
                                             <p className="text-muted mb-0">{user && user.pendingLoans}</p>
                                         </div>
                                     </div>
@@ -217,11 +215,11 @@ class PageProfile extends Component {
                                             />
                                         </i>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0">Cotisation en cours de validation :</h6>
+                                            <h6 className="text-primary mb-0"><Link to="/page-contributions" className="text-primary mb-0">Cotisation en cours de validation :</Link></h6>
                                             <p className="text-muted mb-0">{user && user.pendingContributions}</p>
                                         </div>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0">Remboursement en cours de validation :</h6>
+                                            <h6 className="text-primary mb-0"><Link to="/page-refunds" className="text-primary mb-0">Remboursement en cours de validation :</Link></h6>
                                             <p className="text-muted mb-0">{user && user.pendingRefunds}</p>
                                         </div>
                                     </div>

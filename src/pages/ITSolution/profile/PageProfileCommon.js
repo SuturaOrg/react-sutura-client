@@ -60,7 +60,7 @@ class PageProfileCommon extends Component {
             },
             {
                 id: 6,
-                icon: "uil uil-dashboard",
+                icon: "uil uil-exit",
                 className: "navbar-item account-menu px-0 mt-2",
                 title: "Se déconnecter",
                 link: "/auth-cover-login",
@@ -155,12 +155,19 @@ class PageProfileCommon extends Component {
                                                     <Col md="5" className="text-md-end text-center">
                                                         <ul className="list-unstyled social-icon social mb-0 mt-4">
                                                             <li className="list-inline-item">
-                                                                <Link to="/" className="rounded">
-                                                                    <i className="uil uil-home align-middle"></i>
+                                                                <Link to="/page-profile" className="rounded">
+                                                                    <i className="uil uil-dashboard align-middle"></i>
                                                                 </Link>
                                                             </li>
-
                                                             <li className="list-inline-item">
+                                                                <Link
+                                                                    to="/auth-cover-login"
+                                                                    className="rounded"
+                                                                >
+                                                                    <i className="uil uil-exit align-middle"></i>
+                                                                </Link>
+                                                            </li>
+                                                            <li className="list-inline-item md-2">
                                                                 <Link
                                                                     to="/page-profile-edit"
                                                                     className="rounded"

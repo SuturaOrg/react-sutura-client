@@ -36,7 +36,7 @@ class Topbar extends Component {
                     private:true,
                     isOpenSubMenu: false,
                     child: [
-                        {title: "Accueil", link: "/page-profile"},
+                        {title: "Mon tableau de bord", link: "/page-profile"},
                         {title: "Mes cotisations", link: "/page-contributions"},
                         {title: "Mes demandes", link: "/page-loans"},
                         {title: "Mes remboursements", link: "/page-refunds"},

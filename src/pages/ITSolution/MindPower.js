@@ -610,7 +610,7 @@ export default class MindPower extends Component {
                   />
                   <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
                     <li className="list-inline-item ms-1">
-                      <Link to={{pathname: "https://www.facebook.com/terwilly.sylvain" }} className="rounded">
+                      <Link to={{pathname: "https://www.facebook.com/terwilly.sylvain" }} target="_blank" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="facebook"
@@ -620,7 +620,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to={{pathname: "https://www.instagram.com/gterlly/" }}  className="rounded">
+                      <Link to={{pathname: "https://www.instagram.com/gterlly/" }} target="_blank" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="instagram"
@@ -630,7 +630,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to={{pathname: "https://github.com/Terwilly" }}  className="rounded">
+                      <Link to={{pathname: "https://github.com/Terwilly" }} target="_blank" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="github"
@@ -640,7 +640,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to={{pathname: "https://www.linkedin.com/in/terwilly-sylvain-455558162/" }}  className="rounded">
+                      <Link to={{pathname: "https://www.linkedin.com/in/terwilly-sylvain-455558162/" }} target="_blank" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="linkedin"

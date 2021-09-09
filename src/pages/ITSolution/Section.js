@@ -29,11 +29,18 @@ class Section extends Component {
                   <p className="para-desc text-white-50">
                     Nous proposons la meilleure solution aux problèmes que nous confrontons en tant qu'étudiants dans un pays étranger.
                   </p>
-                  <div className="mt-4 pt-2">
+                  <Row>
+                  <Col className="mt-4 pt-2">
                     <div onClick={this.props.onClickStart}className="btn btn-light">
-                      Commencer
+                      Commencer la visite
                     </div>
-                  </div>
+                  </Col>
+                  <Col className="mt-4 pt-2">
+                    <Link to = 'auth-cover-login'className="btn btn-light">
+                      Se connecter
+                    </Link>
+                  </Col>
+                    </Row>
                 </div>
               </Col>
 

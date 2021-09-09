@@ -88,7 +88,7 @@ class PageCoverLogin extends Component {
                                     className="form-control ps-5"
                                     name="email"
                                     id="email"
-                                    placeholder="Entrer votre email"
+                                    placeholder="Entrez votre email"
                                     required
                                     errorMessage=""
                                     validate={{
@@ -125,23 +125,23 @@ class PageCoverLogin extends Component {
                                     className="form-control ps-5"
                                     name="password"
                                     id="password"
-                                    placeholder="Entrer votre mot de passe"
+                                    placeholder="Entrez votre mot de passe"
                                     required
                                     errorMessage=""
                                     validate={{
                                       required: {
                                         value: true,
-                                        errorMessage: "Please enter Password",
+                                        errorMessage: "Veuillez entrer un mot de passe",
                                       },
                                       minLength: {
                                         value: 6,
                                         errorMessage:
-                                          "Your password must be between 6 and 8 characters",
+                                          "La taille de votre mot de passe doit être comprise entre 6 and 16 caractères",
                                       },
                                       maxLength: {
                                         value: 16,
                                         errorMessage:
-                                          "Your password must be between 6 and 8 characters",
+                                          "La taille de votre mot de passe doit être comprise entre 6 and 16 caractères",
                                       },
                                     }}
                                   />
@@ -186,12 +186,16 @@ class PageCoverLogin extends Component {
                                             className="text-primary"
                                         > </Spinner></div>}
                                 </div>
-                                {alert && alert.message &&
-                                <Alert color={alert.type}>
-                                  {alert.message}
-                                </Alert>}
                               </Col>
-
+                              {alert && alert.message &&
+                              <Col md="12">
+                                <div className="mt-4 mb-3">
+                                  <Alert color={alert.type}>
+                                    {alert.message}
+                                  </Alert>
+                                </div>
+                              </Col>
+                              }
                               {/* <Col lg={12} className="mt-4 text-center">
                                 <h6>Or Login With</h6>
                                 <Row>

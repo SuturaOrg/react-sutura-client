@@ -68,7 +68,7 @@ class PageCoverSignup extends Component {
                         style={{ zIndex: 1 }}
                       >
                         <CardBody className="p-0">
-                          <h4 className="card-title text-center">S'inscrire</h4>
+                          <h4 className="card-title text-center mt-4">S'inscrire</h4>
                           <AvForm className="login-form mt-4" onValidSubmit={this.handleSubmit}>
                             <Row>
                               <Col md="6" style={{
@@ -129,7 +129,7 @@ class PageCoverSignup extends Component {
                                     validate={{
                                       required: {
                                         value: true,
-                                        errorMessage: "Please enter first name",
+                                        errorMessage: "Veuillez entrer votre nom",
                                       },
                                     }}
                                   />
@@ -502,11 +502,16 @@ class PageCoverSignup extends Component {
                                             className="text-primary"
                                         > </Spinner></div>}
                                 </div>
-                                {alert && alert.message &&
-                                <Alert color={alert.type}>
-                                  {alert.message}
-                                </Alert>}
                               </Col>
+                              {alert && alert.message &&
+                              <Col md="12">
+                                <div className="mt-4 mb-3">
+                                  <Alert color={alert.type}>
+                                    {alert.message}
+                                  </Alert>
+                                </div>
+                              </Col>
+                              }
                               {/* <Col lg="12" className="mt-4 text-center">
                                 <h6>Or Signup With</h6>
                                 <Row>

@@ -70,7 +70,7 @@ class PageContributions extends Component {
         window.addEventListener("scroll", this.scrollNavigation, true);
 
         const {dispatch} = this.props;
-        dispatch(entityActions.getAll("contributions"));
+        !this.props.contributionsList && dispatch(entityActions.getAll("contributions"));
     }
 
     // Make sure to remove the DOM listener when the component is unmounted.

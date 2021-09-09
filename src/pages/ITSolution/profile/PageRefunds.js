@@ -60,7 +60,7 @@ class PageRefunds extends Component {
         window.addEventListener("scroll", this.scrollNavigation, true);
 
         const {dispatch} = this.props;
-        dispatch(entityActions.getAll("refunds"));
+        !this.props.refundsList && dispatch(entityActions.getAll("refunds"));
     }
 
     // Make sure to remove the DOM listener when the component is unmounted.

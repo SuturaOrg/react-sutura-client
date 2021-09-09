@@ -44,7 +44,7 @@ class PageMessages extends Component {
         window.addEventListener("scroll", this.scrollNavigation, true);
 
         const {dispatch} = this.props;
-        dispatch(entityActions.getAll("loans"));
+        !this.props.loansList && dispatch(entityActions.getAll("loans"));
     }
 
     // Make sure to remove the DOM listener when the component is unmounted.

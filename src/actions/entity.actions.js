@@ -22,6 +22,7 @@ function create(data, entity, file) {
                     entityPayload => {
                         dispatch(success(entityPayload));
                         dispatch(alertActions.success(getSuccessMessage(entity)));
+                        dispatch(getAll(entity));
                         if (entity === "contributions") {
                             history.push('/contribution-confirmation');
                         }

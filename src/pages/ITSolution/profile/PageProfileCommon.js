@@ -82,8 +82,8 @@ class PageProfileCommon extends Component {
         document.getElementById("buyButton") && (document.getElementById("buyButton").className = "btn btn-light");
         window.addEventListener("scroll", this.scrollNavigation, true);
         const {dispatch}=this.props;
-        dispatch(userActions.getInfo());
-        dispatch(statsActions.get());
+        !this.props.user && dispatch(userActions.getInfo());
+        !this.props.studentsCount && dispatch(statsActions.get());
 
     }
     // Make sure to remove the DOM listener when the component is unmounted.

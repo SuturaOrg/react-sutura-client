@@ -7,7 +7,6 @@ import Asset187 from "../../assets/images/illustrator/Asset187.svg";
 import {Col, Container, Row, Spinner} from "reactstrap";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
-import {userActions} from "../../actions";
 import {statsActions} from "../../actions/stats.actions";
 
 class Features extends Component {
@@ -54,7 +53,7 @@ class Features extends Component {
     componentDidMount() {
         console.log("Features", this.props);
         const {dispatch}=this.props;
-        dispatch(statsActions.get());
+        !this.props.studentsCount && dispatch(statsActions.get());
     }
 
     render() {

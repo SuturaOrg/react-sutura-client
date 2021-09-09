@@ -61,11 +61,6 @@ class PageCoverLogin extends Component {
                 <div className="cover-user-img d-flex align-items-center">
                   <Row>
                     <Col xs={12}>
-                      {alert && alert.message &&
-                      <Alert
-                          color={alert.type}
-                      >
-                        {alert.message}                      </Alert>}
                       <Card
                         className="login-page border-0"
                         style={{ zIndex: "1" }}
@@ -191,6 +186,10 @@ class PageCoverLogin extends Component {
                                             className="text-primary"
                                         > </Spinner></div>}
                                 </div>
+                                {alert && alert.message &&
+                                <Alert color={alert.type}>
+                                  {alert.message}
+                                </Alert>}
                               </Col>
 
                               {/* <Col lg={12} className="mt-4 text-center">

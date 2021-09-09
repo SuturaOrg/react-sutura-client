@@ -65,7 +65,7 @@ class index extends Component {
       <React.Fragment>
         <Section onClickStart={this.scroll(this.whatWeDoRef)} />
         {/* Partner */}
-        <section className="py-4 bg-light">
+        {/* <section className="py-4 bg-light">
           <Container>
             <Row className="justify-content-center">
               {this.state.partners.map((partner, key) => (
@@ -85,7 +85,7 @@ class index extends Component {
               ))}
             </Row>
           </Container>
-        </section>
+        </section> */}
         {/* What we do section */}
         <div ref={this.whatWeDoRef}>
         <WhatWeDo />

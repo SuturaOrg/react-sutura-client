@@ -48,7 +48,7 @@ class SignupSubmitConfirmation extends Component {
                             <Link
                               to="auth-cover-login"
                               className="text-light fw-bold"
-                            >Accueil
+                            >Se connecter
                             </Link>
                           </Button>
                           </div>

@@ -108,8 +108,7 @@ class PageContactThree extends Component {
                             <BreadcrumbItem
                               key={key}
                               active
-                              aria-current="page"
-                            >
+                              aria-current="page">
                               {item.name}
                             </BreadcrumbItem>
                           )

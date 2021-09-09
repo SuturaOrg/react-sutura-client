@@ -16,7 +16,6 @@ class PagePrivacy extends Component {
       pathItems: [
         //id must required
         { id: 1, name: "Sutura", link: "/" },
-        { id: 2, name: "Page", link: "#" },
         { id: 3, name: "Liens utiles", link: "#" },
         { id: 4, name: "A propos" },
       ],

@@ -29,7 +29,21 @@ class Topbar extends Component {
             dropdownOpenShop: false,
             navLinks: [
                 //Note : each child and nested child must have unique id
-                {id: 1, title: "Accueil", link: "/"},
+                {
+                    id: 1,
+                    title: "Mon espace",
+                    link: "/#",
+                    private:true,
+                    isOpenSubMenu: false,
+                    child: [
+                        {title: "Accueil", link: "/page-profile"},
+                        {title: "Mes cotisations", link: "/page-contributions"},
+                        {title: "Mes demandes", link: "/page-loans"},
+                        {title: "Mes remboursements", link: "/page-refunds"},
+                        {title: "Se déconnecter", link: "/logout"},
+
+                    ],
+                },
                 {
                     id: 5,
                     title: "Opérations",
@@ -40,18 +54,6 @@ class Topbar extends Component {
                         {title: "Cotiser", link: "/operations/contribute"},
                         {title: "Demander un prêt", link: "/operations/askloan"},
                         {title: "Rembourser un prêt", link: "/operations/refund"},
-                    ],
-                },
-                {
-                    id: 8,
-                    title: "Liens Utiles",
-                    link: "/#",
-                    isOpenSubMenu: false,
-                    child: [
-                        {title: "A propos", link: "/aboutus"},
-                        {title: "CGU", link: "/tos"},
-                        {title: "L'équipe", link: "/about-team"},
-
                     ],
                 },
                 {id: 200, title: "Faire un don", link: "/operations/donate"},
@@ -119,6 +121,18 @@ class Topbar extends Component {
                 // },
                 {id: 101, title: "Tutoriels", link: "/page-services"},
                 {id: 15, title: "Contacts", link: "/page-contact-three"},
+                {
+                    id: 8,
+                    title: "Liens Utiles",
+                    link: "/#",
+                    isOpenSubMenu: false,
+                    child: [
+                        {title: "A propos", link: "/aboutus"},
+                        {title: "CGU", link: "/tos"},
+                        {title: "L'équipe", link: "/about-team"},
+
+                    ],
+                },
                 {id: 102, notLoggedInOnly:true, title: "Se connecter", link: "/auth-cover-login"},
 
 

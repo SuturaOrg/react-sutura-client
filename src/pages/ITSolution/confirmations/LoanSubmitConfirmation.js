@@ -55,7 +55,7 @@ class LoanSubmitConfirmation extends Component {
                             <Link
                               to="page-loans"
                               className="text-light fw-bold"
-                            >Accueil
+                            >Retour
                             </Link>
                           </Button>
                           </div>

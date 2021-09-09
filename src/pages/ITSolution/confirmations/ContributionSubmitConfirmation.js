@@ -48,7 +48,7 @@ class ContributionSubmitConfirmation extends Component {
                             <Link
                               to="page-contributions"
                               className="text-light fw-bold"
-                            >Accueil
+                            >Retour
                             </Link>
                           </Button>
                           </div>

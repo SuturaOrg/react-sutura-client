@@ -48,7 +48,7 @@ class RefundSubmitConfirmation extends Component {
                             <Link
                               to="page-refunds"
                               className="text-light fw-bold"
-                            >Accueil
+                            >Retour
                             </Link>
                           </Button>
                           </div>

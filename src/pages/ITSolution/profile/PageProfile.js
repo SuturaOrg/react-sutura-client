@@ -143,8 +143,8 @@ class PageProfile extends Component {
                                             />
                                         </i>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0">Cotisations de la période courante :</h6>
-                                            <Link to="#" className="text-muted">
+                                            <h6 className="text-primary mb-0"><Link to="/page-contributions" className="text-muted">Cotisations de la période courante :</Link></h6>
+                                            <Link to="##" className="text-muted">
                                                 {user && user.currentPeriodContributions} MAD
                                             </Link>
                                         </div>
@@ -169,7 +169,7 @@ class PageProfile extends Component {
                                             />
                                         </i>
                                         <div className="flex-1">
-                                            <h6 className="text-primary mb-0">Nombre de cotisations :</h6>
+                                            <h6 className="text-primary mb-0"><Link to="/page-contributions" className="text-muted"></Link>Nombre de cotisations :</h6>
                                             <p className="text-muted mb-0">{user && user.contributionsCount}</p>
                                         </div>
                                     </div>

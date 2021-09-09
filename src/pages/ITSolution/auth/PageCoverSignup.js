@@ -63,11 +63,6 @@ class PageCoverSignup extends Component {
                 <div className="cover-user-img d-flex align-items-center" >
                   <Row className="scrollable" >
                     <Col xs={12}>
-                      {alert && alert.message &&
-                      <Alert
-                          color={alert.type}
-                      >
-                        {alert.message}                      </Alert>}
                       <Card
                         className="login_page border-0"
                         style={{ zIndex: 1 }}
@@ -239,7 +234,7 @@ class PageCoverSignup extends Component {
                               </Col>
                               <Col md={12}>
                                 <div className="mb-3">
-                                  <Label className="form-label">Ville de résidence <span className="text-danger">*</span></Label>
+                                  <Label className="form-label">Ville de résidence{" "}<span className="text-danger">*</span></Label>
                                   <div className="form-icon position-relative">
                                     <AvField type="select" name="town" value="town" helpMessage="Sélectionnez une ville"
 
@@ -278,7 +273,7 @@ class PageCoverSignup extends Component {
 
                               <Col md={12}>
                                 <div className="mb-3">
-                                  <Label className="form-label">Pays d'origine <span className="text-danger">*</span></Label>
+                                  <Label className="form-label">Pays d'origine{" "}<span className="text-danger">*</span></Label>
                                   <div className="form-icon position-relative">
                                     <AvField type="select" name="country" value="country" helpMessage="Sélectionnez un pays"
 
@@ -356,7 +351,7 @@ class PageCoverSignup extends Component {
 
                               <Col md={12}>
                                 <div className="mb-3">
-                                  <Label className="form-label">Année d'entrée au Maroc <span className="text-danger">*</span></Label>
+                                  <Label className="form-label">Année d'entrée au Maroc{" "}<span className="text-danger">*</span></Label>
                                   <div className="form-icon position-relative">
                                     <AvField type="select" name="yearEntryMorocco" value={2021} helpMessage="Sélectionnez une catégorie"
 
@@ -386,7 +381,7 @@ class PageCoverSignup extends Component {
                               <Col md={12}>
                                 <div className="mb-3">
                                   <Label className="form-label">
-                                  Etablissement d'étude
+                                  Etablissement d'étude{" "}<span className="text-danger">*</span>
                                   </Label>
                                   <div className="form-icon position-relative">
                                     <i>
@@ -406,8 +401,8 @@ class PageCoverSignup extends Component {
                                       errorMessage=""
                                       validate={{
                                         required: {
-                                          value: false,
-                                          errorMessage: "Veuillez établissement",
+                                          value: true,
+                                          errorMessage: "Veuillez entrer votre établissement",
                                         },
                                       }}
                                   />
@@ -416,7 +411,7 @@ class PageCoverSignup extends Component {
                               <Col md={12}>
                                 <div className="mb-3">
                                   <Label className="form-label">
-                                  Filière d'étude
+                                  Filière d'étude{" "}<span className="text-danger">*</span>
                                   </Label>
                                   <div className="form-icon position-relative">
                                     <i>
@@ -431,12 +426,12 @@ class PageCoverSignup extends Component {
                                       className="form-control ps-5"
                                       name="faculty"
                                       id="faculty"
-                                      placeholder="Entrez votre filière"
+                                      placeholder="Veuillez entrer votre filière"
                                       required
                                       errorMessage=""
                                       validate={{
                                         required: {
-                                          value: false,
+                                          value: true,
                                           errorMessage: "Veuillez filière",
                                         },
                                       }}
@@ -447,7 +442,7 @@ class PageCoverSignup extends Component {
                               <Col md={12}>
                                 <div className="mb-3">
                                   <Label className="form-label">
-                                  Téléphone
+                                  Téléphone{" "}<span className="text-danger">*</span>
                                   </Label>
                                   <div className="form-icon position-relative">
                                     <i>
@@ -468,8 +463,8 @@ class PageCoverSignup extends Component {
                                       errorMessage=""
                                       validate={{
                                         required: {
-                                          value: false,
-                                          errorMessage: "Veuillez téléphone",
+                                          value: true,
+                                          errorMessage: "Veuillez entrer votre numéro",
                                         },
                                       }}
                                   />
@@ -507,6 +502,10 @@ class PageCoverSignup extends Component {
                                             className="text-primary"
                                         > </Spinner></div>}
                                 </div>
+                                {alert && alert.message &&
+                                <Alert color={alert.type}>
+                                  {alert.message}
+                                </Alert>}
                               </Col>
                               {/* <Col lg="12" className="mt-4 text-center">
                                 <h6>Or Signup With</h6>

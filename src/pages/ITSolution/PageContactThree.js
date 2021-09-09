@@ -96,7 +96,7 @@ class PageContactThree extends Component {
                         <Row className="justify-content-center">
                             <Col lg="12" className="text-center">
                                 <div className="page-next-level">
-                                    <h4 className="title"> Contacter nous</h4>
+                                    <h4 className="title"> Contactez nous</h4>
                                     <div className="page-next">
                                         <nav className="d-inline-block">
                                             <Breadcrumb

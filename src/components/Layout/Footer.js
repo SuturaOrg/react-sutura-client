@@ -39,6 +39,10 @@ class Footer extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        const {dispatch} =this.props;
+        dispatch(alertActions.clear())
+    }
 
     handleSubmit(event,values) {
         const {dispatch} = this.props;

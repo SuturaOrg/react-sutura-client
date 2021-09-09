@@ -41,6 +41,11 @@ class PageCoverLogin extends Component {
     const { checked } = e.target;
     this.setState({ rememberMe: checked });
   }
+  componentDidMount() {
+    const {dispatch} =this.props;
+    dispatch(alertActions.clear())
+  }
+
   render() {
     const { rememberMe } = this.state;
     const {alert, loggingIn}=this.props;

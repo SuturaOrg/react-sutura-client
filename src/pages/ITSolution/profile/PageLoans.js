@@ -9,7 +9,7 @@ import {
 import FeatherIcon from "feather-icons-react";
 
 import ProfileCommon from "./PageProfileCommon";
-import {entityActions} from "../../../actions";
+import {alertActions, entityActions} from "../../../actions";
 import {connect} from "react-redux";
 
 class PageMessages extends Component {
@@ -44,6 +44,7 @@ class PageMessages extends Component {
         window.addEventListener("scroll", this.scrollNavigation, true);
 
         const {dispatch} = this.props;
+        dispatch(alertActions.clear())
         !this.props.loansList && dispatch(entityActions.getAll("loans"));
     }
 

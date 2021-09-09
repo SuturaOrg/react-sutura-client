@@ -57,6 +57,8 @@ class ContributeRequest extends Component {
   };
   componentDidMount() {
     window.addEventListener("scroll", this.scrollNavigation, true);
+    const {dispatch} =this.props;
+    dispatch(alertActions.clear())
   }
 
   // Make sure to remove the DOM listener when the component is unmounted.

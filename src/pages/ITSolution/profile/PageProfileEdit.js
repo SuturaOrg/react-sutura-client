@@ -134,6 +134,8 @@ class PageProfileEdit extends Component {
     }
 
     componentDidMount() {
+        const {dispatch} =this.props;
+        dispatch(alertActions.clear());
         document.body.classList = "";
         document.getElementById("top-menu").classList.add("nav-light");
         document.getElementById("buyButton") && (document.getElementById("buyButton").className = "btn btn-light");

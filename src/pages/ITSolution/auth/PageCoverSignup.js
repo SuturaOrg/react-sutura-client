@@ -43,6 +43,10 @@ class PageCoverSignup extends Component {
     const { checked } = e.target;
     this.setState({ termsChecked: checked });
   }
+  componentDidMount() {
+    const {dispatch} =this.props;
+    dispatch(alertActions.clear())
+  }
 
   render() {
     const { termsChecked, } = this.state;

@@ -33,12 +33,14 @@ class Topbar extends Component {
                     id: 1,
                     title: "Mon espace",
                     link: "/#",
+                    private:true,
                     isOpenSubMenu: false,
                     child: [
                         {title: "Accueil", link: "/page-profile"},
                         {title: "Mes cotisations", link: "/page-contributions"},
                         {title: "Mes demandes", link: "/page-loans"},
                         {title: "Mes remboursements", link: "/page-refunds"},
+                        {title: "Se déconnecter", link: "/logout"},
 
                     ],
                 },

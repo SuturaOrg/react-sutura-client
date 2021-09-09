@@ -119,7 +119,7 @@ class PageMessages extends Component {
                             </Link>
                         </div>
                         <div
-                            className="d-flex border-bottom align-items-center justify-content-between bg-light mt-4 p-3">
+                            className="d-flex border-bottom align-items-center justify-content-between bg-light my-4 p-3">
                             <div className="form-check ps-0">
                                 <div className="mb-0">
                                 {alert.message &&

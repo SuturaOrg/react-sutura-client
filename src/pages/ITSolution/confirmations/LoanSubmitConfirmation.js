@@ -51,13 +51,11 @@ class LoanSubmitConfirmation extends Component {
                         </Col>
                         <Col lg="12">
                           <div className="d-grid">
-                            <Button color="primary">
                             <Link
                               to="page-loans"
-                              className="text-light fw-bold"
+                              className="btn btn-primary"
                             >Retour
                             </Link>
-                          </Button>
                           </div>
                         </Col>
                       </Row>

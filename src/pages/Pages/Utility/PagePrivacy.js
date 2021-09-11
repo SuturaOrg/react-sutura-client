@@ -89,19 +89,16 @@ class PagePrivacy extends Component {
                       dans la plupart du temps les deux à la fois. Ce qui pourrait aider les étudiants est la mise en 
                       place d’une bonne assurance, leur permettant de pouvoir se soigner gratuitement au moment du besoin. 
                       Certains étudiants en disposent par le biais de l’Agence Marocaine de Coopération Internationale. 
-                      Ceux sont les boursiers officiels venant de différents Etats.<br/>
-                      Toutefois le système de l’assurance n’est vraiment pas adapté à l’étudiant, il faut toujours payer la 
+                      Ce sont les boursiers officiels venant de différents Etats.<br/>
+                      Toutefois le système de l’assurance n’est vraiment pas adapté à l’étudiant. Il faut toujours payer la 
                       facture et courir derrière l’assureur pour se faire rembourser. Et c’est pour 2 à 4 mois, et dans la 
                       plupart des cas, l’étudiant ne reçoit rien en retour. Autre exemple, des étudiants ont des maux de dents, 
                       mais ne vont pas voir le dentiste car le budget nécessaire pour accéder au soin pose problème vu les charges 
-                      ponctuelles qui les attendent (loyer, factures, nourriture, etc.). L’accès au soin pose alors de sérieux problèmes. 
+                      ponctuelles qui les attendent (loyer, factures, nourriture, etc.). L’accès aux soins pose alors de sérieux problèmes. 
                       Alors dites-nous comment pouvons-nous être performants dans nos études dans un environnement où l’accès aux soins 
                       pose problème? Pour nous étudiants, il est donc urgent de penser à combler ces carences du système de santé. 
                       A notre avis, le moyen le plus efficace pour s’y prendre est de mettre en place un modèle d’aide et de solidarité 
                       performant et adapté (à intégrer dans les associations d’étudiants).<br/>
-                      Dans cet ordre d’idée, vu le problème cerner il est important que nous puissions nous interroger sur le fait de 
-                      savoir : quel modèle d’organisation informatisée et performante peut-on mettre en place aux seins des associations 
-                      d’étudiants pour résoudre ces problèmes?<br/>
                       Actuellement, les associations d’étudiants sont incapables d’accompagner leurs membres dans ces cas d’urgence, 
                       alors qu’elles devraient. De l’autre côté, certains étudiants sont victimes de chantages ou reçoivent des avis 
                       d’expulsion de la part de leurs bailleurs ou d'autres personnes pour cause de difficulté financière suite à un 

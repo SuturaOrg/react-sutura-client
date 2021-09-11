@@ -14,7 +14,7 @@ import classnames from "classnames";
 
 //Import Images
 import aboutus from "../../assets/images/company/aboutus.jpg";
-import about2 from "../../assets/images/company/about2.png";
+import about2 from "../../assets/images/company/about2.jpg";
 import amazon from "../../assets/images/client/amazon.svg";
 import google from "../../assets/images/client/google.svg";
 import lenovo from "../../assets/images/client/lenovo.svg";
@@ -22,10 +22,11 @@ import paypal from "../../assets/images/client/paypal.svg";
 import shopify from "../../assets/images/client/shopify.svg";
 import spotify from "../../assets/images/client/spotify.svg";
 import MindPower from "../ITSolution/MindPower.js";
-import work1 from "../../assets/images/work/7.jpg";
+import work1 from "../../assets/images/work/12.jpg";
 import work2 from "../../assets/images/work/8.jpg";
 import work3 from "../../assets/images/work/9.jpg";
-import work4 from "../../assets/images/work/12.jpg";
+import work4 from "../../assets/images/work/20.jpg";
+import work5 from "../../assets/images/work/21.jpg";
 import ExperienceTeam from "../CorporateBusiness/ExperienceTeam";
 
 export default class PageAboutusTwo extends Component {
@@ -403,7 +404,7 @@ export default class PageAboutusTwo extends Component {
                     tabId="5"
                   >
                     <img
-                      src={work4}
+                      src={work5}
                       className="img-fluid rounded shadow"
                       alt=""
                     />

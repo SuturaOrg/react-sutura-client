@@ -21,7 +21,7 @@ class Section extends Component {
             <Row className="align-items-center">
               <Col lg={7} md={6}>
                 <div className="title-heading">
-                  <h4 className="text-white-50">L'innovation numérique, sociale et économique</h4>
+                  <h4 className="text-white-50">L'innovation numérique, économique et sociale</h4>
                   <h4 className="heading text-white mb-3 title-dark">
                     {" "}
                     Une startup d'étudiants<br />très ambitieuse{" "}

@@ -532,7 +532,7 @@ export default class MindPower extends Component {
                       Aïcha Mahamane SOULEY
                     </Link>
                   </h5>
-                  <small className="designation text-muted"><b>Membre de l'équipe informatique</b><br/>Etudiante en 5<sup>ème</sup> année en Big Data et Cloud Computing à l'ENS de Mouhammédia</small>
+                  <small className="designation text-muted"><b>Membre de l'équipe informatique</b><br/>Etudiante en 5<sup>ème</sup> année en data science à l'INSEA de Rabat</small>
                 </div>
               </div>
             </div>

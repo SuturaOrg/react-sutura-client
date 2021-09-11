@@ -65,8 +65,8 @@ export default class WhatWeDo extends Component {
         {
           id: 8,
           icon: "uil uil-clock",
-          heading: "Prêts à terme moyen",
-          desc: "Dans ce cas, l'échéance ne majorée à 6 mois",
+          heading: "Prêts à moyen terme",
+          desc: "Dans ce cas, l'échéance est majorée à 6 mois",
         },
       ],
     };
@@ -175,7 +175,7 @@ export default class WhatWeDo extends Component {
                                   >
                                     Lys Pasteur
                                   </Link>
-                                  <small className="text-light"></small>
+                                  <small className="text-light">Discours à la FSTG</small>
                                 </div>
                               </div>
                             </div>
@@ -199,7 +199,7 @@ export default class WhatWeDo extends Component {
                         <p className="text-muted para-desc mb-0">
                           En effet, les étudiants sont de temps en temps confrontés à des problèmes financiers ponctuels. 
                           Ces problèmes sont liés à la santé, à l'alimentation, au loyer, etc.
-                          C'est ainsi que Sutura est venu assisté les étudiants à travers un mécanisme solidaire, culturel et participatif.
+                          C'est ainsi que Sutura est venu assister les étudiants à travers un mécanisme solidaire, culturel et participatif.
                           Sutura est un mot utilisé dans plusieurs pays africains. Au Sénégal, c'est un mot Wolof qui signifie discrétion & 
                           dignité. Ce mot vient de l'arabe "Sitra" qui signifie discrétion.
                         </p>

@@ -179,7 +179,7 @@ export default class PageAboutusTwo extends Component {
               </Col>
             </Row>
           </Container>
-          <Container className="mt-4">
+          {/* <Container className="mt-4">
             <Row className="justify-content-center">
               {this.state.partners.map((image, key) => (
                 <Col
@@ -193,7 +193,7 @@ export default class PageAboutusTwo extends Component {
                 </Col>
               ))}
             </Row>
-          </Container>
+          </Container> */}
         </section>
         <section className="section bg-light">
           {/*MindPower render */}

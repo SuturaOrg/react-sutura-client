@@ -93,9 +93,9 @@ class index extends Component {
         {/* Feature */}
         <Features />
         {/* WorkProcess */}
-        <section className="section">
+        {/* <section className="section">
           <WorkProcess />
-        </section>
+        </section> */}
         {/* Reviews */}
         <section className="section bg-light">
         <Reviews />

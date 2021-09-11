@@ -380,11 +380,10 @@ class PageContactThree extends Component {
                                         <h5 className="fw-bold">Adresse</h5>
                                         <p className="text-muted">
                                             Cité de l'innovation, Université
-                                            <br/>
-                                            B.P. 511 - 40000 - Marrakech <br/>
-                                            Cadi Ayyad av. Abdelkrim Khattabi,
+                                            <br/>Cadi Ayyad av. Abdelkrim Khattabi,<br/>
+                                            B.P. 511 - 40000 - Marrakech
                                         </p>
-                                        <Link to="#" className="video-play-icon text-primary lightbox">
+                                        <Link to={{pathname: "https://www.google.com/maps/place/La+cit%C3%A9+d'innovation/@31.6427336,-8.0216641,17z/data=!3m1!4b1!4m5!3m4!1s0xdafeff360f00771:0x7163612040e32812!8m2!3d31.6427291!4d-8.0194754?hl=fr"}} target="_blank" className="video-play-icon text-primary lightbox">
                                             Voir sur Google map
                                         </Link>
                                     </div>

@@ -216,7 +216,7 @@ export default class WorkProcess extends Component {
                 <CardBody>
                   <h5 className="text-dark">confirmation</h5>
                   <p className="text-muted mb-0">
-                    L'étudiant verra que sa déclaration de remboursement a été bien prise en compte dans son espace personal.
+                    L'étudiant verra que sa déclaration de remboursement a été bien prise en compte dans son espace personnel.
                     Les demandeurs dont leur demande a été validée recevront l'argent souhaité.
                   </p>
                 </CardBody>

@@ -16,7 +16,7 @@ export default class WorkProcess extends Component {
                   <span className="text-primary fw-bold">
                     Sutura
                   </span>{" "}
-                  a mis en œuvre un système optimal pour s'assurer d'une gestion efficiente de la caisse.
+                  a mis en œuvre un système optimal pour garantir d'une gestion efficiente de la caisse.
                   Ce qui permet de maximiser le nombre de demandes satisfaites, d'évaluer les demandes les plus urgentes et de veiller
                   à la rapidité.
                 </p>

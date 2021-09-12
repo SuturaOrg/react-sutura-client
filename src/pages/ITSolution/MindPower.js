@@ -173,7 +173,7 @@ export default class MindPower extends Component {
                   />
                   <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to={{pathname: "https://www.facebook.com/nevillelys.moussavou" }} target="_blank" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="facebook"
@@ -182,7 +182,7 @@ export default class MindPower extends Component {
                         </i>
                       </Link>
                     </li>
-                    <li className="list-inline-item ms-1">
+                    {/* <li className="list-inline-item ms-1">
                       <Link to="#" className="rounded">
                         <i>
                           <FeatherIcon
@@ -191,8 +191,8 @@ export default class MindPower extends Component {
                           />
                         </i>
                       </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
+                    </li> */}
+                    {/* <li className="list-inline-item ms-1">
                       <Link to="#" className="rounded">
                         <i>
                           <FeatherIcon
@@ -201,9 +201,9 @@ export default class MindPower extends Component {
                           />
                         </i>
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to={{pathname: "http://linkedin.com/in/lys-pasteur-moussavou-82abaa194" }} target="_blank" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="linkedin"

@@ -101,7 +101,7 @@ class PageCoverRePassword extends Component {
                                     Remember your password ?
                                   </small>{" "}
                                   <Link
-                                    to="auth-cover-login"
+                                    to="login"
                                     className="text-dark fw-bold"
                                   >
                                     Sign in

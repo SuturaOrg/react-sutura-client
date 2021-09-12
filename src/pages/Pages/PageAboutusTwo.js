@@ -172,7 +172,7 @@ export default class PageAboutusTwo extends Component {
                         Sutura
                       </span>{" "}. Ce dernier a pu exister à la suite d'une longue période de réflexion et d'inverstigation. 
                     </p>
-                    <Link to="/page-contact-three" className="btn btn-primary mt-3">
+                    <Link to="/contact" className="btn btn-primary mt-3">
                       Contactez nous
                     </Link>
                   </div>

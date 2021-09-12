@@ -1095,7 +1095,7 @@ class Demo extends Component {
                   <Col md={6} xs={12} className="mt-5">
                     <div className="text-center">
                       <div className="demos-box rounded shadow text-center border-0">
-                        <Link to="page-services" target="_blank">
+                        <Link to="tutorial" target="_blank">
                           <img
                             src={services}
                             className="img-fluid rounded"
@@ -1858,7 +1858,7 @@ class Demo extends Component {
                   <Col md={6} xs={12} className="mt-5">
                     <div className="text-center">
                       <div className="demos-box rounded shadow text-center border-0">
-                        <Link to="page-contact-three" target="_blank">
+                        <Link to="contact" target="_blank">
                           <img
                             src={contactThree}
                             className="img-fluid rounded"
@@ -1908,7 +1908,7 @@ class Demo extends Component {
                   <Col md={6} xs={12}>
                     <div className="text-center">
                       <div className="demos-box rounded shadow text-center border-0">
-                        <Link to="auth-cover-login" target="_blank">
+                        <Link to="login" target="_blank">
                           <img
                             src={login}
                             className="img-fluid rounded"
@@ -1925,7 +1925,7 @@ class Demo extends Component {
                   <Col md={6} xs={12} className="mt-5 mt-sm-0">
                     <div className="text-center">
                       <div className="demos-box rounded shadow text-center border-0">
-                        <Link to="auth-cover-signup" target="_blank">
+                        <Link to="signup" target="_blank">
                           <img
                             src={signup}
                             className="img-fluid rounded"

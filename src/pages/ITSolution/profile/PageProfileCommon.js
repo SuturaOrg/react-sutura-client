@@ -63,7 +63,7 @@ class PageProfileCommon extends Component {
                 icon: "uil uil-exit",
                 className: "navbar-item account-menu px-0 mt-2",
                 title: "Se déconnecter",
-                link: "/auth-cover-login",
+                link: "/login",
             },
             // {
             //     id: 7,
@@ -161,7 +161,7 @@ class PageProfileCommon extends Component {
                                                             </li>
                                                             <li className="list-inline-item">
                                                                 <Link
-                                                                    to="/auth-cover-login"
+                                                                    to="/login"
                                                                     className="rounded"
                                                                 >
                                                                     <i className="uil uil-exit align-middle"></i>

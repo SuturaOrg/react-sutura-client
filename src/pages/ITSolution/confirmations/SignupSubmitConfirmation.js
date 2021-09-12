@@ -46,7 +46,7 @@ class SignupSubmitConfirmation extends Component {
                           <div className="d-grid">
                             <Button color="primary">
                             <Link
-                              to="auth-cover-login"
+                              to="login"
                               className="text-light fw-bold"
                             >Se connecter
                             </Link>

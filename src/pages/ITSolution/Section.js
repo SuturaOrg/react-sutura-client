@@ -36,7 +36,7 @@ class Section extends Component {
                     </div>
                   </Col>
                   <Col className="mt-4 pt-2">
-                    <Link to = 'auth-cover-login'className="btn btn-light">
+                    <Link to = 'login'className="btn btn-light">
                       Se connecter
                     </Link>
                   </Col>

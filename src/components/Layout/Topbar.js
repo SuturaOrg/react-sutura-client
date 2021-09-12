@@ -40,7 +40,7 @@ class Topbar extends Component {
                         {title: "Mes cotisations", link: "/page-contributions"},
                         {title: "Mes demandes", link: "/page-loans"},
                         {title: "Mes remboursements", link: "/page-refunds"},
-                        {title: "Se déconnecter", link: "/auth-cover-login"},
+                        {title: "Se déconnecter", link: "/login"},
 
                     ],
                 },
@@ -91,8 +91,8 @@ class Topbar extends Component {
                 //             link: "/#",
                 //             isOpenNestedSubMenu: false,
                 //             nestedChild: [
-                //                 {title: "Login Cover", link: "/auth-cover-login"},
-                //                 {title: "Signup Cover", link: "/auth-cover-signup"},
+                //                 {title: "Login Cover", link: "/login"},
+                //                 {title: "Signup Cover", link: "/signup"},
                 //                 {
                 //                     title: "Reset Password Cover",
                 //                     link: "/auth-cover-re-password",
@@ -103,7 +103,7 @@ class Topbar extends Component {
                 //         {
                 //             id: 17,
                 //             title: "Contact",
-                //             link: "//page-contact-three",
+                //             link: "//contact",
                 //         },
                 //     ],
                 // },
@@ -119,8 +119,8 @@ class Topbar extends Component {
                 //         {title: "Widget", link: "/widget"},
                 //     ],
                 // },
-                {id: 101, title: "Tutoriels", link: "/page-services"},
-                {id: 15, title: "Contacts", link: "/page-contact-three"},
+                {id: 101, title: "Tutoriels", link: "/tutorial"},
+                {id: 15, title: "Contacts", link: "/contact"},
                 {
                     id: 8,
                     title: "Liens Utiles",
@@ -133,7 +133,7 @@ class Topbar extends Component {
 
                     ],
                 },
-                {id: 102, notLoggedInOnly:true, title: "Se connecter", link: "/auth-cover-login"},
+                {id: 102, notLoggedInOnly:true, title: "Se connecter", link: "/login"},
 
 
             ],
@@ -642,7 +642,7 @@ class Topbar extends Component {
                                 return (
                                     <div className="buy-button">
                                         <Link
-                                            to={!loggedIn ? "auth-cover-signup" : "/operations/contribute"}
+                                            to={!loggedIn ? "signup" : "/operations/contribute"}
                                             className="btn btn-pills btn-primary"
                                         >
                                             {!loggedIn ? "S'inscrire'" : "Cotiser"}
@@ -653,7 +653,7 @@ class Topbar extends Component {
                                 return (
                                     <div className="buy-button">
                                         <Link
-                                            to={!loggedIn ? "auth-cover-signup" : "/operations/contribute"}
+                                            to={!loggedIn ? "signup" : "/operations/contribute"}
                                             id="buyButton"
                                             className="btn btn-primary"
                                         >

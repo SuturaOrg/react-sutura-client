@@ -174,7 +174,7 @@ class PageCoverLogin extends Component {
                                   </div>
                                   <p className="forgot-pass mb-0">
                                     <Link
-                                      to="auth-re-password-three"
+                                      to="re-password"
                                       className="text-dark fw-bold"
                                     >
                                       Mot de passe oublié?
@@ -224,7 +224,7 @@ class PageCoverLogin extends Component {
                                     Vous n'avez pas de compte ?
                                   </small>{" "}
                                   <Link
-                                    to="auth-cover-signup"
+                                    to="signup"
                                     className="text-dark fw-bold"
                                     onClick={()=>this.props.dispatch(alertActions.clear())}
                                   >

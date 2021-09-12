@@ -117,7 +117,7 @@ class PageProfile extends Component {
                 icon: "uil uil-dashboard",
                 className: "navbar-item account-menu px-0 mt-2",
                 title: "Logout",
-                link: "/auth-cover-login",
+                link: "/login",
             },
         ],
     };

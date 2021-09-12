@@ -46,7 +46,7 @@ class RegistrationSubmitConfirmation extends Component {
                         <Col lg="12">
                           <div className="d-grid">
                             <Link
-                              to="auth-cover-login"
+                              to="login"
                               color={"primary"}
                               className="btn btn-primary"
                             >Se connecter

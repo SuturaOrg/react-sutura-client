@@ -341,7 +341,7 @@ const routes = [
   //User Pages
   { path: "/auth-login", component: PageLogin, isWithoutLayout: true },
   {
-    path: "/auth-cover-login",
+    path: "/login",
     component: PageCoverLogin,
     isWithoutLayout: true,
   },
@@ -353,7 +353,7 @@ const routes = [
 
   { path: "/auth-signup", component: PageSignup, isWithoutLayout: true },
   {
-    path: "/auth-cover-signup",
+    path: "/signup",
     component: PageCoverSignup,
     isWithoutLayout: true,
   },
@@ -374,7 +374,7 @@ const routes = [
     isWithoutLayout: true,
   },
   {
-    path: "/auth-re-password-three",
+    path: "/re-password",
     component: PageRePasswordThree,
     isWithoutLayout: true,
   },
@@ -439,7 +439,7 @@ const routes = [
   { path: "/about-team", component: PageAboutusTwo },
   //{ path: "/page-history", component: PageHistory, isTopbarDark: true },
   //{ path: "/page-pricing", component: PagePricing, isTopbarDark: true },
-  { path: "/page-services", component: PageServices, isTopbarDark: true },
+  { path: "/tutorial", component: PageServices, isTopbarDark: true },
   { path: "/page-team", component: PageTeam, isTopbarDark: true },
 
   //Help Center
@@ -502,7 +502,7 @@ const routes = [
 
   //Page Contact
   { path: "/page-contact-one", component: PageContactOne, isTopbarDark: true },
-  { path: "/page-contact-three", component: PageContactThree, isTopbarDark: true },
+  { path: "/contact", component: PageContactThree, isTopbarDark: true },
   { path: "/page-contact-two", component: PageContactTwo, isTopbarDark: true },
 
   // forums

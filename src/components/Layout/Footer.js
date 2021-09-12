@@ -25,10 +25,10 @@ class Footer extends Component {
         super(props);
         this.state = {
             grid1: [
-                {title: "Se connecter", link: "/auth-cover-login"},
+                {title: "Se connecter", link: "/login"},
                 {title: "L'équipe", link: "/about-team"},
-                {title: "Tutoriel", link: "/page-services"},
-                {title: "Contacts", link: "/page-contact-three"},
+                {title: "Tutoriel", link: "/tutorial"},
+                {title: "Contacts", link: "/contact"},
             ],
             grid2: [
                 {title: "A propos", link: "/aboutus"},

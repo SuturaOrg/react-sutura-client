@@ -42,7 +42,7 @@ class Section extends Component {
                   </p>
                   <div className="mt-4 pt-2">
                     <Link
-                      to="page-services"
+                      to="tutorial"
                       className="btn btn-primary m-1"
                     >
                       Our Services

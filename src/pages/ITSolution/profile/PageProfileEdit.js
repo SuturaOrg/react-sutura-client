@@ -77,7 +77,7 @@ class PageProfileEdit extends Component {
                     icon: "uil uil-dashboard",
                     className: "navbar-item account-menu px-0 mt-2",
                     title: "Logout",
-                    link: "/auth-cover-login",
+                    link: "/login",
                 },
                 // {
                 //     id: 7,
@@ -604,7 +604,7 @@ class PageProfileEdit extends Component {
                                 compte.
                             </h6>
                             <div className="mt-4">
-                                <Link to="/page-contact-three" className="btn btn-danger">Envoyer un mail</Link>
+                                <Link to="/contact" className="btn btn-danger">Envoyer un mail</Link>
                             </div>
                         </div>
                     </div>

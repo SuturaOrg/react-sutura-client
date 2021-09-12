@@ -233,7 +233,7 @@ export default class Forums extends Component {
                               </div>
                               <p className="forgot-pass mb-0">
                                 <Link
-                                  to="auth-re-password-three"
+                                  to="re-password"
                                   className="text-dark fw-bold"
                                 >
                                   Forgot password ?

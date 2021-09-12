@@ -269,7 +269,7 @@ class PageCoverSignup extends Component {
                                     Vous avez déjà un compte ?
                                   </small>{" "}
                                   <Link
-                                    to="/auth-cover-login"
+                                    to="/login"
                                     className="text-dark fw-bold"
                                   >
                                     Se connecter

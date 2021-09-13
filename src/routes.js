@@ -161,6 +161,7 @@ const routes = [
     isWithoutLayout: true,
   },
   { path: "/email-invoice", component: EmailInvoice, isWithoutLayout: true },
+  {path:"/re-password", component: PageRePasswordThree, isWithoutLayout: true},
 
   //Special Pages
   {

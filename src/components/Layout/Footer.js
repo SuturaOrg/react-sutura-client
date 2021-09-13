@@ -32,7 +32,7 @@ class Footer extends Component {
             ],
             grid2: [
                 {title: "A propos", link: "/aboutus"},
-                {title: "Faire un don", link: "/operations/donate"},
+                {title: "Faire un don", link: "/donate"},
                 {title: "CGU", link: "/tos"},
             ],
         };

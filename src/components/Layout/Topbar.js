@@ -56,7 +56,7 @@ class Topbar extends Component {
                         {title: "Rembourser un prêt", link: "/operations/refund"},
                     ],
                 },
-                {id: 200, title: "Faire un don", link: "/operations/donate"},
+                {id: 200, title: "Faire un don", link: "/donate"},
 
                 // {
                 //     id: 3,

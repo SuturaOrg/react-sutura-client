@@ -9,6 +9,6 @@ export const store = createStore(
     rootReducer,
     applyMiddleware(
         thunkMiddleware,
-        loggerMiddleware
+        process.env.NODE_ENV==="production"?null:loggerMiddleware
     )
 );

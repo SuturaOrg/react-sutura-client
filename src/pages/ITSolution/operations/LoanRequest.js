@@ -106,7 +106,7 @@ class LoanRequest extends Component {
                           <Col md={12}>
                             <div className="mb-3">
                               <Label className="form-label">
-                              Montant <span className="text-danger">*</span>
+                              Montant (MAD)<span className="text-danger">*</span>
                               </Label>
                               <div className="form-icon position-relative">
                                 <i>

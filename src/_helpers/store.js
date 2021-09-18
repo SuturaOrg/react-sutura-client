@@ -3,12 +3,15 @@ import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import rootReducer from '../reducers';
 
-const loggerMiddleware = createLogger();
-
+const getMiddleware = () => {
+    console.log("hgfk",process.env);
+    if (process.env.NODE_ENV === 'production') {
+      return applyMiddleware(thunkMiddleware);
+    } else {
+      return applyMiddleware(thunkMiddleware, createLogger())
+    }
+  };
 export const store = createStore(
     rootReducer,
-    applyMiddleware(
-        thunkMiddleware,
-        loggerMiddleware
-    )
+   getMiddleware()
 );

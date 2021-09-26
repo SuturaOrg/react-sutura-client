@@ -48,7 +48,7 @@ function getUserMe(){
         headers: authHeader(),
     };
 
-    return fetch(`${config.apiUrl}/user/studentInfos`, requestOptions)
+    return fetch(`${config.apiUrl}/user/infos`, requestOptions)
         .then(handleResponse)
         .then(user => {
             localStorage.setItem('userInfos', JSON.stringify(user));

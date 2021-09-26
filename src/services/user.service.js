@@ -63,14 +63,14 @@ function logout() {
 
 }
 
-function patchInfos(data,id) {
+function patchInfos(data,id,userType) {
     const requestOptions = {
         method: 'PATCH',
         headers: authHeader(),
         body: JSON.stringify(data)
     };
 
-    return fetch(`${config.apiUrl}/students/${id}`, requestOptions)
+    return fetch(`${config.apiUrl}/${userType}/${id}`, requestOptions)
         .then(handleResponse)
         .then(patchInfosPayload => {
             return patchInfosPayload;

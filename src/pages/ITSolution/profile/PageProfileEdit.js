@@ -106,8 +106,8 @@ class PageProfileEdit extends Component {
             dispatch(alertActions.error("Le fichier doit être une image"))
             return;
         }
-        const userType = this.props.user? this.props.user._links.self.href.split("/")[-2]:"students";
-        console.log(this.props.user);
+        const selfSplit= this.props.user._links.self.href.split("/");
+        const userType = this.props.user? selfSplit[selfSplit.length-2]:"students";
         dispatch(userActions.patchInfo(values, this.state.selectedFile, userType));
     }
 

@@ -112,7 +112,7 @@ function getInfo() {
     }
 }
 
-function patchInfo(data,picture) {
+function patchInfo(data,picture, userType) {
     return async dispatch => {
         dispatch(request());
         picture &&  await fileService.upload(picture, "profilePics").then((payload) => {
@@ -124,7 +124,7 @@ function patchInfo(data,picture) {
                 .then(
                     user => {
                         console.log(data);
-                        userService.patchInfos(data, user.id)
+                        userService.patchInfos(data, user.id, userType)
                             .then((user) => {
                                     dispatch(success());
                                     dispatch(getInfo());

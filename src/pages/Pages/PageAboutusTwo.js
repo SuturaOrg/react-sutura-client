@@ -170,7 +170,7 @@ export default class PageAboutusTwo extends Component {
                       confrontés aux mêmes problèmes pour mettre en place{" "}
                       <span className="text-primary fw-bold">
                         Sutura
-                      </span>{" "}. Ce dernier a pu exister à la suite d'une longue période de réflexion et d'inverstigation. 
+                      </span>{" "}. Ce dernier a pu exister à la suite d'une longue période de réflexion et d'investigation. 
                     </p>
                     <Link to="/contact" className="btn btn-primary mt-3">
                       Contactez nous
@@ -389,7 +389,7 @@ export default class PageAboutusTwo extends Component {
                     />
                     <div className="mt-4">
                       <p className="text-muted">
-                        Le projet Sutura est aussi vraie startup. D'autres services assez intéressants seront proposés pour mieux améliorer
+                        Le projet Sutura est aussi une vraie startup. D'autres services assez intéressants seront proposés pour mieux améliorer
                         les conditions estudiantines.
                       </p>
                       {/* <Link to="#" className="text-primary">

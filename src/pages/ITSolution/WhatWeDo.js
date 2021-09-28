@@ -88,7 +88,7 @@ export default class WhatWeDo extends Component {
                 {/* render Section title */}
                 <SectionTitle
                   title="Notre mission"
-                  desc=" vous permet d'avoir de la disponibilité de cash-flow en cas de besoin ponctuel urgent."
+                  desc=" vous permet d'avoir de la disponibilité de fonds en cas de besoin ponctuel urgent."
                 />
               </div>
             </Row>

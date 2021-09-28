@@ -170,7 +170,7 @@ export default class WorkProcess extends Component {
                   <h5 className="text-dark">Transaction bancaire</h5>
                   <p className="text-muted mb-0">
                       Envoyer l'argent dans notre compte bancaire. Le remboursement peut se faire en entier ou en tranches 
-                      mais il ne faut pas dépasser l'échéance de paiement.
+                      mais l'échéance ne doit pas être dépassée.
                   </p>
                 </CardBody>
               </Card>
@@ -200,7 +200,7 @@ export default class WorkProcess extends Component {
                 <CardBody>
                   <h5 className="text-dark">L'algorithme fait le reste</h5>
                   <p className="text-muted mb-0">
-                      L'algorithme met en jour le tableau de bord de l'étudiant puis procède à son vrai travail:
+                      L'algorithme met à jour le tableau de bord de l'étudiant puis procède à son vrai travail:
                       si la caisse est favorable, l'algorithme va voir quelles demandes peuvent être satisfaites selon leur priorité.
                   </p>
                 </CardBody>
@@ -268,7 +268,7 @@ export default class WorkProcess extends Component {
                 <CardBody>
                   <h5 className="text-dark">Accusé de Réception</h5>
                   <p className="text-muted mb-0">
-                    Après vérification, un mail vous sera envoyé pour confirmation la réception de votre don.
+                    Après vérification, un mail vous sera envoyé pour confirmer la réception de votre don.
                   </p>
                 </CardBody>
               </Card>

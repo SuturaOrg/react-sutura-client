@@ -446,7 +446,7 @@ class PageCoverSignup extends Component {
                               <Col md={12}>
                                 <div className="mb-3">
                                   <Label className="form-label">
-                                  Téléphone{" "}<span className="text-danger">*</span>
+                                  Téléphone(06********){" "}<span className="text-danger">*</span>
                                   </Label>
                                   <div className="form-icon position-relative">
                                     <i>

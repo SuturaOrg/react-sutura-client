@@ -168,7 +168,7 @@ class LoanRequest extends Component {
                             <div className="mb-3">
                               <Label className="form-label">Raison <span className="text-danger">*</span></Label>
                               <div className="form-icon position-relative">
-                                <AvField type="select" name="reason" value="" helpMessage="Sélectionnez une catégorie"
+                                <AvField type="select" name="reason" value="" defaultValue="HEALTH" helpMessage="Sélectionnez une catégorie"
 
                                          validate={{
                                            required: {
@@ -258,6 +258,7 @@ class LoanRequest extends Component {
                                              errorMessage: "Veuillez sélectionner une banque ",
                                            },
                                          }}>
+                                  <option value="Autre banque">Autre</option>
                                   <option value="Arab Bank Maroc">Arab Bank Maroc</option>
                                   <option value="Attijariwafa Bank">Attijariwafa Bank</option>
                                   <option value="AL Barid Bank">AL Barid Bank</option>
@@ -265,7 +266,6 @@ class LoanRequest extends Component {
                                   <option value="CFG Bank">CFG Bank</option>
                                   <option value="CIH Bank">CIH Bank</option>
                                   <option value="Société Générale">Société Générale</option>
-                                  <option value="Autre banque">Autre</option>
                                 </AvField>
                               </div>
                             </div>

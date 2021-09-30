@@ -146,7 +146,7 @@ class PageMessages extends Component {
                                                 <h6 className="text-dark">{loan.amount} <b>MAD</b></h6>
                                                 <p className="text-muted mb-0"><b>Date:</b> {new Date (loan.createdAt).toLocaleDateString("fr-FR",{day:"numeric",month:"long", year:"numeric"})}<br/>
                                                 <b>Catégorie:</b> {loan.reason}<br/>
-                                                <b>Remboursé:</b> {loan.statusRefund?"Remboursé":"Non remboursé"}<br/>
+                                                <b>Etat:</b> {loan.statusRefund?"Remboursé":"Non remboursé"}<br/>
                                                 <b>Montant remboursement:</b> {loan.amountRefund}<br/>
                                                 <b>Echéance de paiement:</b> {loan.deadline}<br/>
                                                 {loan.status==="FINISHED"&&<Link to={{pathname: `${loan.receipt}` }} target="_blank" className="btn btn-primary mt-2">Voir le reçu</Link>}<br/>

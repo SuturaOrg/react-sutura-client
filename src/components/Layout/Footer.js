@@ -46,7 +46,7 @@ class Footer extends Component {
 
     handleSubmit(event,values) {
         const {dispatch} = this.props;
-        dispatch(entityActions.create(values, "newsLetterEmails"))
+        dispatch(entityActions.create(values, "newsLetterEmails",null,false))
     }
 
     render() {

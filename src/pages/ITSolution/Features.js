@@ -51,7 +51,6 @@ class Features extends Component {
     }
 
     componentDidMount() {
-        console.log("Features", this.props);
         const {dispatch}=this.props;
         !this.props.studentsCount && dispatch(statsActions.get());
     }

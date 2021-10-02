@@ -76,7 +76,6 @@ class PageProfileCommon extends Component {
     };
 
     componentDidMount() {
-        console.log(this.props);
         document.body.classList = "";
         document.getElementById("top-menu") && document.getElementById("top-menu").classList.add("nav-light");
         document.getElementById("buyButton") && (document.getElementById("buyButton").className = "btn btn-light");
@@ -332,7 +331,6 @@ function mapStateToProps(state) {
     const { user } = state.user;
     const { statsLoading, period, studentsCount, fundState } = state.stats;
 
-    console.log(state);
     return {
         user,
         statsLoading,

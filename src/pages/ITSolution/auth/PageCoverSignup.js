@@ -34,7 +34,6 @@ class PageCoverSignup extends Component {
   }
   handleSubmit(event, values) {
     if (this.state.termsChecked){
-      console.log(values);
       const { dispatch } = this.props;
       dispatch(userActions.signup(values));
     }

@@ -125,7 +125,6 @@ class PageProfileCommon extends Component {
     };
 
     componentDidMount() {
-        console.log(this.props);
         document.body.classList = "";
         document.getElementById("top-menu") && document.getElementById("top-menu").classList.add("nav-light");
         document.getElementById("buyButton") && (document.getElementById("buyButton").className = "btn btn-light");
@@ -366,7 +365,6 @@ class PageProfileCommon extends Component {
 }
 function mapStateToProps(state) {
     const { user } = state.authentication;
-    console.log(state);
     return {
         user,
     };

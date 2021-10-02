@@ -123,7 +123,6 @@ function patchInfo(data,picture, userType) {
             userService.getUserMe()
                 .then(
                     user => {
-                        console.log(data);
                         userService.patchInfos(data, user.id, userType)
                             .then((user) => {
                                     dispatch(success());

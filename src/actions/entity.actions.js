@@ -13,8 +13,6 @@ export const entityActions = {
 };
 
 function create(data, entity, file) {
-    console.log(file, data, entity);
-
     return dispatch => {
         function _create() {
             entityService.create(data, entity)

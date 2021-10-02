@@ -31,7 +31,6 @@ class PageCoverLogin extends Component {
   }
 
   handleSubmit(event, data) {
-      console.log(data);
       data.rememberMe=this.state.rememberMe;
       const { dispatch } = this.props;
       dispatch(userActions.login(data));

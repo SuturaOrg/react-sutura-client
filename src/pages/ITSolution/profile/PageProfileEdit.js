@@ -619,7 +619,6 @@ class PageProfileEdit extends Component {
 function mapStateToProps(state) {
     const {user, patchLoading} = state.user;
     const {alert} = state;
-    console.log(state);
     return {
         user,
         patchLoading,

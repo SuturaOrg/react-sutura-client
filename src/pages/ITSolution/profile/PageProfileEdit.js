@@ -106,6 +106,10 @@ class PageProfileEdit extends Component {
             dispatch(alertActions.error("Le fichier doit être une image"))
             return;
         }
+        if(this.state.selectedFile.size>7000000){
+            dispatch(alertActions.error("Le fichier ne doit pas dépasser 7 Mo "))
+            return;
+        }
         const selfSplit= this.props.user._links.self.href.split("/");
         const userType = this.props.user? selfSplit[selfSplit.length-2]:"students";
         dispatch(userActions.patchInfo(values, this.state.selectedFile, userType));

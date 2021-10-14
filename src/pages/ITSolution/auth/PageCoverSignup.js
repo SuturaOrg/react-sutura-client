@@ -278,12 +278,12 @@ class PageCoverSignup extends Component {
                                 <div className="mb-3">
                                   <Label className="form-label">Pays d'origine{" "}<span className="text-danger">*</span></Label>
                                   <div className="form-icon position-relative">
-                                    <AvField type="select" name="country" value="country" helpMessage="Sélectionnez un pays"
+                                    <AvField type="select" name="country" helpMessage="Sélectionnez un pays"
 
                                             validate={{
                                               required: {
                                                 value: true,
-                                                errorMessage: "Veuillez sélectionner une catégorie ",
+                                                errorMessage: "Veuillez sélectionner un pays ",
                                               },
                                             }}>
                                       <option value="">- Sélectionnez votre pays -</option>
@@ -356,7 +356,7 @@ class PageCoverSignup extends Component {
                                 <div className="mb-3">
                                   <Label className="form-label">Année d'entrée au Maroc{" "}<span className="text-danger">*</span></Label>
                                   <div className="form-icon position-relative">
-                                    <AvField type="select" name="yearEntryMorocco" value={2021} helpMessage="Sélectionnez une catégorie"
+                                    <AvField type="select" name="yearEntryMorocco" helpMessage="Sélectionnez une année"
 
                                             validate={{
                                               required: {

@@ -52,7 +52,7 @@ class PageError extends Component {
                   Retourner
                 </Link>{" "}
                 <Link to="/" className="btn btn-primary mt-4 ms-2">
-                  Aller à l'acceuil
+                  Aller à l'accueil
                 </Link>
               </Col>
             </Row>

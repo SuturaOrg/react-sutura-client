@@ -156,7 +156,7 @@ class PageProfile extends Component {
                         <h5>{user.firstname} {user.lastname}</h5>
                         <p className="text-muted mb-0">
                             Participer à Sutura c'est non seulement pour soi mais pour d'autres étudiants qui sont dans la 
-                            même situation que nous-même.<br/>Nous sommes ravi de vous compter parmi nos membres.
+                            même situation que nous-même.<br/>Nous sommes ravis de vous compter parmi nos membres.
                         </p>
                     </div>
 

@@ -408,7 +408,7 @@ export default class MindPower extends Component {
                       Amary DIOP
                     </Link>
                   </h5>
-                  <small className="designation text-muted"><b>Membre de l'équipe informatique</b><br/>Etudiant en 5<sup>ème</sup> année en Big Data et Cloud Computing à l'ENS de Mouhammédia</small>
+                  <small className="designation text-muted"><b>Membre de l'équipe informatique</b><br/>Etudiant en 5<sup>ème</sup> année en Big Data et Cloud Computing à l'ENSET de Mouhammédia</small>
                 </div>
               </Card>
             </Col>

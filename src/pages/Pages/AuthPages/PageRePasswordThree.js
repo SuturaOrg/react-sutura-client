@@ -23,7 +23,6 @@ class PageRePasswordThree extends Component {
   }
   handleSubmit(event,value) {
     const {dispatch} = this.props;
-    console.log(value);
     dispatch(mailActions.resetpwd(value.email));
 }
   render() {

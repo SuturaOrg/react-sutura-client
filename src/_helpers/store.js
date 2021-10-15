@@ -4,7 +4,6 @@ import { createLogger } from 'redux-logger';
 import rootReducer from '../reducers';
 
 const getMiddleware = () => {
-    console.log("hgfk",process.env);
     if (process.env.NODE_ENV === 'production') {
       return applyMiddleware(thunkMiddleware);
     } else {

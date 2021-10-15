@@ -15,7 +15,6 @@ import ProfileCommon from "./PageProfileCommon";
 class PageProfile extends Component {
     
     componentDidMount() {
-        console.log(this.props);
         document.body.classList = "";
         document.getElementById("top-menu") && document.getElementById("top-menu").classList.add("nav-light");
         document.getElementById("buyButton") && (document.getElementById("buyButton").className = "btn btn-light");
@@ -237,7 +236,6 @@ class PageProfile extends Component {
 function mapStateToProps(state) {
     const {user} = state.user;
     const {expirationDate}= state.stats;
-    console.log(state);
     return {
         user,
         expirationDate

@@ -39,7 +39,6 @@ class RefundRequest extends Component {
 
     handleSubmit = async (event, values) => {
         event.preventDefault();
-        console.log(values);
         const {dispatch} = this.props;
         if (!this.state.selectedFile.name.match(/.(jpg|jpeg|png|gif|pdf)$/i)) {
             dispatch(alertActions.error("Le fichier doit être une image ou document pdf "))
@@ -79,7 +78,6 @@ class RefundRequest extends Component {
 
     render() {
         const {alert,refundsCreateLoading} = this.props;
-        console.log(alert);
         return (
             <React.Fragment>
                 {/* breadcrumb */}

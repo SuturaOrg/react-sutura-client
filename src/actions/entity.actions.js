@@ -12,9 +12,7 @@ export const entityActions = {
 
 };
 
-function create(data, entity, file) {
-    console.log(file, data, entity);
-
+function create(data, entity, file, getAllAfterCreate=true) {
     return dispatch => {
         function _create() {
             entityService.create(data, entity)
@@ -22,7 +20,7 @@ function create(data, entity, file) {
                     entityPayload => {
                         dispatch(success(entityPayload));
                         dispatch(alertActions.success(getSuccessMessage(entity)));
-                        dispatch(getAll(entity));
+                        getAllAfterCreate && dispatch(getAll(entity));
                         if (entity === "contributions") {
                             history.push('/contribution-confirmation');
                         }

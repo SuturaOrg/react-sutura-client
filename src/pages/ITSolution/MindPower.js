@@ -10,12 +10,13 @@ import client1 from "../../assets/images/team/ambroise.png";
 import client2 from "../../assets/images/team/ousmane.png";
 import client3 from "../../assets/images/team/pasteur.jpg";
 import client4 from "../../assets/images/team/serigne.jpeg";
-import client5 from "../../assets/images/team/ambroise.png";
 import client6 from "../../assets/images/team/amary.jpg";
 import client7 from "../../assets/images/team/sangare.jpg";
 import client8 from "../../assets/images/team/aicha.jpeg";
 import client9 from "../../assets/images/team/souleymane.jpg";
 import client10 from "../../assets/images/team/sylvain.jpg";
+import client11 from "../../assets/images/team/ibrahima.jpg";
+
 
 
 export default class MindPower extends Component {
@@ -292,13 +293,13 @@ export default class MindPower extends Component {
               <div className="card team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={client5}
+                    src={client11}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
                   />
                   <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to={{pathname: "https://web.facebook.com/iib0011" }} target="_blank" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="facebook"
@@ -308,20 +309,10 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to={{pathname: "https://www.instagram.com/iib0011" }} target="_blank" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="instagram"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="twitter"
                             className="fea icon-sm fea-social"
                           />
                         </i>

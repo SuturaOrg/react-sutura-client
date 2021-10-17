@@ -49,7 +49,7 @@ class Reviews extends Component {
         name: "Naby Ndiaye",
         post: "Doctorant",
         desc:
-          "Sutura est une solution qui est arrivée à un moment crucial. L'idée est vriament extraordinaire en plus d'avoir une dimension sociale, elle met en avant les valeurs humaines comme l'entraide.",
+          "Sutura est une solution qui est arrivée à un moment crucial. L'idée est vraiment extraordinaire en plus d'avoir une dimension sociale, elle met en avant les valeurs humaines comme l'entraide.",
         rating: 3,
       },
       {

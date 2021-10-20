@@ -297,7 +297,7 @@ class LoanRequest extends Component {
                                   name="send"
                                   className="btn btn-primary"
                                   value="Demander"
-                              />:<Spinner className="text-primary"> </Spinner>}
+                              />:<Spinner> </Spinner>}
                           </Col>
                         </Row>
                       </AvForm>

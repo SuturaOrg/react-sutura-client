@@ -169,7 +169,7 @@ class RefundRequest extends Component {
                                                             name="send"
                                                             className="btn btn-primary"
                                                             value="Rembourser"
-                                                        />:<Spinner className="text-primary"> </Spinner>}
+                                                        />:<Spinner> </Spinner>}
                                                     </Col>
                                                 </Row>
                                             </AvForm>

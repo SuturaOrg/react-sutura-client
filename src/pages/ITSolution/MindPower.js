@@ -11,7 +11,6 @@ import client2 from "../../assets/images/team/ousmane.png";
 import client3 from "../../assets/images/team/pasteur.jpg";
 import client4 from "../../assets/images/team/serigne.jpeg";
 import client6 from "../../assets/images/team/amary.jpg";
-import client7 from "../../assets/images/team/sangare.jpg";
 import client8 from "../../assets/images/team/aicha.jpeg";
 import client9 from "../../assets/images/team/souleymane.jpg";
 import client10 from "../../assets/images/team/sylvain.jpg";
@@ -159,7 +158,7 @@ export default class MindPower extends Component {
                       Ousmane FAYE
                     </Link>
                   </h5>
-                  <small className="designation text-muted"><b>Vice-Président chargé des Affaires Administratives et des Relations Publiques</b><br/>Doctorant en sciences politiques</small>
+                  <small className="designation text-muted"><b>Vice-Président chargé des Affaires Administratives et des Relations Publiques</b><br/>Doctorant en sciences politiques-UCA Marrakech</small>
                 </div>
               </div>
             </div>
@@ -221,7 +220,7 @@ export default class MindPower extends Component {
                       Lys Pasteur MOUSSAVOU
                     </Link>
                   </h5>
-                  <small className="designation text-muted"><b>Chargé de la modélisation et d'évaluation des risques</b><br/>Elève ingénieur en actuariat et finance à la FSTG-UCA Marrakech</small>
+                  <small className="designation text-muted"><b>Chargé de la modélisation et de l'évaluation des risques</b><br/>Elève ingénieur en actuariat et finance à la FSTG-UCA Marrakech</small>
                 </div>
               </div>
             </div>
@@ -408,68 +407,6 @@ export default class MindPower extends Component {
               <div className="card team text-center border-0">
                 <div className="position-relative">
                   <img
-                    src={client7}
-                    className="img-fluid avatar avatar-ex-large rounded-circle shadow"
-                    alt=""
-                  />
-                  <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="facebook"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="instagram"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="twitter"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                    <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
-                        <i>
-                          <FeatherIcon
-                            icon="linkedin"
-                            className="fea icon-sm fea-social"
-                          />
-                        </i>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body py-3 px-0 content">
-                  <h5 className="mb-0">
-                    <Link to="#" className="name text-dark">
-                      Mouhamadou SANGARÉ
-                    </Link>
-                  </h5>
-                  <small className="designation text-muted"><b>Membre de l'équipe informatique</b><br/>Etudiant en 5<sup>ème</sup> année en data science à l'INSEA de Rabat</small>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 mt-4 pt-2">
-              <div className="card team text-center border-0">
-                <div className="position-relative">
-                  <img
                     src={client8}
                     className="img-fluid avatar avatar-ex-large rounded-circle shadow"
                     alt=""
@@ -586,7 +523,7 @@ export default class MindPower extends Component {
                       Halidou Souleymane HALADOU
                     </Link>
                   </h5>
-                  <small className="designation text-muted"><b>Trésorier<br/> </b>Etudiant en Master Management Option Ingénierie Financiers SUPDECO - Marrakech</small>
+                  <small className="designation text-muted"><b>Trésorier<br/> </b>Etudiant en Master Management Option Ingénierie Financière SUPDECO - Marrakech</small>
                 </div>
               </Card>
             </Col>

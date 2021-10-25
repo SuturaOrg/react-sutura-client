@@ -54,7 +54,7 @@ export default class WhatWeDo extends Component {
           id: 6,
           icon: "uil uil-compass",
           heading: "Autres urgences",
-          desc: "Dès fois, ce sont des problèmes financiers assez particuliers.",
+          desc: "Dès fois, ce sont des problèmes financiers assez particuliers",
         },
         {
           id: 7,

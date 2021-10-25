@@ -229,7 +229,7 @@ class PageProfileEdit extends Component {
                                                 type="text"
                                                 className="form-control ps-5"
                                                 placeholder="Ville :"
-                                                value={user && user.town}
+                                                value={user?.town}
 
                                             />
                                         </div>
@@ -251,7 +251,7 @@ class PageProfileEdit extends Component {
                                                 type="text"
                                                 className="form-control ps-5"
                                                 placeholder="Etablissement :"
-                                                value={user && user.school}
+                                                value={user?.school}
                                                 validate={{
                                                     required: {
                                                         value: false,
@@ -278,7 +278,7 @@ class PageProfileEdit extends Component {
                                                 type="text"
                                                 className="form-control ps-5"
                                                 placeholder="Filière :"
-                                                value={user && user.faculty}
+                                                value={user?.faculty}
                                                 validate={{
                                                     required: {
                                                         value: false,
@@ -306,7 +306,7 @@ class PageProfileEdit extends Component {
                                                 type="number"
                                                 className="form-control ps-5"
                                                 placeholder="Phone :"
-                                                value={user && user.phone}
+                                                value={user?.phone}
                                                 validate={{
                                                     required: {
                                                         value: false,

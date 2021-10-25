@@ -133,11 +133,11 @@ class PageProfileCommon extends Component {
                                                         md="7"
                                                         className="text-md-start text-center mt-4 mt-sm-0"
                                                     >
-                                                        <h3 className="title mb-0">{user && user.firstname} {user && user.lastname}</h3>
+                                                        <h3 className="title mb-0">{user?.firstname} {user?.lastname}</h3>
                                                         <small className="text-muted h6 me-2">
-                                                            {user && user.country}
+                                                            {user?.country}
                                                         </small>
-                                                        {user && user.currentPeriodContributions!==0 &&
+                                                        {user?.currentPeriodContributions &&
                                                             <ul className="list-inline mb-0 mt-3">
                                                                 <li className="list-inline-item ms-1">
                                                                         <i>

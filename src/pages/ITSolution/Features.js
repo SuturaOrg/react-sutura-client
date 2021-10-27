@@ -126,7 +126,7 @@ class Features extends Component {
                                         />
                                         <h2 className="mb-0 mt-4">
                                             { !this.props.statsLoading?<span className="counter-value" data-count="97">
-                        {this.props[progress.stateMapping]}
+                        {Math.round(this.props[progress.stateMapping]/10)*10}
                       </span>:<Spinner> </Spinner>}
                                             {progress.percentage}
                                         </h2>

@@ -71,7 +71,7 @@ class Footer extends Component {
                                 </Link>
                                 <p className={this.props.isLight ? "mt-4 text-muted" : "mt-4"}>
                                     Adhérer ou soutenir Sutura revient à contribuer à l'amélioration des conditions de
-                                    vies des étudiants étrangers.
+                                    vie des étudiants étrangers.
                                 </p>
                                 <ul className={this.props.isLight ? "list-unstyled social-icon social mb-0 m t-4" : "list-unstyled social-icon foot-social-icon mb-0 mt-4"}>
                                     <li className="list-inline-item me-1">

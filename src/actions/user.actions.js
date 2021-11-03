@@ -10,7 +10,8 @@ export const userActions = {
     logout,
     getInfo,
     patchInfo,
-    patchPwd
+    patchPwd,
+    getStats
 };
 
 function login(data) {
@@ -112,29 +113,64 @@ function getInfo() {
     }
 }
 
-function patchInfo(data,picture, userType) {
+function getStats() {
+    return dispatch => {
+        dispatch(request());
+
+        userService.getUserMe()
+            .then(
+                userSummary => {
+                    userService.getStats(userSummary.id).then(userStats => {
+                            dispatch(success(userStats))
+                        },
+                        err => {
+                            dispatch(failure(err));
+                            dispatch(alertActions.error(err));
+                        })
+                },
+                error => {
+                    dispatch(failure(error));
+                    dispatch(alertActions.error(error));
+                }
+            );
+    };
+
+    function request() {
+        return {type: userConstants.GETSTATS_REQUEST}
+    }
+
+    function success(userStats) {
+        return {type: userConstants.GETSTATS_SUCCESS, userStats}
+    }
+
+    function failure(error) {
+        return {type: userConstants.GETSTATS_FAILURE, error}
+    }
+}
+
+function patchInfo(data, picture, userType) {
     return async dispatch => {
         dispatch(request());
-        picture &&  await fileService.upload(picture, "profilePics").then((payload) => {
-                data.picture=payload.url;
-            }, error => {
+        picture && await fileService.upload(picture, "profilePics").then((payload) => {
+            data.picture = payload.url;
+        }, error => {
             dispatch(alertActions.error(error));
-            });
-            userService.getUserMe()
-                .then(
-                    user => {
-                        userService.patchInfos(data, user.id, userType)
-                            .then((user) => {
-                                    dispatch(success());
-                                    dispatch(getInfo());
-                                    dispatch(alertActions.success("Vos modifications ont bien été enregistrées"))
-                                },
-                                error => {
-                                    dispatch(failure(error));
-                                    dispatch(alertActions.error(error));
-                                })
-                    }
-                );
+        });
+        userService.getUserMe()
+            .then(
+                user => {
+                    userService.patchInfos(data, user.id, userType)
+                        .then((user) => {
+                                dispatch(success());
+                                dispatch(getInfo());
+                                dispatch(alertActions.success("Vos modifications ont bien été enregistrées"))
+                            },
+                            error => {
+                                dispatch(failure(error));
+                                dispatch(alertActions.error(error));
+                            })
+                }
+            );
     };
 
     function request() {

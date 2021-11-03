@@ -19,16 +19,16 @@ export function user(state = initialState, action) {
             return {};
         case userConstants.PATCH_REQUEST:
             return {
-                patchLoading : true
+                patchLoading: true
             };
         case userConstants.PATCH_SUCCESS:
+            return {};
+        case userConstants.PATCH_FAILURE:
+            return {};
+        case userConstants.GETSTATS_SUCCESS:
             return {
-                
+                user: action.userStats,
             };
-            case userConstants.PATCH_FAILURE:
-                return {
-                    
-                };
 
         default:
             return state

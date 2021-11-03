@@ -81,7 +81,7 @@ class PageProfileCommon extends Component {
         document.getElementById("buyButton") && (document.getElementById("buyButton").className = "btn btn-light");
         window.addEventListener("scroll", this.scrollNavigation, true);
         const {dispatch}=this.props;
-        !this.props.user && dispatch(userActions.getInfo());
+        !this.props.user && dispatch(userActions.getStats());
         !this.props.studentsCount && dispatch(statsActions.get());
 
     }

@@ -7,7 +7,8 @@ export const userService = {
     logout,
     getUserMe,
     patchInfos,
-    updatePwd
+    updatePwd,
+    getStats
 
 };
 
@@ -56,6 +57,18 @@ function getUserMe(){
         });
 }
 
+function getStats(id){
+    const requestOptions = {
+        method: 'GET',
+        headers: authHeader(),
+    };
+
+    return fetch(`${config.apiUrl}/students/${id}?projection=statsProjection`, requestOptions)
+        .then(handleResponse)
+        .then(user => {
+            return user;
+        });
+}
 function logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('accessToken');

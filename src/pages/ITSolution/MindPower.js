@@ -308,6 +308,16 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
+                      <Link to={{pathname: "https://github.com/iib0011" }} target="_blank" className="rounded">
+                        <i>
+                          <FeatherIcon
+                              icon="github"
+                              className="fea icon-sm fea-social"
+                          />
+                        </i>
+                      </Link>
+                    </li>
+                    <li className="list-inline-item ms-1">
                       <Link to={{pathname: "https://www.instagram.com/iib0011" }} target="_blank" className="rounded">
                         <i>
                           <FeatherIcon
@@ -318,7 +328,7 @@ export default class MindPower extends Component {
                       </Link>
                     </li>
                     <li className="list-inline-item ms-1">
-                      <Link to="#" className="rounded">
+                      <Link to={{pathname: "https://www.linkedin.com/iib0011" }} target="_blank" className="rounded">
                         <i>
                           <FeatherIcon
                             icon="linkedin"

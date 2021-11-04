@@ -63,7 +63,7 @@ function getStats(id){
         headers: authHeader(),
     };
 
-    return fetch(`${config.apiUrl}/students/${id}?projection=statsProjection`, requestOptions)
+    return fetch(`${config.apiUrl}/studentPrimes/${id}?projection=statsProjection`, requestOptions)
         .then(handleResponse)
         .then(user => {
             return user;

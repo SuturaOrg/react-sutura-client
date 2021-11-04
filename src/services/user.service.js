@@ -57,13 +57,13 @@ function getUserMe(){
         });
 }
 
-function getStats(id){
+function getStats(id, userType){
     const requestOptions = {
         method: 'GET',
         headers: authHeader(),
     };
 
-    return fetch(`${config.apiUrl}/students/${id}?projection=statsProjection`, requestOptions)
+    return fetch(`${config.apiUrl}/${userType}/${id}?projection=statsProjection`, requestOptions)
         .then(handleResponse)
         .then(user => {
             return user;

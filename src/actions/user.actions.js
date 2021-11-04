@@ -120,7 +120,9 @@ function getStats() {
         userService.getUserMe()
             .then(
                 userSummary => {
-                    userService.getStats(userSummary.id).then(userStats => {
+                    const selfSplit= userSummary._links.self.href.split("/");
+                    const userType = userSummary? selfSplit[selfSplit.length-2]:"students";
+                    userService.getStats(userSummary.id, userType).then(userStats => {
                             dispatch(success(userStats))
                         },
                         err => {

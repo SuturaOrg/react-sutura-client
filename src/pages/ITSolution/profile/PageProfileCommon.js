@@ -137,7 +137,7 @@ class PageProfileCommon extends Component {
                                                         <small className="text-muted h6 me-2">
                                                             {user?.country}
                                                         </small>
-                                                        {user?.currentPeriodContributions!==0 &&
+                                                        {user && user?.currentPeriodContributions!==0 &&
                                                             <ul className="list-inline mb-0 mt-3">
                                                                 <li className="list-inline-item ms-1">
                                                                         <i>

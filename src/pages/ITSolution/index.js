@@ -92,22 +92,12 @@ class index extends Component {
         </div>
         {/* Feature */}
         <Features />
-        {/* WorkProcess */}
-        {/* <section className="section">
-          <WorkProcess />
-        </section> */}
-        {/* Reviews */}
         <section className="section bg-light">
         <Reviews />
         </section>
         <section>
           <MindPower />
         </section>
-        {/* Blog 
-        <section className="section bg-light">
-          <Blog />
-        </section>
-        */}
       </React.Fragment>
     );
   }

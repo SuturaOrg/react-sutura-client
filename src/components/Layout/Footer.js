@@ -281,7 +281,7 @@ class Footer extends Component {
                             <Col sm="6">
                                 <div className="text-sm-start">
                                     <p className="mb-0">
-                                        © 2020-21 Sutura. Développé par{" "}
+                                        © 2020-22 Sutura. Développé par{" "}
                                         <i className="mdi mdi-heart text-danger"></i>{" "}
                                         <a
                                             href="/about-team"

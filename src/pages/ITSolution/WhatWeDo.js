@@ -39,18 +39,6 @@ export default class WhatWeDo extends Component {
           desc: "Des fois, un problème peut causer un retard de paiement de loyer",
         },
         {
-          id: 4,
-          icon: "uil uil-arrow-up-right",
-          heading: "Transport",
-          desc: "Il arrive qu'on doit se déplacer en période de difficultés financières",
-        },
-        {
-          id: 5,
-          icon: "uil uil-book-open",
-          heading: "Scolarité",
-          desc: "Dès fois aussi, l'argent pour les frais de scolarité est en retard",
-        },
-        {
           id: 6,
           icon: "uil uil-compass",
           heading: "Autres urgences",

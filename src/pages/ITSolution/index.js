@@ -95,9 +95,11 @@ class index extends Component {
         <section className="section bg-light">
         <Reviews />
         </section>
-        <section>
-          <MindPower />
+        {/* Blog
+        <section className="section bg-light">
+          <Blog />
         </section>
+        */}
       </React.Fragment>
     );
   }

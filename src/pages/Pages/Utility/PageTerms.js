@@ -652,7 +652,7 @@ class PageTerms extends Component {
                           <Collapse isOpen={this.state.col1}>
                             <CardBody>
                               <p className="text-muted mb-0 faq-ans">
-                              Les présentes Conditions Générales d’utilisation et de services (ci-après CGU) régissent l’ensemble des différentes utilisations du site internet accessible à l'adresse <b>www.sutura.in</b> édité par l’Association Sutura à l’exclusion des services proposés au sein de l’ESPACE PERSONNEL pour lesquels des CGU spécifiques s’appliquent.
+                              Les présentes Conditions Générales d’utilisation et de services (ci-après CGU) régissent l’ensemble des différentes utilisations du site internet accessible à l'adresse <b>www.sutura.africa</b> édité par l’Association Sutura à l’exclusion des services proposés au sein de l’ESPACE PERSONNEL pour lesquels des CGU spécifiques s’appliquent.
                               Les présentes CGU sont conclues entre l’UTILISATEUR et Sutura, ci-après collectivement dénommées les « PARTIES».<br/><br/>
                               <p>
                                 <b>Important</b><br/>
@@ -696,7 +696,7 @@ class PageTerms extends Component {
                                 <li><b>ESPACE PERSONNEL :</b> désigne la partie du site dédiée aux adhérents de Sutura, accessible uniquement après identification sur le SITE.</li>
                                 <li><b>INFORMATIONS :</b> désigne l’ensemble des informations rendues accessibles aux UTILISATEURS sur le SITE comprenant les données, conseils, recommandations, et autres informations dont Sutura est propriétaire, ou est autorisé à utiliser et à divulguer. Les INFORMATIONS incluent les descriptifs détaillant chaque service proposé par  Sutura, les statuts, les conditions d’adhésion et autres.</li>
                                 <li><b>SERVICES :</b> désigne l’ensemble des services proposés par Sutura aux UTILISATEURS via le SITE à l’exclusion des services proposés au sein de l’ESPACE PERSONNEL.</li>
-                                <li><b>SITE :</b> désigne le site internet accessible à l'adresse <b>www.sutura.in</b>. Le SITE regroupe l’ensemble des pages web, services et fonctionnalités proposés aux UTILISATEURS.</li>
+                                <li><b>SITE :</b> désigne le site internet accessible à l'adresse <b>www.sutura.africa</b>. Le SITE regroupe l’ensemble des pages web, services et fonctionnalités proposés aux UTILISATEURS.</li>
                                 <li><b>UTILISATEUR :</b> désigne toute personne qui accède et navigue sur le SITE, dont les adhérents de Sutura, en vue de bénéficier des SERVICES.</li>
                                 </ul></p><p>
                               </p>
@@ -824,7 +824,7 @@ class PageTerms extends Component {
                             <CardBody>
                               <p className="text-muted mb-0 faq-ans">
                               <h3>4.1. Conditions</h3>
-                                Les adhérents de Sutura ont la possibilité de créer un compte accessible sur le site <b>www.sutura.in</b> afin d’accéder en ligne à certaines informations et documents portant sur la gestion de leur dossier et d’effectuer certaines démarches.
+                                Les adhérents de Sutura ont la possibilité de créer un compte accessible sur le site <b>www.sutura.africa</b> afin d’accéder en ligne à certaines informations et documents portant sur la gestion de leur dossier et d’effectuer certaines démarches.
                                 <br/>
                                 Seules les personnes ayant la qualité « <b>étudiante et étrangère</b> » peuvent créer un compte sur le site.
                                 <br/>

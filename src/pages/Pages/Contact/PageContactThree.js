@@ -332,7 +332,7 @@ class PageContactThree extends Component {
                       onClick={this.sendMail}
                       className="text-primary"
                     >
-                      contact@sutura.in
+                      contact@sutura.africa
                     </Link>
                   </div>
                 </Card>

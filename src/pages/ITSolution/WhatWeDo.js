@@ -204,7 +204,7 @@ export default class WhatWeDo extends Component {
                           <span className="text-primary h4 me-2">
                             <i className="uil uil-check-circle align-middle"></i>
                           </span>
-                          Démocratie
+                          Solidarité
                         </li>
                         <li className="mb-0">
                           <span className="text-primary h4 me-2">

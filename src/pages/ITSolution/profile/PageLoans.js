@@ -116,7 +116,7 @@ class PageMessages extends Component {
                                 <i>
                                     <FeatherIcon icon="plus" className="fea icon-sm"/>
                                 </i>{" "}
-                                Demander un prêt
+                                Demander une aide
                             </Link>
                         </div>
                         <div

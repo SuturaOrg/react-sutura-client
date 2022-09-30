@@ -104,7 +104,7 @@ function getSuccessMessage(entity) {
         case "contributions":
             return "Votre cotisation a été enregistrée avec succès"
         case "loans":
-            return "Votre demande de prêt a été enregistrée avec succès"
+            return "Votre demande de d'aide a été enregistrée avec succès"
         case "refunds":
             return "Votre remboursement s'est déroulé avec succès"
         case "newsLetterEmails":
@@ -121,7 +121,7 @@ function getErrorMessage(entity, error) {
         case "contributions":
             return "Votre cotisation n'a pas été sauvegardée:\n" + error;
         case "loans":
-            return "Votre demande de prêt n'a pas été enregistrée:\n" + error;
+            return "Votre demande de d'aide n'a pas été enregistrée:\n" + error;
         case "refunds":
             return "Votre remboursement n'a pas été enregistré:\n" + error;
         case "newsLetterEmails":

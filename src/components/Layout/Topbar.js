@@ -52,7 +52,7 @@ class Topbar extends Component {
                     isOpenSubMenu: false,
                     child: [
                         {title: "Cotiser", link: "/operations/contribute"},
-                        {title: "Demander un prêt", link: "/operations/askloan"},
+                        {title: "Demander une aide", link: "/operations/askloan"},
                         {title: "Rembourser un prêt", link: "/operations/refund"},
                     ],
                 },

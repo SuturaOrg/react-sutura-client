@@ -92,7 +92,7 @@ export default class WorkProcess extends Component {
           </Row>
           <Row>
           <Col xs={12}>
-              <h4 className="text-primary">Faire une demande de prêt</h4>
+              <h4 className="text-primary">Faire une demande de d'aide</h4>
             </Col>
             <Col md={3} className="mt-4 pt-2">
               <Card className="features feature-clean work-process bg-transparent process-arrow border-0 text-center">
@@ -156,74 +156,74 @@ export default class WorkProcess extends Component {
             </Col>
 
           </Row>
-          <Row>
-          <Col xs={12}>
-              <h4 className="text-primary">Déclarer un remboursement</h4>
-            </Col>
-            <Col md={3} className="mt-4 pt-2">
-              <Card className="features feature-clean work-process bg-transparent process-arrow border-0 text-center">
-                <div className="icons text-primary text-center mx-auto">
-                  <i className="uil uil-presentation-edit d-block rounded h3 mb-0"></i>
-                </div>
+          {/*<Row>*/}
+          {/*<Col xs={12}>*/}
+          {/*    <h4 className="text-primary">Déclarer un remboursement</h4>*/}
+          {/*  </Col>*/}
+          {/*  <Col md={3} className="mt-4 pt-2">*/}
+          {/*    <Card className="features feature-clean work-process bg-transparent process-arrow border-0 text-center">*/}
+          {/*      <div className="icons text-primary text-center mx-auto">*/}
+          {/*        <i className="uil uil-presentation-edit d-block rounded h3 mb-0"></i>*/}
+          {/*      </div>*/}
 
-                <CardBody>
-                  <h5 className="text-dark">Transaction bancaire</h5>
-                  <p className="text-muted mb-0">
-                      Envoyer l'argent dans notre compte bancaire. Le remboursement peut se faire en entier ou en tranches 
-                      mais l'échéance ne doit pas être dépassée.
-                  </p>
-                </CardBody>
-              </Card>
-            </Col>
+          {/*      <CardBody>*/}
+          {/*        <h5 className="text-dark">Transaction bancaire</h5>*/}
+          {/*        <p className="text-muted mb-0">*/}
+          {/*            Envoyer l'argent dans notre compte bancaire. Le remboursement peut se faire en entier ou en tranches */}
+          {/*            mais l'échéance ne doit pas être dépassée.*/}
+          {/*        </p>*/}
+          {/*      </CardBody>*/}
+          {/*    </Card>*/}
+          {/*  </Col>*/}
 
-            <Col md={3} className="mt-md-5 pt-md-2 mt-4 pt-2">
-              <Card className="card features feature-clean work-process bg-transparent process-arrow border-0 text-center">
-                <div className="icons text-primary text-center mx-auto">
-                  <i className="uil uil-airplay d-block rounded h3 mb-0"></i>
-                </div>
+          {/*  <Col md={3} className="mt-md-5 pt-md-2 mt-4 pt-2">*/}
+          {/*    <Card className="card features feature-clean work-process bg-transparent process-arrow border-0 text-center">*/}
+          {/*      <div className="icons text-primary text-center mx-auto">*/}
+          {/*        <i className="uil uil-airplay d-block rounded h3 mb-0"></i>*/}
+          {/*      </div>*/}
 
-                <CardBody>
-                  <h5 className="text-dark">Approbation</h5>
-                  <p className="text-muted mb-0">
-                    Dans cette étape, les Administrateurs de Sutura vérifient que la déclaration respecte les régles générales.
-                  </p>
-                </CardBody>
-              </Card>
-            </Col>
+          {/*      <CardBody>*/}
+          {/*        <h5 className="text-dark">Approbation</h5>*/}
+          {/*        <p className="text-muted mb-0">*/}
+          {/*          Dans cette étape, les Administrateurs de Sutura vérifient que la déclaration respecte les régles générales.*/}
+          {/*        </p>*/}
+          {/*      </CardBody>*/}
+          {/*    </Card>*/}
+          {/*  </Col>*/}
 
-            <Col md={3} className="mt-md-5 pt-md-4 mt-4 pt-2">
-              <Card className="card features feature-clean work-process bg-transparent process-arrow border-0 text-center">
-                <div className="icons text-primary text-center mx-auto">
-                  <i className="uil uil-airplay d-block rounded h3 mb-0"></i>
-                </div>
+          {/*  <Col md={3} className="mt-md-5 pt-md-4 mt-4 pt-2">*/}
+          {/*    <Card className="card features feature-clean work-process bg-transparent process-arrow border-0 text-center">*/}
+          {/*      <div className="icons text-primary text-center mx-auto">*/}
+          {/*        <i className="uil uil-airplay d-block rounded h3 mb-0"></i>*/}
+          {/*      </div>*/}
 
-                <CardBody>
-                  <h5 className="text-dark">L'algorithme fait le reste</h5>
-                  <p className="text-muted mb-0">
-                      L'algorithme met à jour le tableau de bord de l'étudiant puis procède à son vrai travail:
-                      si la caisse est favorable, l'algorithme va voir quelles demandes peuvent être satisfaites selon leur priorité.
-                  </p>
-                </CardBody>
-              </Card>
-            </Col>
+          {/*      <CardBody>*/}
+          {/*        <h5 className="text-dark">L'algorithme fait le reste</h5>*/}
+          {/*        <p className="text-muted mb-0">*/}
+          {/*            L'algorithme met à jour le tableau de bord de l'étudiant puis procède à son vrai travail:*/}
+          {/*            si la caisse est favorable, l'algorithme va voir quelles demandes peuvent être satisfaites selon leur priorité.*/}
+          {/*        </p>*/}
+          {/*      </CardBody>*/}
+          {/*    </Card>*/}
+          {/*  </Col>*/}
 
-            <Col md={3} className="mt-md-5 pt-md-5 mt-4 pt-2">
-              <Card className="features feature-clean work-process bg-transparent d-none-arrow border-0 text-center">
-                <div className="icons text-primary text-center mx-auto">
-                  <i className="uil uil-image-check d-block rounded h3 mb-0"></i>
-                </div>
+          {/*  <Col md={3} className="mt-md-5 pt-md-5 mt-4 pt-2">*/}
+          {/*    <Card className="features feature-clean work-process bg-transparent d-none-arrow border-0 text-center">*/}
+          {/*      <div className="icons text-primary text-center mx-auto">*/}
+          {/*        <i className="uil uil-image-check d-block rounded h3 mb-0"></i>*/}
+          {/*      </div>*/}
 
-                <CardBody>
-                  <h5 className="text-dark">confirmation</h5>
-                  <p className="text-muted mb-0">
-                    L'étudiant verra que sa déclaration de remboursement a été bien prise en compte dans son espace personnel.
-                    Les demandeurs dont leur demande a été validée recevront l'argent souhaité.
-                  </p>
-                </CardBody>
-              </Card>
-            </Col>
+          {/*      <CardBody>*/}
+          {/*        <h5 className="text-dark">confirmation</h5>*/}
+          {/*        <p className="text-muted mb-0">*/}
+          {/*          L'étudiant verra que sa déclaration de remboursement a été bien prise en compte dans son espace personnel.*/}
+          {/*          Les demandeurs dont leur demande a été validée recevront l'argent souhaité.*/}
+          {/*        </p>*/}
+          {/*      </CardBody>*/}
+          {/*    </Card>*/}
+          {/*  </Col>*/}
 
-          </Row>
+          {/*</Row>*/}
 
           <Row>
             <Col xs={12}>

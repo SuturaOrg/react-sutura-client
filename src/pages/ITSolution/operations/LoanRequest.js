@@ -28,7 +28,7 @@ class LoanRequest extends Component {
         //id must required
         { id: 1, name: "Sutura", link: "/" },
         { id: 2, name: "Opérations", link: "#" },
-        { id: 3, name: "Demander un prêt" },
+        { id: 3, name: "Demander une aide" },
       ],
       isOpen: false,
     };
@@ -83,7 +83,7 @@ class LoanRequest extends Component {
       <React.Fragment>
         {/* breadcrumb */}
         <PageBreadcrumb
-          title="Demander un prêt"
+          title="Demander une aide"
           pathItems={this.state.pathItems}
         />
 

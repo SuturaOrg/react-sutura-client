@@ -33,7 +33,7 @@ class LoanSubmitConfirmation extends Component {
               <Col lg={5} md={8}>
                 <Card className="shadow rounded border-0">
                   <CardBody>
-                    <h4 className="card-title text-center">Votre demande de prêt a été enregistrée avec succès</h4>
+                    <h4 className="card-title text-center">Votre demande de d'aide a été enregistrée avec succès</h4>
 
                     <AvForm className="login-form mt-4">
                       <Row>

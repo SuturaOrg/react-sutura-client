@@ -56,18 +56,6 @@ export default class WhatWeDo extends Component {
           heading: "Autres urgences",
           desc: "Dès fois, ce sont des problèmes financiers assez particuliers",
         },
-        {
-          id: 7,
-          icon: "uil uil-watch",
-          heading: "Prêts à court terme",
-          desc: "Ce sont des prêts dont l'échéance ne dépasse pas deux mois",
-        },
-        {
-          id: 8,
-          icon: "uil uil-clock",
-          heading: "Prêts à moyen terme",
-          desc: "Dans ce cas, l'échéance est majorée à 6 mois",
-        },
       ],
     };
 

@@ -275,6 +275,8 @@ class PageCoverSignup extends Component {
                                                                             </option>
                                                                             <option value="Béni Mellal">Béni Mellal
                                                                             </option>
+                                                                            <option value="Benguérir">Benguérir
+                                                                            </option>
                                                                             <option value="Casablanca">Casablanca
                                                                             </option>
                                                                             <option value="El Jadida">El Jadida</option>

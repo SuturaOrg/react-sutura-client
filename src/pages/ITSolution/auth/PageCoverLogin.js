@@ -50,10 +50,10 @@ class PageCoverLogin extends Component {
     const {alert, loggingIn}=this.props;
     return (
       <React.Fragment>
-        <div className="back-to-home rounded d-none d-sm-block">
-          <Link to="/" className="btn btn-icon btn-soft-primary">
+        <div className="back-to-home rounded d-sm-block">
+          <Link to="/" className="btn btn-icon btn-primary">
             <i>
-              <FeatherIcon icon="home" className="icons" />
+              <FeatherIcon icon="home" className="icons"/>
             </i>
           </Link>
         </div>

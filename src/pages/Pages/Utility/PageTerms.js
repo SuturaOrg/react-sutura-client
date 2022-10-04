@@ -1335,11 +1335,11 @@ class PageTerms extends Component {
                                   </li>
                                 </ul>
                                 <b>Deuxième niveau de réclamation – le service réclamation du Siège National</b><br/>
-                                Si vous êtes en désaccord avec la réponse ou la solution apportée par notre service Adhérents, vous avez la possibilité d’adresser une réclamation au Siège National à l’adresse suivante : <b>siegenational@sututa.in</b><br/>
+                                Si vous êtes en désaccord avec la réponse ou la solution apportée par notre service Adhérents, vous avez la possibilité d’adresser une réclamation au Siège National à l’adresse suivante : <b>siegenational@sutura.africa</b><br/>
                                 <b>IMPORTANT :</b> Tout recours au service réclamation du Siège National doit avoir fait l’objet au préalable d’au moins un contact avec le Service Adhérents (premier niveau de réclamation).<br/><br/>
                                 <b>En dernier Recours - Le Médiateur</b><br/>
                                 Si le litige persiste malgré vos échanges avec le Service Adhérents et le Siège National, vous pouvez saisir le Médiateur <b>dans un délai maximum d’un an à compter de votre réclamation</b>.<br/>
-                                Votre demande de médiation peut être formulée par mail à l’adresse m<b>mediation@sututa.in</b><br/>
+                                Votre demande de médiation peut être formulée par mail à l’adresse m<b>mediation@sutura.africa</b><br/>
                                 Plus d’informations sur le dispositif de Médiation<br/>
                                 Dans l’hypothèse où la médiation échouerait, le litige ayant pu donner lieu à une médiation sera confié à la juridiction compétente.
                               </p>

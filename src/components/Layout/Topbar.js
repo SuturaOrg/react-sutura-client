@@ -129,7 +129,7 @@ class Topbar extends Component {
                     child: [
                         {title: "A propos", link: "/aboutus"},
                         {title: "CGU", link: "/tos"},
-                        {title: "L'équipe", link: "/about-team"},
+                        // {title: "L'équipe", link: "/about-team"},
 
                     ],
                 },

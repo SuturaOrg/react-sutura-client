@@ -58,7 +58,7 @@ export default class ExperienceTeam extends Component {
                               <h4 className="title text-white title-dark mb-0">
                                 L'équipe de Sutura 
                               </h4>
-                              <h6 className="text-white-50">Un groupe de personnes magnifiques</h6>
+                              <h6 className="text-white-50">Un groupe de personnes engagées</h6>
                             </div>
                           </Col>
 
